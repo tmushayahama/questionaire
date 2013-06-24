@@ -23,3 +23,12 @@ CREATE TABLE `que_users` (
   KEY `status` (`status`),
   KEY `superuser` (`superuser`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+CREATE TABLE `que_projects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `type` varchar(50) NOT NULL,
+	`description` varchar(50) NOT NULL default "",
+	`create_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
