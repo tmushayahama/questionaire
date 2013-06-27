@@ -1,9 +1,9 @@
--- DROP USER 'questionaire'@'localhost';
--- CREATE USER 'questionaire'@'localhost' IDENTIFIED BY '';
-Drop database if exists questionaire;
-CREATE DATABASE questionaire DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
--- GRANT ALL PRIVILEGES ON questionaire.* to 'questionaire'@'localhost' WITH GRANT OPTION;
-USE questionaire;
+-- DROP USER 'questionnaire'@'localhost';
+-- CREATE USER 'questionnaire'@'localhost' IDENTIFIED BY 'fun++';
+-- Drop database if exists questionnaire;
+CREATE DATABASE questionnaire DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+GRANT ALL PRIVILEGES ON questionnaire.* to 'questionnaire'@'localhost' WITH GRANT OPTION;
+USE questionnaire;
 
 CREATE TABLE `que_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -55,10 +55,7 @@ CREATE TABLE `que_profiles_fields` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 
-
-
-
-CREATE TABLE `que_projects` (
+CREATE TABLE `que_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `type` varchar(50) NOT NULL,
@@ -67,6 +64,18 @@ CREATE TABLE `que_projects` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
+CREATE TABLE `que_user_project` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id`int not null,
+	`project_id` int not null,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+ALTER TABLE `que_user_project`
+  ADD CONSTRAINT `user_project_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_users` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `que_user_project`
+  ADD CONSTRAINT `user_project_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
 
 INSERT INTO `que_profiles_fields` (`id`, `varname`, `title`, `field_type`, `field_size`, `field_size_min`, `required`, `match`, `range`, `error_message`, `other_validator`, `default`, `widget`, `widgetparams`, `position`, `visible`) VALUES
 (1, 'lastname', 'Last Name', 'VARCHAR', 50, 3, 1, '', '', 'Incorrect Last Name (length between 3 and 50 characters).', '', '', '', '', 1, 3),

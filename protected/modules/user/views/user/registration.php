@@ -1,3 +1,4 @@
+<?php $this->beginContent('//login_layouts/login_nav'); ?>
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Registration");
 $this->breadcrumbs=array(
 	UserModule::t("Registration"),
@@ -15,7 +16,7 @@ $this->breadcrumbs=array(
 <div class="form">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'registration-form',
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
 	'disableAjaxValidationAttributes'=>array('RegistrationForm_verifyCode'),
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -98,3 +99,4 @@ $this->breadcrumbs=array(
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 <?php endif; ?>
+<?php $this->endContent(); ?>

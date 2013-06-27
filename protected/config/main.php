@@ -16,9 +16,11 @@ return array(
 				'application.components.*',
 				'application.modules.user.models.*',
 				'application.modules.user.components.*',
+				'application.modules.project.models.*',
+				'application.modules.project.components.*',
 		),
 		'modules' => array(
-				// uncomment the following to enable the Gii tool
+        'project',
 				'user' => array(
 						'tableUsers' => 'que_users',
 						# encrypting method (php hash function)
@@ -76,10 +78,10 @@ return array(
 				),
 				// uncomment the following to use a MySQL database
 				'db' => array(
-						'connectionString' => 'mysql:host=localhost;dbname=questionaire',
+						'connectionString' => 'mysql:host=localhost;dbname=questionnaire',
 						'emulatePrepare' => true,
-						'username' => 'root',
-						'password' => '',
+						'username' => 'questionnaire',
+						'password' => 'fun++',
 						'charset' => 'utf8',
 						'tablePrefix' => 'que_',
 				),

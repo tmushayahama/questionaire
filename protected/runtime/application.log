@@ -1308,3 +1308,1126 @@ Stack trace:
 REQUEST_URI=/questionaire/user/login
 HTTP_REFERER=http://localhost/questionaire/user/login
 ---
+2013/06/25 22:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "project/create".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/project/create
+---
+2013/06/25 23:00:40 [error] [php] include(LoginForm.php): failed to open stream: No such file or directory (C:\xampp\htdocs\questionaire\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\protected\controllers\SiteController.php(81): spl_autoload_call()
+#1 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\questionaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionaire/site/login
+in C:\xampp\htdocs\questionaire\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:01:34 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:01:34 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:01:40 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:01:40 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:01:46 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:01:46 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:01:57 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:01:57 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:02:01 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:02:01 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:03:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:03:15 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:03:44 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:03:44 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:03:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:03:55 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:04:20 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:04:20 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:05:07 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:07 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:05:11 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:11 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:05:21 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:21 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:05:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:05:51 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:57 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:57 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:05:59 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:05:59 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:06:05 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:06:05 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:06:47 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:06:47 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:06:49 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:06:49 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:06:52 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:06:52 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:07:00 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:07:00 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:07:03 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:07:03 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:07:08 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:07:08 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:07:16 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:07:16 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:07:30 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:07:30 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:07:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:07:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:30 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:30 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:31 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:31 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:32 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:32 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:33 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:33 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:34 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:34 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:37 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:37 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:51 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:51 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:09:54 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:09:54 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:10:36 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:10:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:11:35 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:11:35 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:11:41 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/25 23:11:41 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#7 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(30): CActiveForm::validate(Array)
+#8 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:12:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "profile" is not defined in active record class "RegistrationForm".' in C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php:211
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#1 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#3 C:\xampp\htdocs\questionaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#5 C:\xampp\htdocs\questionaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#6 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(40): CModel->validate()
+#7 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#8 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#13 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/25 23:19:29 [error] [php] include(LoginForm.php): failed to open stream: No such file or directory (C:\xampp\htdocs\questionaire\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\protected\controllers\SiteController.php(81): spl_autoload_call()
+#1 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\questionaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionaire/site/login
+in C:\xampp\htdocs\questionaire\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\questionaire\index.php (13)
+2013/06/27 18:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/index.php
+---
+2013/06/27 18:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/login
+---
+2013/06/27 19:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/login
+---
+2013/06/27 19:05:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'questionnaire'@'localhost' (using password: YES)' in C:\xampp\htdocs\questionaire\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\questionaire\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\questionaire\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#7 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('RegistrationFor...')
+#8 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(23): CActiveRecord->__construct()
+#10 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/login
+---
+2013/06/27 19:06:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/login
+---
+2013/06/27 19:09:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'questionnaire'@'localhost' (using password: YES)' in C:\xampp\htdocs\questionaire\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\questionaire\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\questionaire\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#7 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('RegistrationFor...')
+#8 C:\xampp\htdocs\questionaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 C:\xampp\htdocs\questionaire\protected\modules\user\controllers\RegistrationController.php(23): CActiveRecord->__construct()
+#10 C:\xampp\htdocs\questionaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 C:\xampp\htdocs\questionaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\questionaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\questionaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/questionaire/user/registration
+HTTP_REFERER=http://localhost/questionaire/user/login
+---
+2013/06/27 19:11:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/27 19:12:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/27 19:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/27 19:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/27 19:15:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
+2013/06/27 19:16:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionaire/user/registration
+---
