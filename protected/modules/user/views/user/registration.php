@@ -1,4 +1,4 @@
-<?php $this->beginContent('//login_layouts/login_nav'); ?>
+<?php $this->beginContent('//registration_layouts/registration_nav'); ?>
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Registration");
 $this->breadcrumbs=array(
 	UserModule::t("Registration"),
