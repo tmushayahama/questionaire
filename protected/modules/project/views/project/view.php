@@ -8,19 +8,20 @@
 		</ul>
 	</div>
 </div>
-<?php foreach ($projectQuestionnaire as $questionnaire): ?>
-	<div class="row-fluid">
-		<ul class='nav nav-list que-project-entry'>
-			<li>
-				<h4>
-					<?php echo CHtml::link($questionnaire->name, Yii::app()->getModule('project')->viewProjectUrl .'', array('class' => '')); ?>
-					<span class="label pull-right"><i>Created: 12-12-12</i></span>
-				</h4>
+<div class="row-fluid">
+	<ul class="thumbnails ">
+		<br>
+		<?php foreach ($projectQuestionnaire as $questionnaire): ?>
+			<li class="span3 que-project-entry">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="">
+					<h4><?php echo CHtml::link($questionnaire->name, Yii::app()->getModule('project')->viewProjectUrl . '', array('class' => '')); ?></h4>
+				</div>
+				<span class="label pull-right"><i>Created 12-12-12</i></span>
 			</li>
-		</ul>
-	</div>
-<?php endforeach; ?>
-
+		<?php endforeach; ?>
+	</ul>
+</div>
 <div id="new-project-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
