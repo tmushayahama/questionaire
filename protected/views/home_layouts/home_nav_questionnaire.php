@@ -19,24 +19,7 @@
 </div> <!--navbar-->
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span2">
-			<div class="well sidebar-nav que-sidebar">
-				<ul class="nav nav-list">
-					<li><h3><?php echo CHtml::link(Yii::app()->user->firstname . ' ' . Yii::app()->user->lastname, '', array('class' => '')); ?></h3></li>
-					<li class="nav-header">My Statistics</li>
-					<li><a href="#"><?php echo $this->projectCount ?> Projects</a></li>
-					<li><a href="#">0 Questionnaires</a></li>
-					<li><a href="#">0 Questions</a></li>
-					<li class="nav-header">How To</li>
-					<li><a href="#">Create a Project</a></li>
-					<li><a href="#">Create a Questionnaire</a></li>
-					<li><a href="#">Select Questions</a></li>
-				</ul>
-			</div><!--/.well -->
-		</div><!--/span-->
-		<div class="span7">
-			<?php echo $content ?>
-		</div>
+		<?php echo $content ?>
 	</div>
 </div>
 <?php $this->endContent(); ?>

@@ -4,7 +4,7 @@ class ProjectModule extends CWebModule {
 
 	public $createProjectUrl = 'project/project/create';
 	public $viewProjectUrl = 'project/project/view/id/';
-	public $createQuestionnaireUrl = '/project/questionnaire/dashboard/projectId/';
+	public $viewQuestionnaireUrl = '/project/questionnaire/view/';
 	public function init() {
 		// this method is called when the module is being created
 		// you may place code here to customize the module or the application

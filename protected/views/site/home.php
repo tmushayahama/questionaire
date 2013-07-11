@@ -16,7 +16,7 @@
 			<li class="span5 que-project-entry">
 				<div class="thumbnail">
 					<img data-src="holder.js/300x200" alt="">
-					<h3><?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->project->id, array('class' => 'active')); ?></h3>
+					<h4><?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->project->id, array('class' => 'active')); ?></h4>
 					<p><?php echo $userProject->project->description ?></p>
 				</div>
 				<span ><?php echo $userProject->project->type ?></span>

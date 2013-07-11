@@ -12,10 +12,10 @@
 	<ul class="thumbnails ">
 		<br>
 		<?php foreach ($projectQuestionnaire as $questionnaire): ?>
-			<li class="span3 que-project-entry">
+			<li class="span4 que-project-entry">
 				<div class="thumbnail">
 					<img data-src="holder.js/300x200" alt="">
-					<h4><?php echo CHtml::link($questionnaire->name, Yii::app()->getModule('project')->viewProjectUrl . '', array('class' => '')); ?></h4>
+					<h4><?php echo CHtml::link($questionnaire->name, array(Yii::app()->getModule('project')->viewQuestionnaireUrl, 'projectId'=>$projectModel->id, 'questionnaireId'=>$questionnaire->id), array('class' => '')); ?></h4>
 				</div>
 				<span class="label pull-right"><i>Created 12-12-12</i></span>
 			</li>
