@@ -8,39 +8,47 @@
 <?php endif; ?>
 
 
-<div class="form">
-	<?php echo CHtml::beginForm(); ?>
 
+<?php
+echo CHtml::beginForm('', 'post', array(
+		'class' => 'form-horizontal que-form-container'));
+?>
 
-	<?php echo CHtml::errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo CHtml::activeLabelEx($model, 'username'); ?>
-		<?php echo CHtml::activeTextField($model, 'username') ?>
+<fieldset class="que-margin">
+	<legend><?php echo UserModule::t("Registration"); ?></legend>
+	<?php echo CHtml::errorSummary(array($model), NULL, NULL, array('class' => 'alert alert-error')); ?>
+	<div class="control-group">
+		<div class="control-label">
+			<?php echo CHtml::activelabelEx($model, 'username'); ?>
+		</div>
+		<div class="controls">
+			<?php echo CHtml::activeTextField($model, 'username'); ?>
+		</div>
 	</div>
-
-	<div class="row">
-		<?php echo CHtml::activeLabelEx($model, 'password'); ?>
-		<?php echo CHtml::activePasswordField($model, 'password') ?>
+	<div class="control-group">
+		<div class="control-label">
+			<?php echo CHtml::activeLabelEx($model, 'password'); ?>
+		</div>
+		<div class="controls">
+			<?php echo CHtml::activePasswordField($model, 'password') ?>
+		</div>
 	</div>
-
-	<div class="row">
-		<p class="hint">
-			<?php echo CHtml::link(UserModule::t("Register"), Yii::app()->getModule('user')->registrationUrl); ?> | <?php echo CHtml::link(UserModule::t("Lost Password?"), Yii::app()->getModule('user')->recoveryUrl); ?>
-		</p>
+	<div class="control-group">
+		<div class="control-label">
+			<p>Stay Signed In
+				<?php echo CHtml::activeCheckBox($model, 'rememberMe'); ?>
+			</p>
+		</div>
+		<div class="controls">
+			<?php echo CHtml::submitButton(UserModule::t("Login"), array('class' => 'btn btn-primary right')); ?>
+		</div>
 	</div>
-
-	<div class="row rememberMe">
-		<?php echo CHtml::activeCheckBox($model, 'rememberMe'); ?>
-		<?php echo CHtml::activeLabelEx($model, 'rememberMe'); ?>
+	<div class="control-group">
+		<?php echo CHtml::link(UserModule::t("Register"), Yii::app()->getModule('user')->registrationUrl); ?> | <?php echo CHtml::link(UserModule::t("Lost Password?"), Yii::app()->getModule('user')->recoveryUrl); ?>
 	</div>
+</fieldset>
+<?php echo CHtml::endForm(); ?>
 
-	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Login")); ?>
-	</div>
-
-	<?php echo CHtml::endForm(); ?>
-</div><!-- form -->
 
 
 <?php

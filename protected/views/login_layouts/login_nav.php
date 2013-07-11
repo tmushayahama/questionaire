@@ -1,37 +1,38 @@
 <?php $this->beginContent('//layouts/que_main'); ?>
-<div >
-	<div class="navbar navbar-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<div class="row span12">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="span1 brand">
-						Questionnaire
-					</a>
-					<div class="span10">
-						<ul class="nav rm-nav nav-pills inline">
-							<li><a href="#">Explore </a></li>
-							<li><a class="" href="#">Features </a></li>
-						</ul>
-						<?php echo CHtml::link('Sign Up', Yii::app()->getModule('user')->registrationUrl, array('class' => 'pull-right span2 btn btn-danger')); ?>			
+<div class="navbar navbar-inverse navbar-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<?php echo CHtml::link('Questionnaire', Yii::app()->getModule('user')->returnUrl, array('class' => 'brand ')); ?>
+			<div class="nav-collapse collapse">
+				<p class="navbar-text pull-right">
+					<?php echo CHtml::link('Sign Up', Yii::app()->getModule('user')->registrationUrl, array('class' => 'btn btn-success')); ?>
+				</p>
+				<ul class="nav">
+					<li><a href="#about">About</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</div> <!--navbar-->
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12"> 
+			<div class="span8 "> 
+
+			</div>
+			<div class="span4 pull-right"> 
+				<div class="row-fluid">
+					<div class="span12 ">
+						<?php echo $content ?>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> 
 	</div>
-</div>
-<div class="content">
-	<div class="row span12"> 
-		<div class="span5 "> 
-			
-		</div>
-		<div class="span4 pull-rightr"> 
-			<?php echo $content ?>
-		</div>
-	</div>
-</div>
+</div> 
 <?php $this->endContent(); ?>

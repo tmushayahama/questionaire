@@ -1,30 +1,58 @@
-<?php
-/* @var $this ProjectController */
-/* @var $model Project */
+<?php $this->beginContent('//home_layouts/home_nav'); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<ul class="breadcrumb que-breadcrumb">
+			<li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-success')); ?> <span class="divider">/</span></li>
+			<li class="active"><?php echo $projectModel->name ?></li>
+			<li class="pull-right"><a href="#new-project-modal" role="button" class="btn btn-primary" data-toggle="modal">Create A Questionnaire</a></li>
+		</ul>
+	</div>
+</div>
+<?php foreach ($projectQuestionnaire as $questionnaire): ?>
+	<div class="row-fluid">
+		<ul class='nav nav-list que-project-entry'>
+			<li>
+				<h4>
+					<?php echo CHtml::link($questionnaire->name, Yii::app()->getModule('project')->viewProjectUrl .'', array('class' => '')); ?>
+					<span class="label pull-right"><i>Created: 12-12-12</i></span>
+				</h4>
+			</li>
+		</ul>
+	</div>
+<?php endforeach; ?>
 
-$this->breadcrumbs=array(
-	'Projects'=>array('index'),
-	$model->name,
-);
+<div id="new-project-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create Questionnaire</h3>
+  </div>
 
-$this->menu=array(
-	array('label'=>'List Project', 'url'=>array('index')),
-	array('label'=>'Create Project', 'url'=>array('create')),
-	array('label'=>'Update Project', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Project', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Project', 'url'=>array('admin')),
-);
-?>
+	<?php
+	$form = $this->beginWidget('CActiveForm', array(
+			'id' => 'questionnaire-form',
+			'enableAjaxValidation' => false,
+			'htmlOptions' => array(
+					'class' => 'form-horizontal',
+			),
+	));
+	?>
+	<div class="modal-body">
+		<?php echo $form->errorSummary(array($questionnaireModel), NULL, NULL, array('class' => 'alert alert-error')); ?>
+		<div class="control-group">
+			<div class="control-label">
+				<?php echo $form->labelEx($questionnaireModel, 'name'); ?>
+			</div>
+			<div class="controls">
+				<?php echo $form->textField($questionnaireModel, 'name'); ?>
+				<?php echo $form->error($questionnaireModel, 'name'); ?>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<?php echo CHtml::submitButton('Create', array('class' => 'btn btn-primary')); ?>
+	</div>
+	<?php $this->endWidget(); ?>
+</div>
+<?php $this->endContent(); ?>
 
-<h1>View Project #<?php echo $model->id; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'name',
-		'type',
-		'description',
-		'create_at',
-	),
-)); ?>
