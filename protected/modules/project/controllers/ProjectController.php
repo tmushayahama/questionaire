@@ -43,7 +43,7 @@ class ProjectController extends Controller {
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id) {
-		$this->projectCount = UserProject::Model()->count("user_id=".Yii::app()->user->id);
+		$this->projectCount = Project::Model()->count("user_id=".Yii::app()->user->id);
 		$questionnaireModel=new Questionnaire;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -77,12 +77,9 @@ class ProjectController extends Controller {
 			
 
 			$model->attributes = $_POST['Project'];
+      
 			$model->create_at = date("Y-m-d H:i:s");
 			if ($model->save()) {
-				$userProject = new UserProject;
-				$userProject->user_id = Yii::app()->user->id;
-				$userProject->project_id = $model->id;
-				$userProject->save();
 				$this->redirect(array('/site'));
 			}
 		}

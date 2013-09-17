@@ -11,8 +11,8 @@
  * @property string $year
  * @property string $concept
  * @property string $content
- * @property integer $number
- * @property integer $status
+ * @property integer $user_id
+ * @property integer $question_source_id
  *
  * The followings are the available model relations:
  * @property QuestionnaireQuestion[] $questionnaireQuestions
@@ -45,12 +45,12 @@ class Question extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('number, status', 'numerical', 'integerOnly'=>true),
+			array('user_id, question_source_id', 'numerical', 'integerOnly'=>true),
 			array('code, tool, author, concept, content', 'length', 'max'=>150),
 			array('year', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, code, tool, author, year, concept, content, number, status', 'safe', 'on'=>'search'),
+			array('id, code, tool, author, year, concept, content, user_id, question_source_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,8 +79,8 @@ class Question extends CActiveRecord
 			'year' => 'Year',
 			'concept' => 'Concept',
 			'content' => 'Content',
-			'number' => 'Number',
-			'status' => 'Status',
+			'user_id' => 'User',
+			'question_source_id' => 'Question Source',
 		);
 	}
 
@@ -102,8 +102,8 @@ class Question extends CActiveRecord
 		$criteria->compare('year',$this->year,true);
 		$criteria->compare('concept',$this->concept,true);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('number',$this->number);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('question_source_id',$this->question_source_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
