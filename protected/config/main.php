@@ -22,7 +22,7 @@ return array(
 		'modules' => array(
         'project',
 				'user' => array(
-						'tableUsers' => 'que_users',
+						'tableUsers' => 'que_user',
 						# encrypting method (php hash function)
 						'hash' => 'md5',
 						# send activation email

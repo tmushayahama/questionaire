@@ -22,7 +22,7 @@
 		<div class="span2">
 			<div class="well sidebar-nav que-sidebar">
 				<ul class="nav nav-list">
-					<li><h3><?php echo CHtml::link(Yii::app()->user->firstname . ' ' . Yii::app()->user->lastname, '', array('class' => '')); ?></h3></li>
+					<li><h3><?php echo CHtml::link(Yii::app()->user->email, '', array('class' => '')); ?></h3></li>
 					<li class="nav-header">My Statistics</li>
 					<li><a href="#"><?php echo $this->projectCount ?> Projects</a></li>
 					<li><a href="#">0 Questionnaires</a></li>

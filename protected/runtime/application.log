@@ -5439,3 +5439,397 @@ Stack trace:
 REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
 HTTP_REFERER=http://localhost/questionnaire/user/login
 ---
+2013/09/17 18:22:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/09/17 18:22:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_users' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_users`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (23)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:22:28 [error] [exception.CDbException] exception 'CDbException' with message 'The table "que_users" for active record class "RegistrationForm" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('RegistrationFor...')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(23): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#10 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/questionnaire/user/registration
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/09/17 18:23:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_profiles' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_profiles`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (24)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:23:59 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{profiles}}" for active record class "Profile" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Profile))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Profile')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(24): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#10 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/questionnaire/user/registration
+---
+2013/09/17 18:33:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_profiles' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_profiles`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (24)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:33:44 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{profiles}}" for active record class "Profile" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Profile))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Profile')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(24): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#10 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/questionnaire/user/registration
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/09/17 18:36:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:36:31 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (35)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:36:31 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (35)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:36:31 [warning] [application] Failed to set unsafe attribute "organization" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (35)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:37:03 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (35)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:37:03 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (35)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:37:03 [warning] [application] Failed to set unsafe attribute "organization" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (35)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:37:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_profiles' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_profiles`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (37)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:37:03 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{profiles}}" for active record class "Profile" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Profile))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveFinder.php(215): CActiveRecord::model('Profile')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveFinder.php(281): CActiveFinder->buildJoinTree(Object(CJoinElement), 'profile')
+#3 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#4 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1617): CActiveFinder->__construct(Object(RegistrationForm), Array)
+#5 C:\xampp\htdocs\questionnaire\framework\validators\CUniqueValidator.php(103): CActiveRecord->exists(Object(CDbCriteria))
+#6 C:\xampp\htdocs\questionnaire\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(RegistrationForm), 'username')
+#7 C:\xampp\htdocs\questionnaire\framework\base\CModel.php(159): CValidator->validate(Object(RegistrationForm), NULL)
+#8 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(37): CModel->validate()
+#9 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#15 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/questionnaire/user/registration
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:47:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_profiles' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_profiles`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (24)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:47:17 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{profiles}}" for active record class "Profile" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Profile))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Profile')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(24): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#10 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/questionnaire/user/registration
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/09/17 18:47:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_profiles' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_profiles`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (24)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:47:24 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{profiles}}" for active record class "Profile" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Profile))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Profile')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(24): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#10 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/questionnaire/user/registration
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/09/17 18:49:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:49:50 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (38)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:49:50 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (38)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:49:50 [warning] [application] Failed to set unsafe attribute "organization" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (38)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:49:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_profiles_field' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_profiles_field`.
+in C:\xampp\htdocs\questionnaire\protected\modules\user\models\ProfileField.php (39)
+in C:\xampp\htdocs\questionnaire\protected\modules\user\models\Profile.php (175)
+in C:\xampp\htdocs\questionnaire\protected\modules\user\models\Profile.php (154)
+2013/09/17 18:49:50 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{profiles_field}}" for active record class "ProfileField" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(ProfileField))
+#1 C:\xampp\htdocs\questionnaire\protected\modules\user\models\ProfileField.php(39): CActiveRecord::model('ProfileField')
+#2 C:\xampp\htdocs\questionnaire\protected\modules\user\models\Profile.php(175): ProfileField::model()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\user\models\Profile.php(154): Profile->getFields()
+#4 C:\xampp\htdocs\questionnaire\protected\modules\user\components\UActiveRecord.php(12): Profile->widgetAttributes()
+#5 C:\xampp\htdocs\questionnaire\framework\base\CComponent.php(152): UActiveRecord->setAttributes(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(159): CComponent->__set('attributes', Array)
+#7 C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php(39): CActiveRecord->__set('attributes', Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): RegistrationController->actionRegistration()
+#9 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#14 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/questionnaire/user/registration
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:50:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:50:57 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (38)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:50:57 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (38)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:50:57 [warning] [application] Failed to set unsafe attribute "organization" of "RegistrationForm".
+in C:\xampp\htdocs\questionnaire\protected\modules\user\controllers\RegistrationController.php (38)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 18:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:59:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:59:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 18:59:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 19:00:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/registration
+---
+2013/09/17 19:01:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/login
+---
+2013/09/17 19:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/login
+---
+2013/09/17 19:02:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/login
+---
+2013/09/17 19:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/login
+---
+2013/09/17 19:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/user/login
+---
+2013/09/17 19:03:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_user_project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_user_project`.
+in C:\xampp\htdocs\questionnaire\protected\modules\project\models\UserProject.php (24)
+in C:\xampp\htdocs\questionnaire\protected\controllers\SiteController.php (28)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/09/17 19:03:20 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{user_project}}" for active record class "UserProject" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(UserProject))
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\models\UserProject.php(24): CActiveRecord::model('UserProject')
+#2 C:\xampp\htdocs\questionnaire\protected\controllers\SiteController.php(28): UserProject::model()
+#3 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('site')
+#9 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/questionnaire/site
+HTTP_REFERER=http://localhost/questionnaire/user/login
+---
+2013/09/17 19:06:07 [error] [exception.CException] exception 'CException' with message 'Property "RWebUser.firstname" is not defined.' in C:\xampp\htdocs\questionnaire\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\auth\CWebUser.php(140): CComponent->__get('firstname')
+#1 C:\xampp\htdocs\questionnaire\protected\views\home_layouts\home_nav.php(25): CWebUser->__get('firstname')
+#2 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\questionnaire\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\questionnaire\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="row...')
+#6 C:\xampp\htdocs\questionnaire\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="row...')
+#7 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\questionnaire\protected\views\site\home.php(35): CBaseController->endContent()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\questionnaire\framework\web\CController.php(782): CController->renderPartial('home', Array, true)
+#14 C:\xampp\htdocs\questionnaire\protected\controllers\SiteController.php(44): CController->render('home', Array)
+#15 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#16 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('site')
+#21 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/questionnaire/site
+---
+2013/09/17 19:08:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
