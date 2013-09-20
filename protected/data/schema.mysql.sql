@@ -85,13 +85,19 @@ CREATE TABLE `que_question` (
   `code` varchar(150) not null default "",
   `tool` varchar(150) not null default "",
   `author` varchar(150) not null default "",
-  `year` datetime,
+  `year` int(5),
   `concept` varchar(150) not null default "",
   `content` varchar(150),
-  `user_id`int not null default 0,
-  `question_source_id` int not null default 0,
+  `user_id`int not null default 1,
+  `question_source_id` int not null,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+ALTER TABLE `que_question`
+  ADD CONSTRAINT `question_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `que_question`
+  ADD CONSTRAINT `question_question_source_id` FOREIGN KEY (`question_source_id`) REFERENCES `que_question`(`id`) ON DELETE CASCADE;
 
 CREATE TABLE `que_questionnaire_question` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
