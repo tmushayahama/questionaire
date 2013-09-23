@@ -43,7 +43,7 @@ class ProjectController extends Controller {
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id) {
-		$this->projectCount = Project::Model()->count("user_id=".Yii::app()->user->id);
+		$this->projectCount = UserProject::Model()->count("user_id=".Yii::app()->user->id);
 		$questionnaireModel=new Questionnaire;
 
 		// Uncomment the following line if AJAX validation is needed

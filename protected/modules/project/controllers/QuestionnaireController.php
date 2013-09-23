@@ -58,14 +58,21 @@ class QuestionnaireController extends Controller {
 	 */
 	public function actionView($projectId, $questionnaireId) {
 		$questionModel = new Question;
-		$questionSearchModel = new Question('search');
-		$questionSearchModel->unsetAttributes();	// clear any default values
-		if (isset($_GET['Question']))
-			$questionSearchModel->attributes = $_GET['Question'];
-
+		$questionSearchModel = new Question();
+		$searchCriteria = new CDbCriteria;
+		//$questionSearchModel->unsetAttributes();	// clear any default values
+		if (isset($_POST['Question']['questionToolsList'])) {
+			foreach ($_POST['Question']['questionToolsList'] as $tools) {
+				$searchCriteria->addCriteria("tools=".$tools);
+			}
+		}
+		
 
 		$this->render('view', array(
+				'questions'=>Question::Model()->findAll($searchCriteria),
 				'model' => $this->loadModel($questionnaireId),
+				'toolList'=>Question::getUniqueTools(),
+				'conceptList'=>Question::getUniqueConcepts(),
 				'questionSearchModel'=>	$questionSearchModel
 		));
 	}

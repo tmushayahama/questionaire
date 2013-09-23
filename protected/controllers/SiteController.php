@@ -25,7 +25,7 @@ class SiteController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		$this->projectCount = Project::Model()->count("user_id=".Yii::app()->user->id);
+		$this->projectCount = UserProject::Model()->count("user_id=" . Yii::app()->user->id);
 		$projectModel = new Project;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -34,15 +34,18 @@ class SiteController extends Controller {
 		if (isset($_POST['Project'])) {
 			$projectModel->attributes = $_POST['Project'];
 			$projectModel->create_at = date("Y-m-d H:i:s");
-      	$projectModel->user_id = Yii::app()->user->id;
 			if ($projectModel->save()) {
+				$userProject = new UserProject;
+				$userProject->project_id = $projectModel->id;
+				$userProject->user_id = Yii::app()->user->id;
+				$userProject->save();
+				$this->refresh();
 				$this->redirect(array('/site'));
 			}
 		}
-		$userProjects = Project::model()->findAll("user_id = " . Yii::app()->user->id);
 		$this->render('home', array(
-		'projects' => $userProjects,
-		'projectModel' => $projectModel,));
+				'projects' => UserProject::model()->findAll("user_id = " . Yii::app()->user->id),
+				'projectModel' => $projectModel,));
 	}
 
 	/**

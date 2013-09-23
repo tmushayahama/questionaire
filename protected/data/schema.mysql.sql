@@ -58,7 +58,6 @@ CREATE TABLE `que_profile_field` (
 
 CREATE TABLE `que_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-`user_id`int not null,
   `name` varchar(50) NOT NULL,
   `type` varchar(50) NOT NULL,
 	`description` varchar(50) NOT NULL default "",
@@ -66,8 +65,18 @@ CREATE TABLE `que_project` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
-ALTER TABLE `que_project`
-  ADD CONSTRAINT `project_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
+CREATE TABLE `que_user_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`user_id`int not null,
+	`project_id`int not null,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+ALTER TABLE `que_user_project`
+  ADD CONSTRAINT `user_project_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `que_user_project`
+  ADD CONSTRAINT `user_project_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
 
 CREATE TABLE `que_questionnaire` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -82,14 +91,15 @@ ALTER TABLE `que_questionnaire`
 
 CREATE TABLE `que_question` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` varchar(150) not null default "",
+  `sort_code` varchar(10) not null default "",
+	`sort_name` varchar(150) not null default "",
   `tool` varchar(150) not null default "",
   `author` varchar(150) not null default "",
   `year` int(5),
   `concept` varchar(150) not null default "",
-  `content` varchar(150),
-  `user_id`int not null default 1,
-  `question_source_id` int not null,
+  `content` varchar(528),
+  `user_id`int,
+  `question_source_id` int,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 

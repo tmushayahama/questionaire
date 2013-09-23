@@ -4,7 +4,6 @@
 		<h3>Add A Project</h3>
 	</div>
 	<div class="span6">
-
 		<h3><a href="#new-project-modal" role="button" class="btn btn-primary pull-right" data-toggle="modal">Create New Project</a></h3>
 	</div>
 </div>
@@ -12,14 +11,13 @@
 	<ul class="thumbnails ">
 		<br>
 		<?php foreach ($projects as $userProject): ?>
-
 			<li class="span5 que-project-entry">
 				<div class="thumbnail">
 					<img data-src="holder.js/300x200" alt="">
-					<h4><?php echo CHtml::link($userProject->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->id, array('class' => 'active')); ?></h4>
-					<p><?php echo $userProject->description ?></p>
+					<h4><?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->id, array('class' => 'active')); ?></h4>
+					<p><?php echo $userProject->project->description ?></p>
 				</div>
-				<span ><?php echo $userProject->type ?></span>
+				<span ><?php echo $userProject->project->type ?></span>
 				<span class="label pull-right"><i>Created 12-12-12</i></span>
 			</li>
 		<?php endforeach; ?>

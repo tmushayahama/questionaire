@@ -1,3 +1,8 @@
+h1, h2, h3, h4,  h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
 .que-form-container {
 	background-color: #dfeffc;
 	padding:0 0 0 0;
@@ -16,9 +21,35 @@
 	background-color: #d0d5d9;
 }
 .que-sidebar{
-	background-color: #f0f9ff;
+	background-color: #fff;
+	border-right: #515151 solid 1px;
 }
 .que-breadcrumb{
 	background-color: #f0f9ff;
 	border-bottom: #363636 solid 1px;
+}
+.accordion-heading {
+	border-top: #195085 solid 5px;
+	background-color: #f0f5f9;
+}
+.que-checkbox-nav {
+	height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	visibility: visible;
+	border: thin solid white;  
+
+}
+.que-checkbox-nav span li {
+	height: 20px;
+	border-bottom: #EEE solid 1px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	color:#333;
+	line-height: 20px;
+}
+.que-checkbox-nav label {
+	font-size: 0.8em!important;
 }

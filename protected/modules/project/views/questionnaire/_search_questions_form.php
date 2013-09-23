@@ -4,34 +4,63 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="wide form">
-
-	<?php
-	$form = $this->beginWidget('CActiveForm', array(
-			'action' => Yii::app()->createUrl($this->route),
-			'method' => 'get',
+<?php
+$form = $this->beginWidget('CActiveForm', array(
+			'id' => 'question-form',
+			'enableAjaxValidation' => false,
 	));
-	?>
-
-	<div class="row">
-		<?php echo $form->label($model, 'tool'); ?>
-		<?php echo $form->textField($model, 'tool', array('class'=>'input-block-level')); ?>
+?>
+<div class="accordion" id="question-search-1-1">
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#question-search-1-1" href="#collapse-question-search-1-1">
+				Concept<i class="pull-right icon-chevron-down"></i>
+			</a>
+		</div>
+		<div id="collapse-question-search-1-1" class="accordion-body in collapse">
+			<div class="accordion-inner">
+				<div class="row-fluid">
+					<ul class="nav que-checkbox-nav">
+						<?php
+						echo CHtml::activeCheckboxList(
+										$model, 'questionConceptList', CHtml::listData($conceptList, 'concept', 'concept'), array(
+								'labelOptions' => array('style' => 'display:inline'),
+								'separator' => '',
+								'template' => '<li>{input} {label}</li>'
+										)
+						);
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<div class="row">
-		<?php echo $form->label($model, 'concept'); ?>
-		<?php echo $form->textField($model, 'concept', array('class'=>'input-block-level')); ?>
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#question-search-1-1" href="#collapse-question-search-1-2">
+				Tools<i class="pull-right icon-chevron-down"></i>
+			</a>
+		</div>
+		<div id="collapse-question-search-1-2" class="accordion-body collapse">
+			<div class="accordion-inner">
+				<div class="row-fluid">
+					<ul class="nav que-checkbox-nav">
+						<?php
+						echo CHtml::activeCheckboxList(
+										$model, 'questionToolList', CHtml::listData($toolList, 'tool', 'tool'), array(
+								'labelOptions' => array('style' => 'display:inline'),
+								'separator' => '',
+								'template' => '<li>{input} {label}</li>'
+										)
+						);
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
+<?php echo CHtml::submitButton('Search', array('class' => 'btn btn-medium btn-block btn-primary')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'content'); ?>
-		<?php echo $form->textField($model, 'content', array('class'=>'input-block-level')); ?>
-	</div>
+</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search', array('class'=>'btn btn-large btn-block btn-primary')); ?>
-	</div>
-
-	<?php $this->endWidget(); ?>
-
-</div><!-- search-form -->
+<?php $this->endWidget(); ?>

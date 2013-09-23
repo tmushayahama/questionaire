@@ -20,16 +20,6 @@
 	<body>
 		<div class="container-fluid">
 			<?php echo $content ?>
-			<div class="footer">
-				<div id="banner">
-					<div id="info" class="span-12">
-						<b>The Ohio State University College of Medicine</b><br />
-						3190 Graves Hall, 333W. 10th Avenue<br />
-						Columbus, OH 43210 <br />
-						<b> 614-292-4778 </b> <br />
-					</div>
-				</div>
-			</div>
 		</div>
 	</body>
 </html>
