@@ -61,19 +61,29 @@ class QuestionnaireController extends Controller {
 		$questionSearchModel = new Question();
 		$searchCriteria = new CDbCriteria;
 		//$questionSearchModel->unsetAttributes();	// clear any default values
-		if (isset($_POST['Question']['questionToolsList'])) {
-			foreach ($_POST['Question']['questionToolsList'] as $tools) {
-				$searchCriteria->addCriteria("tools=".$tools);
+		if (isset($_POST['Question']['questionToolList'])) {
+			if (is_array($_POST['Question']['questionToolList'])) {
+				foreach ($_POST['Question']['questionToolList'] as $tool) {
+					$searchCriteria->addCondition("tool='" . $tool . "'", 'OR');
+				}
 			}
 		}
-		
+		if (isset($_POST['Question']['questionConceptList'])) {
+			if (is_array($_POST['Question']['questionConceptList'])) {
+				foreach ($_POST['Question']['questionConceptList'] as $concept) {
+					$searchCriteria->addCondition("concept='" . $concept . "'", 'OR');
+				}
+			}
+		}
+
 
 		$this->render('view', array(
-				'questions'=>Question::Model()->findAll($searchCriteria),
+				'questions' => Question::Model()->findAll($searchCriteria),
+				'questionCount' => Question::Model()->count($searchCriteria),
 				'model' => $this->loadModel($questionnaireId),
-				'toolList'=>Question::getUniqueTools(),
-				'conceptList'=>Question::getUniqueConcepts(),
-				'questionSearchModel'=>	$questionSearchModel
+				'toolList' => Question::getUniqueTools(),
+				'conceptList' => Question::getUniqueConcepts(),
+				'questionSearchModel' => $questionSearchModel
 		));
 	}
 
@@ -148,7 +158,7 @@ class QuestionnaireController extends Controller {
 	 */
 	public function actionAdmin() {
 		$model = new Questionnaire('search');
-		$model->unsetAttributes();	// clear any default values
+		$model->unsetAttributes(); // clear any default values
 		if (isset($_GET['Questionnaire']))
 			$model->attributes = $_GET['Questionnaire'];
 
@@ -183,5 +193,4 @@ class QuestionnaireController extends Controller {
 	}
 
 }
-
 
