@@ -1,4 +1,13 @@
 <?php $this->beginContent('//home_layouts/home_nav_questionnaire'); ?>
+<?php
+Yii::app()->clientScript->registerScriptFile(
+				Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
+);
+?>
+<script id="record-task-url" type="text/javascript">
+	var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
+
+</script>
 <div class="row-fluid">
 	<div class="span3">
 		<div class="sidebar-nav que-sidebar">
@@ -6,18 +15,9 @@
 			<?php
 			echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
 					'toolList' => $toolList,
+					"yearList" => $yearList,
 					'conceptList' => $conceptList));
 			?>
-			<ul class="nav nav-list">
-				<li class="nav-header">My Statistics</li>
-				<li><a href="#"><?php echo $this->projectCount ?> Projects</a></li>
-				<li><a href="#">0 Questionnaires</a></li>
-				<li><a href="#">0 Questions</a></li>
-				<li class="nav-header">How To</li>
-				<li><a href="#">Create a Project</a></li>
-				<li><a href="#">Create a Questionnaire</a></li>
-				<li><a href="#">Select Questions</a></li>
-			</ul>
 		</div><!--/.well -->
 	</div><!--/span-->
 	<div class="span6">
@@ -28,25 +28,26 @@
 		</div>
 		<table class="table table-condensed table-hover table-striped">
 			<tbody>
-				<?php 
+				<?php
 				$count = 1;
-				foreach ($questions as $question): ?>
-				<tr>
-					<td class="span1">
-						<?php echo $count++; ?>
-					</td>
-					<td class="span9">
-						<p><?php echo $question->content ?> <br>
-							<small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
-							<a>More Details</a>
+				foreach ($questions as $question):
+					?>
+					<tr>
+						<td class="span1">
+							<?php echo $count++; ?>
+						</td>
+						<td class="span9">
+							<p><?php echo $question->content ?> <br>
+								<small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
+								<a>More Details</a>
 							</p>
-					</td>
-					<td class="span2">
-						<a href="#" class="pull-right btn btn-mini"><i class="icon-plus"></i>Add</a>
-					</td>
-				</tr>
-				
-			<?php endforeach; ?>
+						</td>
+						<td class="span2">
+							<a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn btn-mini"><i class="icon-plus"></i>Add</a>
+						</td>
+					</tr>
+
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 		<?php
@@ -93,10 +94,15 @@
 
 	</div>
 	<div class="span3">
-		<h4><?php echo $model->name." Preview"?></h4>
+		<h4><?php echo $model->name . " Preview" ?></h4>
 		<table>
-			<tbody>
-				
+			<tbody id="question-row">
+				<?php
+				foreach ($question_contents as $question_content):
+					echo $this->renderPartial('_question_row', array(
+							'question_content' => $question_content));
+				endforeach;
+				?>
 			</tbody>
 		</table>
 	</div>
@@ -111,6 +117,18 @@
 		</div>
 		<div class="span6">
 			Selected Concept(s)
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	</div>
+</div>
+<div id="edit-question-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<span><h3>Search Criteria Summary</h3>
+	</span>
+	<div class="modal-body">
+		<div class="span6">
+			<textarea id="edit-question-input" rows=3> </textarea>
 		</div>
 	</div>
 	<div class="modal-footer">

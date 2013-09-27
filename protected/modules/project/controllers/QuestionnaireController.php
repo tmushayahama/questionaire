@@ -29,7 +29,7 @@ class QuestionnaireController extends Controller {
 						'users' => array('*'),
 				),
 				array('allow', // allow authenticated user to perform 'create' and 'update' actions
-						'actions' => array('create', 'update', 'dashboard'),
+						'actions' => array('create', 'update', 'dashboard', 'addquestion'),
 						'users' => array('@'),
 				),
 				array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -64,7 +64,7 @@ class QuestionnaireController extends Controller {
 		if (isset($_POST['Question']['questionToolList'])) {
 			if (is_array($_POST['Question']['questionToolList'])) {
 				foreach ($_POST['Question']['questionToolList'] as $tool) {
-					$searchCriteria->addCondition("tool='" . $tool . "'", 'OR');
+					$searchCriteria->addCondition('tool="' . $tool . '"', 'OR');
 				}
 			}
 		}
@@ -75,16 +75,49 @@ class QuestionnaireController extends Controller {
 				}
 			}
 		}
+		if (isset($_POST['Question']['questionYearList'])) {
+			if (is_array($_POST['Question']['questionYearList'])) {
+				foreach ($_POST['Question']['questionYearList'] as $year) {
+					$searchCriteria->addCondition("year='" . $year . "'", 'OR');
+				}
+			}
+		}
 
 
 		$this->render('view', array(
+				'questionnaireId'=> $questionnaireId,
 				'questions' => Question::Model()->findAll($searchCriteria),
 				'questionCount' => Question::Model()->count($searchCriteria),
 				'model' => $this->loadModel($questionnaireId),
 				'toolList' => Question::getUniqueTools(),
+				'yearList' => Question::getUniqueYear(),
 				'conceptList' => Question::getUniqueConcepts(),
-				'questionSearchModel' => $questionSearchModel
+				'questionSearchModel' => $questionSearchModel,
+				'question_contents' => QuestionnaireQuestion::getUserQuestions($questionnaireId)
 		));
+	}
+
+	public function actionAddQuestion($questionnaireId) {
+		if (Yii::app()->request->isAjaxRequest) {
+			$userQuestion = new UserQuestion;
+			$questionnaireQuestion = new QuestionnaireQuestion;
+			$questionId = Yii::app()->request->getParam('question_id');
+			$content = Question::Model()->findByPk($questionId)->content;
+
+			$userQuestion->question_id = $questionId;
+			$userQuestion->user_id = Yii::app()->user->id;
+			$userQuestion->content = $content;
+			$userQuestion->save(false);
+			$questionnaireQuestion->question_id = $userQuestion->id;
+			$questionnaireQuestion->questionnaire_id = $questionnaireId;
+			$questionnaireQuestion->save(false);
+
+			echo CJSON::encode(array(
+			'question_row' => $this->renderPartial('_question_row', array(
+			'question_content' => $questionnaireQuestion)
+			, true)));
+		}
+		Yii::app()->end();
 	}
 
 	/**

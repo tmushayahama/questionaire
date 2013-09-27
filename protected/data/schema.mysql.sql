@@ -1,6 +1,6 @@
 DROP USER 'questionnaire'@'localhost';
 CREATE USER 'questionnaire'@'localhost' IDENTIFIED BY 'fun++';
-Drop database if exists questionnaire;
+-- Drop database if exists questionnaire;
 CREATE DATABASE questionnaire DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 GRANT ALL PRIVILEGES ON questionnaire.* to 'questionnaire'@'localhost' WITH GRANT OPTION;
 USE questionnaire;
@@ -98,16 +98,25 @@ CREATE TABLE `que_question` (
   `year` int(5),
   `concept` varchar(150) not null default "",
   `content` varchar(528),
-  `user_id`int,
-  `question_source_id` int,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-ALTER TABLE `que_question`
-  ADD CONSTRAINT `question_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
 
-ALTER TABLE `que_question`
-  ADD CONSTRAINT `question_question_source_id` FOREIGN KEY (`question_source_id`) REFERENCES `que_question`(`id`) ON DELETE CASCADE;
+CREATE TABLE `que_user_question` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+	`question_id` int not null,
+	`user_id`int not null,
+  `content` varchar(5000) not null,
+	`scale` int not null default 2,
+	`state` int not null default 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+ALTER TABLE `que_user_question`
+  ADD CONSTRAINT `user_question_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `que_user_question`
+  ADD CONSTRAINT `user_question_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_question`(`id`) ON DELETE CASCADE;
 
 CREATE TABLE `que_questionnaire_question` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -120,5 +129,5 @@ ALTER TABLE `que_questionnaire_question`
   ADD CONSTRAINT `questionnaire_project_questionnaire_id` FOREIGN KEY (`questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
 
 ALTER TABLE `que_questionnaire_question`
-  ADD CONSTRAINT `questionnaire_question_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_question` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `questionnaire_question_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_user_question` (`id`) ON DELETE CASCADE;
 

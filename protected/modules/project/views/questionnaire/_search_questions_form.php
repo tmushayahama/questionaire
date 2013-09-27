@@ -6,9 +6,9 @@
 
 <?php
 $form = $this->beginWidget('CActiveForm', array(
-			'id' => 'question-form',
-			'enableAjaxValidation' => false,
-	));
+		'id' => 'question-form',
+		'enableAjaxValidation' => false,
+				));
 ?>
 <div class="accordion" id="question-search-1-1">
 	<div class="accordion-group">
@@ -59,7 +59,31 @@ $form = $this->beginWidget('CActiveForm', array(
 			</div>
 		</div>
 	</div>
-<?php echo CHtml::submitButton('Search', array('class' => 'btn btn-medium btn-block btn-primary')); ?>
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#question-search-1-1" href="#collapse-question-search-1-3">
+				Year<i class="pull-right icon-chevron-down"></i>
+			</a>
+		</div>
+		<div id="collapse-question-search-1-3" class="accordion-body collapse">
+			<div class="accordion-inner">
+				<div class="row-fluid">
+					<ul class="nav que-checkbox-nav">
+						<?php
+						echo CHtml::activeCheckboxList(
+										$model, 'questionYearList', CHtml::listData($yearList, 'year', 'year'), array(
+								'labelOptions' => array('style' => 'display:inline'),
+								'separator' => '',
+								'template' => '<li>{input} {label}</li>'
+										)
+						);
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php echo CHtml::submitButton('Search', array('class' => 'btn btn-medium btn-block btn-primary')); ?>
 
 </div>
 
