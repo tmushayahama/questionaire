@@ -6,6 +6,8 @@ Yii::app()->clientScript->registerScriptFile(
 ?>
 <script id="record-task-url" type="text/javascript">
 	var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
+	var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
+	var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
 
 </script>
 <div class="row-fluid">
@@ -20,11 +22,21 @@ Yii::app()->clientScript->registerScriptFile(
 			?>
 		</div><!--/.well -->
 	</div><!--/span-->
-	<div class="span6">
+	<div id="que-questions-container"class="span5">
 		<div class="row-fluid">
-			<h4 class="pull-right">Showing Results <b><?php echo $questionCount; ?></b>
-				<a href="#que-search-summary-modal" role="button" data-toggle="modal">View Search Criteria</a>
-			</h4>
+			<div class="span4">
+				<h5 class="pull-left">Results <?php echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
+				</h5>
+			</div>
+			<div class="span8">
+				<?php
+				$this->widget('CLinkPager', array(
+						'pages' => $pages,
+				))
+				?>
+			</div>
+			<br>
+			<a href="#que-search-summary-modal" role="button" data-toggle="modal">View Search Criteria</a>
 		</div>
 		<table class="table table-condensed table-hover table-striped">
 			<tbody>
@@ -34,66 +46,23 @@ Yii::app()->clientScript->registerScriptFile(
 					?>
 					<tr>
 						<td class="span1">
-							<?php echo $count++; ?>
+							<?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
 						</td>
 						<td class="span9">
 							<p><?php echo $question->content ?> <br>
 								<small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
-								<a>More Details</a>
+								<a id="que-more-question-nfo-btn" question-id="<?php echo $question->id ?>" >More Details</a>
 							</p>
 						</td>
 						<td class="span2">
 							<a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn btn-mini"><i class="icon-plus"></i>Add</a>
 						</td>
 					</tr>
-
 				<?php endforeach; ?>
 			</tbody>
 		</table>
-		<?php
-		/* @var $this QuestionnaireController */
-		/* @var $model Questionnaire */
-
-		/* 	$this->breadcrumbs = array(
-		  'Questionnaires' => array('index'),
-		  'Manage',
-		  );
-
-		  $this->menu = array(
-		  array('label' => 'List Questionnaire', 'url' => array('index')),
-		  array('label' => 'Create Questionnaire', 'url' => array('create')),
-		  );
-
-		  Yii::app()->clientScript->registerScript('search', "
-		  $('.search-button').click(function(){
-		  $('.search-form').toggle();
-		  return false;
-		  });
-		  $('.search-form form').submit(function(){
-		  $('#questionnaire-grid').yiiGridView('update', {
-		  data: $(this).serialize()
-		  });
-		  return false;
-		  });
-		  ");
-		  ?>
-
-		  <?php
-		  $this->widget('zii.widgets.grid.CGridView', array(
-		  'id' => 'questionnaire-grid',
-		  'dataProvider' => $questionSearchModel->search(),
-		  'filter' => $questionSearchModel,
-		  'columns' => array(
-		  'content',
-		  array(
-		  'class' => 'CButtonColumn',
-		  ),
-		  ),
-		  )); */
-		?>
-
 	</div>
-	<div class="span3">
+	<div class="span4">
 		<h4><?php echo $model->name . " Preview" ?></h4>
 		<table>
 			<tbody id="question-row">
@@ -124,14 +93,64 @@ Yii::app()->clientScript->registerScriptFile(
 	</div>
 </div>
 <div id="edit-question-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<span><h3>Search Criteria Summary</h3>
+	<span><h3>Edit Question</h3>
 	</span>
 	<div class="modal-body">
-		<div class="span6">
+		<div class="span12">
 			<textarea id="edit-question-input" rows=3> </textarea>
 		</div>
 	</div>
 	<div class="modal-footer">
+		<button id="que-save-edited-btn" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Save</button>
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	</div>
+</div>
+<div id="question-more-info-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<span><h3>Question Info</h3>
+	</span>
+	<div class="modal-body">
+		<div class="span12">
+			<dl class="dl-horizontal">
+				<dt>
+					Content
+				</dt>
+				<dd>
+				<p id="que-more-info-question-content">
+				</p>
+				</dd>
+				<dt>
+					Concept
+				</dt>
+				<dd>
+				<p id="que-more-info-question-concept">
+				</p>
+				</dd>
+				<dt>
+					Tool
+				</dt>
+				<dd>
+				<p id="que-more-info-question-tool">
+				</p>
+				</dd>
+				<dt>
+					Author
+				</dt>
+				<dd>
+				<p id="que-more-info-question-author">
+				</p>
+				</dd>
+				<dt>
+					Year
+				</dt>
+				<dd>
+				<p id="que-more-info-question-year">
+				</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button id="add-question" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Add</button>
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 	</div>
 </div>

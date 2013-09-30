@@ -82,12 +82,16 @@ class QuestionnaireController extends Controller {
 				}
 			}
 		}
-
+		$count = Question::Model()->count($searchCriteria);
+		$pages = new CPagination($count);
+		$pages->pageSize = 50;
+		$pages->applyLimit($searchCriteria);
 
 		$this->render('view', array(
-				'questionnaireId'=> $questionnaireId,
+				'questionnaireId' => $questionnaireId,
 				'questions' => Question::Model()->findAll($searchCriteria),
 				'questionCount' => Question::Model()->count($searchCriteria),
+				'pages' => $pages,
 				'model' => $this->loadModel($questionnaireId),
 				'toolList' => Question::getUniqueTools(),
 				'yearList' => Question::getUniqueYear(),
@@ -113,9 +117,48 @@ class QuestionnaireController extends Controller {
 			$questionnaireQuestion->save(false);
 
 			echo CJSON::encode(array(
-			'question_row' => $this->renderPartial('_question_row', array(
-			'question_content' => $questionnaireQuestion)
-			, true)));
+					'question_row' => $this->renderPartial('_question_row', array(
+							'question_content' => $questionnaireQuestion)
+									, true)));
+		}
+		Yii::app()->end();
+	}
+
+	public function actionEditQuestion() {
+		if (Yii::app()->request->isAjaxRequest) {
+			$userQuestion = new UserQuestion;
+			$questionnaireQuestion = new QuestionnaireQuestion;
+			$questionId = Yii::app()->request->getParam('question_id');
+			$content = Question::Model()->findByPk($questionId)->content;
+
+			$userQuestion->question_id = $questionId;
+			$userQuestion->user_id = Yii::app()->user->id;
+			$userQuestion->content = $content;
+			$userQuestion->save(false);
+			$questionnaireQuestion->question_id = $userQuestion->id;
+			$questionnaireQuestion->questionnaire_id = $questionnaireId;
+			$questionnaireQuestion->save(false);
+
+			echo CJSON::encode(array(
+					'question_row' => $this->renderPartial('_question_row', array(
+							'question_content' => $questionnaireQuestion)
+									, true)));
+		}
+		Yii::app()->end();
+	}
+
+	public function actionMoreInfoQuestion() {
+		if (Yii::app()->request->isAjaxRequest) {
+			$questionId = Yii::app()->request->getParam('question_id');
+			$question = Question::Model()->findByPk($questionId);
+
+			echo CJSON::encode(array(
+			'content' => $question->content,
+			'concept' => $question->concept,
+			'tool' => $question->tool,
+			'author' => $question->author,
+			'year' => $question->year
+			));
 		}
 		Yii::app()->end();
 	}
