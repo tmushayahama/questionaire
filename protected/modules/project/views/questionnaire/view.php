@@ -49,13 +49,15 @@ Yii::app()->clientScript->registerScriptFile(
 							<?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
 						</td>
 						<td class="span9">
-							<p><?php echo $question->content ?> <br>
-								<small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
-								<a id="que-more-question-nfo-btn" question-id="<?php echo $question->id ?>" >More Details</a>
+							<p id="<?php echo 'add-question-'.$question->id ?>"><?php echo $question->content ?> </p>
+							<p><small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
+								<a id="question-modified-btn" question-id="<?php echo $question->id ?>" >Modified <i><?php echo UserQuestion::getModified($question->id); ?></i></a><br>
+									<a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Details</a>
 							</p>
 						</td>
 						<td class="span2">
-							<a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn btn-mini"><i class="icon-plus"></i>Add</a>
+							<a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn-link">Add</a><br>
+							<a question-id="<?php echo $question->id ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -64,7 +66,16 @@ Yii::app()->clientScript->registerScriptFile(
 	</div>
 	<div class="span4">
 		<h4><?php echo $model->name . " Preview" ?></h4>
-		<table>
+		<br>
+		<table class="table table-condensed table-hover">
+			<thead>
+			<th>
+				Content
+			</th>
+			<th>
+				Scale
+			</th>
+			</thead>
 			<tbody id="question-row">
 				<?php
 				foreach ($question_contents as $question_content):
@@ -76,7 +87,6 @@ Yii::app()->clientScript->registerScriptFile(
 		</table>
 	</div>
 </div>
-
 <div id="que-search-summary-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<span><h3>Search Criteria Summary</h3>
 	</span>
@@ -97,7 +107,7 @@ Yii::app()->clientScript->registerScriptFile(
 	</span>
 	<div class="modal-body">
 		<div class="span12">
-			<textarea id="edit-question-input" rows=3> </textarea>
+			<textarea class="span12" id="edit-question-input" rows=3> </textarea>
 		</div>
 	</div>
 	<div class="modal-footer">
@@ -112,39 +122,66 @@ Yii::app()->clientScript->registerScriptFile(
 		<div class="span12">
 			<dl class="dl-horizontal">
 				<dt>
-					Content
+				Content
 				</dt>
 				<dd>
-				<p id="que-more-info-question-content">
-				</p>
+					<p id="que-more-info-question-content">
+					</p>
 				</dd>
 				<dt>
-					Concept
+				Concept
 				</dt>
 				<dd>
-				<p id="que-more-info-question-concept">
-				</p>
+					<p id="que-more-info-question-concept">
+					</p>
 				</dd>
 				<dt>
-					Tool
+				Tool
 				</dt>
 				<dd>
-				<p id="que-more-info-question-tool">
-				</p>
+					<p id="que-more-info-question-tool">
+					</p>
 				</dd>
 				<dt>
-					Author
+				Author
 				</dt>
 				<dd>
-				<p id="que-more-info-question-author">
-				</p>
+					<p id="que-more-info-question-author">
+					</p>
 				</dd>
 				<dt>
-					Year
+				Year
 				</dt>
 				<dd>
-				<p id="que-more-info-question-year">
-				</p>
+					<p id="que-more-info-question-year">
+					</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button id="add-question" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Add</button>
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	</div>
+</div>
+<div id="edit-add-question-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<span><h3>Edit ad Add</h3>
+	</span>
+	<div class="modal-body">
+		<div class="span12">
+			<dl class="dl-horizontal">
+				<dt>
+				Content
+				</dt>
+				<dd>
+					<textarea class="span12" id="edit-add-question-input" rows=3> </textarea>
+				</dd>
+				<dt>
+				Scale
+				</dt>
+				<dd>
+					<textarea class="span12" id="edit-scale-input" rows=3> 
+					</textarea>
 				</dd>
 			</dl>
 		</div>

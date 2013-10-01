@@ -18,6 +18,11 @@
  */
 class UserQuestion extends CActiveRecord
 {
+	public static function getModified($questionId) {
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'question_id='.$questionId;
+		return UserQuestion::Model()->count($criteria);
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.

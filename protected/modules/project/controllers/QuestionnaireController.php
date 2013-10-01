@@ -60,28 +60,35 @@ class QuestionnaireController extends Controller {
 		$questionModel = new Question;
 		$questionSearchModel = new Question();
 		$searchCriteria = new CDbCriteria;
+		$searchToolCriteria = new CDbCriteria;
+		$searchConceptCriteria = new CDbCriteria;
+		$searchYearCriteria = new CDbCriteria;
 		//$questionSearchModel->unsetAttributes();	// clear any default values
 		if (isset($_POST['Question']['questionToolList'])) {
 			if (is_array($_POST['Question']['questionToolList'])) {
 				foreach ($_POST['Question']['questionToolList'] as $tool) {
-					$searchCriteria->addCondition('tool="' . $tool . '"', 'OR');
+				$searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
 				}
 			}
 		}
 		if (isset($_POST['Question']['questionConceptList'])) {
 			if (is_array($_POST['Question']['questionConceptList'])) {
 				foreach ($_POST['Question']['questionConceptList'] as $concept) {
-					$searchCriteria->addCondition("concept='" . $concept . "'", 'OR');
+					$searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
 				}
 			}
 		}
 		if (isset($_POST['Question']['questionYearList'])) {
 			if (is_array($_POST['Question']['questionYearList'])) {
 				foreach ($_POST['Question']['questionYearList'] as $year) {
-					$searchCriteria->addCondition("year='" . $year . "'", 'OR');
+					$searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
 				}
 			}
 		}
+		$searchCriteria->mergeWith($searchToolCriteria, 'AND');
+		$searchCriteria->mergeWith($searchConceptCriteria, 'AND');
+		$searchCriteria->mergeWith($searchYearCriteria, 'AND');
+		
 		$count = Question::Model()->count($searchCriteria);
 		$pages = new CPagination($count);
 		$pages->pageSize = 50;
@@ -267,6 +274,7 @@ class QuestionnaireController extends Controller {
 			Yii::app()->end();
 		}
 	}
+	
 
 }
 

@@ -22,6 +22,7 @@ class Question extends CActiveRecord
 	public $questionToolList;
 	public $questionConceptList;
 	public $questionYearList;
+	
 	public static function getUniqueTools() {
 		/* 	$questionCriteria = new CDbCriteria();
 		  //$questionCriteria->select = "tool";
