@@ -6,9 +6,10 @@ Yii::app()->clientScript->registerScriptFile(
 ?>
 <script id="record-task-url" type="text/javascript">
 	var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
-	var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
+	var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion/questionnaireId/". $questionnaireId); ?>";
 	var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
-
+        var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/".$questionnaireId); ?>"
+        var qRemoveQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/qremovequestion/questionnaireId/".$questionnaireId); ?>"
 </script>
 <div class="row-fluid">
 	<div class="span3">
@@ -38,26 +39,32 @@ Yii::app()->clientScript->registerScriptFile(
 			<br>
 			<a href="#que-search-summary-modal" role="button" data-toggle="modal">View Search Criteria</a>
 		</div>
-		<table class="table table-condensed table-hover table-striped">
+		<table class="table table-condensed">
 			<tbody>
 				<?php
 				$count = 1;
+                                $color="transparent";
 				foreach ($questions as $question):
+                                    if (UserQuestion::getModified($question->id)==0)//number of times added
+                                        $color="transparent";
+                                    else
+                                        $color="lightblue";
 					?>
-					<tr>
+					<tr class="<?php echo $color ?>" id="<?php echo 'display-question-'.$question->id ?>">
 						<td class="span1">
 							<?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
 						</td>
 						<td class="span9">
 							<p id="<?php echo 'add-question-'.$question->id ?>"><?php echo $question->content ?> </p>
 							<p><small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
-								<a id="question-modified-btn" question-id="<?php echo $question->id ?>" >Modified <i><?php echo UserQuestion::getModified($question->id); ?></i></a><br>
+								<a id="question-modified-btn" question-id="<?php echo $question->id ?>" >Added <i><?php echo UserQuestion::getModified($question->id); ?></i></a><br>
 									<a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Details</a>
 							</p>
 						</td>
 						<td class="span2">
 							<a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn-link">Add</a><br>
 							<a question-id="<?php echo $question->id ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
+                                                        <a question-id="<?php echo $question->id ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -165,7 +172,7 @@ Yii::app()->clientScript->registerScriptFile(
 	</div>
 </div>
 <div id="edit-add-question-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<span><h3>Edit ad Add</h3>
+	<span><h3>Edit and Add</h3>
 	</span>
 	<div class="modal-body">
 		<div class="span12">

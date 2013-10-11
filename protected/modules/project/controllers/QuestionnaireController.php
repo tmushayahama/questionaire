@@ -131,7 +131,7 @@ class QuestionnaireController extends Controller {
 		Yii::app()->end();
 	}
 
-	public function actionEditQuestion() {
+	public function actionEditQuestion($questionnaireId) {
 		if (Yii::app()->request->isAjaxRequest) {
 			$userQuestion = new UserQuestion;
 			$questionnaireQuestion = new QuestionnaireQuestion;
@@ -154,6 +154,25 @@ class QuestionnaireController extends Controller {
 		Yii::app()->end();
 	}
 
+        public function actionRemoveQuestion($questionnaireId) {
+		if (Yii::app()->request->isAjaxRequest) {
+			$userQuestionId=Yii::app()->request->getParam('userQuestion_id');
+                        $model=UserQuestion::model()->findByPk($userQuestionId);
+                        $model->delete();
+		}
+		Yii::app()->end();
+	}
+        
+                //problem!!!: will delete questions with same question->id in other questionnaire
+                public function actionQRemoveQuestion($questionnaireId) {
+		if (Yii::app()->request->isAjaxRequest) {
+			$questionId=Yii::app()->request->getParam('question_id');
+                        $model=UserQuestion::model()->findByAttributes(array('question_id'=>$questionId));
+                        $model->delete();
+		}
+		Yii::app()->end();
+	}
+        
 	public function actionMoreInfoQuestion() {
 		if (Yii::app()->request->isAjaxRequest) {
 			$questionId = Yii::app()->request->getParam('question_id');

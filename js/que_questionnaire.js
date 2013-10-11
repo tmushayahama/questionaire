@@ -18,8 +18,9 @@ function ajaxCall(url, data, callback) {
 function addQuestion(data) {
 	//$("#gb-add-commitment-modal").modal("hide");
 	//alert(dat);
-	$("#question-row").append(data["question_row"]);
-}
+	$("#question-row").append(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
+        //$("#add-question-"+question_id).css("color","#999999");//the only way????
+}       
 function editQuestion(data) {
 	//$("#gb-add-commitment-modal").modal("hide");
 	//alert(dat);
@@ -42,8 +43,9 @@ function addQuestionEventHandlers() {
 		e.preventDefault();
 		var question_id = $(this).attr("question-id");
 		//alert(question_id);
-		var data = {question_id: question_id};
-		ajaxCall(addQuestionUrl, data, addQuestion);
+		var data = {question_id: question_id};//????
+                $("#display-question-"+question_id).css("background-color","#E0F2F7");//the only way????
+		ajaxCall(addQuestionUrl, data, addQuestion);//?????
 	});
 	$("body").on("click", ".edit-question-btn", function(e) {
 		e.preventDefault();
@@ -59,6 +61,20 @@ function addQuestionEventHandlers() {
 		$("#edit-add-question-modal").modal("show");
 		$('#edit-add-question-input').val($('#add-question-' + $(this).attr('question-id')).text());
 		$('#edit-add-question-input').select();
+                $('#edit-scale-input').val('');
+	});
+        $("body").on("click", ".remove-question-btn", function(e) {
+		e.preventDefault();
+                var userQuestion_id = $(this).attr("userQuestion_id");
+                var data={userQuestion_id: userQuestion_id};
+		ajaxCall(removeQuestionUrl, data);
+	});
+        $("body").on("click", ".qRemove-question-btn", function(e) {
+		e.preventDefault();
+                var question_id = $(this).attr("question-id");
+                var data={question_id: question_id};
+                $("#display-question-"+question_id).css("background-color","transparent");
+		ajaxCall(qRemoveQuestionUrl, data);
 	});
 
 
