@@ -1,6 +1,6 @@
 DROP USER 'questionnaire'@'localhost';
 CREATE USER 'questionnaire'@'localhost' IDENTIFIED BY 'fun++';
--- Drop database if exists questionnaire;
+Drop database if exists questionnaire;
 CREATE DATABASE questionnaire DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 GRANT ALL PRIVILEGES ON questionnaire.* to 'questionnaire'@'localhost' WITH GRANT OPTION;
 USE questionnaire;

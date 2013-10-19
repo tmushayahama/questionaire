@@ -45,7 +45,9 @@ class SiteController extends Controller {
 		}
 		$this->render('home', array(
 				'projects' => UserProject::model()->findAll("user_id = " . Yii::app()->user->id),
-				'projectModel' => $projectModel,));
+				'projectModel' => $projectModel,
+				'firstname'=>User_2::Model()->findByPk(Yii::app()->user->id)->firstname,
+				'lastname'=>User_2::Model()->findByPk(Yii::app()->user->id)->lastname));
 	}
 
 	/**

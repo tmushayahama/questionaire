@@ -1,4 +1,3 @@
-<?php $this->beginContent('//login_layouts/login_nav'); ?>
 <?php if (Yii::app()->user->hasFlash('loginMessage')): ?>
 
 	<div class="success">
@@ -74,4 +73,3 @@ $form = new CForm(array(
 		),
 				), $model);
 ?>
-<?php $this->endContent(); ?>

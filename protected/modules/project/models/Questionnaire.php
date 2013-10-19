@@ -14,6 +14,17 @@
  */
 class Questionnaire extends CActiveRecord
 {
+	public static function getQuestionnaires($project_id) {
+		$questionnaireCriteria = new CDbCriteria;
+		$questionnaireCriteria->condition = "project_id=".$project_id;
+		$questionnaireCriteria->limit = 3;
+		return Questionnaire::Model()->findAll($questionnaireCriteria);
+	}
+	public static function getQuestionnairesCount($project_id) {
+		$questionnaireCriteria = new CDbCriteria;
+		$questionnaireCriteria->condition = "project_id=".$project_id;
+		return Questionnaire::Model()->count($questionnaireCriteria);
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
