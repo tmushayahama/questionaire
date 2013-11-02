@@ -13,36 +13,44 @@ Yii::app()->clientScript->registerScriptFile(
 </script>
 <ul class="breadcrumb que-breadcrumb">
   <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
-  <li class="active"><?php //echo $projectModel->name ?></li>
+  <li class="active"><?php //echo $projectModel->name                   ?></li>
   <li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>
 </ul>
-<div class="row-fluid que-topbar">
-  <div class="input-prepend input-append">
-    <div class="btn-group">
-      <button class="btn dropdown-toggle" data-toggle="dropdown">
-        All
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        ...
-      </ul>
+<div class="row-fluid que-topbar-question">
+  <div class="span3">
+  </div>
+  <div class="span8">
+    <div class="row-fluid input-prepend input-append">
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+          All
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a>All</a></li>
+          <li><a>Content</a></li>
+          <li><a>Tool</a></li>
+          <li><a>Year</a></li>
+        </ul>
+      </div>
+      <input class="span8" id="appendedPrependedDropdownButton" type="text">
+
+      <div class="btn-group">
+        <button class="btn" >
+          Search
+          <span class="caret"></span>
+        </button> 
+      </div>
     </div>
-    <input class="span2" id="appendedPrependedDropdownButton" type="text">
-    <div class="btn-group">
-      <button class="btn dropdown-toggle" data-toggle="dropdown">
-        Search
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        ...
-      </ul>
+    <div class="span12">
+      <a href="#que-search-summary-modal" class="que-btn btn-link" role="button" data-toggle="modal">View Search Criteria</a>
+      <a href="<?php echo Yii::app()->createUrl("project/questionnaire/view", array("questionnaireId" => $questionnaireId, "projectId" => $projectId)); ?>" class="que-btn btn-link">Go To Questionnaire
+      </a> 
+      <a href="#questionnaire-preview-modal" class="que-btn btn-link" role="button" data-toggle="modal">Preview Questionnaire</a>
     </div>
   </div>
-  <a href="#que-search-summary-modal" class="que-btn btn-link" role="button" data-toggle="modal">View Search Criteria</a>
-  <a href="<?php echo Yii::app()->createUrl("project/questionnaire/view", array("questionnaireId" => $questionnaireId, "projectId" => $projectId)); ?>" class="que-btn btn-link">Go To Questionnaire
-  </a> 
-  <a href="#questionnaire-preview-modal" class="que-btn btn-link" role="button" data-toggle="modal">Preview Questionnaire</a>
 </div>
+
 <div class="row-fluid que-container">
   <div class="span3">
     <div class="sidebar-nav que-questionnaire-sidebar">
@@ -56,6 +64,7 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
   </div>
   <div id="que-questions-container"class="span7">
+
     <div id="que-questionnaire-topbar" class="row-fluid">
       <div class="span4">
         <h5 class="pull-left">Results <?php echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
@@ -79,34 +88,46 @@ Yii::app()->clientScript->registerScriptFile(
         $color = "question-added-row";
       }
       ?>
-
       <div class="row-fluid question-result-row <?php echo $color ?>" id="<?php echo 'display-question-' . $question->id ?>">
         <div class="span1">
           <?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
         </div>
-        <div class="span8">
+        <div class="span6">
           <p id="<?php echo 'add-question-' . $question->id ?>"><?php echo $question->content ?> </p>
           <p><small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
 
           </p>
         </div>
-        <div class="span2">
-          <a id="question-modified-btn" class="pull-right que-stats" question-id="<?php echo $question->id ?>" >
-            <h6>Added</h6>
-            <h5><?php echo UserQuestion::getModified($question->id); ?></h5>
-          </a>
-          <a id="question-modified-btn" class="pull-right que-stats" question-id="<?php echo $question->id ?>" >
-            <h6>Modified</h6>
-            <h5><?php echo UserQuestion::getModified($question->id); ?></h5>
-          </a>
-
+        <div class="pull-right span3">
+          <div class="row-fluid">
+            <a id="question-modified-btn" class="span6 que-stats" question-id="<?php echo $question->id ?>" >
+              <h6>Added</h6>
+              <h5><?php echo UserQuestion::getModified($question->id); ?></h5>
+            </a>
+            <a id="question-modified-btn" class="span6 que-stats" question-id="<?php echo $question->id ?>" >
+              <h6>Modified</h6>
+              <h5><?php echo UserQuestion::getModified($question->id); ?></h5>
+            </a>
+          </div>
 
         </div>
-        <div class="span11">
-          <a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Question Details</a>
-         <!--  <a question-id="<?php //echo $question->id  ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
-          <a question-id="<?php //echo $question->id  ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>-->
-          <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right que-btn btn-small que-btn-green-1">Add Question</a><br>
+        <div class="row-fluid">
+          <div class="span7 offset1">
+            <a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Question Details</a>
+           <!--  <a question-id="<?php //echo $question->id                    ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
+            <a question-id="<?php //echo $question->id                    ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>-->
+          </div>
+          <div class="pull-right btn-group ">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              More Action
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a question-id="<?php echo $question->id ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Before Add</a></li>
+              <li><a question-id="<?php //echo $question->id             ?>" href="#" class="edit-add-question-btn pull-right btn-link">Add Position</a></li>
+            </ul>
+          </div>
+          <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn btn-primary">Add Question</a>
         </div>
       </div>
     <?php endforeach; ?>
@@ -130,8 +151,10 @@ Yii::app()->clientScript->registerScriptFile(
         </thead>
         <tbody id="question-row">
           <?php
+          $count = 1;
           foreach ($question_contents as $question_content):
             echo $this->renderPartial('_question_row', array(
+             'count' => $count++,
              'question_content' => $question_content));
           endforeach;
           ?>

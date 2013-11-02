@@ -105,6 +105,7 @@ function addQuestionEventHandlers() {
 
 }
 
-function editQuestionnaireHandlers () {
-    
+function editQuestionnaireHandlers() {
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
 }

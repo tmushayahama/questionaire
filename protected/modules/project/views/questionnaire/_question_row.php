@@ -3,9 +3,9 @@
 /* @var $model Question */
 /* @var $form CActiveForm */
 ?>
-<div class="row-fluid question-row">
+<div class="ui-state-default row-fluid question-row">
   <div class="span1">
-    1
+    <h3><?php echo $count; ?></h3>
   </div>
   <div class="span8">
     <p><?php echo $question_content->question->content; ?></p><br>
