@@ -1,5 +1,5 @@
 <?php $this->beginContent('//layouts/que_main'); ?>
-<div class="navbar navbar-inverse navbar-top">
+<div class="navbar navbar-top ">
 	<div class="navbar-inner">
 		<div class="container-fluid">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -17,9 +17,5 @@
 		</div>
 	</div>
 </div> <!--navbar-->
-<div class="container-fluid">
-	<div class="row-fluid">
-		<?php echo $content ?>
-	</div>
-</div>
+<?php echo $content ?>
 <?php $this->endContent(); ?>
