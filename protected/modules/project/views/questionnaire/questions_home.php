@@ -14,7 +14,7 @@ Yii::app()->clientScript->registerScriptFile(
 <ul class="breadcrumb que-breadcrumb">
   <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
   <li class="active"><?php //echo $projectModel->name                   ?></li>
-  <li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>
+  <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
 </ul>
 <div class="row-fluid que-topbar-question">
   <div class="span3">
@@ -119,7 +119,7 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
           <div class="pull-right btn-group ">
             <button class="btn dropdown-toggle" data-toggle="dropdown">
-              More Action
+              More Actions
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
@@ -127,7 +127,7 @@ Yii::app()->clientScript->registerScriptFile(
               <li><a question-id="<?php //echo $question->id             ?>" href="#" class="edit-add-question-btn pull-right btn-link">Add Position</a></li>
             </ul>
           </div>
-          <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn btn-primary">Add Question</a>
+          <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn btn-primary">Add</a>
         </div>
       </div>
     <?php endforeach; ?>
@@ -171,7 +171,7 @@ Yii::app()->clientScript->registerScriptFile(
   </span>
   <div class="modal-body">
     <div class="span6">
-      Selected Tool(s)
+      Selected Questionnaire(s)
     </div>
     <div class="span6">
       Selected Concept(s)
@@ -215,7 +215,7 @@ Yii::app()->clientScript->registerScriptFile(
           </p>
         </dd>
         <dt>
-        Tool
+        Questionnaire
         </dt>
         <dd>
           <p id="que-more-info-question-tool">

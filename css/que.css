@@ -142,7 +142,6 @@ h1, h2, h3, h4,  h5, h6 {
     width: 100%;
     height: 260px;
 }
-.que-topbar-question,
 .que-topbar{
     margin-top: 45px;
     margin-bottom: 1px;
@@ -159,7 +158,7 @@ h1, h2, h3, h4,  h5, h6 {
     margin-right:48px;
 }
 #login-form-table input{
-    margin-left:0px;
+    margin-right: 20px;
 }
 #collapse-register-accordion {
     background-color: #f0f5f9;
@@ -233,7 +232,7 @@ h1, h2, h3, h4,  h5, h6 {
     margin-left: 10px;
     margin-top: -10px!important;
     height:30px;
-    width: 120px!important;
+    width: 80px!important;
     font-size: 1.3em;
     font-weight:bold;
     border-radius: 5px;
@@ -343,19 +342,19 @@ h1, h2, h3, h4,  h5, h6 {
     margin-left: 5px;
     display: block;
     text-align: center;
-    border: #2f96b4 solid 1px;
-    border-radius: 8px;
+    border: #7aba7b solid 1px;
+    width: 40px;
+    border-radius: 5px;
     text-decoration: none;
 }
 .question-result-row .que-stats:hover {
     background-color: #F3F6F9;
-    border: #aaa solid 1px;
 }
 .question-result-row .que-stats h5{
-    font-size:1.1em;
+    font-size:1em;
 }
 .question-result-row .que-stats h6{
-    font-size:0.9em;
+    font-size:0.7em;
 }
 .question-added-row {
     background-color: #EEE;

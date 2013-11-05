@@ -63,7 +63,7 @@ class RegistrationController extends Controller {
 					$registerModel->password = UserModule::encrypting($registerModel->password);
 					$registerModel->verifyPassword = UserModule::encrypting($registerModel->verifyPassword);
 					$registerModel->superuser = 0;
-					$registerModel->status = ((Yii::app()->controller->module->activeAfterRegister) ? User::STATUS_ACTIVE : User::STATUS_NOACTIVE);
+					//$registerModel->status = ((Yii::app()->controller->module->activeAfterRegister) ? User::STATUS_ACTIVE : User::STATUS_NOACTIVE);
 
 					if ($registerModel->save()) {
 						$profile->user_id = $registerModel->id;

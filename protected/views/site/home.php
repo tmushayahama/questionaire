@@ -17,7 +17,7 @@ Yii::app()->clientScript->registerScriptFile(
       <div class="nav-collapse collapse">
         <ul class="pull-right nav">
           <?php echo CHtml::link('Logout', Yii::app()->getModule('user')->logoutUrl, array('class' => 'pull-right span1 btn btn-danger')); ?>	
-          <li><?php echo CHtml::link(Yii::app()->user->email, Yii::app()->getModule('user')->logoutUrl, array('class' => 'pull-right ')); ?></li>	
+          <li id="navemail"><?php echo Yii::app()->user->email; ?></li>	
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -51,7 +51,7 @@ Yii::app()->clientScript->registerScriptFile(
         <div class="span6">
           <h2>My Projects (<?php echo $this->projectCount ?>)</h2>
         </div>
-        <button class="pull-right que-btn que-btn-blue-2">Manage Projects</button>
+        <!--<button class="pull-right que-btn que-btn-blue-2">Manage Projects</button>-->
 
       </div>
       <div class="row-fluid">
@@ -60,7 +60,6 @@ Yii::app()->clientScript->registerScriptFile(
             <div id="que-project-add-btn">
               <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/plus.png" alt=""><br>
               <h2>New Project</h2>
-              <p>Manage your questionnaires by </p>
             </div>
             <div id="" class="hide new-project-form">
               <h3>Create Project</h3>

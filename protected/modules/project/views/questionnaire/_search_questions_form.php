@@ -38,7 +38,7 @@ $form = $this->beginWidget('CActiveForm', array(
 	<div class="accordion-group">
 		<div class="accordion-heading">
 			<a class="accordion-toggle" data-toggle="collapse" data-parent="#question-search-1-1" href="#collapse-question-search-1-2">
-				Tools<i class="pull-right icon-chevron-down"></i>
+				Questionnaire<i class="pull-right icon-chevron-down"></i>
 			</a>
 		</div>
 		<div id="collapse-question-search-1-2" class="accordion-body collapse">
