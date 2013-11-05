@@ -100,11 +100,11 @@ Yii::app()->clientScript->registerScriptFile(
         </div>
         <div class="pull-right span3">
           <div class="row-fluid">
-            <a id="question-modified-btn" class="span6 que-stats" question-id="<?php echo $question->id ?>" >
+            <a id="question-added-btn" class="span5 que-stats" question-id="<?php echo $question->id ?>" >
               <h6>Added</h6>
               <h5><?php echo UserQuestion::getModified($question->id); ?></h5>
             </a>
-            <a id="question-modified-btn" class="span6 que-stats" question-id="<?php echo $question->id ?>" >
+            <a id="question-modified-btn" class="span5 que-stats" question-id="<?php echo $question->id ?>" >
               <h6>Modified</h6>
               <h5><?php echo UserQuestion::getModified($question->id); ?></h5>
             </a>

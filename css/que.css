@@ -339,7 +339,7 @@ h1, h2, h3, h4,  h5, h6 {
 }
 .question-result-row .que-stats {
     float:left;
-    margin-left: 5px;
+    margin-left: 2px;
     display: block;
     text-align: center;
     border: #7aba7b solid 1px;
