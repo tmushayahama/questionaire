@@ -1,4 +1,4 @@
-<?php $this->beginContent('//home_layouts/home_nav_questionnaire'); ?>
+<?php $this->beginContent('//home_layouts/navbar'); ?>
 <?php
 Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
@@ -14,10 +14,11 @@ Yii::app()->clientScript->registerScriptFile(
 
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
-    <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
-    <li class="active"><?php //echo $projectModel->name     ?></li>
+    <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
+    <li>Project:<?php echo CHtml::link(Project::model()->findByPk($projectId)->name,Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link'))?><span class="divider">/</span></li>
+    <li class="active">Questionnaire: <?php echo $model->name?></li>
 
-    <li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>
+    <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
 </div>
 

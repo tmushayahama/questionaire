@@ -1,4 +1,4 @@
-<?php $this->beginContent('//home_layouts/home_nav_questionnaire'); ?>
+<?php $this->beginContent('//home_layouts/navbar'); ?>
 <?php
 Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
@@ -12,8 +12,9 @@ Yii::app()->clientScript->registerScriptFile(
   var qRemoveQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/qremovequestion/questionnaireId/" . $questionnaireId); ?>"
 </script>
 <ul class="breadcrumb que-breadcrumb">
-  <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
-  <li class="active"><?php //echo $projectModel->name                   ?></li>
+    <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
+    <li>Project:<?php echo CHtml::link(Project::model()->findByPk($projectId)->name,Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link'));?><span class="divider">/</span></li>
+    <li>Questionnaire: <?php echo CHtml::link($model->name,Yii::app()->createUrl("project/questionnaire/view", array("questionnaireId" => $questionnaireId, "projectId" => $projectId),array('class' => 'btn btn-link')));?><span class="divider">/</span></li>
   <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
 </ul>
 <div class="row-fluid que-topbar-question">

@@ -1,28 +1,11 @@
 <?php
-$this->beginContent('//layouts/que_main');
+$this->beginContent('//home_layouts/navbar');
 /* @var $this SiteController */
 Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/home.js', CClientScript::POS_END
 );
 ?>
-<div class="navbar navbar-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <?php echo CHtml::link('Questionnaire', Yii::app()->getModule('user')->returnUrl, array('class' => 'brand ')); ?>
-      <div class="nav-collapse collapse">
-        <ul class="pull-right nav">
-          <?php echo CHtml::link('Logout', Yii::app()->getModule('user')->logoutUrl, array('class' => 'pull-right span1 btn btn-danger')); ?>	
-          <li id="navemail"><?php echo Yii::app()->user->email; ?></li>	
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div> <!--navbar-->
+
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="sidebar-nav que-home-sidebar">
