@@ -52,10 +52,14 @@ class ProjectController extends Controller {
 		if(isset($_POST['Questionnaire']))
 		{
 			$questionnaireModel->attributes=$_POST['Questionnaire'];
-			$questionnaireModel->project_id = $id;
-			$questionnaireModel->save();
+			if ($questionnaireModel->save(false)) {
+        $projectQuestionnaire = new ProjectQuestionnaire;
+        $projectQuestionnaire->project_id=$id;
+        $projectQuestionnaire->user_questionnaire_id= $questionnaireModel->id;
+        $projectQuestionnaire->save(false);
+      }
 		}
-		$projectQuestionnaire = Questionnaire::model()->findAll("project_id = " . $id);
+		$projectQuestionnaire = ProjectQuestionnaire::model()->findAll("project_id = " . $id);
 		$this->render('view', array(
 				'projectModel' => $this->loadModel($id),
 				'questionnaireModel'=>$questionnaireModel,

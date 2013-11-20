@@ -6,8 +6,8 @@ Yii::app()->clientScript->registerScriptFile(
 );
 ?>
 
-<div class="container-fluid">
-  <div class="row-fluid">
+<div class="container">
+  <div class="row">
     <div class="sidebar-nav que-home-sidebar">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt=""><br>
       <div class="span7">
@@ -46,7 +46,7 @@ Yii::app()->clientScript->registerScriptFile(
             </div>
             <div id="" class="hide new-project-form">
               <h3>Create Project</h3>
-              <?php echo $this->renderPartial('_form', array('model' => $projectModel)); ?>
+              <?php echo $this->renderPartial('_create_project_form', array('model' => $projectModel)); ?>
             </div>
           </div>
           <?php foreach ($projects as $userProject): ?>
@@ -63,13 +63,13 @@ Yii::app()->clientScript->registerScriptFile(
                 <p><?php echo $userProject->project->description ?></p>
               </div>
               <div class="questionnaire-summary">
-                <?php if (Questionnaire::getQuestionnairesCount($userProject->project->id) == 0): ?>
+                <?php if (ProjectQuestionnaire::getProjectQuestionnairesCount($userProject->project->id) == 0): ?>
                   <h4 class="text-center text-warning">No Questionnaire Created</h4>
                 <?php else: ?>
                   <h6 class="text-left">Questionnaire(s)</h6>
                   <table class="table table-hover table-condensed">
                     <tbody>
-                      <?php foreach (Questionnaire::getQuestionnaires($userProject->project->id) as $questionnaire): ?>
+                      <?php foreach (ProjectQuestionnaire::getProjectQuestionnaires($userProject->project->id) as $questionnaire): ?>
                         <tr>
                           <td>
                             <a><?php echo $questionnaire->name; ?></a>
@@ -78,7 +78,7 @@ Yii::app()->clientScript->registerScriptFile(
                       <?php endforeach; ?>
                       <tr>
                         <td>
-                          <?php if (Questionnaire::getQuestionnairesCount($userProject->project->id) > 3): ?>
+                          <?php if (ProjectQuestionnaire::getProjectQuestionnairesCount($userProject->project->id) > 3): ?>
                             <button class="que-btn que-btn-blue-1">Preview All</button>
                           <?php endif; ?>
                         </td>
@@ -91,13 +91,6 @@ Yii::app()->clientScript->registerScriptFile(
             </li>
           <?php endforeach; ?>
         </ul>
-      </div>
-      <div id="onew-project-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h3 id="myModalLabel">Create Project</h3>
-        </div>
-        <?php echo $this->renderPartial('_form', array('model' => $projectModel)); ?>
       </div>
     </div>
   </div>

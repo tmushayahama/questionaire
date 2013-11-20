@@ -6,12 +6,10 @@
  * The followings are the available columns in table '{{project}}':
  * @property integer $id
  * @property string $name
- * @property string $type
  * @property string $description
- * @property string $create_at
  *
  * The followings are the available model relations:
- * @property Questionnaire[] $questionnaires
+ * @property ProjectQuestionnaire[] $projectQuestionnaires
  * @property UserProject[] $userProjects
  */
 class Project extends CActiveRecord
@@ -42,11 +40,12 @@ class Project extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, type, create_at', 'required'),
-			array('name, type, description', 'length', 'max'=>50),
+			array('name', 'required'),
+			array('name', 'length', 'max'=>150),
+			array('description', 'length', 'max'=>500),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, type, description, create_at', 'safe', 'on'=>'search'),
+			array('id, name, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,7 +57,7 @@ class Project extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'questionnaires' => array(self::HAS_MANY, 'Questionnaire', 'project_id'),
+			'projectQuestionnaires' => array(self::HAS_MANY, 'ProjectQuestionnaire', 'project_id'),
 			'userProjects' => array(self::HAS_MANY, 'UserProject', 'project_id'),
 		);
 	}
@@ -71,9 +70,7 @@ class Project extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'type' => 'Type',
 			'description' => 'Description',
-			'create_at' => 'Create At',
 		);
 	}
 
@@ -90,9 +87,7 @@ class Project extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('type',$this->type,true);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('create_at',$this->create_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -33,13 +33,13 @@
       <tr class="que-questionaire-entry">
         <?php
         $row = 1;
-        foreach ($projectQuestionnaire as $questionnaire):
+        foreach ($projectQuestionnaire as $projectQuestionnaire):
           ?>
           <td class="">
             <?php echo $row++; ?>
           </td>
           <td class="name">
-            <h4><?php echo CHtml::link($questionnaire->name, array(Yii::app()->getModule('project')->viewQuestionnaireUrl, 'projectId' => $projectModel->id, 'questionnaireId' => $questionnaire->id), array('class' => '')); ?></h4>
+            <h4><?php echo CHtml::link($projectQuestionnaire->userQuestionnaire->name, array(Yii::app()->getModule('project')->viewQuestionnaireUrl, 'projectId' => $projectModel->id, 'questionnaireId' => $projectQuestionnaire->id), array('class' => '')); ?></h4>
             <p><i class="que-space-right">Created: 12/12/12</i> <i>Last Modified: 12/12/12</i></p>
           </td>
           <td class="">

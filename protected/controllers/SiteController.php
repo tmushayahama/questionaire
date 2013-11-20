@@ -33,7 +33,7 @@ class SiteController extends Controller {
 
 		if (isset($_POST['Project'])) {
 			$projectModel->attributes = $_POST['Project'];
-			$projectModel->create_at = date("Y-m-d H:i:s");
+			//$projectModel->create_at = date("Y-m-d H:i:s");
 			if ($projectModel->save()) {
 				$userProject = new UserProject;
 				$userProject->project_id = $projectModel->id;

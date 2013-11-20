@@ -23,12 +23,6 @@ $form = $this->beginWidget('CActiveForm', array(
 	</div>
 	<div class="control-group">
 		<div class="controls">
-			<?php echo $form->textField($model, 'type', array('placeholder' => 'Type', 'class'=>'input-block-level')); ?>
-			<?php echo $form->error($model, 'type'); ?>
-		</div>
-	</div>
-	<div class="control-group">
-		<div class="controls">
 			<?php echo $form->textArea($model, 'description', array('rows' => 3, 'placeholder' => 'Description', 'class'=>'input-block-level')); ?>
 			<?php echo $form->error($model, 'description'); ?>
 		</div>

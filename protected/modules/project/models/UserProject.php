@@ -7,6 +7,7 @@
  * @property integer $id
  * @property integer $user_id
  * @property integer $project_id
+ * @property integer $privilege_type
  *
  * The followings are the available model relations:
  * @property Project $project
@@ -41,10 +42,10 @@ class UserProject extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('user_id, project_id', 'required'),
-			array('user_id, project_id', 'numerical', 'integerOnly'=>true),
+			array('user_id, project_id, privilege_type', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, project_id', 'safe', 'on'=>'search'),
+			array('id, user_id, project_id, privilege_type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +71,7 @@ class UserProject extends CActiveRecord
 			'id' => 'ID',
 			'user_id' => 'User',
 			'project_id' => 'Project',
+			'privilege_type' => 'Privilege Type',
 		);
 	}
 
@@ -87,6 +89,7 @@ class UserProject extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('project_id',$this->project_id);
+		$criteria->compare('privilege_type',$this->privilege_type);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

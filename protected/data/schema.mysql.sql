@@ -1,4 +1,4 @@
--- DROP USER 'questionnaire'@'localhost';
+DROP USER 'questionnaire'@'localhost';
 CREATE USER 'questionnaire'@'localhost' IDENTIFIED BY 'fun++';
 Drop database if exists questionnaire;
 CREATE DATABASE questionnaire DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
@@ -12,7 +12,7 @@ CREATE TABLE `que_user` (
   `email` varchar(128) NOT NULL,
  `lastname` varchar(50) NOT NULL DEFAULT '',
   `firstname` varchar(50) NOT NULL DEFAULT '',
-	`organization` varchar(100) NOT NULL DEFAULT '',
+    `organization` varchar(100) NOT NULL DEFAULT '',
   `activkey` varchar(128) NOT NULL DEFAULT '',
   `create_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `lastvisit_at` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -55,20 +55,93 @@ CREATE TABLE `que_profile_field` (
   KEY `varname` (`varname`,`widget`,`visible`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
+CREATE TABLE `que_question_sort` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code_name` varchar(10) not null default "",
+    `parent_id` int not null,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+ALTER TABLE `que_question_sort`
+  ADD CONSTRAINT `question_sort_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_question_sort` (`id`) ON DELETE CASCADE;
+
+
+CREATE TABLE `que_question_bank` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sort_id` int not null, 
+  `author` varchar(150) not null default "",
+  `year` int(5),
+  `concept` varchar(150) not null default "",
+  `content` varchar(528),
+    `scale` int,
+    `answer`  varchar(500),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+ALTER TABLE `que_question_bank`
+  ADD CONSTRAINT `question_bank_sort_id` FOREIGN KEY (`sort_id`) REFERENCES `que_question_sort` (`id`) ON DELETE CASCADE;
+
+
+CREATE TABLE `que_questionnaire` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name`varchar(150) not null,
+    `status` int not null default 0,
+    `parent_id` int,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+ALTER TABLE `que_questionnaire`
+  ADD CONSTRAINT `questionnaire_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+
+CREATE TABLE `que_user_question` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `parent_id` int,
+    `questionnaire_id` int not null,
+    `content` varchar(528),
+    `scale` int,
+    `answer`  varchar(500),
+    `status` int not null default 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+ALTER TABLE `que_user_question`
+  ADD CONSTRAINT `user_question_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_question_bank` (`id`) ON DELETE CASCADE;
+ALTER TABLE `que_user_question`
+  ADD CONSTRAINT `user_question_questionnaire_id` FOREIGN KEY (`questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+
+CREATE TABLE `que_questionnaire_question_bank` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+    `bank_questionnaire_id` int not null,
+    `question_id` int not null,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+ALTER TABLE `que_questionnaire_question_bank`
+  ADD CONSTRAINT `questionnaire_question_bank_questionnaire_id` FOREIGN KEY (`bank_questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+ALTER TABLE `que_questionnaire_question_bank`
+  ADD CONSTRAINT `questionnaire_question_bank_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_question_bank` (`id`) ON DELETE CASCADE;
 
 CREATE TABLE `que_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `type` varchar(50) NOT NULL,
-	`description` varchar(50) NOT NULL default "",
-	`create_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `name` varchar(150) not null,
+   `description` varchar(500) not null default '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
+
+
+CREATE TABLE `que_project_questionnaire` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `project_id` int NOT NULL,
+    `user_questionnaire_id` int not null,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
+
+ALTER TABLE `que_project_questionnaire`
+  ADD CONSTRAINT `project_questionnaire_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
+ALTER TABLE `que_project_questionnaire`
+  ADD CONSTRAINT `project_questionnaire_user_questionnaire_id` FOREIGN KEY (`user_questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+
 
 CREATE TABLE `que_user_project` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`user_id`int not null,
 	`project_id`int not null,
+        `privilege_type` int not null default 0,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -77,57 +150,4 @@ ALTER TABLE `que_user_project`
 
 ALTER TABLE `que_user_project`
   ADD CONSTRAINT `user_project_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
-
-CREATE TABLE `que_questionnaire` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name`varchar(150) not null,
-	`project_id` int not null,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
-
-
-ALTER TABLE `que_questionnaire`
-  ADD CONSTRAINT `questionnaire_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
-
-CREATE TABLE `que_question` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `sort_code` varchar(10) not null default "",
-	`sort_name` varchar(150) not null default "",
-  `tool` varchar(150) not null default "",
-  `author` varchar(150) not null default "",
-  `year` int(5),
-  `concept` varchar(150) not null default "",
-  `content` varchar(528),
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE `que_user_question` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-	`question_id` int not null,
-	`user_id`int not null,
-  `content` varchar(5000) not null,
-	`scale` int not null default 2,
-	`state` int not null default 0,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-ALTER TABLE `que_user_question`
-  ADD CONSTRAINT `user_question_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
-
-ALTER TABLE `que_user_question`
-  ADD CONSTRAINT `user_question_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_question`(`id`) ON DELETE CASCADE;
-
-CREATE TABLE `que_questionnaire_question` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `questionnaire_id` int not null,
-  `question_id` int not null,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-
-ALTER TABLE `que_questionnaire_question`
-  ADD CONSTRAINT `questionnaire_project_questionnaire_id` FOREIGN KEY (`questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
-
-ALTER TABLE `que_questionnaire_question`
-  ADD CONSTRAINT `questionnaire_question_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_user_question` (`id`) ON DELETE CASCADE;
 
