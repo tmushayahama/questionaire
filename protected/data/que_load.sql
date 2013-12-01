@@ -1,4 +1,4 @@
-insert into que_question (id, sort_code, sort_name, tool, author, year, concept, content) values
+insert into que_question_bank (id, sort_code, sort_name, tool, author, year, concept, content) values
 (1, '2E1', ' Total Benefit', 'NATC (Nurses\' Attitudes Toward Computers)', 'Stronge', 1985, 'N/A', 'The time spent using a computer is out of proportion to the benefits'),
 (2, '3B2', ' Task Compatibility', 'NATC (Nurses\' Attitudes Toward Computers)', 'Stronge', 1985, 'N/A', 'Nursing data does not lend itself to computers'),
 (3, '3B4', ' Quality Care', 'NATC (Nurses\' Attitudes Toward Computers)', 'Stronge', 1985, 'N/A', 'Computerization of nursing data offers nurses a remarkable opportunity to improve patient care'),

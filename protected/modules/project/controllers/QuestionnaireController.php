@@ -57,30 +57,30 @@ class QuestionnaireController extends Controller {
    * @param integer $id the ID of the model to be displayed
    */
   public function actionView($projectId, $questionnaireId) {
-    $questionModel = new Question;
-    $questionSearchModel = new Question();
+    $questionModel = new QuestionBank;
+    $questionSearchModel = new QuestionBank();
     $searchCriteria = new CDbCriteria;
     $searchToolCriteria = new CDbCriteria;
     $searchConceptCriteria = new CDbCriteria;
     $searchYearCriteria = new CDbCriteria;
     //$questionSearchModel->unsetAttributes();	// clear any default values
-    if (isset($_POST['Question']['questionToolList'])) {
-      if (is_array($_POST['Question']['questionToolList'])) {
-        foreach ($_POST['Question']['questionToolList'] as $tool) {
+    if (isset($_POST['QuestionBank']['questionToolList'])) {
+      if (is_array($_POST['QuestionBank']['questionToolList'])) {
+        foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
           $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
         }
       }
     }
-    if (isset($_POST['Question']['questionConceptList'])) {
-      if (is_array($_POST['Question']['questionConceptList'])) {
-        foreach ($_POST['Question']['questionConceptList'] as $concept) {
+    if (isset($_POST['QuestionBank']['questionConceptList'])) {
+      if (is_array($_POST['QuestionBank']['questionConceptList'])) {
+        foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
           $searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
         }
       }
     }
-    if (isset($_POST['Question']['questionYearList'])) {
-      if (is_array($_POST['Question']['questionYearList'])) {
-        foreach ($_POST['Question']['questionYearList'] as $year) {
+    if (isset($_POST['QuestionBank']['questionYearList'])) {
+      if (is_array($_POST['QuestionBank']['questionYearList'])) {
+        foreach ($_POST['QuestionBank']['questionYearList'] as $year) {
           $searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
         }
       }
@@ -89,7 +89,7 @@ class QuestionnaireController extends Controller {
     $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
     $searchCriteria->mergeWith($searchYearCriteria, 'AND');
 
-    $count = Question::Model()->count($searchCriteria);
+    $count = QuestionBank::Model()->count($searchCriteria);
     $pages = new CPagination($count);
     $pages->pageSize = 50;
     $pages->applyLimit($searchCriteria);
@@ -97,43 +97,43 @@ class QuestionnaireController extends Controller {
     $this->render('questionnaire_home', array(
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
-     'questions' => Question::Model()->findAll($searchCriteria),
-     'questionCount' => Question::Model()->count($searchCriteria),
+     'questions' => QuestionBank::Model()->findAll($searchCriteria),
+     'questionCount' => QuestionBank::Model()->count($searchCriteria),
      'pages' => $pages,
      'model' => $this->loadModel($questionnaireId),
-     'toolList' => Question::getUniqueTools(),
-     'yearList' => Question::getUniqueYear(),
-     'conceptList' => Question::getUniqueConcepts(),
+     'toolList' => QuestionBank::getUniqueTools(),
+     'yearList' => QuestionBank::getUniqueYear(),
+     'conceptList' => QuestionBank::getUniqueConcepts(),
      'questionSearchModel' => $questionSearchModel,
-     'question_contents' => QuestionnaireQuestion::getUserQuestions($questionnaireId)
+     'question_contents' => UserQuestion::getUserQuestions($questionnaireId)
     ));
   }
 
   public function actionViewQuestions($projectId, $questionnaireId) {
-    $questionModel = new Question;
-    $questionSearchModel = new Question();
+    $questionModel = new QuestionBank;
+    $questionSearchModel = new QuestionBank;
     $searchCriteria = new CDbCriteria;
     $searchToolCriteria = new CDbCriteria;
     $searchConceptCriteria = new CDbCriteria;
     $searchYearCriteria = new CDbCriteria;
     //$questionSearchModel->unsetAttributes();	// clear any default values
-    if (isset($_POST['Question']['questionToolList'])) {
-      if (is_array($_POST['Question']['questionToolList'])) {
-        foreach ($_POST['Question']['questionToolList'] as $tool) {
+    if (isset($_POST['QuestionBank']['questionToolList'])) {
+      if (is_array($_POST['QuestionBank']['questionToolList'])) {
+        foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
           $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
         }
       }
     }
-    if (isset($_POST['Question']['questionConceptList'])) {
-      if (is_array($_POST['Question']['questionConceptList'])) {
-        foreach ($_POST['Question']['questionConceptList'] as $concept) {
+    if (isset($_POST['QuestionBank']['questionConceptList'])) {
+      if (is_array($_POST['QuestioBankn']['questionConceptList'])) {
+        foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
           $searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
         }
       }
     }
-    if (isset($_POST['Question']['questionYearList'])) {
-      if (is_array($_POST['Question']['questionYearList'])) {
-        foreach ($_POST['Question']['questionYearList'] as $year) {
+    if (isset($_POST['QuestionBank']['questionYearList'])) {
+      if (is_array($_POST['QuestionBank']['questionYearList'])) {
+        foreach ($_POST['QuestionBank']['questionYearList'] as $year) {
           $searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
         }
       }
@@ -142,7 +142,7 @@ class QuestionnaireController extends Controller {
     $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
     $searchCriteria->mergeWith($searchYearCriteria, 'AND');
 
-    $count = Question::Model()->count($searchCriteria);
+    $count = QuestionBank::Model()->count($searchCriteria);
     $pages = new CPagination($count);
     $pages->pageSize = 50;
     $pages->applyLimit($searchCriteria);
@@ -150,15 +150,15 @@ class QuestionnaireController extends Controller {
     $this->render('questions_home', array(
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
-     'questions' => Question::Model()->findAll($searchCriteria),
-     'questionCount' => Question::Model()->count($searchCriteria),
+     'questions' => QuestionBank::Model()->findAll($searchCriteria),
+     'questionCount' => QuestionBank::Model()->count($searchCriteria),
      'pages' => $pages,
      'model' => $this->loadModel($questionnaireId),
-     'toolList' => Question::getUniqueTools(),
-     'yearList' => Question::getUniqueYear(),
-     'conceptList' => Question::getUniqueConcepts(),
+     'toolList' => QuestionBank::getUniqueTools(),
+     'yearList' => QuestionBank::getUniqueYear(),
+     'conceptList' => QuestionBank::getUniqueConcepts(),
      'questionSearchModel' => $questionSearchModel,
-     'question_contents' => QuestionnaireQuestion::getUserQuestions($questionnaireId)
+     'question_contents' => UserQuestion::getUserQuestions($questionnaireId)
     ));
   }
 

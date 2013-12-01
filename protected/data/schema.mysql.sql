@@ -67,17 +67,17 @@ ALTER TABLE `que_question_sort`
 
 CREATE TABLE `que_question_bank` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `sort_id` int not null, 
+   `sort_code` varchar(150) not null default "", 
+  `sort_name` varchar(150) not null default "", 
+ `tool` varchar(1000) not null default "",
   `author` varchar(150) not null default "",
   `year` int(5),
   `concept` varchar(150) not null default "",
   `content` varchar(528),
-    `scale` int,
-    `answer`  varchar(500),
+    `scale` int not null default 1,
+    `answer`  varchar(500) not null default "",
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-ALTER TABLE `que_question_bank`
-  ADD CONSTRAINT `question_bank_sort_id` FOREIGN KEY (`sort_id`) REFERENCES `que_question_sort` (`id`) ON DELETE CASCADE;
 
 
 CREATE TABLE `que_questionnaire` (

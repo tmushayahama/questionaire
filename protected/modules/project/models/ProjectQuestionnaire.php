@@ -14,12 +14,12 @@
  */
 class ProjectQuestionnaire extends CActiveRecord {
   public static function getProjectQuestionnaires($project_id) {
-    $projectQestionnaireCriteria = new CDbCriteria;
-    $projectQestionnaireCriteria->condition = "project_id=" . $project_id;
-    $projectQestionnaireCriteria->limit = 3;
-    return ProjectQuestionnaire::Model()->findAll($projectQestionnaireCriteria);
+    $projectQuestionnaireCriteria = new CDbCriteria;
+    $projectQuestionnaireCriteria->condition = "project_id=" . $project_id;
+    $projectQuestionnaireCriteria->limit = 3;
+    return ProjectQuestionnaire::Model()->findAll($projectQuestionnaireCriteria);
   }
-
+  
   public static function getProjectQuestionnairesCount($project_id) {
     $projectQestionnaireCriteria = new CDbCriteria;
     $projectQestionnaireCriteria->condition = "project_id=" . $project_id;

@@ -52,7 +52,7 @@ Yii::app()->clientScript->registerScriptFile(
           <?php foreach ($projects as $userProject): ?>
             <li class="que-project-entry">
               <div class="title">
-                <h3><?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->id, array('class' => 'active')); ?>
+                <h3><?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->project->id, array('class' => 'active')); ?>
                 </h3>
               </div>
               <div class="date">
@@ -72,7 +72,7 @@ Yii::app()->clientScript->registerScriptFile(
                       <?php foreach (ProjectQuestionnaire::getProjectQuestionnaires($userProject->project->id) as $questionnaire): ?>
                         <tr>
                           <td>
-                            <a><?php echo $questionnaire->name; ?></a>
+                            <a><?php echo $questionnaire->userQuestionnaire->name; ?></a>
                           </td>
                         </tr>
                       <?php endforeach; ?>

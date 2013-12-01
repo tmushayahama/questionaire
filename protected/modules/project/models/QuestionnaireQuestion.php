@@ -14,12 +14,6 @@
  */
 class QuestionnaireQuestion extends CActiveRecord {
 
-	public static function getUserQuestions($questionnaireId) {
-		$questionnaireQuestionCriteria = new CDbCriteria;
-		//$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
-		$questionnaireQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
-		return QuestionnaireQuestion::Model()->findAll($questionnaireQuestionCriteria);
-	}
 
 	/**
 	 * Returns the static model of the specified AR class.

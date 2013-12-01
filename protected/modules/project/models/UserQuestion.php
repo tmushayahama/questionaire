@@ -5,18 +5,25 @@
  *
  * The followings are the available columns in table '{{user_question}}':
  * @property integer $id
- * @property integer $question_id
- * @property integer $user_id
+ * @property integer $parent_id
+ * @property integer $questionnaire_id
  * @property string $content
  * @property integer $scale
- * @property integer $state
+ * @property string $answer
+ * @property integer $status
  *
  * The followings are the available model relations:
- * @property QuestionnaireQuestion[] $questionnaireQuestions
- * @property Question $question
- * @property User $user
+ * @property Questionnaire $questionnaire
+ * @property QuestionBank $parent
  */
 class UserQuestion extends CActiveRecord {
+
+  public static function getUserQuestions($questionnaireId) {
+    $userQuestionCriteria = new CDbCriteria;
+    //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
+    $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
+    return UserQuestion::Model()->findAll($userQuestionCriteria);
+  }
 
   public static function getModified($questionId) {
     $criteria = new CDbCriteria;
@@ -26,16 +33,15 @@ class UserQuestion extends CActiveRecord {
 
   public static function isAdded($questionId, $questionnaireId) {
     $criteria = new CDbCriteria;
-     $criteria->condition = "user_id=".Yii::app()->user->id;
-    $criteria->addCondition('question_id=' . $questionId);
+    //$criteria->condition = "user_id=" . Yii::app()->user->id;
+   // $criteria->addCondition('question_id=' . $questionId);
     $criteria->addCondition('questionnaire_id=' . $questionnaireId);
-    if (UserQuestion::Model()->count($criteria) ==0) {
+    if (UserQuestion::Model()->count($criteria) == 0) {
       return true;
     }
     return false;
   }
 
-  //public static function AddedIn()
   /**
    * Returns the static model of the specified AR class.
    * @param string $className active record class name.
@@ -59,12 +65,13 @@ class UserQuestion extends CActiveRecord {
     // NOTE: you should only define rules for those attributes that
     // will receive user inputs.
     return array(
-     array('question_id, user_id, content', 'required'),
-     array('question_id, user_id, scale, state', 'numerical', 'integerOnly' => true),
-     array('content', 'length', 'max' => 10),
+     array('questionnaire_id', 'required'),
+     array('parent_id, questionnaire_id, scale, status', 'numerical', 'integerOnly' => true),
+     array('content', 'length', 'max' => 528),
+     array('answer', 'length', 'max' => 500),
      // The following rule is used by search().
      // Please remove those attributes that should not be searched.
-     array('id, question_id, user_id, content, scale, state', 'safe', 'on' => 'search'),
+     array('id, parent_id, questionnaire_id, content, scale, answer, status', 'safe', 'on' => 'search'),
     );
   }
 
@@ -75,9 +82,8 @@ class UserQuestion extends CActiveRecord {
     // NOTE: you may need to adjust the relation name and the related
     // class name for the relations automatically generated below.
     return array(
-     'questionnaireQuestions' => array(self::HAS_MANY, 'QuestionnaireQuestion', 'question_id'),
-     'question' => array(self::BELONGS_TO, 'Question', 'question_id'),
-     'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+     'questionnaire' => array(self::BELONGS_TO, 'Questionnaire', 'questionnaire_id'),
+     'parent' => array(self::BELONGS_TO, 'QuestionBank', 'parent_id'),
     );
   }
 
@@ -87,11 +93,12 @@ class UserQuestion extends CActiveRecord {
   public function attributeLabels() {
     return array(
      'id' => 'ID',
-     'question_id' => 'Question',
-     'user_id' => 'User',
+     'parent_id' => 'Parent',
+     'questionnaire_id' => 'Questionnaire',
      'content' => 'Content',
      'scale' => 'Scale',
-     'state' => 'State',
+     'answer' => 'Answer',
+     'status' => 'Status',
     );
   }
 
@@ -106,11 +113,12 @@ class UserQuestion extends CActiveRecord {
     $criteria = new CDbCriteria;
 
     $criteria->compare('id', $this->id);
-    $criteria->compare('question_id', $this->question_id);
-    $criteria->compare('user_id', $this->user_id);
+    $criteria->compare('parent_id', $this->parent_id);
+    $criteria->compare('questionnaire_id', $this->questionnaire_id);
     $criteria->compare('content', $this->content, true);
     $criteria->compare('scale', $this->scale);
-    $criteria->compare('state', $this->state);
+    $criteria->compare('answer', $this->answer, true);
+    $criteria->compare('status', $this->status);
 
     return new CActiveDataProvider($this, array(
      'criteria' => $criteria,

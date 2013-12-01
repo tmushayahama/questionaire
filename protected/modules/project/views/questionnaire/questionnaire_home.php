@@ -15,36 +15,148 @@ Yii::app()->clientScript->registerScriptFile(
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
-    <li>Project:<?php echo CHtml::link(Project::model()->findByPk($projectId)->name,Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link'))?><span class="divider">/</span></li>
-    <li class="active">Questionnaire: <?php echo $model->name?></li>
+    <li>Project:<?php echo CHtml::link(Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
+    <li class="active">Questionnaire: <?php echo $model->name ?></li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
 </div>
-
-<div class="row-fluid que-container">
-  <div class="span3">
-    <a href="<?php echo Yii::app()->createUrl("project/questionnaire/viewquestions", array("questionnaireId" => $questionnaireId, "projectId" => $projectId)); ?>" class="que-btn que-btn-blue-2 btn-block btn-large">Add More Questions
-    </a>
-  </div><!--/span-->
-  <div class="span7">
-    <div class="heading">
-      <?php echo $model->name ?>
+<div class="container">
+  <div class="row-fluid que-container">
+    <div class="row">
+      <div class="heading">
+        <?php echo $model->name ?>
+      </div>
     </div>
     <br>
-    <div id="sortable">
-      <?php
-      $count = 1;
-      foreach ($question_contents as $question_content):
-        echo $this->renderPartial('_question_row', array(
-         'count'=>$count++,
-         'question_content' => $question_content));
-      endforeach;
-      ?>
-    </div>
+    <div class="row que-border-top-grey-1">
+      <div id="que-questionnaire-sidebar" class="span3">
+        <div class="">
+          <ul id="que-questionnaire-activity-nav" class="">
+            <li class=""><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
 
+            <h5>Add Question</h5>
+            <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
+          </ul>
+
+        </div>
+      </div><!--/span-->
+      <div class="span9 que-questionnaire-content">
+        <div class="tab-content row">
+          <div class="tab-pane active"id="que-questionnaire-edit-pane">
+
+            <div class="tab-heading">
+              Edit Questionnaire
+            </div>
+            <div id="sortable">
+              <?php
+              $count = 1;
+              foreach ($question_contents as $question_content):
+                echo $this->renderPartial('_question_row', array(
+                 'count' => $count++,
+                 'question_content' => $question_content));
+              endforeach;
+              ?>
+            </div>
+          </div>
+          <div class="tab-pane"id="que-questionnaire-bank-pane">
+            <div class="tab-heading">
+              Add from Questionnaire Bank
+            </div>
+          </div>
+          <div class="tab-pane"id="que-question-bank-pane">
+            <div class="tab-heading">
+              Add from Question Bank
+            </div>
+            <div class="row-fluid">
+              <?php
+              echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
+               'pages' => $pages,
+               'questionCount' => $questionCount,
+               'toolList' => $toolList,
+               "yearList" => $yearList,
+               'conceptList' => $conceptList));
+              ?>
+            </div>
+            <div id="que-questionnaire-question-result" class="row-fluid">
+              <div class="row-fluid">
+                <h5 class="pull-left">Results
+                  <?php echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
+                </h5>
+                <div class="span8 pull-right">
+                  <?php
+                  $this->widget('CLinkPager', array(
+                   'pages' => $pages,
+                  ))
+                  ?>
+                </div>
+              </div>
+
+              <?php
+              $count = 1;
+              $color = "transparent";
+              foreach ($questions as $question):
+                //if (!UserQuestion::isAdded($question->id, $questionnaireId)) {//number of times added
+                $color = "transparent";
+                // } else {
+                //$color = "question-added-row";
+                // }
+                ?>
+                <div class="row-fluid question-result-row <?php echo $color ?>" id="<?php echo 'display-question-' . $question->id ?>">
+                  <div class="span1">
+                    <?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
+                  </div>
+                  <div class="span8">
+                    <p id="<?php echo 'add-question-' . $question->id ?>"><?php echo $question->content ?> </p>
+                    <p><small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
+
+                    </p>
+                  </div>
+                  <div class="pull-right span3">
+                    <div class="pull-right span12 row-fluid">
+                      <a id="question-added-btn" class=" pull-right span5 que-stats" question-id="<?php echo $question->id ?>" >
+                        <h6>Added</h6>
+                        <h5><?php //echo UserQuestion::getModified($question->id);       ?></h5>
+                      </a>
+                      <a id="question-modified-btn" class="pull-right span5 que-stats" question-id="<?php echo $question->id ?>" >
+                        <h6>Modified</h6>
+                        <h5><?php //echo UserQuestion::getModified($question->id);       ?></h5>
+                      </a>
+                    </div>
+
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span7 offset1">
+                      <a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Question Details</a>
+                     <!--  <a question-id="<?php //echo $question->id                                       ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
+                      <a question-id="<?php //echo $question->id                                       ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>-->
+                    </div>
+                    <div class="pull-right btn-group ">
+                      <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        More Actions
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a question-id="<?php echo $question->id ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Before Add</a></li>
+                        <li><a question-id="<?php //echo $question->id                                ?>" href="#" class="edit-add-question-btn pull-right btn-link">Add Position</a></li>
+                      </ul>
+                    </div>
+                    <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn que-btn-red-border-1">Add</a>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
+
+
 <div id="que-search-summary-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <span><h3>Search Criteria Summary</h3>
   </span>

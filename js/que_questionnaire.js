@@ -4,6 +4,7 @@
 
 $(document).ready(function(e) {
     console.log("Loading que_questionnaire.js...");
+    
     addQuestionEventHandlers();
     editQuestionnaireHandlers();
 });
@@ -106,6 +107,10 @@ function addQuestionEventHandlers() {
 }
 
 function editQuestionnaireHandlers() {
+    $('#que-questionnaire-activity-nav a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
     $("#sortable").sortable();
     $("#sortable").disableSelection();
 }
