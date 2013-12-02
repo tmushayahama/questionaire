@@ -1,3 +1,11 @@
+
+INSERT INTO `que_user` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`) VALUES
+(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'admin@example.com', '9a24eff8c15a6a141ece27eb6947da0f', 1, 1);
+
+INSERT INTO `que_profile` (`user_id`) VALUES
+(1);
+
+
 insert into que_question_bank (id, sort_code, sort_name, tool, author, year, concept, content) values
 (1, '2E1', ' Total Benefit', 'NATC (Nurses\' Attitudes Toward Computers)', 'Stronge', 1985, 'N/A', 'The time spent using a computer is out of proportion to the benefits'),
 (2, '3B2', ' Task Compatibility', 'NATC (Nurses\' Attitudes Toward Computers)', 'Stronge', 1985, 'N/A', 'Nursing data does not lend itself to computers'),

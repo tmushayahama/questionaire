@@ -29,11 +29,11 @@ class QuestionnaireController extends Controller {
       'users' => array('*'),
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
-      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'viewquestions'),
+      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'viewquestions', 'questionnairesearch'),
       'users' => array('@'),
      ),
      array('allow', // allow admin user to perform 'admin' and 'delete' actions
-      'actions' => array('admin', 'delete'),
+      'actions' => array('admin', 'delete', 'initquestionnaire'),
       'users' => array('admin'),
      ),
      array('deny', // deny all users
@@ -59,11 +59,21 @@ class QuestionnaireController extends Controller {
   public function actionView($projectId, $questionnaireId) {
     $questionModel = new QuestionBank;
     $questionSearchModel = new QuestionBank();
+    $questionnaireSearchModel = new Questionnaire;
+    $searchQuestionnaireCriteria = new CDbCriteria;
     $searchCriteria = new CDbCriteria;
     $searchToolCriteria = new CDbCriteria;
     $searchConceptCriteria = new CDbCriteria;
     $searchYearCriteria = new CDbCriteria;
     //$questionSearchModel->unsetAttributes();	// clear any default values
+
+    if (isset($_POST['QuestionnaireQeustion']['questionnaireList'])) {
+      if (is_array($_POST['QuestionnaireQeustion']['questionnaireList'])) {
+        foreach ($_POST['QuestionnaireQeustion']['questionnaireList'] as $questionnaire) {
+          $searchQuestionnaireCriteria->addCondition('name="' . $questionnaire . '"', 'OR');
+        }
+      }
+    }
     if (isset($_POST['QuestionBank']['questionToolList'])) {
       if (is_array($_POST['QuestionBank']['questionToolList'])) {
         foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
@@ -104,7 +114,9 @@ class QuestionnaireController extends Controller {
      'toolList' => QuestionBank::getUniqueTools(),
      'yearList' => QuestionBank::getUniqueYear(),
      'conceptList' => QuestionBank::getUniqueConcepts(),
+     'questionnaireList' => Questionnaire::getQuestionnaires(),
      'questionSearchModel' => $questionSearchModel,
+     'questionnaireSearchModel' => $questionnaireSearchModel,
      'question_contents' => UserQuestion::getUserQuestions($questionnaireId)
     ));
   }
@@ -112,10 +124,12 @@ class QuestionnaireController extends Controller {
   public function actionViewQuestions($projectId, $questionnaireId) {
     $questionModel = new QuestionBank;
     $questionSearchModel = new QuestionBank;
+    $questionnaireSearchModel = new Questionnaire;
     $searchCriteria = new CDbCriteria;
     $searchToolCriteria = new CDbCriteria;
     $searchConceptCriteria = new CDbCriteria;
     $searchYearCriteria = new CDbCriteria;
+
     //$questionSearchModel->unsetAttributes();	// clear any default values
     if (isset($_POST['QuestionBank']['questionToolList'])) {
       if (is_array($_POST['QuestionBank']['questionToolList'])) {
@@ -147,6 +161,8 @@ class QuestionnaireController extends Controller {
     $pages->pageSize = 50;
     $pages->applyLimit($searchCriteria);
 
+    /* For searching using questionnaire */
+
     $this->render('questions_home', array(
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
@@ -160,6 +176,26 @@ class QuestionnaireController extends Controller {
      'questionSearchModel' => $questionSearchModel,
      'question_contents' => UserQuestion::getUserQuestions($questionnaireId)
     ));
+  }
+
+  public function actionQuestionnaireSearch($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $searchQuestionnaireCriteria = new CDbCriteria;
+      //$questionSearchModel->unsetAttributes();	// clear any default values
+
+      if (isset($_POST['Questionnaire']['questionnaireSelected'])) {
+        if (is_array($_POST['Questionnaire']['questionnaireSelected'])) {
+          foreach ($_POST['Questionnaire']['questionnaireSelected'] as $questionnaire) {
+            $searchQuestionnaireCriteria->addCondition('name="' . $questionnaire . '"', 'OR');
+          }
+        }
+      }
+      echo CJSON::encode(array(
+       'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
+        'questionnaires' => Questionnaire::Model()->findAll($searchQuestionnaireCriteria))
+         , true)));
+    }
+    Yii::app()->end();
   }
 
   public function actionAddQuestion($questionnaireId) {
@@ -307,6 +343,10 @@ class QuestionnaireController extends Controller {
     $this->render('index', array(
      'dataProvider' => $dataProvider,
     ));
+  }
+
+  public function actionInitQuestionnaire() {
+    Questionnaire::initQuestionnaire();
   }
 
   /**

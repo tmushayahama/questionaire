@@ -5,6 +5,7 @@ Yii::app()->clientScript->registerScriptFile(
 );
 ?>
 <script id="record-task-url" type="text/javascript">
+  var questionnaireSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearch/questionnaireId/" . $questionnaireId); ?>";
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion/questionnaireId/" . $questionnaireId); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
@@ -64,6 +65,16 @@ Yii::app()->clientScript->registerScriptFile(
             <div class="tab-heading">
               Add from Questionnaire Bank
             </div>
+            <div class="row-fluid">
+              <?php
+              echo $this->renderPartial('_search_questionnaires_form', array(
+               'model' => $questionnaireSearchModel,
+               'questionnaireList' => $questionnaireList));
+              ?>
+            </div>
+            <div id="questionnaire-result" class="row-fluid">
+
+            </div>
           </div>
           <div class="tab-pane"id="que-question-bank-pane">
             <div class="tab-heading">
@@ -117,11 +128,11 @@ Yii::app()->clientScript->registerScriptFile(
                     <div class="pull-right span12 row-fluid">
                       <a id="question-added-btn" class=" pull-right span5 que-stats" question-id="<?php echo $question->id ?>" >
                         <h6>Added</h6>
-                        <h5><?php //echo UserQuestion::getModified($question->id);       ?></h5>
+                        <h5><?php //echo UserQuestion::getModified($question->id);            ?></h5>
                       </a>
                       <a id="question-modified-btn" class="pull-right span5 que-stats" question-id="<?php echo $question->id ?>" >
                         <h6>Modified</h6>
-                        <h5><?php //echo UserQuestion::getModified($question->id);       ?></h5>
+                        <h5><?php //echo UserQuestion::getModified($question->id);            ?></h5>
                       </a>
                     </div>
 
@@ -129,8 +140,8 @@ Yii::app()->clientScript->registerScriptFile(
                   <div class="row-fluid">
                     <div class="span7 offset1">
                       <a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Question Details</a>
-                     <!--  <a question-id="<?php //echo $question->id                                       ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
-                      <a question-id="<?php //echo $question->id                                       ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>-->
+                     <!--  <a question-id="<?php //echo $question->id                                            ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
+                      <a question-id="<?php //echo $question->id                                            ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>-->
                     </div>
                     <div class="pull-right btn-group ">
                       <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -139,7 +150,7 @@ Yii::app()->clientScript->registerScriptFile(
                       </button>
                       <ul class="dropdown-menu">
                         <li><a question-id="<?php echo $question->id ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Before Add</a></li>
-                        <li><a question-id="<?php //echo $question->id                                ?>" href="#" class="edit-add-question-btn pull-right btn-link">Add Position</a></li>
+                        <li><a question-id="<?php //echo $question->id                                     ?>" href="#" class="edit-add-question-btn pull-right btn-link">Add Position</a></li>
                       </ul>
                     </div>
                     <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn que-btn-red-border-1">Add</a>

@@ -27,7 +27,6 @@ CREATE TABLE `que_user` (
 
 CREATE TABLE `que_profile` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
 

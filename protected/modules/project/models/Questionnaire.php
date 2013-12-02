@@ -18,7 +18,39 @@
  */
 class Questionnaire extends CActiveRecord {
 
- 
+  public $questionnaireSelected;
+
+  public static function initQuestionnaire() {
+    $questionCriteria = new CDbCriteria;
+    $questionCriteria->group = "tool";
+    $questionCriteria->distinct = "tool";
+    $questions = QuestionBank::Model()->findAll($questionCriteria);
+    foreach ($questions as $question) {
+      $questionnaire = new Questionnaire;
+      $questionnaire->name = $question->tool;
+      if ($questionnaire->save(false)) {
+        $questionnaireQuestionBankCriteria = new CDbCriteria;
+        $questionnaireQuestionBankCriteria->addCondition('tool="' . $questionnaire->name . '"');
+        $questionnaireQuestions = QuestionBank::Model()->findAll($questionnaireQuestionBankCriteria);
+        foreach ($questionnaireQuestions as $questionnaireQuestion) {
+          $questionnaireQuestionBank = new QuestionnaireQuestionBank;
+          $questionnaireQuestionBank->bank_questionnaire_id = $questionnaire->id;
+          $questionnaireQuestionBank->question_id = $questionnaireQuestion->id;
+          $questionnaireQuestionBank->save(false);
+        }
+      }
+    }
+  }
+
+  public static function getQuestionnaires() {
+    $questionnaireCriteria = new CDbCriteria;
+    $questionnaireCriteria->group = "name";
+    $questionnaireCriteria->distinct = true;
+    $questionnaireCriteria->addCondition("status=0");
+    $questionnaireCriteria->order = "name asc";
+    return Questionnaire::Model()->findAll($questionnaireCriteria);
+  }
+  
 
   /**
    * Returns the static model of the specified AR class.

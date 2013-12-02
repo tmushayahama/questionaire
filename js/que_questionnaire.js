@@ -4,7 +4,7 @@
 
 $(document).ready(function(e) {
     console.log("Loading que_questionnaire.js...");
-    
+    searchEventHandlers();
     addQuestionEventHandlers();
     editQuestionnaireHandlers();
 });
@@ -16,6 +16,10 @@ function ajaxCall(url, data, callback) {
         data: data,
         success: callback
     });
+}
+function questionnaireSearch(data){
+        $("#questionnaire-result").append(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
+  
 }
 function addQuestion(data) {
     //$("#gb-add-commitment-modal").modal("hide");
@@ -39,6 +43,13 @@ function moreInfoQuestion(data) {
     $("#question-more-info-modal").modal("show");
 }
 
+function searchEventHandlers() {
+     $("#que-search-questionnaire-btn").click(function(e) {
+        e.preventDefault();
+        var data = $("#search-questionnaire-form").serialize();
+        ajaxCall(questionnaireSearchUrl, data, questionnaireSearch);
+    });
+}
 
 function addQuestionEventHandlers() {
     $("body").on("click", ".add-question-btn", function(e) {
