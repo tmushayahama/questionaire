@@ -18,7 +18,7 @@ function ajaxCall(url, data, callback) {
     });
 }
 function questionnaireSearch(data){
-        $("#questionnaire-result").append(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
+        $("#questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
   
 }
 function addQuestion(data) {

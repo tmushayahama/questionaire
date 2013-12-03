@@ -10,7 +10,7 @@ foreach ($questionnaires as $questionnaire):
           <?php echo $questionnaire->name ?> <i class="pull-right icon-chevron-down"></i>
         </a>
       </div>
-      <div id="<?php echo 'collapse-question-search-1-' . $questionnaire->id; ?>" class="accordion-body in collapse">
+      <div id="<?php echo 'collapse-question-search-1-' . $questionnaire->id; ?>" class="accordion-body collapse">
         <div class="accordion-inner">
           <?php
           foreach (QuestionnaireQuestionBank::getQuestionnaireQuestions($questionnaire->id) as $questionnaireQuestion):

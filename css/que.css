@@ -2,8 +2,9 @@ body {
     background-color: #D3D1C4;
 }
 .container {
-    padding: 5px;
+    padding: 2px;
     background-color: #FFF;
+    min-height:1000px;
 }
 .container .row {
     margin-left: 0px!important;
@@ -29,16 +30,19 @@ h1, h2, h3, h4,  h5, h6 {
     margin: 0;
 }
 .navbar-inner {
-    background-color:#102E37;
-    color:#FFF;
+    background-color:#CCC;
+    border-bottom: #800000 solid 5px;
+    color:#222;
     /* background-color:#2c475e;
      background-color: #a4b9cc; */
     background-image: none;
     background-repeat: no-repeat;
     filter: none;
+    
 }
 .navbar-inner a {
-    color: #FFF;
+    color: #800D00;
+    font-weight: bold;
 }
 .que-breadcrumb {
     background-color: #edeff4;
@@ -174,24 +178,24 @@ h1, h2, h3, h4,  h5, h6 {
     margin-right: 20px;
 }
 #collapse-register-accordion {
-    background-color: #f0f5f9;
+    background-color: #F0F0F0;
 }
 #register-accordion  {
 
 }
 #register-accordion .accordion-heading {
-    border-top: #0298AB solid 5px;
-    background-color: #102E37;
+    border-top: #BBB solid 5px;
+    background-color: #EEE;
 }
 #register-accordion .accordion-heading:hover {
-    border-top: #01789B solid 5px;
-    background-color: #061418;
+    border-top: #888 solid 5px;
+    background-color: #BBB;
 }
 #register-accordion i {
     margin-top: 13px;
 }
 #register-accordion a {
-    color: #FFF;
+    color: #800000;
     text-decoration: none;
 }
 .accordion-heading {

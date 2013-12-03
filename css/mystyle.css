@@ -1,11 +1,21 @@
 #banner{height:120px; width:100%;position:fixed;bottom:0;background-color:gray;}
 #info{position: absolute;bottom:20%; left:60%;}
 #topbanner{background-image: -webkit-radial-gradient(left bottom, circle farthest-corner, 
-#00A3EF 0%, #072B61 100%); height:110px;}
-h1#homepage {text-align:left; text-shadow: 0 2px black; position: absolute;left:10px;top:40px;}
+               #00A3EF 0%, #072B61 100%); height:110px;}
+h1#homepage {text-align:left; position: absolute;left:10px;top:40px;}
 .lightblue{background-color:#E0F2F7;}
-.introduction{background-color:#8AB9D5;height:600px;text-align:center;border-radius:20px;border-style:solid;border-width:3px;}
-.introduction h1{margin-top:30px;}
-.introbody{background-color: #CEE3F6;height:460px;margin-left:20px;margin-right:20px;}
-.introbody p {text-align:justify; font-size:22px;padding:20px; line-height:150%;text-indent:2em;}
+.introduction{
+    height:400px;
+    text-align:center;
+    border-width:3px;
+}
+.introduction h1{
+    margin-top:30px;
+}
+.introbody{
+    background-color: #FFF;
+    height:600px;
+    margin:0;
+}
+.introbody p {text-align:justify; font-size:22px;padding:10px; line-height:150%;text-indent:2em;}
 #navemail {margin-top:10px;}
