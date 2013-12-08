@@ -82,8 +82,8 @@ CREATE TABLE `que_question_bank` (
 CREATE TABLE `que_questionnaire` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name`varchar(150) not null,
-    `status` int not null default 0,
-    `parent_id` int,
+  `status` int not null default 0,
+  `parent_id` int,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 ALTER TABLE `que_questionnaire`
@@ -118,7 +118,7 @@ ALTER TABLE `que_questionnaire_question_bank`
 CREATE TABLE `que_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(150) not null,
-   `description` varchar(500) not null default '',
+  `description` varchar(500) not null default '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 
@@ -126,7 +126,7 @@ CREATE TABLE `que_project` (
 CREATE TABLE `que_project_questionnaire` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `project_id` int NOT NULL,
-    `user_questionnaire_id` int not null,
+  `user_questionnaire_id` int not null,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 

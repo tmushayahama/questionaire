@@ -8,41 +8,47 @@ Yii::app()->clientScript->registerScriptFile(
 
 <div class="container">
   <div class="row">
-    <div class="span3">
-      <div class="row que-topbar">
-        <div class="span12">
-          <h3>My Projects (<?php echo $this->projectCount ?>)</h3>
-        </div>
+    <div class="sidebar-nav que-home-sidebar">
+      <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt=""><br>
+      <div class="span7">
+        <h4><?php echo CHtml::link($firstname . "\n" . $lastname, '', array('class' => '')); ?></h4>
       </div>
-      <div id="que-project-add-container">
-        <div id="que-project-add-btn">
-          <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/plus.png" alt=""><br>
-          <h2>New Project</h2>
-        </div>
-        <div id="" class="hide new-project-form">
-          <h3>Create Project</h3>
-          <?php echo $this->renderPartial('_create_project_form', array('model' => $projectModel)); ?>
-        </div>
+      <div class="span4">
+        <button class="pull-right que-btn que-btn-green-1">Edit</button>
       </div>
-    </div>
+      <br>
+      <br>
+      <ul class="nav nav-list nav-stacked">
+        <li class="nav-header">My Statistics</li>
+        <li><a href="#"><?php echo $this->projectCount ?> Projects</a></li>
+        <li><a href="#">0 Questionnaires</a></li>
+        <li><a href="#">0 Questions</a></li>
+        <li class="nav-header">How To</li>
+        <li><a href="#">Create a Project</a></li>
+        <li><a href="#">Create a Questionnaire</a></li>
+        <li><a href="#">Select Questions</a></li>
+      </ul>
+    </div><!--/span-->
     <div class="span8">
-      <div class="row que-topbar">
-        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt="">
-        <div class="">
-          <h4>
-            <a>
-              <?php echo $firstname ?><br>
-              <?php echo $lastname ?>
-            </a>
-          </h4>
-          <h5><a>Edit Profile</a></h5>
+      <div class="row-fluid que-topbar">
+        <div class="span6">
+          <h2>My Projects (<?php echo $this->projectCount ?>)</h2>
         </div>
-
         <!--<button class="pull-right que-btn que-btn-blue-2">Manage Projects</button>-->
+
       </div>
       <div class="row-fluid">
         <ul class="nav ">
-
+          <div id="que-project-add-container">
+            <div id="que-project-add-btn">
+              <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/plus.png" alt=""><br>
+              <h2>New Project</h2>
+            </div>
+            <div id="" class="hide new-project-form">
+              <h3>Create Project</h3>
+              <?php echo $this->renderPartial('_create_project_form', array('model' => $projectModel)); ?>
+            </div>
+          </div>
           <?php foreach ($projects as $userProject): ?>
             <li class="que-project-entry">
               <div class="title">

@@ -7068,3 +7068,2464 @@ Stack trace:
 REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
 HTTP_REFERER=http://localhost/questionnaire/site
 ---
+2013/12/03 13:53:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/03 13:53:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/03 13:54:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/03 13:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/03 13:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/04 02:40:36 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\questionnaire\protected\controllers\SiteController.php:49)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/site
+in C:\xampp\htdocs\questionnaire\protected\controllers\SiteController.php (49)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/04 02:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/12/04 02:44:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/12/04 02:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/
+---
+2013/12/04 02:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:00:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:03:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:13:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:16:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:20:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/04 03:22:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/06 09:32:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/06 09:32:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/06 09:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/06 09:33:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/06 09:33:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/2
+---
+2013/12/06 09:34:42 [error] [php] include(Question.php): failed to open stream: No such file or directory (C:\xampp\htdocs\questionnaire\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(269): spl_autoload_call()
+#1 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): QuestionnaireController->actionMoreInfoQuestion()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#4 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#7 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/moreinfoquestion
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (269)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/06 09:34:44 [error] [php] include(Question.php): failed to open stream: No such file or directory (C:\xampp\htdocs\questionnaire\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(269): spl_autoload_call()
+#1 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): QuestionnaireController->actionMoreInfoQuestion()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#4 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#7 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/moreinfoquestion
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (269)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/06 09:34:46 [error] [php] include(Question.php): failed to open stream: No such file or directory (C:\xampp\htdocs\questionnaire\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(269): spl_autoload_call()
+#1 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(49): QuestionnaireController->actionMoreInfoQuestion()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#4 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#7 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/moreinfoquestion
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (269)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/07 23:32:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/07 23:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/07 23:48:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/07 23:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/07 23:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/07 23:59:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:10:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:22:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 00:30:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 00:30:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:13:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:13:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:15:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:15:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:25:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 02:26:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:26:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:27:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 02:27:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 02:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 02:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 02:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 02:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 02:40:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 02:40:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 02:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:52:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:52:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:57:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:57:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 02:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:00:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:00:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 03:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 03:00:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 03:04:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:21:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:23:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:25:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:25:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:27:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 03:32:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:04:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:09:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:10:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:12:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:13:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:15:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:30:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 04:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:31:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 04:35:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:36:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 04:38:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:38:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:42:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 04:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 04:54:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 04:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:54:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 04:54:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 04:54:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 05:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 05:05:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 05:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 05:08:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 05:18:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 05:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 05:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 05:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:08:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'questionnaire.que_questionnaire_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `que_questionnaire_question`.
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (204)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/08 06:08:44 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{questionnaire_question}}" for active record class "QuestionnaireQuestion" cannot be found in the database.' in C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(QuestionnaireQuestion))
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('QuestionnaireQu...')
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(204): CActiveRecord->__construct()
+#4 [internal function]: QuestionnaireController->actionAddQuestion('1')
+#5 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionnaireController), Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionnaireController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('addquestion')
+#16 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('project/questio...')
+#17 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/questionnaire/project/questionnaire/addquestion/questionnaireId/1
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:28:09 [error] [php] include(Question.php): failed to open stream: No such file or directory (C:\xampp\htdocs\questionnaire\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(205): spl_autoload_call()
+#1 unknown(0): QuestionnaireController->actionAddQuestion()
+#2 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#6 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#12 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#13 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/addquestion/questionnaireId/1
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (205)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/08 06:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:32:28 [error] [exception.CException] exception 'CException' with message 'Property "UserQuestion.user_id" is not defined.' in C:\xampp\htdocs\questionnaire\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(159): CComponent->__set('user_id', '2')
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(208): CActiveRecord->__set('user_id', '2')
+#2 [internal function]: QuestionnaireController->actionAddQuestion('1')
+#3 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionnaireController), Array)
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionnaireController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('addquestion')
+#14 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('project/questio...')
+#15 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/questionnaire/project/questionnaire/addquestion/questionnaireId/1
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:34:56 [error] [php] Undefined variable: count (C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php:8)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(215): QuestionnaireController->renderPartial()
+#2 unknown(0): QuestionnaireController->actionAddQuestion()
+#3 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#7 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#10 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#13 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#14 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/addquestion/questionnaireId/1
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php (8)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (215)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2013/12/08 06:36:54 [error] [php] Undefined variable: question_content (C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php:33)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php(59): QuestionnaireController->renderPartial()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(95): QuestionnaireController->renderInternal()
+#4 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(782): QuestionnaireController->renderPartial()
+#6 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(121): QuestionnaireController->render()
+#7 unknown(0): QuestionnaireController->actionView()
+#8 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#15 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#18 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#19 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php (33)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php (59)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (121)
+2013/12/08 06:43:45 [error] [php] Undefined variable: question_content (C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php:33)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php(59): QuestionnaireController->renderPartial()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(95): QuestionnaireController->renderInternal()
+#4 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(782): QuestionnaireController->renderPartial()
+#6 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(121): QuestionnaireController->render()
+#7 unknown(0): QuestionnaireController->actionView()
+#8 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#15 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#18 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#19 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php (33)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php (59)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (121)
+2013/12/08 06:43:53 [error] [php] Undefined variable: question_content (C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php:33)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php(59): QuestionnaireController->renderPartial()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(95): QuestionnaireController->renderInternal()
+#4 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(782): QuestionnaireController->renderPartial()
+#6 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(121): QuestionnaireController->render()
+#7 unknown(0): QuestionnaireController->actionView()
+#8 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#15 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#18 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#19 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php (33)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php (59)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (121)
+2013/12/08 06:44:41 [error] [php] Undefined variable: question_content (C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#1 C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php(59): QuestionnaireController->renderPartial()
+#2 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\questionnaire\framework\web\CBaseController.php(95): QuestionnaireController->renderInternal()
+#4 C:\xampp\htdocs\questionnaire\framework\web\CController.php(869): QuestionnaireController->renderFile()
+#5 C:\xampp\htdocs\questionnaire\framework\web\CController.php(782): QuestionnaireController->renderPartial()
+#6 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(121): QuestionnaireController->render()
+#7 unknown(0): QuestionnaireController->actionView()
+#8 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#15 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#18 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#19 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\_question_row.php (34)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\views\questionnaire\questionnaire_home.php (59)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (121)
+2013/12/08 06:46:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 06:46:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/1
+---
+2013/12/08 07:08:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gi".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('gi')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/gi
+---
+2013/12/08 07:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 07:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 07:17:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 07:17:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 07:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 07:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/2
+---
+2013/12/08 07:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/2
+---
+2013/12/08 07:17:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2013/12/08 07:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 07:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 07:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 07:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 07:33:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:33:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:58:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:58:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 07:59:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:00:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:09:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:10:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:24:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:29:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 08:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:08:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:22:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:23:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:23:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:45:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:46:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:47:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:56:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:56:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:58:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:59:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 09:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 09:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 10:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 10:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 10:03:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 10:03:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/1
+---
+2013/12/08 10:03:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:03:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:06:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:06:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:08:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:08:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:11:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:12:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:13:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:16:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:24:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:27:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:27:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:37:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:48:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:48:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 10:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 11:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 11:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 11:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 11:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---
+2013/12/08 11:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/1/questionnaireId/89
+---

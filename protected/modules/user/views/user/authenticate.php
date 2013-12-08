@@ -99,7 +99,7 @@
         <div class="accordion-group">
           <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#register-accordion" href="#collapse-register-accordion">
-              <h2>Sign Up<i class="pull-right icon-white icon-chevron-down"></i></h2>
+              <h2>Sign Up<i class="pull-right icon-chevron-down"></i></h2>
             </a>
           </div>
           <div id="collapse-register-accordion" class="accordion-body collapse">

@@ -59,11 +59,11 @@ class ProjectController extends Controller {
         $projectQuestionnaire->save(false);
       }
 		}
-		$projectQuestionnaire = ProjectQuestionnaire::model()->findAll("project_id = " . $id);
+		$projectQuestionnaires = ProjectQuestionnaire::model()->findAll("project_id = " . $id);
 		$this->render('view', array(
 				'projectModel' => $this->loadModel($id),
 				'questionnaireModel'=>$questionnaireModel,
-				'projectQuestionnaire'=>$projectQuestionnaire,
+				'projectQuestionnaires'=>$projectQuestionnaires,
 		));
 	}
 
