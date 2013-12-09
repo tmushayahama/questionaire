@@ -10,9 +10,17 @@ Yii::app()->clientScript->registerScriptFile(
   <div class="row">
     <div class="span3">
       <div class="row que-topbar">
-        <div class="span12">
-          <h3>My Projects (<?php echo $this->projectCount ?>)</h3>
+        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt="">
+        <div class="">
+          <h4>
+            <a>
+              <?php echo $firstname ?><br>
+              <?php echo $lastname ?>
+            </a>
+          </h4>
+          <h5><a>Edit Profile</a></h5>
         </div>
+
       </div>
       <div id="que-project-add-container">
         <div id="que-project-add-btn">
@@ -27,15 +35,8 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
     <div class="span8">
       <div class="row que-topbar">
-        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt="">
-        <div class="">
-          <h4>
-            <a>
-              <?php echo $firstname ?><br>
-              <?php echo $lastname ?>
-            </a>
-          </h4>
-          <h5><a>Edit Profile</a></h5>
+        <div class="span12">
+          <h3>My Projects (<?php echo $this->projectCount ?>)</h3>
         </div>
 
         <!--<button class="pull-right que-btn que-btn-blue-2">Manage Projects</button>-->
