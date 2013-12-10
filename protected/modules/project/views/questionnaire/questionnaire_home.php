@@ -16,8 +16,8 @@ Yii::app()->clientScript->registerScriptFile(
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
-    <li>Project:<?php echo CHtml::link(Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
-    <li class="active">Questionnaire: <?php echo $model->name ?></li>
+    <li><?php echo CHtml::link("Project: ".Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
+    <li class="active">Questionnaire</li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
@@ -48,7 +48,7 @@ Yii::app()->clientScript->registerScriptFile(
           <div class="tab-heading">
             Edit Questionnaire
           </div>
-          <div id="sortable" class="span11">
+          <div id="que-questionnaire-questions" class="span11">
             <?php
             $count = 1;
             foreach ($userQuestions as $userQuestion):

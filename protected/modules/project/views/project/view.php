@@ -78,7 +78,7 @@
             </div>
           </div>
         </div>
-        <?php echo CHtml::submitButton('Create', array('class' => 'btn btn-large btn-block')); ?>
+        <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-green-1 btn-large btn-block')); ?>
 
 
       </div>

@@ -24,7 +24,7 @@ function questionnaireSearch(data){
 function addQuestion(data) {
     //$("#gb-add-commitment-modal").modal("hide");
     //alert(dat);
-    $("#question-row").append(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
+    $("#que-questionnaire-questions").append(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
 }
 function editQuestion(data) {
@@ -122,6 +122,6 @@ function editQuestionnaireHandlers() {
         e.preventDefault();
         $(this).tab('show');
     });
-    $("#sortable").sortable();
-    $("#sortable").disableSelection();
+    $("#que-questionnaire-questions").sortable();
+    $("#que-questionnaire-questions").disableSelection();
 }
