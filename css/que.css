@@ -1,8 +1,11 @@
 body {
     background-color: #D3D1C4;
 }
-.container {
-    padding: 2px;
+.container-fluid {
+    padding:0px;
+    margin:0px;
+}
+.height-1000 {
     min-height:1000px;
 }
 .container .row {
@@ -11,8 +14,10 @@ body {
 .que-white-background {
     background-color: #FFF;
 }
+
 a {
     color:#800D00;
+    cursor: pointer;
 }
 body .modal-slim {
     width: 35%; /* desired relative width */
@@ -31,10 +36,13 @@ h1, h2, h3, h4,  h5, h6 {
     padding: 0;
     margin: 0;
 }
+.navbar {
+    margin: 0px;
+}
 .navbar-inner {
     background-color:#444;
-    border-bottom: #800000 solid 5px;
-    color:#FFF;
+    border-bottom: #990000 solid 5px;
+    color:#F2F2F2;
     /* background-color:#2c475e;
      background-color: #a4b9cc; */
     background-image: none;
@@ -43,20 +51,73 @@ h1, h2, h3, h4,  h5, h6 {
 
 }
 .navbar-inner a {
-    color: #800000;
+    color: #FFF;
     font-weight: bold;
 }
-.que-breadcrumb {
-    background-color: #EEE;
-    top: 43px;
-    position: absolute;
-    width: 100%;
-    height: 30px;
+#navbar-user-info img {
+    margin: 5px;
+    height: 50px;
+    width:60px;
+
 }
+.que-breadcrumb {
+    background-color: transparent;
+    border-bottom: #999 solid 1px;
+    margin-bottom: 0px;
+    padding-left:30px;
+    width: 100%;
+    height: 25px;
+    font-size:1.5em;
+    font-weight:bold;
+}
+.que-topbar-nav{
+    background-color: #C7C4B5;
+    margin-bottom: 20px;
+    padding: 10px 5px 0px 5px;
+    height:60px;
+}
+.que-topbar-nav ul{
+    margin: 0 auto 0 auto;
+    list-style: none;
+    width:700px;
+    height: 100%;
+}
+.que-topbar-nav ul li{
+    float:left;
+    margin-right:1%;
+    width:30%;
+    height: 100%;
+}
+.que-topbar-nav ul li:hover,
+.que-topbar-nav ul li.que-active{
+    background-color: #FAFAFA;
+}
+.que-topbar-nav ul li a{
+    padding-top:10px;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+.que-topbar-nav ul li a small{
+    color:#555;
+} 
+
 .que-form-container {
     background-color: #dfeffc;
     padding:0 0 0 0;
     overflow:hidden;
+}
+#que-projects-sidebar {
+}
+.que-no-project-notification {
+    height: 150px;
+    width: 100%;
+    background-color: #FFF;
+    -webkit-box-shadow: #EEE -3px 1px 3px;
+    -moz-box-shadow: #EEE -3px 1px 3px;
+    box-shadow: #AAA -3px 1px 2px;
+
 }
 .que-projects-container{
     padding:5px 5px 5px 5px;
@@ -89,10 +150,17 @@ h1, h2, h3, h4,  h5, h6 {
 }
 
 #que-project-add-btn img {
-    margin: 0px 30% 15px 30%;
+    margin: 15px 25% 10px 25%;
     background-color: #EEE;
     height:120px;
-    width:38%;
+    width:50%;
+    outline: #AAA solid 8px;
+    border: #FFF solid 3px;
+}
+#que-project-add-btn img:hover {
+    background-color: #CCC;
+    outline: #888 solid 8px;
+    border: #EEE solid 3px;
 }
 #que-project-add-btn h2,
 #que-project-add-btn p {
@@ -151,6 +219,7 @@ h1, h2, h3, h4,  h5, h6 {
 .que-topbar{
     margin-top: 45px;
     margin-bottom: 1px;
+    border-bottom: #999 solid 1px;
     padding: 10px 5px 5px 10px;
     height:60px;
 }
@@ -245,6 +314,15 @@ h1, h2, h3, h4,  h5, h6 {
     font-size: 1.3em;
     font-weight:bold;
     border-radius: 5px;
+}
+.que-btn-logout {
+    margin-left: 10px;
+    margin-top: 10px;
+    height:45px;
+    width: 100px;
+    line-height: 45px;
+    font-size: 1.3em;
+    font-weight:bold;
 }
 .que-btn-color-white {
     color:#FFF;

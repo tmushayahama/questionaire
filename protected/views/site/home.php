@@ -5,23 +5,36 @@ Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/home.js', CClientScript::POS_END
 );
 ?>
-
+<div class="container-fluid">
+  <ul class="row breadcrumb que-breadcrumb">
+    <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider"></span></li>
+  </ul>
+  <div class="row que-topbar-nav ">
+    <ul class="">
+      <li class="que-active">
+        <a>
+          <h4>My Projects</h4>
+          <h5><small>(<?php echo $this->projectCount ?> active)</small></h5>
+        </a>
+      </li>
+      <li>
+        <a>
+          <h4>Activity Log</h4>
+          <h5><small>0 activities</small></h5>
+        </a>
+      </li>
+      <li>
+        <a>
+          <h4>Announcements</h4>
+          <h5><small>0 new</small></h5>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="container">
   <div class="row">
-    <div class="span3">
-      <div class="row que-topbar">
-        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt="">
-        <div class="">
-          <h4>
-            <a>
-              <?php echo $firstname ?><br>
-              <?php echo $lastname ?>
-            </a>
-          </h4>
-          <h5><a>Edit Profile</a></h5>
-        </div>
-
-      </div>
+    <div id="que-projects-sidebar" class="span3">
       <div id="que-project-add-container">
         <div id="que-project-add-btn">
           <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/plus.png" alt=""><br>
@@ -34,17 +47,11 @@ Yii::app()->clientScript->registerScriptFile(
       </div>
     </div>
     <div class="span8">
-      <div class="row que-topbar">
-        <div class="span12">
-          <h3>My Projects (<?php echo $this->projectCount ?>)</h3>
-        </div>
 
-        <!--<button class="pull-right que-btn que-btn-blue-2">Manage Projects</button>-->
-      </div>
       <div class="row-fluid">
         <ul class="nav ">
-
           <?php foreach ($projects as $userProject): ?>
+
             <li class="que-project-entry">
               <div class="title">
                 <h3><?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->project->id, array('class' => 'active')); ?>

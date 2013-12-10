@@ -24,6 +24,12 @@ class User extends CActiveRecord {
 	 * @var timestamp $lastvisit_at
 	 */
 
+  public static function getFirstname() {
+    return User_2::Model()->findByPk(Yii::app()->user->id)->firstname;
+  }
+  public static function getLastname() {
+    return User_2::Model()->findByPk(Yii::app()->user->id)->lastname;
+  }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return CActiveRecord the static model class
