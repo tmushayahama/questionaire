@@ -59,6 +59,17 @@ class QuestionBank extends CActiveRecord {
     ));
   }
 
+  public static function modifyTimesAdded($questionBankModel, $increment) {
+    if ($increment) {
+      $questionBankModel->times_added++;
+    } else {
+      if ($questionBankModel->times_added > 0) {
+        $questionBankModel->times_added--;
+      }
+    }
+    return $questionBankModel->save(false);
+  }
+
   /**
    * Returns the static model of the specified AR class.
    * @param string $className active record class name.

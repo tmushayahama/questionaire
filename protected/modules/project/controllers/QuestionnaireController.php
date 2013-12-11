@@ -192,7 +192,8 @@ class QuestionnaireController extends Controller {
       }
       echo CJSON::encode(array(
        'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
-        'questionnaires' => Questionnaire::Model()->findAll($searchQuestionnaireCriteria))
+        'questionnaires' => Questionnaire::Model()->findAll($searchQuestionnaireCriteria),
+        'questionnaireId' => $questionnaireId)
          , true)));
     }
     Yii::app()->end();
@@ -202,16 +203,22 @@ class QuestionnaireController extends Controller {
     if (Yii::app()->request->isAjaxRequest) {
       $userQuestion = new UserQuestion;
       $questionId = Yii::app()->request->getParam('question_id');
-      $content = QuestionBank::Model()->findByPk($questionId)->content;
+      $questionStatus = Yii::app()->request->getParam('question_status');
+      $questionBankModel = QuestionBank::Model()->findByPk($questionId);
+      $content = $questionBankModel->content;
+
 
       $userQuestion->parent_id = $questionId;
       $userQuestion->questionnaire_id = $questionnaireId;
       $userQuestion->content = $content;
-      $userQuestion->save(false);
+      $userQuestion->status = $questionStatus;
+      if ($userQuestion->save(false)) {
+        QuestionBank::modifyTimesAdded($questionBankModel, true);
+      }
 
       echo CJSON::encode(array(
        'question_row' => $this->renderPartial('_question_row', array(
-        'count' =>1,
+        'count' => 1,
         'userQuestion' => $userQuestion)
          , true)));
     }

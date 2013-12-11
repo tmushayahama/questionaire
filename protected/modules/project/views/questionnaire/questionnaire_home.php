@@ -16,7 +16,7 @@ Yii::app()->clientScript->registerScriptFile(
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
-    <li><?php echo CHtml::link("Project: ".Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
+    <li><?php echo CHtml::link("Project: " . Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
     <li class="active">Questionnaire</li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
@@ -104,54 +104,48 @@ Yii::app()->clientScript->registerScriptFile(
 
             <?php
             $count = 1;
-            $color = "transparent";
+
             foreach ($questions as $question):
-              //if (!UserQuestion::isAdded($question->id, $questionnaireId)) {//number of times added
-              $color = "transparent";
-              // } else {
-              //$color = "question-added-row";
-              // }
+              $questionAddedClass = "";
+              $notificationHideClass = "";
+              $isAdded = UserQuestion::isAdded($question->id, $questionnaireId);
+              if ($isAdded) {
+                $questionAddedClass = "question-added-row";
+              } else {
+                $notificationHideClass = "hidden";
+              }
               ?>
-              <div class="row-fluid question-result-row <?php echo $color ?>" id="<?php echo 'display-question-' . $question->id ?>">
-                <div class="span1">
-                  <?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
-                </div>
-                <div class="span8">
-                  <p id="<?php echo 'add-question-' . $question->id ?>"><?php echo $question->content ?> </p>
-                  <p><small>-<?php echo $question->author ?> <i><?php echo $question->year ?></i></small><br>
+              <div class="question-result-row <?php echo $questionAddedClass ?>" 
+                   question-id="<?php echo $question->id ?>" 
+                   question-status="<?php echo UserQuestion::$FROM_QUESTION; ?>">
 
-                  </p>
+                <div class="added-notification <?php echo $notificationHideClass; ?> row">
+                  <div class="label label-info">
+                   You have added this question in this questionnaire
+                  </div>
                 </div>
-                <div class="pull-right span3">
-                  <div class="pull-right span12 row-fluid">
-                    <a id="question-added-btn" class=" pull-right span5 que-stats" question-id="<?php echo $question->id ?>" >
-                      <h6>Added</h6>
-                      <h5><?php //echo UserQuestion::getModified($question->id);              ?></h5>
-                    </a>
-                    <a id="question-modified-btn" class="pull-right span5 que-stats" question-id="<?php echo $question->id ?>" >
-                      <h6>Modified</h6>
-                      <h5><?php //echo UserQuestion::getModified($question->id);              ?></h5>
-                    </a>
+                <div class="row">
+                  <div class="span1">
+                    <?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
                   </div>
-
+                  <div class="span9">
+                    <blockquote>
+                      <p><?php echo $question->content; ?></p>
+                      <small><?php echo $question->author ?> <cite title="Source Title"><?php echo $question->concept ?></cite></small>
+                    </blockquote>
+                  </div>
+                  <div class="span2">
+                    <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1">Add</a>
+                  </div>
                 </div>
-                <div class="row-fluid">
-                  <div class="span7 offset1">
-                    <a id="que-more-question-info-btn" question-id="<?php echo $question->id ?>" >More Question Details</a>
-                   <!--  <a question-id="<?php //echo $question->id                                              ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Add</a>
-                    <a question-id="<?php //echo $question->id                                              ?>" href="#" class="qRemove-question-btn pull-right btn-link">Remove</a>-->
-                  </div>
-                  <div class="pull-right btn-group ">
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                      More Actions
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a question-id="<?php echo $question->id ?>" href="#" class="edit-add-question-btn pull-right btn-link">Edit Before Add</a></li>
-                      <li><a question-id="<?php //echo $question->id                                       ?>" href="#" class="edit-add-question-btn pull-right btn-link">Add Position</a></li>
-                    </ul>
-                  </div>
-                  <a question-id="<?php echo $question->id ?>" href="#" class="add-question-btn pull-right btn que-btn-red-border-1">Add</a>
+                <div class="que-question-footer row">
+                  <a class="btn btn-link question-added-btn que-stats" question-id="<?php echo $question->id ?>" >
+                    <strong><?php echo $question->times_added; ?></strong> Times Added
+                  </a>
+                  <a class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
+                    <strong><?php echo $question->times_modified; ?></strong> Times Modified
+                  </a>
+                  <a class="pull-right btn btn-link que-more-question-info-btn">More Question Details</a>
                 </div>
               </div>
             <?php endforeach; ?>

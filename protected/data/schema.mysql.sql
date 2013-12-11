@@ -73,8 +73,10 @@ CREATE TABLE `que_question_bank` (
   `year` int(5),
   `concept` varchar(150) not null default "",
   `content` varchar(528),
-    `scale` int not null default 1,
-    `answer`  varchar(500) not null default "",
+  `scale` int not null default 1,
+  `answer`  varchar(500) not null default "",
+  `times_added` int not null default 0,
+  `times_modified` int not null default 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
@@ -119,6 +121,7 @@ CREATE TABLE `que_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(150) not null,
   `description` varchar(500) not null default '',
+  `status` int not null default 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 

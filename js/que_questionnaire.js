@@ -1,7 +1,10 @@
+
+/*----------------GLOBAL VARIABLES ---------*/
+var QUESTION_ADDED_COLOR = "#999";
+var QUESTION_ADDED_OUTLINE = "#EFDAA5 solid 5px";
 // ________________________________________________________________
 // |-------------------------INITIALIZATIONS-----------------------|
 // `````````````````````````````````````````````````````````````````
-
 $(document).ready(function(e) {
     console.log("Loading que_questionnaire.js...");
     searchEventHandlers();
@@ -17,9 +20,9 @@ function ajaxCall(url, data, callback) {
         success: callback
     });
 }
-function questionnaireSearch(data){
-        $("#questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
-  
+function questionnaireSearch(data) {
+    $("#questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
+
 }
 function addQuestion(data) {
     //$("#gb-add-commitment-modal").modal("hide");
@@ -44,7 +47,7 @@ function moreInfoQuestion(data) {
 }
 
 function searchEventHandlers() {
-     $("#que-search-questionnaire-btn").click(function(e) {
+    $("#que-search-questionnaire-btn").click(function(e) {
         e.preventDefault();
         var data = $("#search-questionnaire-form").serialize();
         ajaxCall(questionnaireSearchUrl, data, questionnaireSearch);
@@ -54,11 +57,15 @@ function searchEventHandlers() {
 function addQuestionEventHandlers() {
     $("body").on("click", ".add-question-btn", function(e) {
         e.preventDefault();
-        var question_id = $(this).attr("question-id");
-        //alert(question_id);
-        var data = {question_id: question_id};//????
-        $("#display-question-" + question_id).css("background-color", "#E0F2F7");//the only way????
-        ajaxCall(addQuestionUrl, data, addQuestion);//?????
+        var questionId = $(this).closest(".question-result-row").attr("question-id");
+        var questionStatus = $(this).closest(".question-result-row").attr("question-status");
+        var data = {question_id: questionId,
+            question_status: questionStatus};//????
+        ajaxCall(addQuestionUrl, data, addQuestion);
+        $(this).closest(".question-result-row").addClass("question-added-row")
+                .find(".added-notification").removeClass("hide");
+
+        $(this).text("Added");
     });
     $("body").on("click", ".edit-question-btn", function(e) {
         e.preventDefault();

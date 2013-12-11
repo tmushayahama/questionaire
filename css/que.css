@@ -476,31 +476,31 @@ h1, h2, h3, h4,  h5, h6 {
     width:100%;
 }
 .question-result-row {
-    border-bottom: #888 solid 1px;
+    outline: #FEFEFE solid 5px;
+    border: #BBB solid 1px;
     background-color: #FFF;
-    margin-bottom: 2px;
+    margin: 15px;
     padding: 5px;
 }
-.question-result-row .que-stats {
+.que-question-footer {
+    background-color: #EDEFF4;
+    height:30px;
+}
+.que-question-footer .que-stats {
     float:left;
     display: block;
-    text-align: center;
-    border: #7aba7b solid 1px;
-    border-radius: 5px;
+    border-right: #FFF solid 2px;
     text-decoration: none;
 }
-.question-result-row .que-stats:hover {
-    background-color: #F3F6F9;
+.que-question-footer .que-stats:hover {
+    background-color: #DDD;
 }
-.question-result-row .que-stats h5{
-    font-size:1.2em;
-}
-.question-result-row .que-stats h6{
-    font-size:0.9em;
+.que-question-footer .btn-link {
+    color: #006699!important;
 }
 .question-added-row {
-    background-color: #EEE;
-    color: #888;
+    outline: #EFDAA5 solid 5px;
+    color: #999!important;
 }
 /*------QUESTIONNAIRE-----------*/
 .que-border-top-red-1{

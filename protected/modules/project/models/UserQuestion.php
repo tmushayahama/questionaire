@@ -18,6 +18,12 @@
  */
 class UserQuestion extends CActiveRecord {
 
+  public static $FROM_QUESTION = 0;
+  public static $FROM_QUESTION_MODIFIED = 1;
+  public static $FROM_QUESTIONNAIRE = 2;
+  public static $FROM_QUESTIONNAIRE_MODIFIED = 3;
+  public static $NEW_QUESTION = 4;
+  
   public static function getUserQuestions($questionnaireId) {
     $userQuestionCriteria = new CDbCriteria;
     //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
@@ -33,13 +39,14 @@ class UserQuestion extends CActiveRecord {
 
   public static function isAdded($questionId, $questionnaireId) {
     $criteria = new CDbCriteria;
+    //$parentId = QuestionBank::Model()->findByPk($questionId);
     //$criteria->condition = "user_id=" . Yii::app()->user->id;
-   // $criteria->addCondition('question_id=' . $questionId);
+    $criteria->addCondition('parent_id=' . $questionId);
     $criteria->addCondition('questionnaire_id=' . $questionnaireId);
     if (UserQuestion::Model()->count($criteria) == 0) {
-      return true;
+      return false;
     }
-    return false;
+    return true;
   }
 
   /**
