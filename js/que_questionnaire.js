@@ -7,6 +7,10 @@ var QUESTION_ADDED_OUTLINE = "#EFDAA5 solid 5px";
 // `````````````````````````````````````````````````````````````````
 $(document).ready(function(e) {
     console.log("Loading que_questionnaire.js...");
+    $('#que-topbar-nav-list a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
     searchEventHandlers();
     addQuestionEventHandlers();
     editQuestionnaireHandlers();
@@ -55,6 +59,10 @@ function searchEventHandlers() {
 }
 
 function addQuestionEventHandlers() {
+    $("body").on("click", ".que-view-answer-options-toggle", function(e) {
+        e.preventDefault();
+        $(this).next().toggle("slow");
+    });
     $("body").on("click", ".add-question-btn", function(e) {
         e.preventDefault();
         var questionId = $(this).closest(".question-result-row").attr("question-id");
@@ -63,26 +71,17 @@ function addQuestionEventHandlers() {
             question_status: questionStatus};//????
         ajaxCall(addQuestionUrl, data, addQuestion);
         $(this).closest(".question-result-row").addClass("question-added-row")
-                .find(".added-notification").removeClass("hide");
+                .find(".added-notification").removeClass("hidden");
+    });
 
-        $(this).text("Added");
-    });
-    $("body").on("click", ".edit-question-btn", function(e) {
+    $("body").on("click", ".que-add-all-questionnaire-questions", function(e) {
         e.preventDefault();
-        $('#edit-question-input').val($(this).attr("question-content"));
-        $('#edit-question-input').attr('question-id', question_id);
-        var question_id = $(this).attr("question-id");
-        var data = {question_id: question_id};
-        $('#edit-question-input').select();
-        //ajaxCall(addQuestionUrl, data, addQuestion);
+        $(this).closest(".accordion-group").find(".add-question-btn").each(function() {
+            $(this).click();
+        });
+
     });
-    $("body").on("click", ".edit-add-question-btn", function(e) {
-        e.preventDefault();
-        $("#edit-add-question-modal").modal("show");
-        $('#edit-add-question-input').val($('#add-question-' + $(this).attr('question-id')).text());
-        $('#edit-add-question-input').select();
-        $('#edit-scale-input').val('');
-    });
+
     $("body").on("click", ".remove-question-btn", function(e) {
         e.preventDefault();
         var userQuestion_id = $(this).attr("userQuestion_id");
@@ -102,25 +101,12 @@ function addQuestionEventHandlers() {
         e.preventDefault();
         $('#edit-question-input').select();
         //$('#edit-question-input').attr('question-id', question_id);
-        var question_id = $(this).attr("question-id");
-        var data = {question_id: question_id};
+        var questionId = $(this).closest(".question-result-row").attr("question-id");
+        var data = {question_id: questionId};
         ajaxCall(moreInfoQuestionUrl, data, moreInfoQuestion);
     });
 
-    $("body").on("click", "#que-save-edited-btn", function(e) {
-        e.preventDefault();
-        var content = $('#edit-question-input').val();
-        if (content.trim() == "") {
-            alert("Question Content cannot be empty");
-        } else {
-            var question_id = $(this).attr("question-id");
-            var data = {question_id: question_id,
-                content: content.trim()};
-            ajaxCall(editQuestionUrl, data, editQuestion);
-        }
 
-
-    });
 
 }
 
@@ -131,4 +117,37 @@ function editQuestionnaireHandlers() {
     });
     $("#que-questionnaire-questions").sortable();
     $("#que-questionnaire-questions").disableSelection();
+
+    $("body").on("click", ".que-edit-question-btn", function(e) {
+        e.preventDefault();
+        $(this).closest(".question-row").find(".que-question-action-links").hide("fast");
+        $(this).closest(".question-row").find(".que-question-text").hide("fast");
+        $(this).closest(".question-row").find(".que-edit-question-submit-btn-row").show("slow");
+        $(this).closest(".question-row").find(".edit-question-input").show("slow");
+    });
+    $("body").on("click", ".que-cancel-edit-question-btn, .que-save-edit-question-btn", function(e) {
+        e.preventDefault();
+        $(this).closest(".question-row").find(".que-edit-question-submit-btn-row").hide("fast");
+        $(this).closest(".question-row").find(".edit-question-input").hide("slow");
+        $(this).closest(".question-row").find(".que-question-action-links").show("slow");
+        $(this).closest(".question-row").find(".que-question-text").show("slow");
+    });
+    $("body").on("click", ".que-edit-question-btn", function(e) {
+        e.preventDefault();
+        $(this).closest(".question-row").find(".que-edit-question-content")
+                .text($(this).closest(".question-row").find(".que-question-content").text())
+                .select();
+    });
+    $("body").on("click", ".que-save-edit-question-btn", function(e) {
+        e.preventDefault();
+        var content =  $(this).closest(".question-row").find(".que-edit-question-content").val();
+        if (content.trim() == "") {
+            alert("Question Content cannot be empty");
+        } else {
+            var user_question_id =  $(this).closest(".question-row").attr("user-question-id");
+            var data = {user_question_id: user_question_id,
+                content: content.trim()};
+            ajaxCall(editQuestionUrl, data, editQuestion);
+        }
+    });
 }

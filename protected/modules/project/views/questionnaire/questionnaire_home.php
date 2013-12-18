@@ -7,7 +7,7 @@ Yii::app()->clientScript->registerScriptFile(
 <script id="record-task-url" type="text/javascript">
   var questionnaireSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearch/questionnaireId/" . $questionnaireId); ?>";
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
-  var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion/questionnaireId/" . $questionnaireId); ?>";
+  var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
   var qRemoveQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/qremovequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -121,8 +121,9 @@ Yii::app()->clientScript->registerScriptFile(
 
                 <div class="added-notification <?php echo $notificationHideClass; ?> row">
                   <div class="label label-info">
-                   You have added this question in this questionnaire
+                    You have added this question in this questionnaire
                   </div>
+                  <br>
                 </div>
                 <div class="row">
                   <div class="span1">
@@ -133,19 +134,33 @@ Yii::app()->clientScript->registerScriptFile(
                       <p><?php echo $question->content; ?></p>
                       <small><?php echo $question->author ?> <cite title="Source Title"><?php echo $question->concept ?></cite></small>
                     </blockquote>
+                    <a class="que-view-answer-options-toggle">
+                      <strong>View Answer Options</strong> 
+                      <i class="icon-chevron-down"></i>
+                    </a>
+                    <div class="question-answer-options row hide">
+                      <ol class="nav nav-list">
+                        <li>Strongly Agree</li>
+                        <li>Agree</li>
+                        <li>Neither Agree nor Disagree</li>
+                        <li>Disagree</li>
+                        <li>Strongly Disagree</li>
+                      </ol>
+                    </div>
                   </div>
                   <div class="span2">
-                    <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1">Add</a>
+                    <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1"><i class=icon-plus-sign></i> Add</a>
                   </div>
                 </div>
+                <br>
                 <div class="que-question-footer row">
                   <a class="btn btn-link question-added-btn que-stats" question-id="<?php echo $question->id ?>" >
-                    <strong><?php echo $question->times_added; ?></strong> Times Added
+                    Used: <strong><?php echo $question->times_added; ?></strong>
                   </a>
                   <a class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
-                    <strong><?php echo $question->times_modified; ?></strong> Times Modified
+                    Modified: <strong><?php echo $question->times_modified; ?></strong> 
                   </a>
-                  <a class="pull-right btn btn-link que-more-question-info-btn">More Question Details</a>
+                  <a class="pull-right btn btn-link que-more-question-info-btn"><strong>More Question Details</strong></a>
                 </div>
               </div>
             <?php endforeach; ?>

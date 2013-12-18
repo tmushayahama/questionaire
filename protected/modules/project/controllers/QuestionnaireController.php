@@ -225,25 +225,18 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
-  public function actionEditQuestion($questionnaireId) {
+  public function actionEditQuestion() {
     if (Yii::app()->request->isAjaxRequest) {
-      $userQuestion = new UserQuestion;
-      $questionnaireQuestion = new QuestionnaireQuestion;
-      $questionId = Yii::app()->request->getParam('question_id');
-      $content = Question::Model()->findByPk($questionId)->content;
+      $userQuestionId = Yii::app()->request->getParam('user_question_id');
+      $content = Yii::app()->request->getParam('content');
+      $userQuestion = UserQuestion::Model()->findByPk($userQuestionId);
 
-      $userQuestion->question_id = $questionId;
-      $userQuestion->user_id = Yii::app()->user->id;
       $userQuestion->content = $content;
-      $userQuestion->save(false);
-      $questionnaireQuestion->question_id = $userQuestion->id;
-      $questionnaireQuestion->questionnaire_id = $questionnaireId;
-      $questionnaireQuestion->save(false);
-
-      echo CJSON::encode(array(
-       'question_row' => $this->renderPartial('_question_row', array(
-        'question_content' => $questionnaireQuestion)
-         , true)));
+      if ($userQuestion->save()) {
+        $question = QuestionBank::Model()->findByPk($userQuestion->parent_id);
+        $question->times_modified++;
+        $question->save();
+      }
     }
     Yii::app()->end();
   }

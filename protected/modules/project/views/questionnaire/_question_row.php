@@ -3,35 +3,70 @@
 /* @var $model Question */
 /* @var $form CActiveForm */
 ?>
-<div class="ui-state-default question-row">
+<div class="ui-state-default question-row" user-question-id="<?php echo $userQuestion->id ?>">
+
   <div class="row">
     <div class="span1">
       <h3><?php echo $count; ?></h3>
     </div>
     <div class="span11">
-      <p><?php echo $userQuestion->content; ?></p><br>
-      <div class="row-fluid ">
-        <label class="span4 radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" unchecked>
-          Strongly Disagree
-        </label>
-        <label class="span4 radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" unchecked>
-          Agree
-        </label>
-        <label class="span4 radio">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" unchecked>
-          Strongly Agree
-        </label>
+      <div class="row-fluid edit-question-input hide">
+        <textarea class="que-edit-question-content input-block-level" rows="3">
+      
+        </textarea>
+        <a class="que-view-answer-options-toggle">
+          <h5> <strong>Edit Answer Options</strong> 
+            <i class="icon-chevron-down"></i>
+          </h5>
+        </a>
+        <div class="question-answer-options row hide">
+          <textarea class="input-block-level" rows="5">     
+          </textarea>
+        </div>
+      </div>
+      <div class="row-fluid que-question-text">
+        <p class="que-question-content"><?php echo $userQuestion->content; ?></p>
+        <a class="que-view-answer-options-toggle">
+          <h5> <strong>View Answer Options</strong> 
+            <i class="icon-chevron-down"></i>
+          </h5>
+        </a>
+        <div class="question-answer-options row hide">
+          <label class="radio">
+            <input type="radio" name="<?php echo "radio-" . $count; ?>" id="<?php echo "radio-" . $count; ?>" value="option1" unchecked>
+            Strongly Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="<?php echo "radio-" . $count; ?>" id="<?php echo "radio-" . $count; ?>" value="option1" unchecked>
+            Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="<?php echo "radio-" . $count; ?>" id="<?php echo "radio-" . $count; ?>" value="option1" unchecked>
+            Neither Agree nor Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="<?php echo "radio-" . $count; ?>" id="<?php echo "radio-" . $count; ?>" value="option1" unchecked>
+            Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="<?php echo "radio-" . $count; ?>" id="<?php echo "radio-" . $count; ?>" value="option1" unchecked>
+            Strongly Disagree
+          </label>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row que-question-action-links">
     <div class="span11">
-      <a class="que-btn btn-link"><h5>Add Question Above</h5></a>
       <a class="que-btn btn-link pull-right"><h5>Copy</h5></a>
-      <a href="#edit-question-modal" question-content="<?php echo $userQuestion->content ?>" question_id="<?php echo $userQuestion->id ?>"role="button" data-toggle="modal" class="que-btn btn-link pull-right edit-question-btn"><h5>Edit</h5></a>
+      <a class="que-btn btn-link pull-right que-edit-question-btn"><h5>Edit</h5></a>
       <a href="#" userQuestion_id="<?php echo $userQuestion->id ?>"role="button" class="que-btn btn-link pull-right remove-question-btn"><h5>Remove</h5></a>
     </div>
+  </div>
+  <div class="row que-edit-question-submit-btn-row hide">
+    <div class="span11">
+      <a class="que-save-edit-question-btn que-btn btn-small que-btn-green-1 que-btn-color-white" ><h5>Save</h5></a>
+      <a class="que-cancel-edit-question-btn btn btn-small"><h5>Cancel</h5></a>
+   </div>
   </div>
 </div>

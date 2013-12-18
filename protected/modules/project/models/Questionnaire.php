@@ -18,6 +18,7 @@
  */
 class Questionnaire extends CActiveRecord {
 
+  public static $QUESTIONNAIRE_STATUS_PLAYGROUND = -2;
   public $questionnaireSelected;
 
   public static function initQuestionnaire() {
@@ -50,7 +51,6 @@ class Questionnaire extends CActiveRecord {
     $questionnaireCriteria->order = "name asc";
     return Questionnaire::Model()->findAll($questionnaireCriteria);
   }
-  
 
   /**
    * Returns the static model of the specified AR class.

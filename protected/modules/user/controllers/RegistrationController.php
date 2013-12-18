@@ -23,15 +23,13 @@ class RegistrationController extends Controller {
 		$registerModel = new RegistrationForm;
 		$profile = new Profile;
 		$profile->regMode = true;
-		$loginLodel = new UserLogin;
-
+		$loginModel = new UserLogin;
 		if (Yii::app()->user->isGuest) {
-
 			// collect user input data
 			if (isset($_POST['UserLogin'])) {
-				$loginLodel->attributes = $_POST['UserLogin'];
+				$loginModel->attributes = $_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
-				if ($loginLodel->validate()) {
+				if ($loginModel->validate()) {
 					$this->lastViset();
 					if (Yii::app()->user->returnUrl == '/index.php')
 						$this->redirect(Yii::app()->controller->module->returnUrl);
@@ -96,7 +94,7 @@ class RegistrationController extends Controller {
 					$profile->validate();
 			}
 			$this->render('/user/authenticate',
-							array('loginLodel' => $loginLodel,
+							array('loginLodel' => $loginModel,
 									'registerModel' => $registerModel,
 									'profile' => $profile));
 		}

@@ -23,7 +23,7 @@ CREATE TABLE `que_user` (
   UNIQUE KEY `email` (`email`),
   KEY `status` (`status`),
   KEY `superuser` (`superuser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE `que_profile` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -52,7 +52,7 @@ CREATE TABLE `que_profile_field` (
   `visible` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `varname` (`varname`,`widget`,`visible`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 CREATE TABLE `que_question_sort` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -145,7 +145,7 @@ CREATE TABLE `que_user_project` (
 	`project_id`int not null,
         `privilege_type` int not null default 0,
 	PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 ALTER TABLE `que_user_project`
   ADD CONSTRAINT `user_project_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;

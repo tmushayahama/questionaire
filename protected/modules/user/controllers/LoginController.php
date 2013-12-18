@@ -52,6 +52,7 @@ class LoginController extends Controller
 
 					if ($registerModel->save()) {
 						$profile->user_id = $registerModel->id;
+            Project::initProject($registerModel->id);
 						$profile->save();
 						if (Yii::app()->controller->module->sendActivationMail) {
 							$activation_url = $this->createAbsoluteUrl('/user/activation/activation', array("activkey" => $registerModel->activkey, "email" => $registerModel->email));

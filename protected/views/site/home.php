@@ -10,7 +10,7 @@ Yii::app()->clientScript->registerScriptFile(
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider"></span></li>
   </ul>
   <div class="row que-topbar-nav ">
-    <ul class="">
+    <ul id="que-topbar-nav-list">
       <li class="que-active">
         <a href="#que-projects-pane" data-toggle="tab">
           <h4>My Projects</h4>
@@ -98,9 +98,15 @@ Yii::app()->clientScript->registerScriptFile(
       </div>
     </div>
   </div>
-  <div class="tab-pane active" id="que-activity-log-pane">
+  <div class="tab-pane" id="que-activity-log-pane">
+    <ul class="nav nav-stacked nav-tabs">
+      <li><a>All</a></li>
+      <li><a>Projects Activities</a></li>
+      <li><a>Questionnaire Activities</a></li>
+    </ul>
   </div>
-  <div class="tab-pane active" id="que-announcements-pane">
+  <div class="tab-pane" id="que-announcements-pane">
+    Announcements
   </div>
 </div>
 <?php $this->endContent(); ?>
