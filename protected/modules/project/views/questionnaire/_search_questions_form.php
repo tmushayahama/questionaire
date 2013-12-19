@@ -6,8 +6,11 @@
 
 <?php
 $form = $this->beginWidget('CActiveForm', array(
- 'id' => 'question-form',
+ 'id' => 'search-question-form',
  'enableAjaxValidation' => false,
+ 'htmlOptions' => array(
+  'class' => 'form',
+  'onsubmit' => "return false;")
   ));
 ?>
 <div class="row">
@@ -113,9 +116,8 @@ $form = $this->beginWidget('CActiveForm', array(
   </div> 
 </div>
 <div class="form-footer span11">
-  <?php echo CHtml::submitButton('Search', array('class' => 'btn que-btn-red-border-1')); ?>
+  <?php echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
   <a class="btn que-btn-red-border-1 ">Clear</a>
   <a href="#que-search-summary-modal" class="btn que-btn-red-border-1 pull-right" role="button" data-toggle="modal"><h5>View Search Criteria</h5></a>
-
 </div>
 <?php $this->endWidget(); ?>

@@ -66,8 +66,8 @@ ALTER TABLE `que_question_sort`
 
 CREATE TABLE `que_question_bank` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-   `sort_code` varchar(150) not null default "", 
-  `sort_name` varchar(150) not null default "", 
+  -- `sort_code` varchar(150) not null default "", 
+  -- `sort_name` varchar(150) not null default "", 
  `tool` varchar(1000) not null default "",
   `author` varchar(150) not null default "",
   `year` int(5),

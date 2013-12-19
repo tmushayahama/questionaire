@@ -6,6 +6,7 @@ Yii::app()->clientScript->registerScriptFile(
 ?>
 <script id="record-task-url" type="text/javascript">
   var questionnaireSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearch/questionnaireId/" . $questionnaireId); ?>";
+  var questionSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionsearch/questionnaireId/" . $questionnaireId); ?>";
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
@@ -67,10 +68,11 @@ Yii::app()->clientScript->registerScriptFile(
             <?php
             echo $this->renderPartial('_search_questionnaires_form', array(
              'model' => $questionnaireSearchModel,
-             'questionnaireList' => $questionnaireList));
+             "yearList" => $yearList,
+             'conceptList' => $conceptList));
             ?>
           </div>
-          <div id="questionnaire-result" class="row-fluid">
+          <div id="que-questionnaire-result" class="row-fluid">
 
           </div>
         </div>
@@ -81,89 +83,13 @@ Yii::app()->clientScript->registerScriptFile(
           <div class="row-fluid">
             <?php
             echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
-             'pages' => $pages,
-             'questionCount' => $questionCount,
              'toolList' => $toolList,
              "yearList" => $yearList,
              'conceptList' => $conceptList));
             ?>
           </div>
-          <div id="que-questionnaire-question-result" class="row-fluid">
-            <div class="row-fluid">
-              <h5 class="pull-left">Results
-                <?php echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
-              </h5>
-              <div class="span8 pull-right">
-                <?php
-                $this->widget('CLinkPager', array(
-                 'pages' => $pages,
-                ))
-                ?>
-              </div>
-            </div>
+          <div id="que-question-result" class="row-fluid">
 
-            <?php
-            $count = 1;
-
-            foreach ($questions as $question):
-              $questionAddedClass = "";
-              $notificationHideClass = "";
-              $isAdded = UserQuestion::isAdded($question->id, $questionnaireId);
-              if ($isAdded) {
-                $questionAddedClass = "question-added-row";
-              } else {
-                $notificationHideClass = "hidden";
-              }
-              ?>
-              <div class="question-result-row <?php echo $questionAddedClass ?>" 
-                   question-id="<?php echo $question->id ?>" 
-                   question-status="<?php echo UserQuestion::$FROM_QUESTION; ?>">
-
-                <div class="added-notification <?php echo $notificationHideClass; ?> row">
-                  <div class="label label-info">
-                    You have added this question in this questionnaire
-                  </div>
-                  <br>
-                </div>
-                <div class="row">
-                  <div class="span1">
-                    <?php echo ($pages->currentPage * $pages->pageSize) + $count++; ?>
-                  </div>
-                  <div class="span9">
-                    <blockquote>
-                      <p><?php echo $question->content; ?></p>
-                      <small><?php echo $question->author ?> <cite title="Source Title"><?php echo $question->concept ?></cite></small>
-                    </blockquote>
-                    <a class="que-view-answer-options-toggle">
-                      <strong>View Answer Options</strong> 
-                      <i class="icon-chevron-down"></i>
-                    </a>
-                    <div class="question-answer-options row hide">
-                      <ol class="nav nav-list">
-                        <li>Strongly Agree</li>
-                        <li>Agree</li>
-                        <li>Neither Agree nor Disagree</li>
-                        <li>Disagree</li>
-                        <li>Strongly Disagree</li>
-                      </ol>
-                    </div>
-                  </div>
-                  <div class="span2">
-                    <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1"><i class=icon-plus-sign></i> Add</a>
-                  </div>
-                </div>
-                <br>
-                <div class="que-question-footer row">
-                  <a class="btn btn-link question-added-btn que-stats" question-id="<?php echo $question->id ?>" >
-                    Used: <strong><?php echo $question->times_added; ?></strong>
-                  </a>
-                  <a class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
-                    Modified: <strong><?php echo $question->times_modified; ?></strong> 
-                  </a>
-                  <a class="pull-right btn btn-link que-more-question-info-btn"><strong>More Question Details</strong></a>
-                </div>
-              </div>
-            <?php endforeach; ?>
           </div>
         </div>
       </div>
@@ -202,7 +128,7 @@ Yii::app()->clientScript->registerScriptFile(
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
-<div id="question-more-info-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="question-more-info-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <span><h3>Question Info</h3>
   </span>
   <div class="modal-body">
@@ -247,7 +173,6 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
   </div>
   <div class="modal-footer">
-    <button id="add-question" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Add</button>
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>

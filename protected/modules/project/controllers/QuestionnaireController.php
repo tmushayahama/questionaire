@@ -57,59 +57,13 @@ class QuestionnaireController extends Controller {
    * @param integer $id the ID of the model to be displayed
    */
   public function actionView($projectId, $questionnaireId) {
-    $questionModel = new QuestionBank;
     $questionSearchModel = new QuestionBank();
-    $questionnaireSearchModel = new Questionnaire;
-    $searchQuestionnaireCriteria = new CDbCriteria;
-    $searchCriteria = new CDbCriteria;
-    $searchToolCriteria = new CDbCriteria;
-    $searchConceptCriteria = new CDbCriteria;
-    $searchYearCriteria = new CDbCriteria;
-    //$questionSearchModel->unsetAttributes();	// clear any default values
-
-    if (isset($_POST['QuestionnaireQeustion']['questionnaireList'])) {
-      if (is_array($_POST['QuestionnaireQeustion']['questionnaireList'])) {
-        foreach ($_POST['QuestionnaireQeustion']['questionnaireList'] as $questionnaire) {
-          $searchQuestionnaireCriteria->addCondition('name="' . $questionnaire . '"', 'OR');
-        }
-      }
-    }
-    if (isset($_POST['QuestionBank']['questionToolList'])) {
-      if (is_array($_POST['QuestionBank']['questionToolList'])) {
-        foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
-          $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
-        }
-      }
-    }
-    if (isset($_POST['QuestionBank']['questionConceptList'])) {
-      if (is_array($_POST['QuestionBank']['questionConceptList'])) {
-        foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
-          $searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
-        }
-      }
-    }
-    if (isset($_POST['QuestionBank']['questionYearList'])) {
-      if (is_array($_POST['QuestionBank']['questionYearList'])) {
-        foreach ($_POST['QuestionBank']['questionYearList'] as $year) {
-          $searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
-        }
-      }
-    }
-    $searchCriteria->mergeWith($searchToolCriteria, 'AND');
-    $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
-    $searchCriteria->mergeWith($searchYearCriteria, 'AND');
-
-    $count = QuestionBank::Model()->count($searchCriteria);
-    $pages = new CPagination($count);
-    $pages->pageSize = 50;
-    $pages->applyLimit($searchCriteria);
+    $questionnaireSearchModel = new QuestionBank;
+ 
 
     $this->render('questionnaire_home', array(
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
-     'questions' => QuestionBank::Model()->findAll($searchCriteria),
-     'questionCount' => QuestionBank::Model()->count($searchCriteria),
-     'pages' => $pages,
      'model' => $this->loadModel($questionnaireId),
      'toolList' => QuestionBank::getUniqueTools(),
      'yearList' => QuestionBank::getUniqueYear(),
@@ -178,21 +132,101 @@ class QuestionnaireController extends Controller {
     ));
   }
 
-  public function actionQuestionnaireSearch($questionnaireId) {
+  public function actionQuestionSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
+      $questionSearchModel = new QuestionBank();
+      $questionnaireSearchModel = new QuestionBank;
       $searchQuestionnaireCriteria = new CDbCriteria;
+      $searchCriteria = new CDbCriteria;
+      $searchToolCriteria = new CDbCriteria;
+      $searchConceptCriteria = new CDbCriteria;
+      $searchYearCriteria = new CDbCriteria;
       //$questionSearchModel->unsetAttributes();	// clear any default values
 
-      if (isset($_POST['Questionnaire']['questionnaireSelected'])) {
-        if (is_array($_POST['Questionnaire']['questionnaireSelected'])) {
-          foreach ($_POST['Questionnaire']['questionnaireSelected'] as $questionnaire) {
+      if (isset($_POST['QuestionnaireQeustion']['questionnaireList'])) {
+        if (is_array($_POST['QuestionnaireQeustion']['questionnaireList'])) {
+          foreach ($_POST['QuestionnaireQeustion']['questionnaireList'] as $questionnaire) {
             $searchQuestionnaireCriteria->addCondition('name="' . $questionnaire . '"', 'OR');
           }
         }
       }
+      if (isset($_POST['QuestionBank']['questionToolList'])) {
+        if (is_array($_POST['QuestionBank']['questionToolList'])) {
+          foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
+            $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
+          }
+        }
+      }
+      if (isset($_POST['QuestionBank']['questionConceptList'])) {
+        if (is_array($_POST['QuestionBank']['questionConceptList'])) {
+          foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
+            $searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
+          }
+        }
+      }
+      if (isset($_POST['QuestionBank']['questionYearList'])) {
+        if (is_array($_POST['QuestionBank']['questionYearList'])) {
+          foreach ($_POST['QuestionBank']['questionYearList'] as $year) {
+            $searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
+          }
+        }
+      }
+      $searchCriteria->mergeWith($searchToolCriteria, 'AND');
+      $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
+      $searchCriteria->mergeWith($searchYearCriteria, 'AND');
+
+      $count = QuestionBank::Model()->count($searchCriteria);
+      $pages = new CPagination($count);
+      $pages->pageSize = 50;
+      $pages->applyLimit($searchCriteria);
+      echo CJSON::encode(array(
+       'question_search_results' => $this->renderPartial('_question_search_results', array(
+        'questions' => QuestionBank::Model()->findAll($searchCriteria),
+        'questionCount' => QuestionBank::Model()->count($searchCriteria),
+        'questionnaireId' => $questionnaireId,
+        'pages' => $pages)
+         , true
+         , true)));
+    }
+    Yii::app()->end();
+  }
+
+  public function actionQuestionnaireSearch($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $searchQuestionnaireCriteria = new CDbCriteria;
+      $searchCriteria = new CDbCriteria;
+      $searchConceptCriteria = new CDbCriteria;
+      $searchYearCriteria = new CDbCriteria;
+      //$questionSearchModel->unsetAttributes();	// clear any default values
+      $searchConceptCriteria->with = array
+       ("question" => array("alias" => "t2"));
+      $searchYearCriteria->with = array
+       ("question" => array("alias" => "t2"));
+      $searchCriteria->with = array
+       ("question" => array("alias" => "t2"),
+       "bankQuestionnaire" => array("alias" => "t3"));
+      if (isset($_POST['QuestionBank'][2]['questionConceptList'])) {
+        if (is_array($_POST['QuestionBank'][2]['questionConceptList'])) {
+          foreach ($_POST['QuestionBank'][2]['questionConceptList'] as $concept) {
+            $searchConceptCriteria->addCondition("t2.concept='" . $concept . "'", 'OR');
+          }
+        }
+      }
+      if (isset($_POST['QuestionBank'][2]['questionYearList'])) {
+        if (is_array($_POST['QuestionBank'][2]['questionYearList'])) {
+          foreach ($_POST['QuestionBank'][2]['questionYearList'] as $year) {
+            $searchYearCriteria->addCondition("t2.year='" . $year . "'", 'OR');
+          }
+        }
+      }
+      $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
+      $searchCriteria->mergeWith($searchYearCriteria, 'AND');
+      $searchCriteria->group = "bank_questionnaire_id";
+      $searchCriteria->distinct = true;
+
       echo CJSON::encode(array(
        'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
-        'questionnaires' => Questionnaire::Model()->findAll($searchQuestionnaireCriteria),
+        'questionnaires' => QuestionnaireQuestionBank::Model()->findAll($searchCriteria),
         'questionnaireId' => $questionnaireId)
          , true)));
     }
@@ -237,6 +271,9 @@ class QuestionnaireController extends Controller {
         $question->times_modified++;
         $question->save();
       }
+      echo CJSON::encode(array(
+       "content" => $userQuestion->content,
+       "user_question_id" => $userQuestion->id));
     }
     Yii::app()->end();
   }
@@ -263,7 +300,7 @@ class QuestionnaireController extends Controller {
   public function actionMoreInfoQuestion() {
     if (Yii::app()->request->isAjaxRequest) {
       $questionId = Yii::app()->request->getParam('question_id');
-      $question = Question::Model()->findByPk($questionId);
+      $question = QuestionBank::Model()->findByPk($questionId);
 
       echo CJSON::encode(array(
        'content' => $question->content,

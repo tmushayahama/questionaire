@@ -3,7 +3,7 @@
 /* @var $model Question */
 /* @var $form CActiveForm */
 ?>
-<div class="ui-state-default question-row" user-question-id="<?php echo $userQuestion->id ?>">
+<div id="<?php echo "que-user-question-row-".$userQuestion->id ?>" class="ui-state-default question-row" user-question-id="<?php echo $userQuestion->id ?>">
 
   <div class="row">
     <div class="span1">
@@ -58,15 +58,15 @@
   </div>
   <div class="row que-question-action-links">
     <div class="span11">
-      <a class="que-btn btn-link pull-right"><h5>Copy</h5></a>
-      <a class="que-btn btn-link pull-right que-edit-question-btn"><h5>Edit</h5></a>
-      <a href="#" userQuestion_id="<?php echo $userQuestion->id ?>"role="button" class="que-btn btn-link pull-right remove-question-btn"><h5>Remove</h5></a>
+      <a class="que-btn btn-link pull-right disabled" ><h4>Copy</h4></a>
+      <a class="que-btn btn-link pull-right que-edit-question-btn"><h4>Edit</h4></a>
+      <a href="#" userQuestion_id="<?php echo $userQuestion->id ?>"role="button" class="que-btn btn-link pull-right remove-question-btn"><h4>Remove</h4></a>
     </div>
   </div>
   <div class="row que-edit-question-submit-btn-row hide">
     <div class="span11">
-      <a class="que-save-edit-question-btn que-btn btn-small que-btn-green-1 que-btn-color-white" ><h5>Save</h5></a>
-      <a class="que-cancel-edit-question-btn btn btn-small"><h5>Cancel</h5></a>
+      <a class="que-save-edit-question-btn que-btn btn-small que-btn-green-1 que-btn-color-white" >Save</a>
+      <a class="que-cancel-edit-question-btn btn btn-small">Cancel</a>
    </div>
   </div>
 </div>

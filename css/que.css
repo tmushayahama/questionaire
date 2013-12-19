@@ -25,7 +25,7 @@ body .modal-slim {
     margin-right:auto; 
 }
 body .modal-thick {
-    width: 600px; /* desired relative width */
+    width: 800px; /* desired relative width */
    margin-left:auto;
     margin-right:auto; 
 }
@@ -34,6 +34,7 @@ h1, h2, h3, h4,  h5, h6 {
     padding: 0;
     margin: 0;
 }
+
 .navbar {
     margin: 0px;
 }
@@ -330,7 +331,7 @@ h1, h2, h3, h4,  h5, h6 {
     font-weight:bold;
 }
 .que-btn-color-white {
-    color:#FFF;
+    color:#FFF!important;
 }
 .que-btn-red-1 {
     background-color: #800d00;
@@ -533,7 +534,7 @@ h1, h2, h3, h4,  h5, h6 {
     border-right: #888 solid 1px;
     min-height:1000px;
 }
-#que-questionnaire-question-result {
+#que-question-result {
     border-top: #CCC solid 4px;
     margin-top:20px;
     padding-top:10px;

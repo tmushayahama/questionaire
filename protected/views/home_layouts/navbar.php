@@ -16,8 +16,7 @@
           <div class="pull-right">
             <h5>
               <a>
-                <?php echo User::getFirstname(); ?><br>
-                <?php echo User::getLastname(); ?>
+                <?php echo User::getFirstname(); ?> <?php echo User::getLastname(); ?>
               </a>
             </h5>
             <h6><a>Edit Profile</a></h6>
@@ -27,5 +26,10 @@
     </div>
   </div>
 </div> <!--navbar-->
+<div id="ajax-loader" class="hide">
+  <div class="progress progress-striped active">
+    <div class="bar" style="width: 100%;"></div>
+  </div>
+</div>
 <?php echo $content ?>
 <?php $this->endContent(); ?>

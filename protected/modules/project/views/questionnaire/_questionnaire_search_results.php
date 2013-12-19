@@ -4,12 +4,12 @@
   $color = "transparent";
 
   foreach ($questionnaires as $questionnaire):
-    $questionnaireQuestions = QuestionnaireQuestionBank::getQuestionnaireQuestions($questionnaire->id);
+    $questionnaireQuestions = QuestionnaireQuestionBank::getQuestionnaireQuestions($questionnaire->bankQuestionnaire->id);
     ?>
     <div class="accordion-group">
       <div class="accordion-heading row">
         <h4>
-          <?php echo $questionnaire->name ?> 
+          <?php echo $questionnaire->bankQuestionnaire->name ?> 
         </h4>
         <div class="row">
           <a class="accordion-toggle" data-toggle="collapse" data-parent="#questionnaire-search-result-1" href="<?php echo '#collapse-question-search-1-' . $questionnaire->id; ?>">

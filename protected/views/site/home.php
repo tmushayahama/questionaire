@@ -17,16 +17,17 @@ Yii::app()->clientScript->registerScriptFile(
           <h5><small>(<?php echo $this->projectCount ?> active)</small></h5>
         </a>
       </li>
+
+      <li>
+        <a href="#que-people-pane" data-toggle="tab">
+          <h4>People</h4>
+          <h5><small>0 shared</small></h5>
+        </a>
+      </li>
       <li>
         <a href="#que-activity-log-pane" data-toggle="tab">
           <h4>Activity Log</h4>
           <h5><small>0 activities</small></h5>
-        </a>
-      </li>
-      <li>
-        <a href="#que-announcements-pane" data-toggle="tab">
-          <h4>Announcements</h4>
-          <h5><small>0 new</small></h5>
         </a>
       </li>
     </ul>
@@ -99,14 +100,16 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
   </div>
   <div class="tab-pane" id="que-activity-log-pane">
-    <ul class="nav nav-stacked nav-tabs">
-      <li><a>All</a></li>
-      <li><a>Projects Activities</a></li>
-      <li><a>Questionnaire Activities</a></li>
-    </ul>
+    <div class="row-fluid">
+      <ul class="nav nav-stacked nav-tabs que-white-background span4">
+        <li><a>All</a></li>
+        <li><a>Projects Activities</a></li>
+        <li><a>Questionnaire Activities</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="tab-pane" id="que-announcements-pane">
-    Announcements
+  <div class="tab-pane" id="que-people-pane">
+    You have not shared your project with anyone.
   </div>
 </div>
 <?php $this->endContent(); ?>
