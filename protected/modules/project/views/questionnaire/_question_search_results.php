@@ -24,7 +24,8 @@ foreach ($questions as $question):
     $notificationHideClass = "hidden";
   }
   ?>
-  <div class="question-result-row <?php echo $questionAddedClass ?>" 
+  <div id="<?php echo 'question-result-row-'.$question->id ?>"
+       class="question-result-row <?php echo $questionAddedClass ?>" 
        question-id="<?php echo $question->id ?>" 
        question-status="<?php echo UserQuestion::$FROM_QUESTION; ?>">
 
@@ -62,6 +63,33 @@ foreach ($questions as $question):
       </div>
     </div>
     <br>
+    <div class="row-fluid que-more-info-question-row hide">
+      <div class="span12">
+        <dl class="dl-horizontal">
+          <dt>
+          Concept:
+          </dt>
+          <dd>
+            <p class="que-more-info-question-concept">
+            </p>
+          </dd>
+          <dt>
+          Author:
+          </dt>
+          <dd>
+            <p class="que-more-info-question-author">
+            </p>
+          </dd>
+          <dt>
+          Year:
+          </dt>
+          <dd>
+            <p class="que-more-info-question-year">
+            </p>
+          </dd>
+        </dl>
+      </div>
+    </div>
     <div class="que-question-footer row">
       <a class="btn btn-link question-added-btn que-stats" question-id="<?php echo $question->id ?>" >
         Used: <strong><?php echo $question->times_added; ?></strong>
@@ -69,7 +97,7 @@ foreach ($questions as $question):
       <a class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
         Modified: <strong><?php echo $question->times_modified; ?></strong> 
       </a>
-      <a class="pull-right btn btn-link que-more-question-info-btn"><strong>More Question Details</strong></a>
+      <h5><a class="pull-right btn btn-link que-more-question-info-btn">More Question Details</a></h5>
     </div>
   </div>
 <?php endforeach; ?>

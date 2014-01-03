@@ -305,9 +305,8 @@ class QuestionnaireController extends Controller {
       $question = QuestionBank::Model()->findByPk($questionId);
 
       echo CJSON::encode(array(
-       'content' => $question->content,
+       'question_id' => $question->id,
        'concept' => $question->concept,
-       'tool' => $question->tool,
        'author' => $question->author,
        'year' => $question->year
       ));
