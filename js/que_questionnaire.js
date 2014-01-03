@@ -57,7 +57,14 @@ function moreInfoQuestion(data) {
     $("#question-more-info-modal").modal("show");
 }
 function removeQuestion(data) {
-    $("#que-user-question-row-"+data["user_question_id"]).remove();
+    $("#que-user-question-row-" + data["user_question_id"]).remove();
+    rearrangeNumbers("#que-questionnaire-questions");
+}
+function rearrangeNumbers(id) {
+    var children = $(id).children();
+    for(var i = 0; i<children.length; i++) {
+       $(children[i]).find(".count").text(i+1);
+    }
 }
 function searchEventHandlers() {
     $("#que-search-questionnaire-btn").click(function(e) {
@@ -98,7 +105,8 @@ function addQuestionEventHandlers() {
 
     $("body").on("click", ".remove-question-btn", function(e) {
         e.preventDefault();
-        var userQuestion_id = $(this).closest(".question-row").attr("user-question-id");;
+        var userQuestion_id = $(this).closest(".question-row").attr("user-question-id");
+        ;
         var data = {userQuestion_id: userQuestion_id};
         ajaxCall(removeQuestionUrl, data, removeQuestion);
     });

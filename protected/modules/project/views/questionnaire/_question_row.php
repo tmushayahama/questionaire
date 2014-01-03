@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="span1">
-      <h3><?php echo $count; ?></h3>
+      <h3 class="count"><?php echo $count; ?></h3>
     </div>
     <div class="span11">
       <div class="row-fluid edit-question-input hide">
