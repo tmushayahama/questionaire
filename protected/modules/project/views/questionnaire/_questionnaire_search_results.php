@@ -47,7 +47,8 @@
               $notificationHideClass = "hidden";
             }
             ?>
-            <div class="question-result-row <?php echo $questionAddedClass ?>" 
+            <div id="<?php echo 'question-result-row-' . $questionnaireQuestion->question->id ?>"
+                 class="question-result-row <?php echo $questionAddedClass ?>" 
                  question-id="<?php echo $questionnaireQuestion->question->id ?>" 
                  question-status="<?php echo UserQuestion::$FROM_QUESTION; ?>">
 
@@ -84,7 +85,33 @@
                   <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1"><i class=icon-plus-sign></i> Add</a>
                 </div>
               </div>
-              <br>
+              <div class="row-fluid que-more-info-question-row hide">
+                <div class="span12">
+                  <dl class="dl-horizontal">
+                    <dt>
+                    Concept:
+                    </dt>
+                    <dd>
+                      <p class="que-more-info-question-concept">
+                      </p>
+                    </dd>
+                    <dt>
+                    Author:
+                    </dt>
+                    <dd>
+                      <p class="que-more-info-question-author">
+                      </p>
+                    </dd>
+                    <dt>
+                    Year:
+                    </dt>
+                    <dd>
+                      <p class="que-more-info-question-year">
+                      </p>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
               <div class="que-question-footer row">
                 <a class="btn btn-link question-added-btn que-stats" >
                   Used: <strong><?php echo $questionnaireQuestion->question->times_added; ?></strong>
@@ -92,7 +119,7 @@
                 <a class="btn btn-link question-modified-btn que-stats">
                   Modified: <strong><?php echo $questionnaireQuestion->question->times_modified; ?></strong> 
                 </a>
-                <a class="pull-right btn btn-link que-more-question-info-btn"><strong>More Question Details</strong></a>
+                <h5><a class="pull-right btn btn-link que-more-question-info-btn">More Question Details</a></h5>
               </div>
             </div>
           <?php endforeach; ?>

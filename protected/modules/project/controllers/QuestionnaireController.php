@@ -29,7 +29,7 @@ class QuestionnaireController extends Controller {
       'users' => array('*'),
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
-      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'viewquestions', 'questionnairesearch'),
+      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions', 'questionnairesearch'),
       'users' => array('@'),
      ),
      array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -248,6 +248,27 @@ class QuestionnaireController extends Controller {
       $userQuestion->status = $questionStatus;
       if ($userQuestion->save(false)) {
         QuestionBank::modifyTimesAdded($questionBankModel, true);
+      }
+
+      echo CJSON::encode(array(
+       'question_row' => $this->renderPartial('_question_row', array(
+        'count' => 1,
+        'userQuestion' => $userQuestion)
+         , true)));
+    }
+    Yii::app()->end();
+  }
+  
+  public function actionCreateQuestion($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $userQuestion = new UserQuestion;
+      $questionContent = Yii::app()->request->getParam('content');
+     
+      
+      $userQuestion->questionnaire_id = $questionnaireId;
+      $userQuestion->content = $questionContent;
+      $userQuestion->status = UserQuestion::$NEW_QUESTION;
+      if ($userQuestion->save(false)) {
       }
 
       echo CJSON::encode(array(

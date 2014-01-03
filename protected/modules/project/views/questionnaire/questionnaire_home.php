@@ -8,6 +8,7 @@ Yii::app()->clientScript->registerScriptFile(
   var questionnaireSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearch/questionnaireId/" . $questionnaireId); ?>";
   var questionSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionsearch/questionnaireId/" . $questionnaireId); ?>";
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
+   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -45,7 +46,6 @@ Yii::app()->clientScript->registerScriptFile(
     <div class="span9 que-questionnaire-content">
       <div class="tab-content row">
         <div class="tab-pane active"id="que-questionnaire-edit-pane">
-
           <div class="tab-heading">
             Edit Questionnaire
           </div>
@@ -90,6 +90,18 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
           <div id="que-question-result" class="row-fluid">
 
+          </div>
+        </div>
+        <div class="tab-pane"id="que-create-new-question-bank-pane">
+          <div class="tab-heading">
+            Create your Own Question
+          </div>
+          <div class="row-fluid">
+            <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
+            <div class="row-fluid gb-footer">
+              <a id="que-save-create-question-btn" class="btn btn-large btn-success que-btn-color-white" >Save</a>
+              <a id="que-cancel-create-question-btn" class="btn btn-large">Cancel</a>
+            </div>
           </div>
         </div>
       </div>

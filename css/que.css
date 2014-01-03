@@ -50,13 +50,13 @@ h1, h2, h3, h4,  h5, h6 {
 
 }
 .navbar-inner a {
-    color: #FFF;
+    color: #F2F2F2;
     font-weight: bold;
 }
 #navbar-user-info img {
     margin: 5px;
-    height: 50px;
-    width:60px;
+    height: 30px;
+    width:40px;
 
 }
 .que-breadcrumb {
@@ -323,11 +323,11 @@ h1, h2, h3, h4,  h5, h6 {
 }
 .que-btn-logout {
     margin-left: 10px;
-    margin-top: 10px;
-    height:45px;
+    margin-top: 3px;
+    height:35px;
     width: 100px;
-    line-height: 45px;
-    font-size: 1.3em;
+    line-height: 35px;
+    font-size: 1.2em;
     font-weight:bold;
 }
 .que-btn-color-white {
@@ -420,13 +420,10 @@ h1, h2, h3, h4,  h5, h6 {
 }
 /*------Questionnaire -------*/
 .question-row {
-    border: #345678 solid 1px;
-    background-color: #EDEFF4;
-    -webkit-box-shadow: #2F5344 -1px 1px 2px;
-    -moz-box-shadow: #2F5344 -1px 1px 2px;
-    box-shadow: #2F5344 -1px 1px 2px;
+    border: #777 solid 1px;
+    background-color: #FEFEFE;
     margin-bottom: 20px;
-    padding: 10px 5px 5px 5px;
+    padding: 10px 0px 0px 0px;
     font-size:1.5em;
     font-weight: bold;
     line-height: 28px;
@@ -436,7 +433,11 @@ h1, h2, h3, h4,  h5, h6 {
 }
 .question-row a {
     margin-left: 20px;
-    color:#800000!important;
+    color:#800000;
+}
+.question-row .que-footer {
+    padding: 10px 5px 0px 5px;
+    background-color: #CACAC8;
 }
 .heading{
     font-size: 2.0em;

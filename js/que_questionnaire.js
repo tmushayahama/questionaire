@@ -37,10 +37,16 @@ function questionSearch(data) {
     $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
 }
 function addQuestion(data) {
+     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
+    //$("#add-question-"+question_id).css("color","#999999");//the only way????
+    rearrangeNumbers("#que-questionnaire-questions");
+}
+function createQuestion(data) {
     //$("#gb-add-commitment-modal").modal("hide");
     //alert(dat);
-    $("#que-questionnaire-questions").append(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
-    //$("#add-question-"+question_id).css("color","#999999");//the only way????
+    $("#que-create-question-input").val("");
+    $('a[href="#que-questionnaire-edit-pane"]').tab('show');
+    $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
     rearrangeNumbers("#que-questionnaire-questions");
 }
 function editQuestion(data) {
@@ -98,7 +104,16 @@ function addQuestionEventHandlers() {
         $(this).closest(".accordion-group").find(".add-question-btn").each(function() {
             $(this).click();
         });
-
+    });
+    $("#que-save-create-question-btn").click(function(e) {
+        e.preventDefault();
+        var content = $("#que-create-question-input").val();
+        if (content.trim() == "") {
+            alert("Question cannot be empty");
+        } else {
+            var data = {content: content.trim()};
+            ajaxCall(createQuestionUrl, data, createQuestion);
+        }
     });
 
     $("body").on("click", ".remove-question-btn", function(e) {
@@ -144,6 +159,10 @@ function editQuestionnaireHandlers() {
 
     $("body").on("click", ".que-edit-question-btn", function(e) {
         e.preventDefault();
+        $(".que-edit-question-submit-btn-row").hide("fast");
+        $(".edit-question-input").hide("fast");
+        $(".que-question-action-links").show("fast");
+        $(".que-question-text").show("fast");
         $(this).closest(".question-row").find(".que-question-action-links").hide("fast");
         $(this).closest(".question-row").find(".que-question-text").hide("fast");
         $(this).closest(".question-row").find(".que-edit-question-submit-btn-row").show("slow");

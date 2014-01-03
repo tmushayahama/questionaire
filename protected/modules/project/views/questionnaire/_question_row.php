@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="span1">
-      <h3 class="count"><?php echo $count; ?></h3>
+      <h2 class="text-center text-info count"><?php echo $count; ?></h2>
     </div>
     <div class="span11">
       <div class="row-fluid edit-question-input hide">
@@ -56,16 +56,16 @@
       </div>
     </div>
   </div>
-  <div class="row que-question-action-links">
+  <div class="row que-footer que-question-action-links">
     <div class="span11">
       <a class="que-btn btn-link pull-right disabled" ><h4>Copy</h4></a>
       <a class="que-btn btn-link pull-right que-edit-question-btn"><h4>Edit</h4></a>
       <a href="#" userQuestion_id="<?php echo $userQuestion->id ?>"role="button" class="que-btn btn-link pull-right remove-question-btn"><h4>Remove</h4></a>
     </div>
   </div>
-  <div class="row que-edit-question-submit-btn-row hide">
+  <div class="row que-footer que-edit-question-submit-btn-row hide">
     <div class="span11">
-      <a class="que-save-edit-question-btn que-btn btn-small que-btn-green-1 que-btn-color-white" >Save</a>
+      <a class="que-save-edit-question-btn btn btn-small btn-success que-btn-color-white" >Save</a>
       <a class="que-cancel-edit-question-btn btn btn-small">Cancel</a>
    </div>
   </div>

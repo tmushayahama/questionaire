@@ -27,6 +27,7 @@ class UserQuestion extends CActiveRecord {
   public static function getUserQuestions($questionnaireId) {
     $userQuestionCriteria = new CDbCriteria;
     //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
+    $userQuestionCriteria->order = "id desc";
     $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
     return UserQuestion::Model()->findAll($userQuestionCriteria);
   }
