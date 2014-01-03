@@ -42,8 +42,6 @@ function addQuestion(data) {
     rearrangeNumbers("#que-questionnaire-questions");
 }
 function createQuestion(data) {
-    //$("#gb-add-commitment-modal").modal("hide");
-    //alert(dat);
     $("#que-create-question-input").val("");
     $('a[href="#que-questionnaire-edit-pane"]').tab('show');
     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted

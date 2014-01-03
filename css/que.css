@@ -223,11 +223,10 @@ h1, h2, h3, h4,  h5, h6 {
     background-color: #fff;
 }
 .que-topbar{
-    margin-top: 45px;
-    margin-bottom: 1px;
-    border-bottom: #999 solid 1px;
-    padding: 10px 5px 5px 10px;
-    height:60px;
+    margin-top: 0px;
+    padding: 10px 5px 10px 10px;
+    background-color: #C7C4B5;
+    height:30px;
 }
 .que-topbar img {
     float:left;

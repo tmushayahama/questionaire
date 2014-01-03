@@ -9,6 +9,11 @@ Yii::app()->clientScript->registerScriptFile(
   <ul class="row breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider"></span></li>
   </ul>
+  <div class="que-topbar">
+    <div class="container">
+      <h3>Home</h3>
+    </div>
+  </div>
   <div class="row que-topbar-nav ">
     <ul id="que-topbar-nav-list">
       <li class="que-active">

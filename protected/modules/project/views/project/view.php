@@ -3,10 +3,15 @@
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
-    <li class="active"><?php echo $projectModel->name ?></li>
+    <li class="active">Project</li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
+  <div class="que-topbar">
+    <div class="container">
+      <h3><?php echo $projectModel->name ?></h3>
+    </div>
+  </div>
 </div>
 
 <div class="container">
@@ -15,10 +20,7 @@
     <a class=""><i class="icon-time"></i> 2 Questionnaire </a>
     <a class=""><i class="icon-book"></i> 2 Questions </a>
   </div> -->
-  <div class="row que-topbar">
-    <h2 class=""><?php echo $projectModel->name ?></h2>
-  </div>
-
+  <br>
   <div class="row que-white-background que-questionnaires-content">
     <table class="span7 table table-hover">
       <thead>

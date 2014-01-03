@@ -59,7 +59,7 @@ class QuestionnaireController extends Controller {
   public function actionView($projectId, $questionnaireId) {
     $questionSearchModel = new QuestionBank();
     $questionnaireSearchModel = new QuestionBank;
- 
+
 
     $this->render('questionnaire_home', array(
      'projectId' => $projectId,
@@ -258,17 +258,18 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
-  
+
   public function actionCreateQuestion($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $userQuestion = new UserQuestion;
       $questionContent = Yii::app()->request->getParam('content');
-     
-      
+
+
       $userQuestion->questionnaire_id = $questionnaireId;
       $userQuestion->content = $questionContent;
       $userQuestion->status = UserQuestion::$NEW_QUESTION;
       if ($userQuestion->save(false)) {
+        
       }
 
       echo CJSON::encode(array(
@@ -288,9 +289,11 @@ class QuestionnaireController extends Controller {
 
       $userQuestion->content = $content;
       if ($userQuestion->save()) {
-        $question = QuestionBank::Model()->findByPk($userQuestion->parent_id);
-        $question->times_modified++;
-        $question->save();
+        if ($userQuestion->status != UserQuestion::$NEW_QUESTION) {
+          $question = QuestionBank::Model()->findByPk($userQuestion->parent_id);
+          $question->times_modified++;
+          $question->save();
+        }
       }
       echo CJSON::encode(array(
        "content" => $userQuestion->content,

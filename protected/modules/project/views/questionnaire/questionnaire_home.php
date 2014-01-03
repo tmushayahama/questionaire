@@ -8,7 +8,7 @@ Yii::app()->clientScript->registerScriptFile(
   var questionnaireSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearch/questionnaireId/" . $questionnaireId); ?>";
   var questionSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionsearch/questionnaireId/" . $questionnaireId); ?>";
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
-   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
+  var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -23,11 +23,37 @@ Yii::app()->clientScript->registerScriptFile(
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
+  <div class="que-topbar">
+    <div class="container">
+      <h3><?php echo $model->name ?></h3>
+    </div>
+  </div>
+  <div class="row que-topbar-nav ">
+    <ul id="que-topbar-nav-list">
+      <li class="que-active">
+        <a href="#que-projects-pane" data-toggle="tab">
+          <h4>Design Questionnaire</h4>
+          <h5><small>0 questions</small></h5>
+        </a>
+      </li>
+
+      <li>
+        <a href="#que-people-pane" data-toggle="tab">
+          <h4>Contributers</h4>
+          <h5><small>0</small></h5>
+        </a>
+      </li>
+      <li>
+        <a href="#que-activity-log-pane" data-toggle="tab">
+          <h4>Questionnaire Summary</h4>
+          <h5><small>0 activities</small></h5>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 <div class="container">
-  <div class="row que-topbar">
-    <h2><?php echo $model->name ?></h2>
-  </div>
+
   <div class="row-fluid que-border-top-red-1 que-white-background">
     <div id="que-questionnaire-sidebar" class="span3">
       <div class="">
