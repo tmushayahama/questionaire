@@ -283,6 +283,8 @@ class QuestionnaireController extends Controller {
       $userQuestionId = Yii::app()->request->getParam('userQuestion_id');
       $model = UserQuestion::model()->findByPk($userQuestionId);
       $model->delete();
+      echo CJSON::encode(array(
+       "user_question_id" => $userQuestionId));
     }
     Yii::app()->end();
   }

@@ -1,0 +1,574 @@
+1	2	Active		"becoming actively involved, stand up"
+2	3	Adaptable		"being flexible when things change. manage multiple assignments and tasks, set priorities, adapt to changing conditions, adapt to work assignments. adapting new procedures"
+3	3	Add windshield washer fluid		
+4	2	Adventurous		
+5	1	Advising People		
+6	2	Affectionate		
+7	2	Aggressive		
+8	2	Alert		
+9	2	Ambitious		
+10	1	Analyze Data Or Facts		
+11	1	Analyzing Problems		
+12	3	Anticipate Needs		
+13	3	Arrange Social Functions		
+14	3	Articulate		
+15	1	Artistic		
+16	1	Assemble Or Make Things		Alert
+17	1	Assembling Apparatus		
+18	2	Assertive		
+19	2	Attractive		
+20	1	Audit Records		
+21	1	Auditing Financial Reports		
+22	1	Balance Money		
+23	1	Basic Accounting		
+24	2	Be a Respectful House Guest		
+25	1	Becoming Actively Involved		
+26	2	Being Photogenic		
+27	1	Being Thorough		
+28	2	Bold		
+29	2	Broad-Minded		
+30	1	Budgeting Expenses		
+31	3	Build a Fire		
+32	1	"Build, Observe, Inspect Things"		
+33	2	Businesslike		
+34	3	Buy a Woman Clothing		
+35	1	"Calculate, Compute"		
+36	1	Calculating Numerical Data		
+37	2	Calm		
+38	3	Calm a Crying Baby		
+39	3	Care For		
+40	2	Careful		
+41	3	Caring		
+42	3	Carve a Turkey		
+43	2	Cautious		
+44	3	Change a tire		
+45	3	Change oil		
+46	2	Charming		
+47	3	Check coolant level		
+48	3	Check tire pressure		
+49	1	Checking For Accuracy		
+50	2	Cheerful		
+51	1	Classify Data		
+52	1	Classifying Records		
+53	2	Clear-Thinking		
+54	2	Clever		
+55	1	Coaching Individuals		
+56	1	Collaborating Ideas		
+57	1	Collecting Money		
+58	3	Comfort a Crying Woman		
+59	3	Communicate Verbally		"Writes clearly and concisely, speaks effectively, listens attentively, openly expresses ideas, negotiates/resolves differences, leads group discussions, provides feedback, persuades others, provides well-thought out solutions, gathers appropriate information, confidently speaks in public"
+60	1	"Compare, Inspect, Or Record Facts"		
+61	1	Comparing Results		
+62	2	Competent		
+63	2	Competitive		
+64	1	Compiling Statistics		
+65	1	Comprehending Ideas		
+66	1	Conducting Interviews		
+67	1	Conducting Meetings		
+68	2	Confident		
+69	3	Confront Others		
+70	1	Confronting Other People		
+71	2	Conscientious		
+72	2	Conservative		
+73	2	Considerate		
+74	1	Construct Or Repair		
+75	1	Constructing Buildings		
+76	2	Cool		
+77	2	Cooperative		
+78	1	Coordinating Schedules/Times		
+79	1	Coping With Deadlines		
+80	3	Counsel People		
+81	1	Counseling/Consulting People		
+82	1	"Count, Observe, Compile"		
+83	2	Courageous		
+84	1	Create New Ideas		
+85	1	Creating Meaningful And Challenging Work		
+86	1	Creating New Ideas		
+87	2	Creative		
+88	1	"Creative, Artistic"		
+89	1	Critical Thinking		
+90	2	Curiosity		
+91	2	"Dance, Body Movement"		
+92	2	Daring		
+93	1	Dealing With Data		
+94	1	Deciding Uses Of Money		
+95	3	Decision Making		
+96	2	Decisive		
+97	1	Defining A Problem		
+98	1	Defining Performance Standards		
+99	3	Delegate		
+100	1	Delegating Responsibilities		
+101	2	Deliberate		
+102	3	Deliver Bad News		
+103	2	Democratic		
+104	3	Demonstrate Something		
+105	2	Dependable		
+106	1	Design		
+107	1	Detail-Oriented		
+108	3	Detect a Lie		
+109	2	Determined		
+110	1	Determining A Problem		
+111	1	"Developing A Climate Of Enthusiasm, Teamwork, And Cooperation"		
+112	1	Developing Plans For Projects		
+113	2	Dignified		
+114	3	Diplomatic		
+115	1	Direct Others		
+116	1	Direct Projects		
+117	2	Discreet		
+118	1	Dispensing Information		
+119	1	Displaying Artistic Ideas		
+120	1	Distributing Products		
+121	3	Do Basic Cooking		
+122	2	Do Push-Ups and Sit-Ups Properly		
+123	2	Dominant		
+124	1	Drafting Reports		
+125	1	Dramatizing Ideas		
+126	1	"Draw, Sketch, Render"		
+127	3	Drive a Manual Transmission Vehicle		
+128	1	Drive Or Operate Vehicles		
+129	2	Eager		
+130	2	Easygoing		
+131	1	Edit		
+132	1	Edit A Picture		
+133	1	Edit A Video		
+134	1	Editing Work		
+135	2	Efficient		
+136	2	Emotional		
+137	3	Empowering Others		
+138	1	Encouraging Others		
+139	3	End a Date Politely Without Making Promises		
+140	1	Enduring Long Hours		
+141	2	Energetic		
+142	1	Enforcing Rules And Regulations		
+143	2	Enterprising		
+144	1	Entertaining People		
+145	2	Enthusiastic		
+146	1	Estimating Physical Space		
+147	1	Evaluating Programs		
+148	3	Explain Things To Others		
+149	1	Expressing Feelings		
+150	1	Expressing Ideas Orally To Individuals Or Groups		
+151	2	Expressive		
+152	2	Fair-Minded		
+153	2	Farsighted		
+154	1	Finding Information		
+155	2	Firm		
+156	2	Flexibility		
+157	2	Flexible		
+158	3	Flirt Without Looking Ridiculous		
+159	1	Follow Instructions		
+160	2	Forceful		
+161	2	Formal		
+162	2	Frank		
+163	2	Friendly		
+164	3	Friendship		
+165	3	Garderning	Save Seeds	
+166	3	Garderning	Grow Plants From Cuttings	
+167	3	Garderning	Grow Plants From Seed	
+168	3	Garderning	Divide Plants	
+169	3	Garderning	Plant A Vegetable Garden	
+170	3	Garderning	Grow An Herb Garden	
+171	3	Garderning	Compost	
+172	1	Gathering Information		
+173	2	General Conscientiousness	Awareness Of Your Surroundings	
+174	2	General Conscientiousness	Recognizing A Potentially Dangerous Situation	
+175	2	General Conscientiousness	Have Personal Medical Information And Keep Up With Appointments	
+176	2	General Conscientiousness	Emergency Preparedness	
+177	2	General Conscientiousness	Avoid Drugs And Alcohol	
+178	2	General Conscientiousness	Be Sexually Responsible	
+179	2	General Conscientiousness	"How To Say “No,” Respectfully"	
+180	2	General Conscientiousness	How To Ask For Help	
+181	2	General Conscientiousness	Be Open-Minded	
+182	2	General Conscientiousness	Accept Constructive Criticism	
+183	2	General Conscientiousness	Being Alert	
+184	1	Generating Accounts		
+185	2	Generous		
+186	2	Gentle		
+187	4	Get a Busy Bartender's Attention		
+188	1	Get Results		
+189	3	Give a Compliment		
+190	4	Give a Good Massage		
+191	3	Give Driving Directions		
+192	1	Good With My Hands		
+193	2	Good-Natured		
+194	1	Google Efficiently		
+195	3	"Handle a Hammer, Axe or Handsaw"		
+196	3	Handle a Job Interview		
+197	3	Handle the Police		
+198	1	Handling Complaints		
+199	1	Handling Detail Work		
+200	2	Happinness		
+201	2	Healthy		
+202	3	Help Others		
+203	2	Helpful		
+204	3	High Energy		
+205	3	Hold a Baby		
+206	3	Home and Personal Care Skills	Read An Electric Meter.	
+207	3	Home and Personal Care Skills	How to use basic kitchen appliances	
+208	3	Home and Personal Care Skills	Wash/Dry clothes	
+209	3	Home and Personal Care Skills	Determine which clothes to take to the dry cleaners	
+210	3	Home and Personal Care Skills	Make a bed (with clean sheets)	
+211	3	Home and Personal Care Skills	Fold laundry	
+212	3	Home and Personal Care Skills	"How to properly clean a toilet, shower, bathroom floor, etc."	
+213	3	Home and Personal Care Skills	How to unclog a toilet	
+214	3	Home and Personal Care Skills	Set an alarm and wake yourself up on time	
+215	3	Home and Personal Care Skills	Get rid of spiders and bugs (without help)	
+216	3	Home Maintenance	Fix A Leaky Faucet	
+217	3	Home Maintenance	Unclog A Drain	
+218	3	Home Maintenance	Unclog A Toilet	
+219	3	Home Maintenance	Caulk	
+220	3	Home Maintenance	Reverse A Ceiling Fan	
+221	3	Home Maintenance	Vacuum Refrigerator Coils	
+222	3	Home Maintenance	Clean A Dryer Vent	
+223	3	Home Maintenance	Get Rid Of Fruit Flies	
+224	3	Home Maintenance	Get Rid Of Ants	
+225	3	Home Maintenance	Clean Your Gutters	
+226	3	Home Maintenance	Line-Dry Clothes.	
+227	2	Honest		
+228	3	Hook Up a Basic Home Theater System		
+229	2	Humorous		
+230	2	Idealistic		
+231	2	Imaginative		
+232	1	Imagining New Solutions		
+233	3	Implement Basic Computer Security Best Practices		
+234	2	Independent		
+235	2	Individualistic		
+236	2	Industrious		
+237	2	Informal		
+238	2	Ingenious		
+239	3	Initiative		
+240	3	Innovative		
+241	3	Insightful		
+242	1	Inspecting Physical Objects		
+243	2	Intellectual		
+244	2	Intelligent		
+245	2	Intentive		
+246	1	Interacting With People At Different Levels		
+247	1	Interpersonal Skills		"works well with others, self-confident, accepts responsibilitysensitive, supportive, motivates others, shares credit, counsels, cooperates, delegates effectively, represents others, understands feelings, "
+248	1	Interpreting Languages		
+249	3	Interview Others		
+250	1	Interviewing Prospective Employees		
+251	1	Inventing New Ideas		
+252	1	Investigate		
+253	1	Investigating Problems		
+254	3	Iron a Shirt		
+255	3	Jump Start a Car		
+256	3	Jump Start a Car		
+257	3	Keep a Clean House		
+258	1	Keep Financial Records		
+259	3	Kind		
+260	3	Kitchen and Cooking	Make Bread	
+261	3	Kitchen and Cooking	Cook Your Own Food	
+262	3	Kitchen and Cooking	Make Ice Cream	
+263	3	Kitchen and Cooking	Substitute Ingredients In Recipes	
+264	3	Kitchen and Cooking	Make A Cake From Scratch	
+265	3	Kitchen and Cooking	Make Pancakes From Scratch	
+266	3	Kitchen and Cooking	"Make Broth: Beef, Vegetable, Chicken, Turkey "	
+267	3	Kitchen and Cooking	Cook Dried Beans	
+268	3	Kitchen and Cooking	Use Up Leftovers	
+269	3	Kitchen and Cooking	Make Yogurt	
+270	3	Kitchen and Cooking	Season A Cast Iron Pan	
+271	3	Kitchen and Cooking	Roast A Chicken	
+272	3	Kitchen and Cooking	Cook In Bulk	
+273	1	Knowledge Of Community/Government Affairs		
+274	1	Knowledge Of Concepts And Principles		
+275	1	Leadership		
+276	3	Learn Spaninsh		
+277	3	Learning Other Languages	Learn Spaninsh	
+278	3	Learning Other Languages	Speaking in Spanish	
+279	3	Learning Other Languages	Writing Spanish	
+280	3	Learning Other Languages	Typing in Chinese	
+281	2	Leisurely		
+282	3	Life Management and Organization Skills	Create A Budget	
+283	3	Life Management and Organization Skills	Keep Your Finances Records Organized	
+284	3	Life Management and Organization Skills	Organize All Passwords	
+285	3	Life Management and Organization Skills	"Use A Credit Card Responsibly, Avoiding Debt"	
+286	3	Life Management and Organization Skills	When/How To Pay Taxes	
+287	3	Life Management and Organization Skills	Time Management	
+288	3	Life Management and Organization Skills	Keep A Daily Calendar	
+289	3	Life Management and Organization Skills	How To Set Up Internet/Cable	
+290	3	Life Management and Organization Skills	Calculate A Tip	
+291	3	Life Management and Organization Skills	How To Split A Check Amongst Friends	
+292	3	Life Management and Organization Skills	Address An Envelope	
+293	3	Life Management and Organization Skills	Write A Check	
+294	3	Life Management and Organization Skills	Balance A Checkbook	
+295	3	Life Management and Organization Skills	Pack Smarter	
+296	3	Life Management and Organization Skills	Change The Battery In A Fire Alarm	
+297	3	Life Management and Organization Skills	Back-Up Information On Your Computer And Other Devices	
+298	3	Life Management and Organization Skills	Manage/Clean-Up Your Social Media Accounts	
+299	2	Lighthearted		
+300	2	Likable		
+301	3	Listen		
+302	3	Listen Carefully to Others		
+303	1	Listening To Others		
+304	1	Locate Answers Or Information		
+305	1	Locating Missing Information		
+306	3	Logical		
+307	2	Loyal		
+308	1	Maintaining A High Level Of Activity		
+309	1	Maintaining Accurate Records		
+310	1	Maintaining Emotional Control Under Stress		
+311	3	Make a Good First Impression		
+312	3	"Make a Short, Informative Public Speech"		
+313	3	Make a Simple Budget		
+314	3	Make Eggs More than Three Ways		
+315	1	Making Decisions		
+316	3	Manage Money		
+317	3	Manage Time		
+318	1	Managing An Organization		
+319	1	Managing People		
+320	1	Math		
+321	2	Mature		
+322	1	Measuring Boundaries		
+323	1	Mediate Problems		
+324	1	Mediating Between People		
+325	1	Meeting New People		
+326	1	Meeting People		
+327	2	Methodical		
+328	2	Meticulous		
+329	2	Mild		
+330	2	Moderate		
+331	2	Modest		
+332	3	Money Management	Bargain Shopping	
+333	3	Money Management	Stack Coupons	
+334	3	Money Management	Make Your Own Sale	
+335	3	Money Management	Haggle	
+336	3	Money Management	Barter Trade	
+337	3	Money Management	Cherry Pick	
+338	3	Money Management	Make A Household Budget	
+339	3	Money Management	Balance A Checkbook	
+340	3	Money Management	Negotiate Medical Bills	
+341	3	Money Management	Contest A Billing Error	
+342	3	Money Management	Calculate Your Net Worth	
+343	3	Motivate People		
+344	1	Motivating Others		
+345	2	Music Appreciation		
+346	2	Natural		
+347	3	Navigate with a Map and Compass		
+348	3	Negotiate		
+349	3	Negotiate		
+350	3	Negotiate Agreements		
+351	1	Negotiating/Arbitrating Conflicts		
+352	3	Networking		
+353	2	Obliging		
+354	1	Off-Bearing Or Feeding Machinery		
+355	3	Open Minded		
+356	1	Operate a Computer		
+357	1	Operate Tools And Machinery		
+358	1	Operating Equipment		
+359	2	Opportunistic		
+360	2	Optimistic		
+361	2	Organizational Skills		"organizing tasks, organizing files, handles details, coordinates tasks, punctual, manages projects effectively, meets deadlines, sets goals, keeps control over budget, plans and arranges activities, multi-tasks"
+362	2	Original		
+363	3	Outgoing		
+364	1	Overseeing Operations		
+365	2	Painstaking		
+366	3	Paint		
+367	3	Paint a Room		
+368	3	Parallel Park		
+369	2	Patience		
+370	3	Patient		
+371	2	Peaceable		
+372	3	Perform Basic First Aid		
+373	3	Perform CPR and the Heimlich Maneuver		
+374	3	"Perform, Act"		
+375	1	Performing Numeric Analysis		
+376	2	Persevering		
+377	1	Persuading Others		
+378	2	Persuasive		
+379	3	Pick a Ripe Fruit		
+380	1	Picking Out Important Information		
+381	1	Plan		
+382	1	Planning Agendas/Meetings		
+383	1	Planning Organizational Needs		
+384	2	Play Instruments		
+385	2	Pleasant		
+386	2	Poised		
+387	2	Polite		
+388	2	Practical		
+389	2	Precise		
+390	1	Predicting Futures		
+391	1	Prefer Details		
+392	1	Preparing Written Communications		
+393	3	Present Artistic Ideas		
+394	2	Pressure-Resistant		
+395	1	Prioritizing Work		
+396	2	Productive		
+397	3	Professional Skills	Write A Resume	
+398	3	Professional Skills	Draft A Cover Letter	
+399	3	Professional Skills	Professionally Format Emails	
+400	3	Professional Skills	Write Thank You Notes	
+401	3	Professional Skills	Network	
+402	2	Progressive		
+403	1	Promoting Events		
+404	1	Proposing Ideas		
+405	3	Protect Personal Identity Information		
+406	1	Providing Customers With Service		
+407	1	Providing Discipline When Necessary		
+408	2	Prudent		
+409	1	Public Speaking		
+410	2	Punctual		
+411	2	Purposeful		
+412	1	Questioning Others		
+413	2	Quick		
+414	2	Quiet		
+415	1	Raising Funds		
+416	2	Rational		
+417	1	Reading Volumes Of Material		
+418	2	Realistic		
+419	2	Reasonable		
+420	3	Recite Basic Geography		
+421	3	Recognize Personal Alcohol Limits		
+422	1	Recommending Courses Of Action		
+423	2	Reflective		
+424	1	Rehabilitating People		
+425	1	Relating To The Public		
+426	2	Relaxation		
+427	2	Relaxed		
+428	2	Reliable		
+429	3	Relocate Living Spaces		
+430	3	Remember Information		
+431	3	Remember Names		
+432	1	Remembering Information		
+433	3	Remove a Stain		
+434	1	Repair Things		
+435	1	Reporting Information		
+436	1	Research		"creates ideas, identifies problems, solves problem, gathers information, evaluate information, citing sources, meets goals, identifies resourcess, defines needs, analyzes issues, develops strategies, assesses situations"
+437	2	Reserved		
+438	1	Resolving Conflicts		
+439	2	Resourceful		
+440	2	Responsible		
+441	2	Retiring		
+442	2	Robust		
+443	1	Run Meetings		
+444	1	Running Meetings		
+445	1	Safety Conscious		
+446	1	Screening Telephone Calls		
+447	3	Select Good Produce		
+448	2	Self-Confident		
+449	2	Self-Motivated		
+450	1	Selling Ideas		
+451	1	Selling Products		
+452	2	Sense Of Humor		
+453	2	Sensible		
+454	3	Sensitive		
+455	2	Serious		
+456	3	Serving		
+457	1	Serving Individuals		
+458	1	Setting Priorities		
+459	1	Setting Up Demonstrations		
+460	1	Setting Work/Committee Goals		
+461	3	Sew a Button		
+462	3	Sew a Button onto Clothing		
+463	3	Sewing or Mending	Hem A Pair Of Pants	
+464	3	Sewing or Mending	Sew On A Button	
+465	3	Sewing or Mending	Fix A Broken Zipper	
+466	3	Sewing or Mending	Mend A Ripped Seam	
+467	3	Sewing or Mending	Use A Sewing Machine.	
+468	3	Sewing or Mending	Crafting	
+469	3	Sewing or Mending	Make A Candle.	
+470	3	Share Leadership		
+471	2	Sharp-Witted		
+472	3	Shine a Shoe		
+473	2	Sincere		
+474	1	Sketching Charts Or Diagrams		
+475	1	Skillfully Applying Professional Knowledge		
+476	3	Smile for the Camera		
+477	2	Sociable		
+478	1	Solve Problems		
+479	3	Speak at Least Two Common Languages		
+480	3	Speak In Public		
+481	3	Speaking in Spanish		
+482	1	Speaking To The Public		
+483	3	Speed Read		
+484	3	Split Firewood		
+485	2	Spontaneous		
+486	2	Spunky		
+487	2	Stable		
+488	2	Steady		
+489	2	Strong		
+490	2	Strong-Minded		
+491	3	Student Specific Skills	Shop Smarter For Books	
+492	3	Student Specific Skills	Keep Track Of Your Grades	
+493	3	Student Specific Skills	Keep Track Of Assignments Due	
+494	3	Student Specific Skills	Register For Classes	
+495	3	Student Specific Skills	Maintain Healthy Study Habits	
+496	3	Student Specific Skills	Contact Professors For Help	
+497	3	Student Specific Skills	Navigate To Classes	
+498	3	Student Specific Skills	Discuss Living Guidelines With Your Roommate	
+499	3	Student Specific Skills	Use Your University’s Web Site	
+500	3	Student Specific Skills	"Taking Clear, Readable Notes"	
+501	3	Student Specific Skills	Essay Writing	
+502	3	Student Specific Skills	Create An Outline	
+503	3	Student Specific Skills	Public Speaking	
+504	3	Student Specific Skills	Seek Out Extracurricular Activities You Enjoy	
+505	3	Student Specific Skills	Create A Schedule That Works For You	
+506	3	Student Specific Skills	Maintain A Healthy Balance Between Your Academic And Social Life	
+507	1	Summarizing Information		
+508	3	Supervise		
+509	1	Supervising Employees		
+510	1	Supporting Others		
+511	3	Supportive		
+512	3	Swim		
+513	2	Sympathetic		
+514	3	Tactful		
+515	3	Take A Good Picture		
+516	1	Take Inventory		
+517	3	Take Orders		
+518	2	Take Risks		
+519	3	Take Useful Notes		
+520	1	Taking Independent Action		
+521	1	Taking Personal Responsibility		
+522	3	Teach		
+523	2	Teachable		
+524	1	Teaching/Instructing/Training Individuals		
+525	1	Team Builder		
+526	3	Tell a Story that Captivates People’s Attention		
+527	2	Tenacious		
+528	3	Think Of Others		
+529	1	Thinking In A Logical Manner		
+530	1	Thinking Of Creative Ideas		
+531	2	Thorough		
+532	2	Thoughtful		
+533	2	Tie A Necktie		
+534	2	Tolerant		
+535	1	Tolerating Interruptions		
+536	2	Tough		
+537	3	Transportation Savvy	Read A Map	
+538	3	Transportation Savvy	Fill Up A Car With Gas	
+539	3	Transportation Savvy	Change A Tire	
+540	3	Transportation Savvy	Hail A Taxi	
+541	3	Transportation Savvy	Bike Maintenance	
+542	3	Transportation Savvy	Utilize And Navigate Public Transit	
+543	3	Travel Light		
+544	3	Trust		
+545	2	Trusting		
+546	2	Trustworthy		
+547	3	Type		
+548	3	Typing in Chinese		
+549	2	Unaffected		
+550	2	Unassuming		
+551	1	Understand The Big Picture		
+552	2	Understanding		
+553	2	Unexcitable		
+554	2	Uninhibited		
+555	1	Updating Files		
+556	1	Use Complex Equipment		
+557	1	Use Equipment		
+558	1	Use My Hands		
+559	3	"Using Words, Ideas"		
+560	2	Verbal		
+561	2	Versatile		
+562	2	Warm		
+563	3	Wax a car		
+564	2	Wholesome		
+565	3	Win or Avoid a Fistfight		
+566	2	Wise		
+567	2	Witty		
+568	3	Working With Others		
+569	1	Working With People		
+570	1	Write Clearly		
+571	1	Writing For Publication		
+572	1	Writing Letters/Papers/Proposals		
+573	1	Writing Reports		
+574	3	Writing Spanish		
