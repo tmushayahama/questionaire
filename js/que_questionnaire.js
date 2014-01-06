@@ -30,6 +30,14 @@ function ajaxCall(url, data, callback) {
         success: callback
     });
 }
+/*function queConfirm(message) {
+    $("#que-confirm-message").text(message);
+    if ($('#que-confirm-btn').click()) {
+        return true;
+    } else if ($('#que-cancel-confirm-btn').click()) {
+        return false;
+    }
+}*/
 function questionnaireSearch(data) {
     $("#que-questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
 }
@@ -37,7 +45,7 @@ function questionSearch(data) {
     $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
 }
 function addQuestion(data) {
-     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
+    $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
     rearrangeNumbers("#que-questionnaire-questions");
 }
@@ -116,9 +124,13 @@ function addQuestionEventHandlers() {
 
     $("body").on("click", ".remove-question-btn", function(e) {
         e.preventDefault();
-        var userQuestion_id = $(this).closest(".question-row").attr("user-question-id");
-        var data = {userQuestion_id: userQuestion_id};
-        ajaxCall(removeQuestionUrl, data, removeQuestion);
+       // $("#que-confirm-modal").modal("show");
+        if (confirm("Are you sure")) {
+            var userQuestion_id = $(this).closest(".question-row").attr("user-question-id");
+            var data = {userQuestion_id: userQuestion_id};
+            ajaxCall(removeQuestionUrl, data, removeQuestion);
+        }
+        //$("#que-confirm-modal").modal("hide");
     });
     $("body").on("click", ".qRemove-question-btn", function(e) {
         e.preventDefault();
