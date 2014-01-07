@@ -29,7 +29,7 @@ class QuestionnaireController extends Controller {
       'users' => array('*'),
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
-      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions', 
+      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions',
        'questionnairesearch', 'GetUserQuestionToDelete'),
       'users' => array('@'),
      ),
@@ -260,6 +260,25 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
+  public function actionDuplicateQuestion($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+
+      $duplicatedUserQuestion = new UserQuestion;
+      $originalUserQuestionId = Yii::app()->request->getParam('user_question_id');
+      $originalUserQuestion = UserQuestion::Model()->findByPk($originalUserQuestionId);
+      $duplicatedUserQuestion->attributes = $originalUserQuestion->attributes;
+      if ($duplicatedUserQuestion->save(false)) {
+      }
+
+      echo CJSON::encode(array(
+       'question_row' => $this->renderPartial('_question_row', array(
+        'count' => 1,
+        'userQuestion' => $duplicatedUserQuestion)
+         , true)));
+    }
+    Yii::app()->end();
+  }
+
   public function actionCreateQuestion($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $userQuestion = new UserQuestion;
@@ -313,11 +332,12 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
+
   public function actionGetUserQuestionToDelete($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $parentId = Yii::app()->request->getParam('question_id');
       $questionStatus = Yii::app()->request->getParam('question_status');
-      
+
 
       echo CJSON::encode(array(
        'user_questions_to_delete' => $this->renderPartial('_user_questions_to_delete', array(
@@ -327,7 +347,6 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
-
 
   //problem!!!: will delete questions with same question->id in other questionnaire
   public function actionQRemoveQuestion($questionnaireId) {

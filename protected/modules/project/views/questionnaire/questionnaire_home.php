@@ -13,6 +13,8 @@ Yii::app()->clientScript->registerScriptFile(
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
   var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
+  var duplicateQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/duplicatequestion/questionnaireId/" . $questionnaireId); ?>"
+
 </script>
 
 <div class="row-fluid">
@@ -146,7 +148,7 @@ Yii::app()->clientScript->registerScriptFile(
   <span><h3>Remove Question</h3>
   </span>
   <div class="modal-body">
-    
+
   </div>
   <div class="modal-footer">
     <button id="que-delete-all" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Delete All</button>

@@ -49,6 +49,11 @@ function addQuestion(data) {
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
     rearrangeNumbers("#que-questionnaire-questions");
 }
+function duplicateQuestion(data) {
+    $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
+    //$("#add-question-"+question_id).css("color","#999999");//the only way????
+    rearrangeNumbers("#que-questionnaire-questions");
+}
 function createQuestion(data) {
     $("#que-create-question-input").val("");
     $('a[href="#que-questionnaire-edit-pane"]').tab('show');
@@ -78,7 +83,7 @@ function removeFromSearchQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).remove();
     $("#from-results-remove-user-question-row-" + data["user_question_id"]).remove();
     if ($(".from-results-question-row").length == 0) {
-         $("#user-question-to-delete-modal").modal("hide");
+        $("#user-question-to-delete-modal").modal("hide");
     }
     rearrangeNumbers("#que-questionnaire-questions");
 }
@@ -144,8 +149,7 @@ function addQuestionEventHandlers() {
             ajaxCall(createQuestionUrl, data, createQuestion);
         }
     });
-
-    $("body").on("click", ".remove-question-btn", function(e) {
+    $("body").on("click", ".que-remove-question-btn", function(e) {
         e.preventDefault();
         // $("#que-confirm-modal").modal("show");
         if (confirm("Are you sure")) {
@@ -153,6 +157,15 @@ function addQuestionEventHandlers() {
             var data = {userQuestion_id: userQuestion_id};
             ajaxCall(removeQuestionUrl, data, removeQuestion);
         }
+        //$("#que-confirm-modal").modal("hide");
+    });
+
+    $("body").on("click", ".que-duplicate-question-btn", function(e) {
+        e.preventDefault();
+        var userQuestion_id = $(this).closest(".question-row").attr("user-question-id");
+        var data = {user_question_id: userQuestion_id};
+        ajaxCall(duplicateQuestionUrl, data, duplicateQuestion);
+
         //$("#que-confirm-modal").modal("hide");
     });
 
