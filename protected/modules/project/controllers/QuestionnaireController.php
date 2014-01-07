@@ -29,7 +29,8 @@ class QuestionnaireController extends Controller {
       'users' => array('*'),
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
-      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions', 'questionnairesearch'),
+      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions', 
+       'questionnairesearch', 'GetUserQuestionToDelete'),
       'users' => array('@'),
      ),
      array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -312,6 +313,21 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
+  public function actionGetUserQuestionToDelete($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $parentId = Yii::app()->request->getParam('question_id');
+      $questionStatus = Yii::app()->request->getParam('question_status');
+      
+
+      echo CJSON::encode(array(
+       'user_questions_to_delete' => $this->renderPartial('_user_questions_to_delete', array(
+        'count' => 1,
+        'userQuestions' => UserQuestion::getUserQuestionsByParentId($questionnaireId, $parentId))
+         , true)));
+    }
+    Yii::app()->end();
+  }
+
 
   //problem!!!: will delete questions with same question->id in other questionnaire
   public function actionQRemoveQuestion($questionnaireId) {

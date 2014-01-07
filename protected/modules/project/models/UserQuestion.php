@@ -23,7 +23,7 @@ class UserQuestion extends CActiveRecord {
   public static $FROM_QUESTIONNAIRE = 2;
   public static $FROM_QUESTIONNAIRE_MODIFIED = 3;
   public static $NEW_QUESTION = 4;
-  
+
   public static function getUserQuestions($questionnaireId) {
     $userQuestionCriteria = new CDbCriteria;
     //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
@@ -48,6 +48,14 @@ class UserQuestion extends CActiveRecord {
       return false;
     }
     return true;
+  }
+
+  public static function getUserQuestionsByParentId($questionnaireId, $parentId) {
+    $userQuestionCriteria = new CDbCriteria;
+    $userQuestionCriteria->order = "id desc";
+    $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
+    $userQuestionCriteria->addCondition("parent_id=" . $parentId);
+    return UserQuestion::Model()->findAll($userQuestionCriteria);
   }
 
   /**

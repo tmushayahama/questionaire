@@ -15,16 +15,22 @@
 $count = 1;
 
 foreach ($questions as $question):
+  $actionText = "";
+  $actionValue = "";
   $questionAddedClass = "";
   $notificationHideClass = "";
   $isAdded = UserQuestion::isAdded($question->id, $questionnaireId);
   if ($isAdded) {
     $questionAddedClass = "question-added-row";
+    $actionValue = "remove";
+    $actionText = "<i class='icon-minus-sign'></i> Remove";
   } else {
     $notificationHideClass = "hidden";
+    $actionValue = "add";
+    $actionText = "<i class='icon-plus-sign'></i> Add";
   }
   ?>
-  <div id="<?php echo 'question-result-row-'.$question->id ?>"
+  <div id="<?php echo 'question-result-row-' . $question->id ?>"
        class="question-result-row <?php echo $questionAddedClass ?>" 
        question-id="<?php echo $question->id ?>" 
        question-status="<?php echo UserQuestion::$FROM_QUESTION; ?>">
@@ -44,7 +50,7 @@ foreach ($questions as $question):
           <p><?php echo $question->content; ?></p>
           <small><?php echo $question->author ?> <cite title="Source Title"><?php echo $question->concept ?></cite></small>
         </blockquote>
-        <a class="que-view-answer-options-toggle">
+        <!-- <a class="que-view-answer-options-toggle">
           <strong>View Answer Options</strong> 
           <i class="icon-chevron-down"></i>
         </a>
@@ -56,10 +62,10 @@ foreach ($questions as $question):
             <li>Disagree</li>
             <li>Strongly Disagree</li>
           </ol>
-        </div>
-      </div>
+        </div>-->
+      </div> 
       <div class="span2">
-        <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1"><i class=icon-plus-sign></i> Add</a>
+        <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></a>
       </div>
     </div>
     <br>

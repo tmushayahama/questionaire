@@ -11,8 +11,8 @@ Yii::app()->clientScript->registerScriptFile(
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
+  var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
-  var qRemoveQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/qremovequestion/questionnaireId/" . $questionnaireId); ?>"
 </script>
 
 <div class="row-fluid">
@@ -23,113 +23,102 @@ Yii::app()->clientScript->registerScriptFile(
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
-  <div class="que-topbar">
-    <div class="container">
-      <h3><?php echo $model->name ?></h3>
+  <div class="que-topbar-nav">
+    <div class=" container">
+      <div class="row">
+        <h4 class="pull-left"><?php echo $model->name ?></h4>
+        <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
+          <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Design Questionnaire</a></li>
+          <li class=""><a href="#questionnaire-summary-pane" data-toggle="tab">Summary</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="row que-topbar-nav ">
-    <ul id="que-topbar-nav-list">
-      <li class="que-active">
-        <a href="#que-projects-pane" data-toggle="tab">
-          <h4>Design Questionnaire</h4>
-          <h5><small>0 questions</small></h5>
-        </a>
-      </li>
-
-      <li>
-        <a href="#que-people-pane" data-toggle="tab">
-          <h4>Contributers</h4>
-          <h5><small>0</small></h5>
-        </a>
-      </li>
-      <li>
-        <a href="#que-activity-log-pane" data-toggle="tab">
-          <h4>Questionnaire Summary</h4>
-          <h5><small>0 activities</small></h5>
-        </a>
-      </li>
-    </ul>
   </div>
 </div>
 <div class="container">
-
   <div class="row-fluid que-border-top-red-1 que-white-background">
-    <div id="que-questionnaire-sidebar" class="span3">
-      <div class="">
-        <ul id="que-questionnaire-activity-nav" class="">
-          <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
+    <div class="tab-content">
+      <div class="tab-pane active " id="questionnaire-design-pane">
+        <div id="que-questionnaire-sidebar" class="span3">
+          <div class="">
+            <ul id="que-questionnaire-activity-nav" class="">
+              <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
 
-          <h5>Add Question</h5>
-          <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
-          <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
-          <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
+              <h5>Add Question</h5>
+              <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
+              <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
+              <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
 
-        </ul>
-
-      </div>
-    </div><!--/span-->
-    <div class="span9 que-questionnaire-content">
-      <div class="tab-content row">
-        <div class="tab-pane active"id="que-questionnaire-edit-pane">
-          <div class="tab-heading">
-            Edit Questionnaire
-          </div>
-          <div id="que-questionnaire-questions" class="span11">
-            <?php
-            $count = 1;
-            foreach ($userQuestions as $userQuestion):
-              echo $this->renderPartial('_question_row', array(
-               'count' => $count++,
-               'userQuestion' => $userQuestion));
-            endforeach;
-            ?>
-          </div>
-        </div>
-        <div class="tab-pane"id="que-questionnaire-bank-pane">
-          <div class="tab-heading">
-            Add from Questionnaire Bank
-          </div>
-          <div class="row-fluid">
-            <?php
-            echo $this->renderPartial('_search_questionnaires_form', array(
-             'model' => $questionnaireSearchModel,
-             "yearList" => $yearList,
-             'conceptList' => $conceptList));
-            ?>
-          </div>
-          <div id="que-questionnaire-result" class="row-fluid">
+            </ul>
 
           </div>
-        </div>
-        <div class="tab-pane"id="que-question-bank-pane">
-          <div class="tab-heading">
-            Add from Question Bank
-          </div>
-          <div class="row-fluid">
-            <?php
-            echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
-             'toolList' => $toolList,
-             "yearList" => $yearList,
-             'conceptList' => $conceptList));
-            ?>
-          </div>
-          <div id="que-question-result" class="row-fluid">
+        </div><!--/span-->
+        <div class="span9 que-questionnaire-content">
+          <div class="tab-content row">
+            <div class="tab-pane active"id="que-questionnaire-edit-pane">
+              <div class="tab-heading">
+                Edit Questionnaire
+              </div>
+              <div id="que-questionnaire-questions" class="span11">
+                <?php
+                $count = 1;
+                foreach ($userQuestions as $userQuestion):
+                  echo $this->renderPartial('_question_row', array(
+                   'count' => $count++,
+                   'userQuestion' => $userQuestion));
+                endforeach;
+                ?>
+              </div>
+            </div>
+            <div class="tab-pane"id="que-questionnaire-bank-pane">
+              <div class="tab-heading">
+                Add from Questionnaire Bank
+              </div>
+              <div class="row-fluid">
+                <?php
+                echo $this->renderPartial('_search_questionnaires_form', array(
+                 'model' => $questionnaireSearchModel,
+                 "yearList" => $yearList,
+                 'conceptList' => $conceptList));
+                ?>
+              </div>
+              <div id="que-questionnaire-result" class="row-fluid">
 
-          </div>
-        </div>
-        <div class="tab-pane"id="que-create-new-question-bank-pane">
-          <div class="tab-heading">
-            Create your Own Question
-          </div>
-          <div class="row-fluid">
-            <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
-            <div class="row-fluid gb-footer">
-              <a id="que-save-create-question-btn" class="btn btn-large btn-success que-btn-color-white" >Save</a>
-              <a id="que-cancel-create-question-btn" class="btn btn-large">Cancel</a>
+              </div>
+            </div>
+            <div class="tab-pane"id="que-question-bank-pane">
+              <div class="tab-heading">
+                Add from Question Bank
+              </div>
+              <div class="row-fluid">
+                <?php
+                echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
+                 'toolList' => $toolList,
+                 "yearList" => $yearList,
+                 'conceptList' => $conceptList));
+                ?>
+              </div>
+              <div id="que-question-result" class="row-fluid">
+
+              </div>
+            </div>
+            <div class="tab-pane"id="que-create-new-question-bank-pane">
+              <div class="tab-heading">
+                Create your Own Question
+              </div>
+              <div class="row-fluid">
+                <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
+                <div class="row-fluid gb-footer">
+                  <a id="que-save-create-question-btn" class="btn btn-large btn-success que-btn-color-white" >Save</a>
+                  <a id="que-cancel-create-question-btn" class="btn btn-large">Cancel</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="tab-pane active " id="questionnaire-summary-pane">
+
       </div>
     </div>
   </div>
@@ -153,16 +142,14 @@ Yii::app()->clientScript->registerScriptFile(
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
-<div id="edit-question-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <span><h3>Edit Question</h3>
+<div id="user-question-to-delete-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <span><h3>Remove Question</h3>
   </span>
   <div class="modal-body">
-    <div class="span12">
-      <textarea class="span12" id="edit-question-input" rows=3> </textarea>
-    </div>
+    
   </div>
   <div class="modal-footer">
-    <button id="que-save-edited-btn" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Save</button>
+    <button id="que-delete-all" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Delete All</button>
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>

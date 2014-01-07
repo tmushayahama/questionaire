@@ -9,33 +9,16 @@ Yii::app()->clientScript->registerScriptFile(
   <ul class="row breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider"></span></li>
   </ul>
-  <div class="que-topbar">
-    <div class="container">
-      <h3>Home</h3>
+  <div class="que-topbar-nav">
+    <div class=" container">
+      <div class="row">
+        <h4 class="pull-left">Home</h4>
+        <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
+          <li class="active"><a href="#que-projects-pane" data-toggle="tab">Projects</a></li>
+          <li class=""><a href="#que-activity-log-pane" data-toggle="tab">Activity Log</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="row que-topbar-nav ">
-    <ul id="que-topbar-nav-list">
-      <li class="que-active">
-        <a href="#que-projects-pane" data-toggle="tab">
-          <h4>My Projects</h4>
-          <h5><small>(<?php echo $this->projectCount ?> active)</small></h5>
-        </a>
-      </li>
-
-      <li>
-        <a href="#que-people-pane" data-toggle="tab">
-          <h4>People</h4>
-          <h5><small>0 shared</small></h5>
-        </a>
-      </li>
-      <li>
-        <a href="#que-activity-log-pane" data-toggle="tab">
-          <h4>Activity Log</h4>
-          <h5><small>0 activities</small></h5>
-        </a>
-      </li>
-    </ul>
   </div>
 </div>
 <div class="container tab-content">
@@ -112,9 +95,6 @@ Yii::app()->clientScript->registerScriptFile(
         <li><a>Questionnaire Activities</a></li>
       </ul>
     </div>
-  </div>
-  <div class="tab-pane" id="que-people-pane">
-    You have not shared your project with anyone.
   </div>
 </div>
 <?php $this->endContent(); ?>

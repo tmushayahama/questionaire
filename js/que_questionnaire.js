@@ -31,13 +31,13 @@ function ajaxCall(url, data, callback) {
     });
 }
 /*function queConfirm(message) {
-    $("#que-confirm-message").text(message);
-    if ($('#que-confirm-btn').click()) {
-        return true;
-    } else if ($('#que-cancel-confirm-btn').click()) {
-        return false;
-    }
-}*/
+ $("#que-confirm-message").text(message);
+ if ($('#que-confirm-btn').click()) {
+ return true;
+ } else if ($('#que-cancel-confirm-btn').click()) {
+ return false;
+ }
+ }*/
 function questionnaireSearch(data) {
     $("#que-questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
 }
@@ -65,6 +65,10 @@ function moreInfoQuestion(data) {
     questionResultRow.find('.que-more-info-question-author').text(data["author"]);
     questionResultRow.find('.que-more-info-question-year').text(data["year"]);
     questionResultRow.find(".que-more-info-question-row").show("slow");
+}
+function getUserQuestionToDelete(data) {
+    $("#user-question-to-delete-modal .modal-body").html(data["user_questions_to_delete"]);
+    $("#user-question-to-delete-modal").modal("show");
 }
 function removeQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).remove();
@@ -100,9 +104,20 @@ function addQuestionEventHandlers() {
         var questionStatus = $(this).closest(".question-result-row").attr("question-status");
         var data = {question_id: questionId,
             question_status: questionStatus};//????
-        ajaxCall(addQuestionUrl, data, addQuestion);
-        $(this).closest(".question-result-row").addClass("question-added-row")
-                .find(".added-notification").removeClass("hidden");
+        if ($(this).attr("que-action") === "add") {
+            ajaxCall(addQuestionUrl, data, addQuestion);
+            $(this).attr("que-action", "remove");
+            $(this).html("<i class='icon-minus-sign'></i> Remove");
+            $(this).css("color", "#B96320");
+            $(this).closest(".question-result-row").addClass("question-added-row")
+                    .find(".added-notification").removeClass("hidden");
+        } else {
+            ajaxCall(getUserQuestionToDeleteUrl, data, getUserQuestionToDelete);
+            // $(this).html("<i class='icon-plus-sign'></i> Add");
+            // $(this).css("color", "#111");
+            //$(this).closest(".question-result-row").removeClass("question-added-row")
+            //      .find(".added-notification").addClass("hidden");
+        }
     });
 
     $("body").on("click", ".que-add-all-questionnaire-questions", function(e) {
@@ -124,7 +139,7 @@ function addQuestionEventHandlers() {
 
     $("body").on("click", ".remove-question-btn", function(e) {
         e.preventDefault();
-       // $("#que-confirm-modal").modal("show");
+        // $("#que-confirm-modal").modal("show");
         if (confirm("Are you sure")) {
             var userQuestion_id = $(this).closest(".question-row").attr("user-question-id");
             var data = {userQuestion_id: userQuestion_id};
