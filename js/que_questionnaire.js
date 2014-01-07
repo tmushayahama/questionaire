@@ -74,6 +74,14 @@ function removeQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).remove();
     rearrangeNumbers("#que-questionnaire-questions");
 }
+function removeFromSearchQuestion(data) {
+    $("#que-user-question-row-" + data["user_question_id"]).remove();
+    $("#from-results-remove-user-question-row-" + data["user_question_id"]).remove();
+    if ($(".from-results-question-row").length == 0) {
+         $("#user-question-to-delete-modal").modal("hide");
+    }
+    rearrangeNumbers("#que-questionnaire-questions");
+}
 function rearrangeNumbers(id) {
     var children = $(id).children();
     for (var i = 0; i < children.length; i++) {
@@ -147,12 +155,16 @@ function addQuestionEventHandlers() {
         }
         //$("#que-confirm-modal").modal("hide");
     });
-    $("body").on("click", ".qRemove-question-btn", function(e) {
+
+    $("body").on("click", ".from-results-remove-question-btn", function(e) {
         e.preventDefault();
-        var question_id = $(this).attr("question-id");
-        var data = {question_id: question_id};
-        $("#display-question-" + question_id).css("background-color", "transparent");
-        ajaxCall(qRemoveQuestionUrl, data);
+        // $("#que-confirm-modal").modal("show");
+
+        var userQuestion_id = $(this).closest(".from-results-question-row").attr("user-question-id");
+        var data = {userQuestion_id: userQuestion_id};
+        ajaxCall(removeQuestionUrl, data, removeFromSearchQuestion);
+
+        //$("#que-confirm-modal").modal("hide");
     });
 
 
