@@ -104,8 +104,8 @@ h1, h2, h3, h4,  h5, h6 {
     color:#555;
 }
 .que-topbar-nav{
-    background-color: #C7C4B5;
     padding-top: 20px;
+    border-bottom: #800000 solid 5px;
 }
 
 .que-topbar-nav ul li a small{
@@ -118,6 +118,10 @@ h1, h2, h3, h4,  h5, h6 {
     overflow:hidden;
 }
 #que-projects-sidebar {
+    background-color: #C7C4B5;
+    height: 100vh;
+    width: 28%;
+    float: left;
 }
 .que-no-project-notification {
     height: 150px;
@@ -129,26 +133,30 @@ h1, h2, h3, h4,  h5, h6 {
 
 }
 .que-projects-container{
-    padding:5px 5px 5px 5px;
-    background-color: #fafafa;
+    background-color: #E5E3D5;
+    width: 72%;
+    float: left;
 }
 .que-project-entry {
     height: 307px;
     float: left;
-    width:30%!important;
-    margin: 10px 10px 10px 10px;
-    border: #aaa solid 1px;
+    width:32%!important;
+    margin: 1% 0 1% 1%;
+    border: #444 solid 1px;
     background-color: #fff;
-    border-top: #999 solid 5px;
+    border-top: #444 solid 5px;
     overflow: hidden;
+}
+.que-project-entry .que-padding{
+    padding: 0px 10px 10px 10px;
 }
 #que-project-add-container {
     height: 300px;
     max-height: 300px;
     float: left;
     width:100%;
-    margin: 12px 10px 0px 10px;
-    width:100%;
+    padding: 12px 10px 0px 10px;
+    width: 95%;
     overflow: hidden;
 }
 #que-project-add-btn {
@@ -162,7 +170,7 @@ h1, h2, h3, h4,  h5, h6 {
     margin: 15px 25% 10px 25%;
     background-color: #EEE;
     height:120px;
-    width:50%;
+    width:40%;
     outline: #AAA solid 8px;
     border: #FFF solid 3px;
 }
@@ -183,13 +191,13 @@ h1, h2, h3, h4,  h5, h6 {
 }
 .que-project-entry .title {
     height: 15%;
-    background-color: #f0f0f0;
+    background-color: #E5E3D5;
     border-bottom: #ccc solid 1px;
     text-align: center;
 }
 .que-project-entry .date {
     font-size:0.9em;
-    height: 7%;
+    height: 6%;
     border-bottom: #999 solid 1px;
 }
 .que-project-entry .content {
@@ -228,7 +236,6 @@ h1, h2, h3, h4,  h5, h6 {
 .que-topbar{
     margin-top: 0px;
     padding: 10px 5px 10px 10px;
-    background-color: #C7C4B5;
     height:30px;
 }
 .que-topbar img {
@@ -399,21 +406,18 @@ h1, h2, h3, h4,  h5, h6 {
 .que-container {
     margin-top: 50px;
 }
-.que-project-container {
-    margin-top: 50px;
-}
 /*------Project -------*/
 #new-questionnaire-form {
     border-bottom:#BBB solid 1px;
     padding: 5px;
-    background-color: #DDD;
+    background-color: #C7C4B5;
     -webkit-box-shadow: #EEE -1px 1px 3px;
     -moz-box-shadow: #EEE -1px 1px 3px;
     box-shadow: #AAA -1px 1px 2px;
 }
 .que-questionnaires-content {
     padding-top: 10px;
-    border-top: #800000 solid 5px;
+    background-color: #E5E3D5;
 }
 .que-questionnaires-content table thead{
     border-top: #BBB solid 2px;
@@ -448,9 +452,13 @@ h1, h2, h3, h4,  h5, h6 {
     color: #111;
 }
 .tab-heading{
+    height: 30px;
+    background-color: #FFF;
     font-size: 2.0em;
-    padding: 25px 0 20px 0px;
+    margin-bottom: 20px;
+    padding: 20px 20px 10px 20px;
     color: #800D00;
+    border-bottom: #BBB solid 1px;
 }
 #user-question-to-delete-modal {
     max-height:600px;

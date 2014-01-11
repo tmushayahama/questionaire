@@ -7,11 +7,10 @@
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
-  <div class="que-topbar">
-    <div class="container">
-      <h3><?php echo $projectModel->name ?></h3>
-    </div>
+  <div class="que-topbar-nav container">
+    <h4><?php echo $projectModel->name ?></h4>
   </div>
+</div>
 </div>
 
 <div class="container">
@@ -20,9 +19,38 @@
     <a class=""><i class="icon-time"></i> 2 Questionnaire </a>
     <a class=""><i class="icon-book"></i> 2 Questions </a>
   </div> -->
-  <br>
-  <div class="row que-white-background que-questionnaires-content">
-    <table class="span7 table table-hover">
+  <div class="row que-questionnaires-content">
+    <div id="new-questionnaire-form" class="span4">
+      <div class="header">
+        <h3> Create Questionnaire</h3>
+      </div>
+
+      <?php
+      $form = $this->beginWidget('CActiveForm', array(
+       'id' => 'questionnaire-form',
+       'enableAjaxValidation' => false,
+       'htmlOptions' => array(
+        'class' => 'form',
+       ),
+      ));
+      ?>
+      <div class="row-fluid">
+        <div class="span12">
+          <?php echo $form->errorSummary(array($questionnaireModel), NULL, NULL, array('class' => 'alert alert-error')); ?>
+          <div class="control-group">
+            <div class="controls">
+              <?php echo $form->textField($questionnaireModel, 'name', array("class" => "input-block-level", "placeholder" => "Name")); ?>
+              <?php echo $form->error($questionnaireModel, 'name'); ?>
+            </div>
+          </div>
+        </div>
+        <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-green-1 btn-large btn-block')); ?>
+
+
+      </div>
+      <?php $this->endWidget(); ?>
+    </div>
+    <table class="span7 que-white-background table table-hover">
       <thead>
         <tr>
           <th class="span1">
@@ -56,36 +84,7 @@
         <?php endforeach; ?>
       </tbody>
     </table>
-    <div id="new-questionnaire-form" class="span4">
-      <div class="header">
-        <h3> Create Questionnaire</h3>
-      </div>
 
-      <?php
-      $form = $this->beginWidget('CActiveForm', array(
-       'id' => 'questionnaire-form',
-       'enableAjaxValidation' => false,
-       'htmlOptions' => array(
-        'class' => 'form',
-       ),
-      ));
-      ?>
-      <div class="row-fluid">
-        <div class="span12">
-          <?php echo $form->errorSummary(array($questionnaireModel), NULL, NULL, array('class' => 'alert alert-error')); ?>
-          <div class="control-group">
-            <div class="controls">
-              <?php echo $form->textField($questionnaireModel, 'name', array("class" => "input-block-level", "placeholder" => "Name")); ?>
-              <?php echo $form->error($questionnaireModel, 'name'); ?>
-            </div>
-          </div>
-        </div>
-        <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-green-1 btn-large btn-block')); ?>
-
-
-      </div>
-      <?php $this->endWidget(); ?>
-    </div>
   </div>
 </div>
 

@@ -3,7 +3,7 @@
 /* @var $model Question */
 /* @var $form CActiveForm */
 ?>
-<div class="row">
+<div class="row que-search-box">
   <div class="span3">
     <h4 class="pull-right">Keyword Search</h4>
   </div>
@@ -27,6 +27,7 @@
   </div> 
 </div>
 
+<div class="row que-search-box">
 <?php
 $form = $this->beginWidget('CActiveForm', array(
  'id' => 'search-questionnaire-form-from-q',
@@ -36,10 +37,7 @@ $form = $this->beginWidget('CActiveForm', array(
   'onsubmit' => "return false;")
   ));
 ?>
-
-<br>
-<div class="row">
-  <div class="span3"><h4 class="pull-right">C Questionnaire Only</h4></div>
+<div class="span3"><h4 class="pull-right">C Questionnaire Only</h4></div>
   <div class="span8">
     <div class="accordion" id="questionnaire-search-1-1">
       <div class="accordion-group">
@@ -63,21 +61,20 @@ $form = $this->beginWidget('CActiveForm', array(
                 ?>
               </ul>
             </div>
-            <div class="form-footer span11">
-              <?php echo CHtml::submitButton('Search', array('id' => 'que-search-questionnaire-from-q-btn', 'class' => 'btn que-btn-red-border-1')); ?>
-              <a class="btn que-btn-red-border-1 ">Clear</a>
-              <a href="#que-search-summary-modal" class="btn que-btn-red-border-1 pull-right" role="button" data-toggle="modal">View Search Criteria</a>
-            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="form-footer span11">
+      <?php echo CHtml::submitButton('Search', array('id' => 'que-search-questionnaire-from-q-btn', 'class' => 'btn que-btn-red-border-1')); ?>
+      <a class="btn que-btn-red-border-1 ">Clear</a>
+      <a href="#que-search-summary-modal" class="btn que-btn-red-border-1 pull-right" role="button" data-toggle="modal">View Search Criteria</a>
+    </div>
   </div> 
+<?php $this->endWidget(); ?>
 </div>
 
-<?php $this->endWidget(); ?>
-
-
+<div class="row que-search-box">
 <?php
 $form = $this->beginWidget('CActiveForm', array(
  'id' => 'search-questionnaire-form-from-cy',
@@ -87,7 +84,7 @@ $form = $this->beginWidget('CActiveForm', array(
   'onsubmit' => "return false;")
   ));
 ?>
-<div class="row">
+
   <div class="span3"><h4 class="pull-right">Concept and Year</h4></div>
   <div class="span8">
     <div class="accordion" id="questionnaire-search-1-1">
@@ -146,6 +143,6 @@ $form = $this->beginWidget('CActiveForm', array(
       <a href="#que-search-summary-modal" class="btn que-btn-red-border-1 pull-right" role="button" data-toggle="modal">View Search Criteria</a>
     </div>
   </div> 
-</div>
 
 <?php $this->endWidget(); ?>
+</div>
