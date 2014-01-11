@@ -14,7 +14,7 @@
  */
 class QuestionnaireQuestion extends CActiveRecord {
 
- 
+  
 
   /**
    * Returns the static model of the specified AR class.

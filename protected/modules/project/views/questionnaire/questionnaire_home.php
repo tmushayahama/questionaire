@@ -5,7 +5,8 @@ Yii::app()->clientScript->registerScriptFile(
 );
 ?>
 <script id="record-task-url" type="text/javascript">
-  var questionnaireSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearch/questionnaireId/" . $questionnaireId); ?>";
+  var questionnaireSearchFromCYUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearchfromcy/questionnaireId/" . $questionnaireId); ?>";
+  var questionnaireSearchFromQUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearchfromq/questionnaireId/" . $questionnaireId); ?>";
   var questionSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionsearch/questionnaireId/" . $questionnaireId); ?>";
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
@@ -79,7 +80,9 @@ Yii::app()->clientScript->registerScriptFile(
               <div class="row-fluid">
                 <?php
                 echo $this->renderPartial('_search_questionnaires_form', array(
-                 'model' => $questionnaireSearchModel,
+                 'questionnaireSearchFromCYModel' => $questionnaireSearchFromCYModel,
+                 'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
+                 'toolList' => $toolList,
                  "yearList" => $yearList,
                  'conceptList' => $conceptList));
                 ?>
@@ -95,7 +98,6 @@ Yii::app()->clientScript->registerScriptFile(
               <div class="row-fluid">
                 <?php
                 echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
-                 'toolList' => $toolList,
                  "yearList" => $yearList,
                  'conceptList' => $conceptList));
                 ?>

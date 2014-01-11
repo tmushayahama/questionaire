@@ -52,6 +52,7 @@ function addQuestion(data) {
 function duplicateQuestion(data) {
     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
+    //$("#que-user-question-row-"data.
     rearrangeNumbers("#que-questionnaire-questions");
 }
 function createQuestion(data) {
@@ -94,10 +95,15 @@ function rearrangeNumbers(id) {
     }
 }
 function searchEventHandlers() {
-    $("#que-search-questionnaire-btn").click(function(e) {
+    $("#que-search-questionnaire-from-q-btn").click(function(e) {
         e.preventDefault();
-        var data = $("#search-questionnaire-form").serialize();
-        ajaxCall(questionnaireSearchUrl, data, questionnaireSearch);
+        var data = $("#search-questionnaire-form-from-q").serialize();
+        ajaxCall(questionnaireSearchFromQUrl, data, questionnaireSearch);
+    });
+    $("#que-search-questionnaire-from-cy-btn").click(function(e) {
+        e.preventDefault();
+        var data = $("#search-questionnaire-form-from-cy").serialize();
+        ajaxCall(questionnaireSearchFromCYUrl, data, questionnaireSearch);
     });
     $("#que-search-question-btn").click(function(e) {
         e.preventDefault();

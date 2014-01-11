@@ -19,9 +19,8 @@
  * @property QuestionnaireQuestionBank[] $questionnaireQuestionBanks
  * @property UserQuestion[] $userQuestions
  */
-class QuestionBank extends CActiveRecord
-{
-   public $questionToolList;
+class QuestionBank extends CActiveRecord {
+
   public $questionConceptList;
   public $questionYearList;
 
@@ -69,99 +68,95 @@ class QuestionBank extends CActiveRecord
     }
     return $questionBankModel->save(false);
   }
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return QuestionBank the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
 
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return '{{question_bank}}';
-	}
+  /**
+   * Returns the static model of the specified AR class.
+   * @param string $className active record class name.
+   * @return QuestionBank the static model class
+   */
+  public static function model($className = __CLASS__) {
+    return parent::model($className);
+  }
 
-	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('year, scale, times_added, times_modified', 'numerical', 'integerOnly'=>true),
-			array('tool', 'length', 'max'=>1000),
-			array('author, concept', 'length', 'max'=>150),
-			array('content', 'length', 'max'=>528),
-			array('answer', 'length', 'max'=>500),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, tool, author, year, concept, content, scale, answer, times_added, times_modified', 'safe', 'on'=>'search'),
-		);
-	}
+  /**
+   * @return string the associated database table name
+   */
+  public function tableName() {
+    return '{{question_bank}}';
+  }
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-			'questionnaireQuestionBanks' => array(self::HAS_MANY, 'QuestionnaireQuestionBank', 'question_id'),
-			'userQuestions' => array(self::HAS_MANY, 'UserQuestion', 'parent_id'),
-		);
-	}
+  /**
+   * @return array validation rules for model attributes.
+   */
+  public function rules() {
+    // NOTE: you should only define rules for those attributes that
+    // will receive user inputs.
+    return array(
+     array('year, scale, times_added, times_modified', 'numerical', 'integerOnly' => true),
+     array('tool', 'length', 'max' => 1000),
+     array('author, concept', 'length', 'max' => 150),
+     array('content', 'length', 'max' => 528),
+     array('answer', 'length', 'max' => 500),
+     // The following rule is used by search().
+     // Please remove those attributes that should not be searched.
+     array('id, tool, author, year, concept, content, scale, answer, times_added, times_modified', 'safe', 'on' => 'search'),
+    );
+  }
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'id' => 'ID',
-			'tool' => 'Tool',
-			'author' => 'Author',
-			'year' => 'Year',
-			'concept' => 'Concept',
-			'content' => 'Content',
-			'scale' => 'Scale',
-			'answer' => 'Answer',
-			'times_added' => 'Times Added',
-			'times_modified' => 'Times Modified',
-		);
-	}
+  /**
+   * @return array relational rules.
+   */
+  public function relations() {
+    // NOTE: you may need to adjust the relation name and the related
+    // class name for the relations automatically generated below.
+    return array(
+     'questionnaireQuestionBanks' => array(self::HAS_MANY, 'QuestionnaireQuestionBank', 'question_id'),
+     'userQuestions' => array(self::HAS_MANY, 'UserQuestion', 'parent_id'),
+    );
+  }
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+  /**
+   * @return array customized attribute labels (name=>label)
+   */
+  public function attributeLabels() {
+    return array(
+     'id' => 'ID',
+     'tool' => 'Tool',
+     'author' => 'Author',
+     'year' => 'Year',
+     'concept' => 'Concept',
+     'content' => 'Content',
+     'scale' => 'Scale',
+     'answer' => 'Answer',
+     'times_added' => 'Times Added',
+     'times_modified' => 'Times Modified',
+    );
+  }
 
-		$criteria=new CDbCriteria;
+  /**
+   * Retrieves a list of models based on the current search/filter conditions.
+   * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+   */
+  public function search() {
+    // Warning: Please modify the following code to remove attributes that
+    // should not be searched.
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('tool',$this->tool,true);
-		$criteria->compare('author',$this->author,true);
-		$criteria->compare('year',$this->year);
-		$criteria->compare('concept',$this->concept,true);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('scale',$this->scale);
-		$criteria->compare('answer',$this->answer,true);
-		$criteria->compare('times_added',$this->times_added);
-		$criteria->compare('times_modified',$this->times_modified);
+    $criteria = new CDbCriteria;
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+    $criteria->compare('id', $this->id);
+    $criteria->compare('tool', $this->tool, true);
+    $criteria->compare('author', $this->author, true);
+    $criteria->compare('year', $this->year);
+    $criteria->compare('concept', $this->concept, true);
+    $criteria->compare('content', $this->content, true);
+    $criteria->compare('scale', $this->scale);
+    $criteria->compare('answer', $this->answer, true);
+    $criteria->compare('times_added', $this->times_added);
+    $criteria->compare('times_modified', $this->times_modified);
+
+    return new CActiveDataProvider($this, array(
+     'criteria' => $criteria,
+    ));
+  }
+
 }
