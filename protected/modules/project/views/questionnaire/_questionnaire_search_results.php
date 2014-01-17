@@ -38,13 +38,19 @@
           <?php
           $count = 1;
           foreach ($questionnaireQuestions as $questionnaireQuestion):
+            $actionText = "";
+            $actionValue = "";
             $questionAddedClass = "";
             $notificationHideClass = "";
             $isAdded = UserQuestion::isAdded($questionnaireQuestion->question->id, $questionnaireId);
             if ($isAdded) {
               $questionAddedClass = "question-added-row";
+              $actionValue = "remove";
+              $actionText = "<i class='icon-minus-sign'></i> Remove";
             } else {
               $notificationHideClass = "hidden";
+              $actionValue = "add";
+              $actionText = "<i class='icon-plus-sign'></i> Add";
             }
             ?>
             <div id="<?php echo 'question-result-row-' . $questionnaireQuestion->question->id ?>"
@@ -82,31 +88,18 @@
                   </div>
                 </div>
                 <div class="span2">
-                  <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1"><i class=icon-plus-sign></i> Add</a>
+                  <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></a>
                 </div>
               </div>
               <div class="row-fluid que-more-info-question-row hide">
                 <div class="span12">
                   <dl class="dl-horizontal">
                     <dt>
-                    Concept:
+                    Modifications:
                     </dt>
                     <dd>
-                      <p class="que-more-info-question-concept">
-                      </p>
-                    </dd>
-                    <dt>
-                    Author:
-                    </dt>
-                    <dd>
-                      <p class="que-more-info-question-author">
-                      </p>
-                    </dd>
-                    <dt>
-                    Year:
-                    </dt>
-                    <dd>
-                      <p class="que-more-info-question-year">
+                      <p class="que-more-info-question-modification">
+
                       </p>
                     </dd>
                   </dl>

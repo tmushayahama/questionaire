@@ -39,7 +39,7 @@ Yii::app()->clientScript->registerScriptFile(
   </div>
 </div>
 <div class="container">
-  <div class="row-fluid que-border-top-red-1 que-white-background">
+  <div class="row-fluid que-white-background">
     <div class="tab-content">
       <div class="tab-pane active " id="questionnaire-design-pane">
         <div id="que-questionnaire-sidebar" class="span3">

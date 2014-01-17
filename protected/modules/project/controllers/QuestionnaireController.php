@@ -307,6 +307,7 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
+       'original_user_question_id'=>$originalUserQuestion->id,
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
         'userQuestion' => $duplicatedUserQuestion)

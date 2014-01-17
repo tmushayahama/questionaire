@@ -50,7 +50,7 @@ function addQuestion(data) {
     rearrangeNumbers("#que-questionnaire-questions");
 }
 function duplicateQuestion(data) {
-    $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
+    $(data["question_row"]).insertAfter("#que-user-question-row-"+data["original_user_question_id"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
     //$("#que-user-question-row-"data.
     rearrangeNumbers("#que-questionnaire-questions");

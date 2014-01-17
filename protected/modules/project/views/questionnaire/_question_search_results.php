@@ -48,7 +48,8 @@ foreach ($questions as $question):
       <div class="span9">
         <blockquote>
           <p><?php echo $question->content; ?></p>
-          <small><?php echo $question->author ?> <cite title="Source Title"><?php echo $question->concept ?></cite></small>
+          <small><?php echo $question->author . ", " . $question->year; ?> <br>
+            <cite title="Source Title"><?php echo $question->concept ?></cite></small>
         </blockquote>
         <!-- <a class="que-view-answer-options-toggle">
           <strong>View Answer Options</strong> 
@@ -73,37 +74,24 @@ foreach ($questions as $question):
       <div class="span12">
         <dl class="dl-horizontal">
           <dt>
-          Concept:
+          Modifications:
           </dt>
           <dd>
-            <p class="que-more-info-question-concept">
-            </p>
-          </dd>
-          <dt>
-          Author:
-          </dt>
-          <dd>
-            <p class="que-more-info-question-author">
-            </p>
-          </dd>
-          <dt>
-          Year:
-          </dt>
-          <dd>
-            <p class="que-more-info-question-year">
+            <p class="que-more-info-question-modification">
+
             </p>
           </dd>
         </dl>
       </div>
     </div>
     <div class="que-question-footer row">
-      <a class="btn btn-link question-added-btn que-stats" question-id="<?php echo $question->id ?>" >
+      <p class="btn btn-link question-added-btn que-stats" question-id="<?php echo $question->id ?>" >
         Used: <strong><?php echo $question->times_added; ?></strong>
-      </a>
-      <a class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
+      </p>
+      <p class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
         Modified: <strong><?php echo $question->times_modified; ?></strong> 
-      </a>
-      <h5><a class="pull-right btn btn-link que-more-question-info-btn">More Question Details</a></h5>
+      </p>
+      <a class="pull-right btn btn-link que-more-question-info-btn">See Modifications</a>
     </div>
   </div>
 <?php endforeach; ?>

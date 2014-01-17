@@ -4,7 +4,6 @@
 /* @var $form CActiveForm */
 ?>
 <div id="<?php echo "que-user-question-row-" . $userQuestion->id ?>" class="ui-state-default question-row" user-question-id="<?php echo $userQuestion->id ?>">
-
   <div class="row">
     <div class="span1">
       <h2 class="text-center text-info count"><?php echo $count; ?></h2>
