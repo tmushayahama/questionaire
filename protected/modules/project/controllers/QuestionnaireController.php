@@ -30,7 +30,8 @@ class QuestionnaireController extends Controller {
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
       'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions',
-       'questionnairesearchfromq', 'questionnairesearchfromcy', 'GetUserQuestionToDelete'),
+       'questionnairesearchfromq', 'questionnairesearchfromcy', 'GetUserQuestionToDelete', 'questionKeywordSearch',
+       'questionnaireKeywordSearch'),
       'users' => array('@'),
      ),
      array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -193,6 +194,39 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
+  public function actionQuestionKeywordSearch($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $keyword = Yii::app()->request->getParam('keyword');
+
+      //$count = QuestionBank::Model()->count($searchCriteria);
+      $pages = new CPagination(50);
+      $pages->pageSize = 50;
+      echo CJSON::encode(array(
+       'question_search_results' => $this->renderPartial('_question_search_results', array(
+        'questions' => QuestionBank::keywordSearch($keyword, 50),
+        'questionCount' => 50,
+        'questionnaireId' => $questionnaireId,
+        'pages' => $pages)
+         , true
+         , true)));
+    }
+    Yii::app()->end();
+  }
+public function actionQuestionnaireKeywordSearch($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+       $keyword = Yii::app()->request->getParam('keyword');
+
+     
+      echo CJSON::encode(array(
+       'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
+        'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, 10),
+        'questionnaireId' => $questionnaireId)
+         , true)));
+    }
+    Yii::app()->end();
+  }
+
+  
   public function actionQuestionnaireSearchFromCY($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $searchQuestionnaireCriteria = new CDbCriteria;
@@ -307,7 +341,7 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
-       'original_user_question_id'=>$originalUserQuestion->id,
+       'original_user_question_id' => $originalUserQuestion->id,
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
         'userQuestion' => $duplicatedUserQuestion)

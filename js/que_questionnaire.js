@@ -50,7 +50,7 @@ function addQuestion(data) {
     rearrangeNumbers("#que-questionnaire-questions");
 }
 function duplicateQuestion(data) {
-    $(data["question_row"]).insertAfter("#que-user-question-row-"+data["original_user_question_id"]);//"question_row" is the thing that addQuestion controller submitted
+    $(data["question_row"]).insertAfter("#que-user-question-row-" + data["original_user_question_id"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
     //$("#que-user-question-row-"data.
     rearrangeNumbers("#que-questionnaire-questions");
@@ -95,6 +95,22 @@ function rearrangeNumbers(id) {
     }
 }
 function searchEventHandlers() {
+    $("#que-question-keyword-search-btn").click(function(e) {
+        e.preventDefault();
+        var keyword = $("#que-question-keyword-search-input").val().trim();
+        if (keyword != "") {
+            var data = {"keyword": keyword};
+            ajaxCall(questionKeywordSearchUrl, data, questionSearch);
+        }
+    });
+    $("#que-questionnaire-keyword-search-btn").click(function(e) {
+        e.preventDefault();
+        var keyword = $("#que-questionnaire-keyword-search-input").val().trim();
+        if (keyword != "") {
+            var data = {"keyword": keyword};
+            ajaxCall(questionnaireKeywordSearchUrl, data, questionnaireSearch);
+        }
+    });
     $("#que-search-questionnaire-from-q-btn").click(function(e) {
         e.preventDefault();
         var data = $("#search-questionnaire-form-from-q").serialize();

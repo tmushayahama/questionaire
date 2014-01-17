@@ -31,8 +31,8 @@ $form = $this->beginWidget('CActiveForm', array(
           <li><a>Year</a></li>
         </ul>
       </div>
-      <input class="span8" id="appendedPrependedDropdownButton" class="que-input-large" placeholder="Keyword Search."type="text">
-      <a href="" class="btn que-btn-red-border-1" role="button" data-toggle="modal">Keyword Search</a>
+      <input class="span8" id="que-question-keyword-search-input" class="que-input-large" placeholder="Search Question by context, year, etc."type="text">
+      <button id="que-question-keyword-search-btn" class="btn que-btn-red-border-1" >Keyword Search</button>
     </div>
   </div> 
 </div>

@@ -8,6 +8,9 @@ Yii::app()->clientScript->registerScriptFile(
   var questionnaireSearchFromCYUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearchfromcy/questionnaireId/" . $questionnaireId); ?>";
   var questionnaireSearchFromQUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearchfromq/questionnaireId/" . $questionnaireId); ?>";
   var questionSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionsearch/questionnaireId/" . $questionnaireId); ?>";
+  var questionKeywordSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionkeywordsearch/questionnaireId/" . $questionnaireId); ?>";
+  var questionnaireKeywordSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnaireKeywordSearch/questionnaireId/" . $questionnaireId); ?>";
+
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";

@@ -21,8 +21,8 @@
           <li><a>Year</a></li>
         </ul>
       </div>
-      <input class="span9" id="appendedPrependedDropdownButton" class="que-input-large" placeholder="Keyword Search."type="text">
-      <a class="btn que-btn-red-border-1 ">Search</a>
+     <input class="span8" id="que-questionnaire-keyword-search-input" class="que-input-large" placeholder="Search Questionnaires by question, year, etc."type="text">
+      <button id="que-questionnaire-keyword-search-btn" class="btn que-btn-red-border-1" >Keyword Search</button>
     </div>
   </div> 
 </div>
