@@ -37,7 +37,7 @@ Yii::app()->clientScript->registerScriptFile(
       <div class="tab-heading">
         <div class="pull-left">My Projects</div>
         <div class="pull-right">
-          0
+          <?php echo UserProject::getUserProjectCount(); ?>
         </div>
       </div>
       <?php foreach ($projects as $userProject): ?>
@@ -64,7 +64,9 @@ Yii::app()->clientScript->registerScriptFile(
                   <?php foreach (ProjectQuestionnaire::getProjectQuestionnaires($userProject->project->id) as $questionnaire): ?>
                     <tr>
                       <td>
-                        <a><?php echo $questionnaire->userQuestionnaire->name; ?></a>
+                        <a href="<?php echo Yii::app()->createUrl('project/questionnaire/view', array('projectId'=>$userProject->project_id, 'questionnaireId' =>$questionnaire->userQuestionnaire->id)); ?>">
+                          <?php echo $questionnaire->userQuestionnaire->name; ?>
+                        </a>
                       </td>
                     </tr>
                   <?php endforeach; ?>

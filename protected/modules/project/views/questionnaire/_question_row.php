@@ -8,7 +8,7 @@
     <div class="span1">
       <h2 class="text-center text-info count"><?php echo $count; ?></h2>
     </div>
-    <div class="span11">
+    <div class="span9">
       <div class="row-fluid edit-question-input hide">
         <textarea class="que-edit-question-content input-block-level" rows="3">
       
@@ -54,6 +54,25 @@
         </div> -->
       </div>
     </div> 
+    <div class="span2">
+      <small class="badge badge-info">
+        <?php
+        switch ($userQuestion->status) {
+          case UserQuestion::$FROM_QUESTION:
+            case UserQuestion::$FROM_QUESTIONNAIRE:
+            echo "certified";
+            break;
+          case UserQuestion::$FROM_QUESTION_MODIFIED:
+          case UserQuestion::$FROM_QUESTIONNAIRE_MODIFIED:
+            echo "modified";
+            break;
+          case UserQuestion::$NEW_QUESTION:
+            echo "new";
+            break;
+        }
+        ?>
+      </small>
+    </div>
   </div>
   <div class="row que-footer que-question-action-links">
     <div class="span11">

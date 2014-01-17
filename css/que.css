@@ -233,6 +233,8 @@ h1, h2, h3, h4,  h5, h6 {
     width:100%;
     background-color: #fff;
 }
+.que-questionnaire-sidebar .nav-header{
+}
 .que-topbar{
     margin-top: 0px;
     padding: 10px 5px 10px 10px;
@@ -595,4 +597,20 @@ h1, h2, h3, h4,  h5, h6 {
 }
 #questionnaire-search-result-1 .accordion-heading{
     background-color: #EEE;
+}
+.que-stats-row-1 {
+    height: 150px;
+}
+.que-stats-row-1 h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 5.0em;
+    font-weight: normal!important;
+}
+.que-stats-row-1 .que-stats {
+    margin: 10px;
+    border: #AAA solid 1px;
+    background-color: #E5E3D5;
+    text-align: center;
+    height: 100%;
 }

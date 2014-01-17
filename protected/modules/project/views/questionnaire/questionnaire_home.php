@@ -29,15 +29,13 @@ Yii::app()->clientScript->registerScriptFile(
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
-  <div class="que-topbar-nav">
-    <div class=" container">
-      <div class="row">
-        <h4 class="pull-left"><?php echo $model->name ?></h4>
-        <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
-          <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Design Questionnaire</a></li>
-          <li class=""><a href="#questionnaire-summary-pane" data-toggle="tab">Summary</a></li>
-        </ul>
-      </div>
+  <div class="que-topbar-nav container">
+    <div class="row">
+      <h4 class="pull-left"><?php echo $model->name ?></h4>
+      <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
+        <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Design Questionnaire</a></li>
+        <li class=""><a href="#questionnaire-summary-pane" data-toggle="tab">Summary</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -50,7 +48,7 @@ Yii::app()->clientScript->registerScriptFile(
             <ul id="que-questionnaire-activity-nav" class="">
               <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
 
-              <h5>Add Question</h5>
+              <h5 class="nav-header text-center">Add Question</h5>
               <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
               <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
               <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
@@ -63,7 +61,10 @@ Yii::app()->clientScript->registerScriptFile(
           <div class="tab-content row">
             <div class="tab-pane active"id="que-questionnaire-edit-pane">
               <div class="tab-heading">
-                Edit Questionnaire
+                <div class="pull-left">Edit Questionnaire</div>
+                <div class="pull-right">
+                  <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
+                </div>
               </div>
               <div id="que-questionnaire-questions" class="span11">
                 <?php
@@ -124,8 +125,28 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
         </div>
       </div>
-      <div class="tab-pane active " id="questionnaire-summary-pane">
+      <div class="tab-pane" id="questionnaire-summary-pane">
+        <div class="tab-heading">
+          <div class="pull-left">Total Questions</div>
+          <div class="pull-right">
+            <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?>
+          </div>
+        </div>
 
+        <div class="que-stats-row-1 row-fluid">
+          <div class=" que-stats offset1 span3">
+            <h1><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
+            <h3>Original Questions</h3>
+          </div>
+          <div class="que-stats span4">
+            <h1><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId) ?></h1>
+            <h3>Questions Modified</h3>
+          </div>
+          <div class="que-stats span3">
+            <h1><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId) ?></h1>
+            <h3>Questions New</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>

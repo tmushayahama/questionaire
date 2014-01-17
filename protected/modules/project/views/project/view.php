@@ -11,7 +11,6 @@
     <h4><?php echo $projectModel->name ?></h4>
   </div>
 </div>
-</div>
 
 <div class="container">
   <!-- <div id="gb-home-nav" class=" row-fluid span10">

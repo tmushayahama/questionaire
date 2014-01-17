@@ -379,6 +379,12 @@ public function actionQuestionnaireKeywordSearch($questionnaireId) {
       $userQuestion = UserQuestion::Model()->findByPk($userQuestionId);
 
       $userQuestion->content = $content;
+      if ($userQuestion->status == UserQuestion::$FROM_QUESTIONNAIRE ) {
+        $userQuestion->status = UserQuestion::$FROM_QUESTIONNAIRE_MODIFIED;
+      }
+      if ($userQuestion->status == UserQuestion::$FROM_QUESTION) {
+        $userQuestion->status = UserQuestion::$FROM_QUESTION_MODIFIED;
+      }
       if ($userQuestion->save()) {
         if ($userQuestion->status != UserQuestion::$NEW_QUESTION) {
           $question = QuestionBank::Model()->findByPk($userQuestion->parent_id);

@@ -22,6 +22,8 @@ class QuestionnaireQuestionBank extends CActiveRecord {
     $keywordSearchCriteria->compare("qB.author", $keyword, true, "OR");
     $keywordSearchCriteria->compare("qB.year", $keyword, true, "OR");
     $keywordSearchCriteria->compare("qB.content", $keyword, true, "OR");
+    $keywordSearchCriteria->group = "qB.tool";
+    $keywordSearchCriteria->distinct = true;
     $keywordSearchCriteria->limit = $limit;
     return QuestionnaireQuestionBank::Model()->findAll($keywordSearchCriteria);
   }

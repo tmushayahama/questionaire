@@ -31,6 +31,38 @@ class UserQuestion extends CActiveRecord {
     $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
     return UserQuestion::Model()->findAll($userQuestionCriteria);
   }
+   public static function getUserQuestionsCount($questionnaireId) {
+    $userQuestionCriteria = new CDbCriteria;
+    //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
+
+    $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
+    return UserQuestion::Model()->count($userQuestionCriteria);
+  }
+  public static function getUserQuestionsOriginalCount($questionnaireId) {
+    $userQuestionCriteria = new CDbCriteria;
+    //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
+
+    $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
+    $userQuestionCriteria->addCondition("status=" . UserQuestion::$FROM_QUESTION. " OR status=".UserQuestion::$FROM_QUESTIONNAIRE);
+  return UserQuestion::Model()->count($userQuestionCriteria);
+  }
+  public static function getUserQuestionsModifiedCount($questionnaireId) {
+    $userQuestionCriteria = new CDbCriteria;
+    //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
+
+    $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
+    $userQuestionCriteria->addCondition("status=" . UserQuestion::$FROM_QUESTION_MODIFIED. " OR status=".UserQuestion::$FROM_QUESTIONNAIRE_MODIFIED);
+    return UserQuestion::Model()->count($userQuestionCriteria);
+  }
+   public static function getUserQuestionsCreatedCount($questionnaireId) {
+    $userQuestionCriteria = new CDbCriteria;
+    //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
+
+    $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
+    $userQuestionCriteria->addCondition("status=" . UserQuestion::$NEW_QUESTION);
+  
+    return UserQuestion::Model()->count($userQuestionCriteria);
+  }
 
   public static function getModified($questionId) {
     $criteria = new CDbCriteria;
