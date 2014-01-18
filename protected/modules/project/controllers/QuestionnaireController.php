@@ -212,11 +212,12 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
-public function actionQuestionnaireKeywordSearch($questionnaireId) {
-    if (Yii::app()->request->isAjaxRequest) {
-       $keyword = Yii::app()->request->getParam('keyword');
 
-     
+  public function actionQuestionnaireKeywordSearch($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $keyword = Yii::app()->request->getParam('keyword');
+
+
       echo CJSON::encode(array(
        'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
         'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, 10),
@@ -226,7 +227,6 @@ public function actionQuestionnaireKeywordSearch($questionnaireId) {
     Yii::app()->end();
   }
 
-  
   public function actionQuestionnaireSearchFromCY($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $searchQuestionnaireCriteria = new CDbCriteria;
@@ -379,7 +379,7 @@ public function actionQuestionnaireKeywordSearch($questionnaireId) {
       $userQuestion = UserQuestion::Model()->findByPk($userQuestionId);
 
       $userQuestion->content = $content;
-      if ($userQuestion->status == UserQuestion::$FROM_QUESTIONNAIRE ) {
+      if ($userQuestion->status == UserQuestion::$FROM_QUESTIONNAIRE) {
         $userQuestion->status = UserQuestion::$FROM_QUESTIONNAIRE_MODIFIED;
       }
       if ($userQuestion->status == UserQuestion::$FROM_QUESTION) {
@@ -420,6 +420,22 @@ public function actionQuestionnaireKeywordSearch($questionnaireId) {
        'user_questions_to_delete' => $this->renderPartial('_user_questions_to_delete', array(
         'count' => 1,
         'userQuestions' => UserQuestion::getUserQuestionsByParentId($questionnaireId, $parentId))
+         , true)));
+    }
+    Yii::app()->end();
+  }
+
+  public function actionViewModifiedQuestions() {
+    if (Yii::app()->request->isAjaxRequest) {
+      $questionId = Yii::app()->request->getParam('question_id');
+
+
+      echo CJSON::encode(array(
+       'question_id'=>$questionId,
+       'questions_modified_container' => $this->renderPartial('_questions_modified_container', array(
+        'userQuestions' => UserQuestion::getModified($questionId),
+         )
+         , true
          , true)));
     }
     Yii::app()->end();

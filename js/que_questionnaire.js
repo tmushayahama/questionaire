@@ -67,9 +67,7 @@ function editQuestion(data) {
 }
 function moreInfoQuestion(data) {
     var questionResultRow = $("#question-result-row-" + data["question_id"]);
-    questionResultRow.find('.que-more-info-question-concept').text(data["concept"]);
-    questionResultRow.find('.que-more-info-question-author').text(data["author"]);
-    questionResultRow.find('.que-more-info-question-year').text(data["year"]);
+    questionResultRow.find('.que-more-info-question-modification').html(data["questions_modified_container"]);
     questionResultRow.find(".que-more-info-question-row").show("slow");
 }
 function getUserQuestionToDelete(data) {
@@ -204,7 +202,7 @@ function addQuestionEventHandlers() {
 
 
     $("body").on("click", ".que-more-question-info-btn", function(e) {
-        var expand = $(this).text() === "More Question Details";
+        var expand = $(this).text() === "Show Modifications";
         if (expand) {
             e.preventDefault();
             var questionId = $(this).closest(".question-result-row").attr("question-id");
@@ -213,7 +211,7 @@ function addQuestionEventHandlers() {
         } else {
             $(".question-result-row").find(".que-more-info-question-row").hide("slow");
         }
-        $(this).text(expand ? "Less Question Details" : "More Question Details");
+        $(this).text(expand ? "Hide Modifications" : "Show Modifications");
 
     });
 

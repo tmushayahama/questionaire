@@ -77,9 +77,9 @@ foreach ($questions as $question):
           Modifications:
           </dt>
           <dd>
-            <p class="que-more-info-question-modification">
+            <div class="que-more-info-question-modification">
 
-            </p>
+            </div>
           </dd>
         </dl>
       </div>
@@ -91,7 +91,7 @@ foreach ($questions as $question):
       <p class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
         Modified: <strong><?php echo $question->times_modified; ?></strong> 
       </p>
-      <a class="pull-right btn btn-link que-more-question-info-btn">See Modifications</a>
+      <a class="pull-right btn btn-link que-more-question-info-btn">Show Modifications</a>
     </div>
   </div>
 <?php endforeach; ?>

@@ -14,7 +14,7 @@ Yii::app()->clientScript->registerScriptFile(
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
-  var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moreinfoquestion"); ?>";
+  var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/viewModifiedQuestions"); ?>";
   var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
   var duplicateQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/duplicatequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -181,48 +181,12 @@ Yii::app()->clientScript->registerScriptFile(
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
-<div id="question-more-info-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <span><h3>Question Info</h3>
+<div id="question-modified-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <span><h3>View Modified</h3>
   </span>
   <div class="modal-body">
     <div class="span12">
-      <dl class="dl-horizontal">
-        <dt>
-        Content
-        </dt>
-        <dd>
-          <p id="que-more-info-question-content">
-          </p>
-        </dd>
-        <dt>
-        Concept
-        </dt>
-        <dd>
-          <p id="que-more-info-question-concept">
-          </p>
-        </dd>
-        <dt>
-        Tool
-        </dt>
-        <dd>
-          <p id="que-more-info-question-tool">
-          </p>
-        </dd>
-        <dt>
-        Author
-        </dt>
-        <dd>
-          <p id="que-more-info-question-author">
-          </p>
-        </dd>
-        <dt>
-        Year
-        </dt>
-        <dd>
-          <p id="que-more-info-question-year">
-          </p>
-        </dd>
-      </dl>
+      
     </div>
   </div>
   <div class="modal-footer">
