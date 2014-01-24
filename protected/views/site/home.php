@@ -56,7 +56,7 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
           <div class="questionnaire-summary que-padding">
             <?php if (ProjectQuestionnaire::getProjectQuestionnairesCount($userProject->project->id) == 0): ?>
-              <h4 class="text-center text-warning">No Questionnaire Created</h4>
+              <h4 class="text-center text-info">No Questionnaire Created</h4>
             <?php else: ?>
               <h6 class="text-left">Questionnaire(s)</h6>
               <table class="table table-hover table-condensed">

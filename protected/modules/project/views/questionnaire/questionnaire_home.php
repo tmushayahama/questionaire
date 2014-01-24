@@ -117,8 +117,8 @@ Yii::app()->clientScript->registerScriptFile(
               <div class="row-fluid">
                 <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
                 <div class="row-fluid gb-footer">
-                  <a id="que-save-create-question-btn" class="btn btn-large btn-success que-btn-color-white" >Save</a>
-                  <a id="que-cancel-create-question-btn" class="btn btn-large">Cancel</a>
+                  <button id="que-save-create-question-btn" class="que-btn que-btn-blue-2" >Save</button>
+                  <button id="que-cancel-create-question-btn" class="que-btn  que-btn-grey-1">Cancel</button>
                 </div>
               </div>
             </div>

@@ -59,7 +59,7 @@
         <?php
         switch ($userQuestion->status) {
           case UserQuestion::$FROM_QUESTION:
-            case UserQuestion::$FROM_QUESTIONNAIRE:
+          case UserQuestion::$FROM_QUESTIONNAIRE:
             echo "certified";
             break;
           case UserQuestion::$FROM_QUESTION_MODIFIED:
@@ -75,16 +75,18 @@
     </div>
   </div>
   <div class="row que-footer que-question-action-links">
-    <div class="span11">
-      <a class="que-btn btn-link pull-right que-duplicate-question-btn" ><h4>Duplicate</h4></a>
-      <a class="que-btn btn-link pull-right que-edit-question-btn"><h4>Edit</h4></a>
-      <a class="que-btn btn-link pull-right que-remove-question-btn"><h4>Remove</h4></a>
+    <div class="span12">
+      <div class="btn-group pull-right">
+        <button class="que-btn que-btn-blue-2 btn-mini que-duplicate-question-btn" >Duplicate</button>
+        <button class="que-btn que-btn-blue-2 btn-mini que-edit-question-btn">Edit</button>
+        <button class="que-btn que-btn-blue-2 btn-mini que-remove-question-btn">Remove</button>
+      </div>
     </div>
   </div>
   <div class="row que-footer que-edit-question-submit-btn-row hide">
     <div class="span11">
-      <a class="que-save-edit-question-btn btn btn-small btn-success que-btn-color-white" >Save</a>
-      <a class="que-cancel-edit-question-btn btn btn-small">Cancel</a>
+      <button class="que-save-edit-question-btn que-btn que-btn-blue-2" >Save</button>
+      <button class="que-cancel-edit-question-btn que-btn que-btn-grey-1">Cancel</button>
     </div>
   </div>
 </div>

@@ -43,7 +43,7 @@
             </div>
           </div>
         </div>
-        <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-green-1 btn-large btn-block')); ?>
+        <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-blue-2 btn-large btn-block')); ?>
 
 
       </div>
@@ -76,8 +76,8 @@
               <p><i class="que-space-right">Created: 12/12/12</i> <i>Last Modified: 12/12/12</i></p>
             </td>
             <td class="">
-              <i class ="question-icon icon-edit"></i>
-              <i class ="question-icon icon-trash"></i>
+              <i class ="icon-edit"></i>
+              <i class ="icon-trash"></i>
             </td>
           </tr>
         <?php endforeach; ?>

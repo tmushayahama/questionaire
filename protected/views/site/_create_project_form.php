@@ -26,8 +26,8 @@ $form = $this->beginWidget('CActiveForm', array(
     </div>
   </div>
   <div class="">
-    <?php echo CHtml::submitButton('Create', array('class' => 'que-btn btn-large que-btn-green-1 pull-right')); ?>
-    <a id="que-btn-close-project-form" class="btn btn-large pull-right">Cancel</a>
+    <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-blue-2 pull-right')); ?>
+    <button id="que-btn-close-project-form" class="que-btn que-btn-grey-1 pull-right">Cancel</button>
   </div>
 </div>
 <?php $this->endWidget(); ?>

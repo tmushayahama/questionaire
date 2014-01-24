@@ -10,13 +10,14 @@
       <?php echo CHtml::link('Questionnaire', Yii::app()->getModule('user')->returnUrl, array('class' => 'brand ')); ?>
 
       <div class="nav-collapse collapse">
-        <?php echo CHtml::link('Logout', Yii::app()->getModule('user')->logoutUrl, array('class' => 'pull-right que-btn que-btn-logout que-btn-red-1')); ?>
+        <?php echo CHtml::link('Logout', Yii::app()->getModule('user')->logoutUrl, array('class' => 'pull-right que-btn que-btn-logout')); ?>
         <div id="navbar-user-info" class="pull-right">
           <img class="pull-right" src="<?php echo Yii::app()->request->baseUrl; ?>/img/que_avatar.jpg" alt="">
           <div class="pull-right">
             <h5>
               <a>
-                <?php echo User::getFirstname(); ?> <?php echo User::getLastname(); ?>
+                <?php echo User::getFirstname(); ?><br>
+                  <?php echo User::getLastname(); ?>
               </a>
             </h5>
             <h6><a>Edit Profile</a></h6>
