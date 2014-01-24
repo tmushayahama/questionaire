@@ -1,5 +1,5 @@
 body {
-    background-color: #FCFCFC;
+    background-color: #F7F7F7;
 }
 body .modal-thick {
     width: 950px;
@@ -22,11 +22,15 @@ body .modal-thick {
 }
 
 a {
+    color: #006699;
     cursor: pointer;
 }
 h1, h2, h3, h4,  h5, h6 {
     padding: 0;
     margin: 0;
+}
+textarea {
+    resize: none;
 }
 /*****NAVS*******/
 .que-nav-1 {
@@ -102,6 +106,19 @@ h1, h2, h3, h4,  h5, h6 {
 .que-breadcrumb > li > .divider {
     color:#555;
 }
+/*----Headingins------*/
+.sub-heading-1 {
+    height:53px;
+    padding: 8px 15px 0px 10px;
+    background-color: #27728B;
+    color: #F5F5F5;
+}
+.sub-heading-2 {
+    height:30px;
+    padding: 8px 5px 0px 10px;
+    background-color: #27728B;
+    color: #F5F5F5;
+}
 .que-topbar-nav{
     padding-top: 20px;
     border-bottom: #27728B solid 5px;
@@ -116,7 +133,7 @@ h1, h2, h3, h4,  h5, h6 {
     padding:0 0 0 0;
     overflow:hidden;
 }
-#que-projects-sidebar {
+.que-sidebar {
     background-color: #ECF2F7;
     height: 100vh;
     width: 28%;
@@ -131,7 +148,7 @@ h1, h2, h3, h4,  h5, h6 {
     box-shadow: #AAA -3px 1px 2px;
 
 }
-.que-projects-container{
+.que-middle-container{
     background-color: #FFF;
     width: 72%;
     float: left;
@@ -141,22 +158,28 @@ h1, h2, h3, h4,  h5, h6 {
     float: left;
     width:32%!important;
     margin: 1% 0 1% 1%;
-    border: #EEE solid 1px;
+    border: #ECF2F7 solid 1px;
     background-color: #FAFAFA;
     border-top: #27728B solid 3px;
     overflow: hidden;
+    -webkit-box-shadow: #27728B -1px 1px 2px;
+    -moz-box-shadow: #27728B -1px 1px 2px;
+    box-shadow: #27728B -1px 1px 2px;
 }
 .que-project-entry .que-padding{
     padding: 0px 10px 10px 10px;
 }
 #que-project-add-container {
-    height: 300px;
-    max-height: 300px;
+    height: 190px;
     float: left;
     width:100%;
-    padding: 12px 10px 0px 10px;
+    padding: 15px 10px 0px 10px;
     width: 95%;
     overflow: hidden;
+    background-color: #DDD;
+    -webkit-box-shadow: #AAA -2px 1px 3px;
+    -moz-box-shadow: #AAA -2px 1px 3px;
+    box-shadow: #AAA -2px 1px 2px;
 }
 #que-project-add-btn {
     height: 100%;
@@ -189,8 +212,9 @@ h1, h2, h3, h4,  h5, h6 {
     text-align: center;
 }
 .que-project-entry .title {
-    height: 15%;
-    background-color: #ECF2F7;
+    height: 10%;
+    padding-top: 10px;
+    background-color: #DDD;
     border-bottom: #ccc solid 1px;
     text-align: center;
 }
@@ -418,14 +442,13 @@ h1, h2, h3, h4,  h5, h6 {
 #new-questionnaire-form {
     border-bottom:#BBB solid 1px;
     padding: 5px;
-    background-color: #ECF2F7;
+    background-color: #DDD;
     -webkit-box-shadow: #EEE -1px 1px 3px;
     -moz-box-shadow: #EEE -1px 1px 3px;
     box-shadow: #AAA -1px 1px 2px;
 }
 .que-questionnaires-content {
     padding-top: 10px;
-    background-color: #ECF2F7;
 }
 .que-questionnaires-content table thead{
     border-top: #BBB solid 2px;
@@ -456,7 +479,7 @@ h1, h2, h3, h4,  h5, h6 {
 .question-row .que-footer button {
     margin-left: 3px;
 }
-  
+
 .heading{
     font-size: 2.0em;
     font-weight: bold;
@@ -470,7 +493,8 @@ h1, h2, h3, h4,  h5, h6 {
     margin-bottom: 20px;
     padding: 20px 20px 10px 20px;
     color: #72929E;
-    border-bottom: #BBB solid 1px;
+    border-bottom: #27728B solid 1px;
+    border-right: #27728B solid 1px;
 }
 #user-question-to-delete-modal {
     max-height:600px;
@@ -557,39 +581,31 @@ h1, h2, h3, h4,  h5, h6 {
 .que-border-top-grey-1{
     border-top: #AAA solid 5px;
 }
-#que-questionnaire-sidebar {
-    border-right: #888 solid 1px;
-    min-height:1000px;
-}
 #que-question-result {
     border-top: #CCC solid 4px;
     margin-top:20px;
     padding-top:10px;
 }
-#que-questionnaire-activity-nav {
+.que-sidebar-nav-1 {
     width:100%;
     float:left;
     margin: 0px;
     list-style: none;
-    background-color: #FFF;
+    background-color: #EEE;
     border-right: #BBB;
 }
-#que-questionnaire-activity-nav h5{
-    padding: 10px 0 2px 0;
-    background-color: #FFF;
-}
-#que-questionnaire-activity-nav i{
+.que-sidebar-nav-1 i{
     margin-top: 17px;
 }
-#que-questionnaire-activity-nav li {
+.que-sidebar-nav-1 li {
     height: 50px;
-    width: 97%;
+    width: 98%;
     padding-left:1%;
     padding-right:1%;
     border-bottom: #AAA solid 1px;
     overflow: hidden;
 }
-#que-questionnaire-activity-nav li a{
+.que-sidebar-nav-1 li a{
     display: block;
     height: 100%;
     width: 100%;
@@ -600,13 +616,17 @@ h1, h2, h3, h4,  h5, h6 {
     text-align: left;
     text-decoration: none;
 }
-#que-questionnaire-activity-nav li:hover,
-#que-questionnaire-activity-nav li.active {
-    background-color: #27728B!important;
+.que-sidebar-nav-1 li:hover {
+    background-color: #0298AB!important;
 }
-#que-questionnaire-activity-nav li:hover a,
-#que-questionnaire-activity-nav li.active a{
-    color: #F5F5F5!important;
+.que-sidebar-nav-1 li.active {
+    background-color: #BBB!important;
+}
+.que-sidebar-nav-1 li.active:hover a{
+    color: #000!important;
+}
+.que-sidebar-nav-1 li:hover a{
+    color: #F5F5F5;
 }
 .que-stats-row-1 {
     height: 150px;

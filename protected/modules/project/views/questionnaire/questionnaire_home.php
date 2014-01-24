@@ -43,21 +43,18 @@ Yii::app()->clientScript->registerScriptFile(
   <div class="row-fluid que-white-background">
     <div class="tab-content">
       <div class="tab-pane active " id="questionnaire-design-pane">
-        <div id="que-questionnaire-sidebar" class="span3">
-          <div class="">
-            <ul id="que-questionnaire-activity-nav" class="">
-              <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
-
-              <h5 class="nav-header text-center">Add Question</h5>
-              <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
-              <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
-              <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
-
-            </ul>
-
-          </div>
+        <div class="que-sidebar row-fluid">
+          <h3 class="sub-heading-1">Design Questionnaire</h3>
+          <ul class="que-sidebar-nav-1">
+            <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
+            <br>
+            <h4 class="sub-heading-2">Add Question</h4>
+            <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
+          </ul>
         </div><!--/span-->
-        <div class="span9 que-questionnaire-content">
+        <div class="que-middle-container row-fluid">
           <div class="tab-content row">
             <div class="tab-pane active"id="que-questionnaire-edit-pane">
               <div class="tab-heading">
@@ -186,7 +183,7 @@ Yii::app()->clientScript->registerScriptFile(
   </span>
   <div class="modal-body">
     <div class="span12">
-      
+
     </div>
   </div>
   <div class="modal-footer">
