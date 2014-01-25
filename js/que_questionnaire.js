@@ -139,9 +139,8 @@ function addQuestionEventHandlers() {
             question_status: questionStatus};//????
         if ($(this).attr("que-action") === "add") {
             ajaxCall(addQuestionUrl, data, addQuestion);
-            $(this).attr("que-action", "remove");
-            $(this).html("<i class='icon-minus-sign'></i> Remove");
-            $(this).css("color", "#B96320");
+            $(this).attr("que-action", "added");
+            $(this).html("<i class='icon-minus-sign'></i> Added");
             $(this).closest(".question-result-row").addClass("question-added-row")
                     .find(".added-notification").removeClass("hidden");
         } else {

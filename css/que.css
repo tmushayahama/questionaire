@@ -91,7 +91,7 @@ textarea {
 
 }
 .que-breadcrumb {
-    background-color: transparent;
+    background-color: #ECF2F7;
     border-bottom: #999 solid 1px;
     margin-bottom: 0px;
     padding-left:30px;
@@ -134,7 +134,7 @@ textarea {
     overflow:hidden;
 }
 .que-sidebar {
-    background-color: #ECF2F7;
+    background-color: #FFF;
     height: 100vh;
     width: 28%;
     float: left;
@@ -176,7 +176,7 @@ textarea {
     padding: 15px 10px 0px 10px;
     width: 95%;
     overflow: hidden;
-    background-color: #DDD;
+    background-color: #EEE;
     -webkit-box-shadow: #AAA -2px 1px 3px;
     -moz-box-shadow: #AAA -2px 1px 3px;
     box-shadow: #AAA -2px 1px 2px;
@@ -330,9 +330,6 @@ textarea {
 .que-questionaire-entry {
     margin-bottom: 20px;
 }
-.quw-added-question {
-    background-color: #ECF2F7;
-}
 
 /*---QUE-BTNS --------*/
 .que-btn{
@@ -415,10 +412,10 @@ textarea {
     background-color: #1B3128;
 }
 .que-btn-grey-1 {
-    background-color: #EEE;
+    background-color: #CCC;
 }
 .que-btn-grey-1:hover {
-    background-color: #CCC;
+    background-color: #AAA;
 }
 .question-icon {
     margin-right: 15px!important;
@@ -446,9 +443,6 @@ textarea {
     -webkit-box-shadow: #EEE -1px 1px 3px;
     -moz-box-shadow: #EEE -1px 1px 3px;
     box-shadow: #AAA -1px 1px 2px;
-}
-.que-questionnaires-content {
-    padding-top: 10px;
 }
 .que-questionnaires-content table thead{
     border-top: #BBB solid 2px;
@@ -558,7 +552,7 @@ textarea {
 }
 .question-added-row {
     outline: #EFDAA5 solid 5px;
-    color: #888!important;
+    color: #555!important;
 }
 #questionnaire-search-result-1 {
     margin-top:20px;

@@ -18,19 +18,19 @@
           </a>
         </div>
         <div class="que-question-footer row">
-          <a class="btn btn-link question-added-btn que-stats" >
-            Used: <strong><?php echo 0 ?></strong>
+          <!-- <a class="btn btn-link question-added-btn que-stats" >
+            Used: <strong><?php //echo 0  ?></strong>
           </a>
           <a class="btn btn-link question-modified-btn que-stats">
-            Modified: <strong><?php echo 0 ?></strong> 
+            Modified: <strong><?php //echo 0  ?></strong> 
           </a>
-          <a class="pull-right btn btn-link que-more-question-info-btn"><strong>More Questionnaire Details</strong></a>
+          <a class="pull-right btn btn-link que-more-question-info-btn"><strong>More Questionnaire Details</strong></a> -->
         </div>
       </div>
       <div id="<?php echo 'collapse-question-search-1-' . $questionnaire->id; ?>" class="accordion-body collapse">
         <div class="accordion-inner">
           <div class="row">
-            <a class="que-add-all-questionnaire-questions btn btn-small btn-inverse pull-left">Add All</a>
+            <a class="que-add-all-questionnaire-questions que-btn que-btn-grey-1 btn-small  pull-left">Add All</a>
             <div class="span3">
               <?php echo count($questionnaireQuestions); ?> Questions
             </div>
@@ -45,8 +45,8 @@
             $isAdded = UserQuestion::isAdded($questionnaireQuestion->question->id, $questionnaireId);
             if ($isAdded) {
               $questionAddedClass = "question-added-row";
-              $actionValue = "remove";
-              $actionText = "<i class='icon-minus-sign'></i> Remove";
+              $actionValue = "added";
+              $actionText = "<i class='icon-minus-sign'></i> Added";
             } else {
               $notificationHideClass = "hidden";
               $actionValue = "add";
@@ -73,10 +73,10 @@
                     <p><?php echo $questionnaireQuestion->question->content; ?></p>
                     <small><?php echo $questionnaireQuestion->question->author ?> <cite title="Source Title"><?php echo $questionnaireQuestion->question->concept ?></cite></small>
                   </blockquote>
-                  <a class="que-view-answer-options-toggle">
+                  <!-- <a class="que-view-answer-options-toggle">
                     <strong>View Answer Options</strong> 
                     <i class="icon-chevron-down"></i>
-                  </a>
+                  </a> 
                   <div class="question-answer-options row hide">
                     <ol class="nav nav-list">
                       <li>Strongly Agree</li>
@@ -85,10 +85,10 @@
                       <li>Disagree</li>
                       <li>Strongly Disagree</li>
                     </ol>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="span2">
-                  <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></a>
+                  <button class="add-question-btn pull-right que-btn que-btn-grey-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></button>
                 </div>
               </div>
               <div class="row-fluid que-more-info-question-row hide">
@@ -112,7 +112,9 @@
                 <a class="btn btn-link question-modified-btn que-stats">
                   Modified: <strong><?php echo $questionnaireQuestion->question->times_modified; ?></strong> 
                 </a>
-                <h5><a class="pull-right btn btn-link que-more-question-info-btn">More Question Details</a></h5>
+                <?php if ($questionnaireQuestion->question->times_modified > 0): ?>
+                  <a class="pull-right btn btn-link que-more-question-info-btn">Show Modifications</a>
+                <?php endif; ?>
               </div>
             </div>
           <?php endforeach; ?>

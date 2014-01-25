@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="span2">
-        <a class="from-results-remove-question-btn btn btn-danger">Remove</a>
+        <button class="from-results-remove-question-btn que-btn que-btn-red-1">Remove</button>
       </div>
     </div>
   </div>

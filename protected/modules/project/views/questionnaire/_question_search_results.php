@@ -22,8 +22,8 @@ foreach ($questions as $question):
   $isAdded = UserQuestion::isAdded($question->id, $questionnaireId);
   if ($isAdded) {
     $questionAddedClass = "question-added-row";
-    $actionValue = "remove";
-    $actionText = "<i class='icon-minus-sign'></i> Remove";
+    $actionValue = "added";
+    $actionText = "<i class='icon-minus-sign'></i> Added";
   } else {
     $notificationHideClass = "hidden";
     $actionValue = "add";
@@ -66,7 +66,7 @@ foreach ($questions as $question):
         </div>-->
       </div> 
       <div class="span2">
-        <a href="#" class="add-question-btn pull-right btn que-btn-red-border-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></a>
+        <button class="add-question-btn pull-right que-btn que-btn-grey-1 que-btn-red-border-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></button>
       </div>
     </div>
     <br>
@@ -91,7 +91,9 @@ foreach ($questions as $question):
       <p class="btn btn-link question-modified-btn que-stats" question-id="<?php echo $question->id ?>" >
         Modified: <strong><?php echo $question->times_modified; ?></strong> 
       </p>
-      <a class="pull-right btn btn-link que-more-question-info-btn">Show Modifications</a>
+      <?php if ($question->times_modified > 0): ?>
+        <a class="pull-right btn btn-link que-more-question-info-btn">Show Modifications</a>
+      <?php endif; ?>
     </div>
   </div>
 <?php endforeach; ?>

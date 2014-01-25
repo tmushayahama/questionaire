@@ -25,7 +25,7 @@ Yii::app()->clientScript->registerScriptFile(
       <h3 class="sub-heading-1">Create Project</h3>
       <div id="que-project-add-container">
         <!-- <div id="que-project-add-btn" class="hide">
-          <img src="<?php //echo Yii::app()->request->baseUrl; ?>/img/plus.png" alt=""><br>
+          <img src="<?php //echo Yii::app()->request->baseUrl;    ?>/img/plus.png" alt=""><br>
           <h2>New Project</h2>
         </div> -->
         <div id="" class="new-project-form">
@@ -64,7 +64,7 @@ Yii::app()->clientScript->registerScriptFile(
                   <?php foreach (ProjectQuestionnaire::getProjectQuestionnaires($userProject->project->id) as $questionnaire): ?>
                     <tr>
                       <td>
-                        <a href="<?php echo Yii::app()->createUrl('project/questionnaire/view', array('projectId'=>$userProject->project_id, 'questionnaireId' =>$questionnaire->userQuestionnaire->id)); ?>">
+                        <a href="<?php echo Yii::app()->createUrl('project/questionnaire/view', array('projectId' => $userProject->project_id, 'questionnaireId' => $questionnaire->userQuestionnaire->id)); ?>">
                           <?php echo $questionnaire->userQuestionnaire->name; ?>
                         </a>
                       </td>
@@ -73,7 +73,7 @@ Yii::app()->clientScript->registerScriptFile(
                   <tr>
                     <td>
                       <?php if (ProjectQuestionnaire::getProjectQuestionnairesCount($userProject->project->id) > 3): ?>
-                        <a class="pull-left que-btn btn-link">More</a>
+                        <a class="pull-left que-btn">More</a>
                       <?php endif; ?>
                     </td>
                   </tr>
@@ -87,12 +87,15 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
   </div>
   <div class="tab-pane" id="que-activity-log-pane">
-    <div class="row-fluid">
-      <ul class="nav nav-stacked nav-tabs que-white-background span4">
-        <li><a>All</a></li>
-        <li><a>Projects Activities</a></li>
-        <li><a>Questionnaire Activities</a></li>
+    <div class="que-sidebar row-fluid">
+      <h3 class="sub-heading-1">Activity Log</h3>
+      <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
+        <li class="active"><a href="#que-activity-log-all-pane" data-toggle="tab">All<i class="icon-chevron-right pull-right"></i></a></li>
+        <li class=""><a href="#que-activity-log-projects-pane" data-toggle="tab">Projects<i class="icon-chevron-right pull-right"></i></a></li>
+        <li class=""><a href="#que-activity-log-questionnaires-pane" data-toggle="tab">Questionnaires<i class="icon-chevron-right pull-right"></i></a></li>
       </ul>
+    </div><!--/span-->
+    <div class="que-middle-container row-fluid">
     </div>
   </div>
 </div>

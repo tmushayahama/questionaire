@@ -13,7 +13,7 @@
         <textarea class="que-edit-question-content input-block-level" rows="3">
       
         </textarea>
-        <a class="que-view-answer-options-toggle">
+       <!-- <a class="que-view-answer-options-toggle">
           <h5> <strong>Edit Answer Options</strong> 
             <i class="icon-chevron-down"></i>
           </h5>
@@ -21,7 +21,7 @@
         <div class="question-answer-options row hide">
           <textarea class="input-block-level" rows="5">     
           </textarea>
-        </div>
+        </div> -->
       </div>
       <div class="row-fluid que-question-text">
         <p class="que-question-content"><?php echo $userQuestion->content; ?></p>
@@ -55,7 +55,7 @@
       </div>
     </div> 
     <div class="span2">
-      <small class="badge badge-info">
+      <small class="badge">
         <?php
         switch ($userQuestion->status) {
           case UserQuestion::$FROM_QUESTION:
@@ -77,9 +77,9 @@
   <div class="row que-footer que-question-action-links">
     <div class="span12">
       <div class="btn-group pull-right">
-        <button class="que-btn que-btn-blue-2 btn-mini que-duplicate-question-btn" >Duplicate</button>
-        <button class="que-btn que-btn-blue-2 btn-mini que-edit-question-btn">Edit</button>
-        <button class="que-btn que-btn-blue-2 btn-mini que-remove-question-btn">Remove</button>
+        <button class="que-btn que-btn-grey-1 btn-mini que-duplicate-question-btn" >Duplicate</button>
+        <button class="que-btn que-btn-grey-1 btn-mini que-edit-question-btn">Edit</button>
+        <button class="que-btn que-btn-grey-1 btn-mini que-remove-question-btn">Remove</button>
       </div>
     </div>
   </div>

@@ -45,7 +45,7 @@ Yii::app()->clientScript->registerScriptFile(
       <div class="tab-pane active " id="questionnaire-design-pane">
         <div class="que-sidebar row-fluid">
           <h3 class="sub-heading-1">Design Questionnaire</h3>
-          <ul class="que-sidebar-nav-1">
+          <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
             <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
             <br>
             <h4 class="sub-heading-2">Add Question</h4>
@@ -168,14 +168,16 @@ Yii::app()->clientScript->registerScriptFile(
   </div>
 </div>
 <div id="user-question-to-delete-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <span><h3>Remove Question</h3>
+  <span><h3>Remove Referenced Question</h3><p>
+    You can remove directly from here. 
+    </p>
   </span>
   <div class="modal-body">
 
   </div>
   <div class="modal-footer">
-    <button id="que-delete-all" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Delete All</button>
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button id="que-delete-all" class="que-btn que-btn-red-1" data-dismiss="modal" aria-hidden="true">Delete All</button>
+    <button type="button" class="que-btn que-btn-grey-1" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
 <div id="question-modified-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -214,7 +216,7 @@ Yii::app()->clientScript->registerScriptFile(
   </div>
   <div class="modal-footer">
     <button id="add-question" class="btn btn-success" data-dismiss="modal" aria-hidden="true">Add</button>
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
 <?php $this->endContent(); ?>

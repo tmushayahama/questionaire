@@ -19,71 +19,80 @@
     <a class=""><i class="icon-book"></i> 2 Questions </a>
   </div> -->
   <div class="row que-questionnaires-content">
-    <div id="new-questionnaire-form" class="span4">
-      <div class="header">
-        <h3> Create Questionnaire</h3>
-      </div>
+    <div class="que-sidebar row-fluid">
+      <h3 class="sub-heading-1">My Questionnaires</h3>
+      <div id="new-questionnaire-form" class="">
 
-      <?php
-      $form = $this->beginWidget('CActiveForm', array(
-       'id' => 'questionnaire-form',
-       'enableAjaxValidation' => false,
-       'htmlOptions' => array(
-        'class' => 'form',
-       ),
-      ));
-      ?>
-      <div class="row-fluid">
-        <div class="span12">
-          <?php echo $form->errorSummary(array($questionnaireModel), NULL, NULL, array('class' => 'alert alert-error')); ?>
-          <div class="control-group">
-            <div class="controls">
-              <?php echo $form->textField($questionnaireModel, 'name', array("class" => "input-block-level", "placeholder" => "Name")); ?>
-              <?php echo $form->error($questionnaireModel, 'name'); ?>
+        <?php
+        $form = $this->beginWidget('CActiveForm', array(
+         'id' => 'questionnaire-form',
+         'enableAjaxValidation' => false,
+         'htmlOptions' => array(
+          'class' => 'form',
+         ),
+        ));
+        ?>
+        <div class="row-fluid">
+          <div class="span12">
+            <?php echo $form->errorSummary(array($questionnaireModel), NULL, NULL, array('class' => 'alert alert-error')); ?>
+            <div class="control-group">
+              <div class="controls">
+                <?php echo $form->textField($questionnaireModel, 'name', array("class" => "input-block-level", "placeholder" => "Name")); ?>
+                <?php echo $form->error($questionnaireModel, 'name'); ?>
+              </div>
             </div>
           </div>
+          <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-blue-2')); ?>
+          <button type="button" class="que-btn que-btn-grey-1">Cancel</button>
+
         </div>
-        <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-blue-2 btn-large btn-block')); ?>
-
-
+        <?php $this->endWidget(); ?>
       </div>
-      <?php $this->endWidget(); ?>
-    </div>
-    <table class="span7 que-white-background table table-hover">
-      <thead>
-        <tr>
-          <th class="span1">
-          </th>
-          <th class="span8">
-            Name
-          </th>
-          <th class="span3">
-            Action
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="que-questionaire-entry">
-          <?php
-          $row = 1;
-          foreach ($projectQuestionnaires as $projectQuestionnaire):
-            ?>
-            <td class="">
-              <?php echo $row++; ?>
-            </td>
-            <td class="name">
-              <h4><?php echo CHtml::link($projectQuestionnaire->userQuestionnaire->name, array(Yii::app()->getModule('project')->viewQuestionnaireUrl, 'projectId' => $projectModel->id, 'questionnaireId' => $projectQuestionnaire->userQuestionnaire->id), array('class' => '')); ?></h4>
-              <p><i class="que-space-right">Created: 12/12/12</i> <i>Last Modified: 12/12/12</i></p>
-            </td>
-            <td class="">
-              <i class ="icon-edit"></i>
-              <i class ="icon-trash"></i>
-            </td>
-          </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
+    </div><!--/span-->
+    <div class="que-middle-container row-fluid">
 
+      <div class="tab-heading">
+        <div class="pull-left">My Questionnaires</div>
+        <div class="pull-right">
+          <?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>
+        </div>
+      </div>
+      <br>
+      <table class="que-white-background table table-hover">
+        <thead>
+          <tr>
+            <th class="span1">
+            </th>
+            <th class="span8">
+              Name
+            </th>
+            <th class="span3">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="que-questionaire-entry">
+            <?php
+            $row = 1;
+            foreach ($projectQuestionnaires as $projectQuestionnaire):
+              ?>
+              <td class="">
+                <?php echo $row++; ?>
+              </td>
+              <td class="name">
+                <h4><?php echo CHtml::link($projectQuestionnaire->userQuestionnaire->name, array(Yii::app()->getModule('project')->viewQuestionnaireUrl, 'projectId' => $projectModel->id, 'questionnaireId' => $projectQuestionnaire->userQuestionnaire->id), array('class' => '')); ?></h4>
+                <p><i class="que-space-right">Created: 12/12/12</i> <i>Last Modified: 12/12/12</i></p>
+              </td>
+              <td class="">
+                <i class ="icon-edit"></i>
+                <i class ="icon-trash"></i>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
