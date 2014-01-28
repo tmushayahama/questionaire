@@ -11,7 +11,6 @@ Yii::app()->clientScript->registerScriptFile(
   </ul>
   <div class="que-topbar-nav container">
     <div class="row">
-      <h4 class="pull-left">Home</h4>
       <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
         <li class="active"><a href="#que-projects-pane" data-toggle="tab">Projects</a></li>
         <li class=""><a href="#que-activity-log-pane" data-toggle="tab">Activity Log</a></li>
@@ -35,9 +34,9 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
     <div class="que-middle-container row-fluid">
       <div class="tab-heading">
-        <div class="pull-left">My Projects</div>
-        <div class="pull-right">
-          <?php echo UserProject::getUserProjectCount(); ?>
+        <div class="pull-left">My Projects </div>
+        <div class="">
+           (<?php echo UserProject::getUserProjectCount(); ?>)
         </div>
       </div>
       <?php foreach ($projects as $userProject): ?>

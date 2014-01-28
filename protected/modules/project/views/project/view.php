@@ -3,7 +3,7 @@
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
-    <li class="active">Project</li>
+    <li class="active"><?php echo $projectModel->name ?></li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
@@ -20,7 +20,7 @@
   </div> -->
   <div class="row que-questionnaires-content">
     <div class="que-sidebar row-fluid">
-      <h3 class="sub-heading-1">My Questionnaires</h3>
+      <h3 class="sub-heading-1">Create Questionnaires</h3>
       <div id="new-questionnaire-form" class="">
 
         <?php
@@ -42,8 +42,8 @@
               </div>
             </div>
           </div>
-          <?php echo CHtml::submitButton('Create', array('class' => 'que-btn que-btn-blue-2')); ?>
-          <button type="button" class="que-btn que-btn-grey-1">Cancel</button>
+          <?php echo CHtml::submitButton('Create', array('class' => 'que-btn pull-right que-btn-blue-2')); ?>
+          <button type="button" class="que-btn pull-right que-btn-grey-1">Cancel</button>
 
         </div>
         <?php $this->endWidget(); ?>
@@ -52,9 +52,9 @@
     <div class="que-middle-container row-fluid">
 
       <div class="tab-heading">
-        <div class="pull-left">My Questionnaires</div>
-        <div class="pull-right">
-          <?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>
+        <div class="pull-left">My Questionnaires </div>
+        <div class="">
+          (<?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>)
         </div>
       </div>
       <br>
@@ -67,7 +67,6 @@
               Name
             </th>
             <th class="span3">
-              Action
             </th>
           </tr>
         </thead>
