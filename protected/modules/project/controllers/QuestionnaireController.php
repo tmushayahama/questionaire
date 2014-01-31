@@ -212,16 +212,26 @@ class QuestionnaireController extends Controller {
   public function actionQuestionKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
+      $tool = Yii::app()->request->getParam('tool');
       $concept = Yii::app()->request->getParam('concept');
       $year = Yii::app()->request->getParam('year');
+      $selectedDropdown = Yii::app()->request->getParam('selected_dropdown');
       $model = new QuestionBank();
-      $conceptList = QuestionBank::getUniqueColumn($keyword, $concept, $year, "concept");
-      $yearList = QuestionBank::getUniqueColumn($keyword, $concept, $year, "year");
+      $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
+      $conceptList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "concept");
+      $yearList = QuestionBank::getUniqueColumn($keyword,$tool, $concept, $year, "year");
       //$count = QuestionBank::Model()->count($searchCriteria);
       $pages = new CPagination(50);
       $pages->pageSize = 50;
 
       echo CJSON::encode(array(
+       'selected_dropdown'=> $selectedDropdown,
+       'tool_dropdown' => CHtml::activeDropDownList(
+         $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
+        'id' => 'que-question-tool-dropdown',
+        'empty' => 'Select a Questionnaire',
+        'class' => 'input-block-level'
+       )),
        'concept_dropdown' => CHtml::activeDropDownList(
          $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
         'id' => 'que-question-concept-dropdown',
@@ -235,7 +245,7 @@ class QuestionnaireController extends Controller {
         'class' => 'input-block-level'
        )),
        'question_search_results' => $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::keywordSearch($keyword, $concept, $year, 50),
+        'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
         'questionCount' => 50,
         'questionnaireId' => $questionnaireId,
         'pages' => $pages)
@@ -244,7 +254,6 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
-
   public function actionQuestionnaireKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');

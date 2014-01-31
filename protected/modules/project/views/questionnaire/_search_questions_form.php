@@ -37,6 +37,18 @@ $form = $this->beginWidget('CActiveForm', array(
 <br>
 <button class="que-additional-filter-question-btn que-btn que-btn-grey-1">Additional Filters</button>
 <div class="row">
+  <div id="que-tool-dropdown" class="span12">
+    <?php
+    echo CHtml::activeDropDownList(
+      $model, 'tool', CHtml::listData($toolList, 'tool', 'tool'), array(
+      'id'=> 'que-question-tool-dropdown',
+       'empty' => 'Select a Questionnaire',
+     'class' => 'input-block-level'
+    ));
+    ?>
+  </div>
+</div>
+<div class="row">
   <div id="que-concept-dropdown" class="span12">
     <?php
     echo CHtml::activeDropDownList(

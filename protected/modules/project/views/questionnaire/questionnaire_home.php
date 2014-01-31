@@ -44,7 +44,7 @@ Yii::app()->clientScript->registerScriptFile(
     <div class="tab-content">
       <div class="tab-pane active " id="questionnaire-design-pane">
         <div class="que-sidebar row-fluid">
-           <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
+          <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
             <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
             <br>
             <h4 class="sub-heading-2">Add Questions</h4>
@@ -79,12 +79,12 @@ Yii::app()->clientScript->registerScriptFile(
               </div>
               <div class="row-fluid">
                 <?php
-                echo $this->renderPartial('_search_questionnaires_form', array(
-                 'questionnaireSearchFromCYModel' => $questionnaireSearchFromCYModel,
-                 'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
-                 'toolList' => $toolList,
-                 "yearList" => $yearList,
-                 'conceptList' => $conceptList));
+                //echo $this->renderPartial('_search_questionnaires_form', array(
+                 //'questionnaireSearchFromCYModel' => $questionnaireSearchFromCYModel,
+                 //'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
+                 //'toolList' => $toolList,
+                // "yearList" => $yearList,
+                // 'conceptList' => $conceptList));
                 ?>
               </div>
               <div id="que-questionnaire-result" class="row-fluid">
@@ -98,6 +98,7 @@ Yii::app()->clientScript->registerScriptFile(
               <div class="row-fluid">
                 <?php
                 echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
+                 "toolList" => $toolList,
                  "yearList" => $yearList,
                  'conceptList' => $conceptList));
                 ?>
@@ -168,7 +169,7 @@ Yii::app()->clientScript->registerScriptFile(
 </div>
 <div id="user-question-to-delete-modal" class="modal modal-thick hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <span><h3>Remove Referenced Question</h3><p>
-    You can remove directly from here. 
+      You can remove directly from here. 
     </p>
   </span>
   <div class="modal-body">
