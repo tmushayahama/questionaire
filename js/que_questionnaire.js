@@ -43,6 +43,8 @@ function questionnaireSearch(data) {
 }
 function questionSearch(data) {
     $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
+    $("#que-concept-dropdown").html(data["concept_dropdown"]);//"question_row" is the thing that addQuestion controller submitted
+    $("#que-year-dropdown").html(data["year_dropdown"]);
 }
 function addQuestion(data) {
     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted

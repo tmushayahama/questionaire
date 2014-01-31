@@ -37,65 +37,32 @@ $form = $this->beginWidget('CActiveForm', array(
   </div> 
 </div>
 <br>
+<br>
+<button class="que-additional-filter-question-btn que-btn que-btn-grey-1">Additional Filters</button>
 <div class="row">
-  <div class="span3"><h4 class="pull-right">Additional Filters</h4></div>
-  <div class="span8">
-    <div class="accordion" id="">
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#question-search-1-1" href="#collapse-question-search-1-1">
-            Concept<i class="pull-right icon-chevron-down"></i>
-          </a>
-        </div>
-        <div id="collapse-question-search-1-1" class="accordion-body in collapse">
-          <div class="accordion-inner">
-            <div class="row-fluid">
-              <ul class="nav que-checkbox-nav">
-                <?php
-                echo CHtml::activeCheckboxList(
-                  $model, 'questionConceptList', CHtml::listData($conceptList, 'concept', 'concept'), array(
-                 'labelOptions' => array('style' => 'display:inline'),
-                 'separator' => '',
-                 'template' => '<li>{input} {label}</li>'
-                  )
-                );
-                ?>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#question-search-1-1" href="#collapse-question-search-1-3">
-            Year<i class="pull-right icon-chevron-down"></i>
-          </a>
-        </div>
-        <div id="collapse-question-search-1-3" class="accordion-body collapse">
-          <div class="accordion-inner">
-            <div class="row-fluid">
-              <ul class="nav que-checkbox-nav">
-                <?php
-                echo CHtml::activeCheckboxList(
-                  $model, 'questionYearList', CHtml::listData($yearList, 'year', 'year'), array(
-                 'labelOptions' => array('style' => 'display:inline'),
-                 'separator' => '',
-                 'template' => '<li>{input} {label}</li>'
-                  )
-                );
-                ?>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-footer span11">
-      <?php echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
-      <a class="btn que-btn-red-border-1 ">Clear</a>
-      <a href="#que-search-summary-modal" class="btn que-btn-red-border-1 pull-right" role="button" data-toggle="modal">View Search Criteria</a>
-    </div>
-  </div> 
+  <div id="que-concept-dropdown" class="span12">
+    <?php
+    echo CHtml::activeDropDownList(
+      $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
+     'empty' => 'Select a Concept',
+     'class' => 'input-block-level'
+    ));
+    ?>
+  </div>
 </div>
-
+<div class="row">
+  <div id="que-year-dropdown" class="span12">
+    <?php
+    echo CHtml::activeDropDownList(
+      $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
+     'empty' => 'Select Year',
+     'class' => 'input-block-level'
+    ));
+    ?>
+  </div>
+</div>
+<div class="form-footer span11">
+  <?php echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
+  <a class="btn que-btn-red-border-1 ">Clear</a>
+</div>
 <?php $this->endWidget(); ?>

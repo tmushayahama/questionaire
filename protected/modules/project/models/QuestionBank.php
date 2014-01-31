@@ -25,15 +25,28 @@ class QuestionBank extends CActiveRecord {
   public $questionYearList;
 
   public static function keywordSearch($keyword, $limit) {
-    $keywordSearchCriteria = new CDbCriteria;
-     $keywordSearchCriteria->compare("tool", $keyword, true, "OR");
-     $keywordSearchCriteria->compare("concept", $keyword, true, "OR");
-     $keywordSearchCriteria->compare("author", $keyword, true, "OR");
-     $keywordSearchCriteria->compare("year", $keyword, true, "OR");
-     $keywordSearchCriteria->compare("content", $keyword, true, "OR");
-     $keywordSearchCriteria->limit = $limit;
-     return QuestionBank::Model()->findAll($keywordSearchCriteria);
+    $keywordSearchCriteria = self::keywordSearchCriteria($keyword);
+    $keywordSearchCriteria->limit = $limit;
+    return QuestionBank::Model()->findAll($keywordSearchCriteria);
   }
+
+  public static function keywordSearchCriteria($keyword) {
+    $keywordSearchCriteria = new CDbCriteria;
+    $keywordSearchCriteria->compare("tool", $keyword, true, "OR");
+    $keywordSearchCriteria->compare("concept", $keyword, true, "OR");
+    $keywordSearchCriteria->compare("author", $keyword, true, "OR");
+    $keywordSearchCriteria->compare("year", $keyword, true, "OR");
+    $keywordSearchCriteria->compare("content", $keyword, true, "OR");
+    return $keywordSearchCriteria;
+  }
+
+  public static function getUniqueConcept($keyword, $group) {
+    $keywordSearchCriteria = self::keywordSearchCriteria($keyword);
+    $keywordSearchCriteria->group = $group;
+    $keywordSearchCriteria->distinct = true;
+    return QuestionBank::Model()->findAll($keywordSearchCriteria);
+  }
+
   public static function getUniqueTools() {
     /* 	$questionCriteria = new CDbCriteria();
       //$questionCriteria->select = "tool";

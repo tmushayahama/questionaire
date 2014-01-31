@@ -135,21 +135,6 @@ class QuestionnaireController extends Controller {
     ));
   }
 
-  public function actionPopulateFilters() {
-    if (Yii::app()->request->isAjaxRequest) {
-
-      echo CJSON::encode(array(
-       'question_search_results' => $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::Model()->findAll($searchCriteria),
-        'questionCount' => QuestionBank::Model()->count($searchCriteria),
-        'questionnaireId' => $questionnaireId,
-        'pages' => $pages)
-         , true
-         , true)));
-    }
-    Yii::app()->end();
-  }
-
   public function actionQuestionSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $questionSearchModel = new QuestionBank();
@@ -212,24 +197,11 @@ class QuestionnaireController extends Controller {
   public function actionQuestionKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
-      $model = new QuestionBank();
-      $conceptList = QuestionBank::getUniqueConcept($keyword, "concept");
-      $yearList = QuestionBank::getUniqueConcept($keyword, "year");
+
       //$count = QuestionBank::Model()->count($searchCriteria);
       $pages = new CPagination(50);
       $pages->pageSize = 50;
-
       echo CJSON::encode(array(
-       'concept_dropdown' => CHtml::activeDropDownList(
-         $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
-        'empty' => 'Select a Concept',
-        'class' => 'input-block-level'
-       )),
-       'year_dropdown' => CHtml::activeDropDownList(
-         $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
-        'empty' => 'Select a Year',
-        'class' => 'input-block-level'
-       )),
        'question_search_results' => $this->renderPartial('_question_search_results', array(
         'questions' => QuestionBank::keywordSearch($keyword, 50),
         'questionCount' => 50,
@@ -459,7 +431,7 @@ class QuestionnaireController extends Controller {
 
 
       echo CJSON::encode(array(
-       'question_id' => $questionId,
+       'question_id'=>$questionId,
        'questions_modified_container' => $this->renderPartial('_questions_modified_container', array(
         'userQuestions' => UserQuestion::getModified($questionId),
          )
