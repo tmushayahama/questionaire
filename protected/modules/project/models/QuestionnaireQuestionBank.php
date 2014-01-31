@@ -14,7 +14,13 @@
  */
 class QuestionnaireQuestionBank extends CActiveRecord {
 
-  public static function keywordSearch($keyword, $limit) {
+  public static function keywordSearch($keyword, $tool, $concept, $year, $limit) {
+    $keywordSearchCriteria = self::keywordSearchCriteria($keyword, $tool, $concept, $year);
+    $keywordSearchCriteria->limit = $limit;
+    return QuestionnaireQuestionBank::Model()->findAll($keywordSearchCriteria);
+  }
+
+  public static function keywordSearchCriteria($keyword, $tool, $concept, $year) {
     $keywordSearchCriteria = new CDbCriteria;
     $keywordSearchCriteria->with = array("question" => array("alias" => "qB"));
     $keywordSearchCriteria->compare("qB.tool", $keyword, true, "OR");
@@ -24,8 +30,16 @@ class QuestionnaireQuestionBank extends CActiveRecord {
     $keywordSearchCriteria->compare("qB.content", $keyword, true, "OR");
     $keywordSearchCriteria->group = "qB.tool";
     $keywordSearchCriteria->distinct = true;
-    $keywordSearchCriteria->limit = $limit;
-    return QuestionnaireQuestionBank::Model()->findAll($keywordSearchCriteria);
+    if ($tool != null) {
+      $keywordSearchCriteria->addCondition("qB.tool='" . $tool . "'");
+    }
+    if ($concept != null) {
+      $keywordSearchCriteria->addCondition("qB.concept='" . $concept . "'");
+    }
+    if ($year != null) {
+      $keywordSearchCriteria->addCondition("qB.year=" . $year);
+    }
+    return $keywordSearchCriteria;
   }
 
   public static function getQuestionnaireQuestions($questionnaireId) {

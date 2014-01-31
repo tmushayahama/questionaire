@@ -2,6 +2,8 @@
 /*----------------GLOBAL VARIABLES ---------*/
 var QUESTION_ADDED_COLOR = "#999";
 var QUESTION_ADDED_OUTLINE = "#EFDAA5 solid 5px";
+var resultOutput = 1;
+var selectedDropdown = "";
 // ________________________________________________________________
 // |-------------------------INITIALIZATIONS-----------------------|
 // `````````````````````````````````````````````````````````````````
@@ -46,7 +48,9 @@ function questionSearch(data) {
     $("#que-concept-dropdown").html(data["concept_dropdown"]);//"question_row" is the thing that addQuestion controller submitted
     $("#que-tool-dropdown").html(data["tool_dropdown"]);
     $("#que-year-dropdown").html(data["year_dropdown"]);
-    $("#" + data["selected_dropdown"] + " option:nth(1)").attr("selected", "selected");
+    if (data["selected_dropdown"].trim() != "") {
+        $("#" + data["selected_dropdown"] + " option:nth(1)").attr("selected", "selected");
+    }
 }
 function addQuestion(data) {
     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
@@ -105,28 +109,50 @@ function searchEventHandlers() {
                 "year": null,
                 "concept": null,
                 "tool": null,
-                "selected_dropdown": null};
+                "selected_dropdown": null,
+                result_output: resultOutput};
             ajaxCall(questionKeywordSearchUrl, data, questionSearch);
         }
     });
-    $("body").on("change",
-            "#que-question-tool-dropdown, #que-question-concept-dropdown, #que-question-year-dropdown",
-            function(e) {
-                e.preventDefault();
-                var concept = $("#que-question-concept-dropdown").val().trim();
-                var year = $("#que-question-year-dropdown").val().trim();
-                var tool = $("#que-question-tool-dropdown").val().trim();
-                //alert(tool)
-                var keyword = $("#que-question-keyword-search-input").val().trim();
-                if (concept != "" || year != "" || tool != "") {
-                    var data = {"keyword": keyword,
-                        "concept": concept,
-                        "year": year,
-                        "tool": tool,
-                        "selected_dropdown": $(this).attr("id")};
-                    ajaxCall(questionKeywordSearchUrl, data, questionSearch);
-                }
-            });
+    $("body").on("change", "#que-question-tool-dropdown, #que-question-concept-dropdown, #que-question-year-dropdown", function(e) {
+        e.preventDefault();
+        var concept = $("#que-question-concept-dropdown").val().trim();
+        var year = $("#que-question-year-dropdown").val().trim();
+        var tool = $("#que-question-tool-dropdown").val().trim();
+        //alert(tool)
+        var keyword = $("#que-question-keyword-search-input").val().trim();
+        selectedDropdown = $(this).attr("id");
+        if (concept != "" || year != "" || tool != "") {
+            var data = {keyword: keyword,
+                concept: concept,
+                year: year,
+                tool: tool,
+                result_output: resultOutput,
+                selected_dropdown: selectedDropdown};
+            ajaxCall(questionKeywordSearchUrl, data, questionSearch);
+        }
+    });
+
+    $(".que-result-as").click(function(e) {
+        e.preventDefault();
+        var concept = $("#que-question-concept-dropdown").val().trim();
+        var year = $("#que-question-year-dropdown").val().trim();
+        var tool = $("#que-question-tool-dropdown").val().trim();
+        //alert(tool)
+        var keyword = $("#que-question-keyword-search-input").val().trim();
+        resultOutput = $(this).attr("result-output");
+        //if (concept != "" || year != "" || tool != "") {
+        var data = {keyword: keyword,
+            concept: concept,
+            year: year,
+            tool: tool,
+            result_output: resultOutput,
+            selected_dropdown: selectedDropdown};
+        ajaxCall(questionKeywordSearchUrl, data, questionSearch);
+        //  }
+        $(".que-result-as").removeClass("que-btn-grey-1");
+        $(this).addClass("que-btn-grey-1");
+    });
     $("#que-questionnaire-keyword-search-btn").click(function(e) {
         e.preventDefault();
         var keyword = $("#que-questionnaire-keyword-search-input").val().trim();

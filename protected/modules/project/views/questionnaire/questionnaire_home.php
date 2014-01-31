@@ -48,8 +48,7 @@ Yii::app()->clientScript->registerScriptFile(
             <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
             <br>
             <h4 class="sub-heading-2">Add Questions</h4>
-            <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
-            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">Question Search<i class="icon-chevron-right pull-right"></i></a></li>
             <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
           </ul>
         </div><!--/span-->
@@ -73,49 +72,41 @@ Yii::app()->clientScript->registerScriptFile(
                 ?>
               </div>
             </div>
-            <div class="tab-pane"id="que-questionnaire-bank-pane">
-              <div class="tab-heading">
-                Add from Questionnaire Bank
-              </div>
-              <div class="row-fluid">
-                <?php
-                //echo $this->renderPartial('_search_questionnaires_form', array(
-                 //'questionnaireSearchFromCYModel' => $questionnaireSearchFromCYModel,
-                 //'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
-                 //'toolList' => $toolList,
-                // "yearList" => $yearList,
-                // 'conceptList' => $conceptList));
-                ?>
-              </div>
-              <div id="que-questionnaire-result" class="row-fluid">
-
-              </div>
-            </div>
             <div class="tab-pane"id="que-question-bank-pane">
               <div class="tab-heading">
-                Add from Question Bank
+                Question Search
               </div>
-              <div class="row-fluid">
-                <?php
-                echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
-                 "toolList" => $toolList,
-                 "yearList" => $yearList,
-                 'conceptList' => $conceptList));
-                ?>
-              </div>
-              <div id="que-question-result" class="row-fluid">
+              <div class="que-margined">
+                <div class="row-fluid">
+                  <?php
+                  echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
+                   "toolList" => $toolList,
+                   "yearList" => $yearList,
+                   'conceptList' => $conceptList));
+                  ?>
+                </div>
+                <div>
+                  <ul class="nav nav-tabs">
+                    <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1">Results As Questions</a></li>
+                    <li><a id="que-result-as-questions" class="que-result-as" result-output="2">Results As Questionnaires</a></li>
+                  </ul>
+                </div>
+                <div id="que-question-result" class="row-fluid">
 
+                </div>
               </div>
             </div>
             <div class="tab-pane"id="que-create-new-question-bank-pane">
               <div class="tab-heading">
                 Create your Own Question
               </div>
-              <div class="row-fluid">
-                <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
-                <div class="row-fluid gb-footer">
-                  <button id="que-save-create-question-btn" class="que-btn que-btn-blue-2" >Save</button>
-                  <button id="que-cancel-create-question-btn" class="que-btn  que-btn-grey-1">Cancel</button>
+              <div class="que-margined">
+                <div class="row-fluid">
+                  <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
+                  <div class="row-fluid gb-footer">
+                    <button id="que-save-create-question-btn" class="que-btn que-btn-blue-2" >Save</button>
+                    <button id="que-cancel-create-question-btn" class="que-btn  que-btn-grey-1">Cancel</button>
+                  </div>
                 </div>
               </div>
             </div>

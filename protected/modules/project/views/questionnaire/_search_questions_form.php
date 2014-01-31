@@ -29,7 +29,7 @@ $form = $this->beginWidget('CActiveForm', array(
         </ul>
       </div>
       <input class="span8" id="que-question-keyword-search-input" class="que-input-large" placeholder="Search Question by context, year, etc."type="text">
-      <button id="que-question-keyword-search-btn" class="btn que-btn-red-border-1" >Keyword Search</button>
+      <button id="que-question-keyword-search-btn" class="que-btn que-btn-blue-2" >Keyword Search</button>
     </div>
   </div> 
 </div>
@@ -37,7 +37,7 @@ $form = $this->beginWidget('CActiveForm', array(
 <br>
 <button class="que-additional-filter-question-btn que-btn que-btn-grey-1">Additional Filters</button>
 <div class="row">
-  <div id="que-tool-dropdown" class="span12">
+  <div id="que-tool-dropdown" class="span10">
     <?php
     echo CHtml::activeDropDownList(
       $model, 'tool', CHtml::listData($toolList, 'tool', 'tool'), array(
@@ -49,7 +49,7 @@ $form = $this->beginWidget('CActiveForm', array(
   </div>
 </div>
 <div class="row">
-  <div id="que-concept-dropdown" class="span12">
+  <div id="que-concept-dropdown" class="span10">
     <?php
     echo CHtml::activeDropDownList(
       $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
@@ -61,7 +61,7 @@ $form = $this->beginWidget('CActiveForm', array(
   </div>
 </div>
 <div class="row">
-  <div id="que-year-dropdown" class="span12">
+  <div id="que-year-dropdown" class="span10">
     <?php
     echo CHtml::activeDropDownList(
       $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
@@ -73,7 +73,7 @@ $form = $this->beginWidget('CActiveForm', array(
   </div>
 </div>
 <div class="form-footer span11">
-  <?php echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
-  <a class="btn que-btn-red-border-1 ">Clear</a>
+  <?php //echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
+  <button type="button" class="que-btn que-btn-grey-1 ">Clear</button>
 </div>
 <?php $this->endWidget(); ?>

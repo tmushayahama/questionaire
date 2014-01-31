@@ -158,6 +158,9 @@ textarea {
     width: 72%;
     float: left;
 }
+.que-margined {
+    margin: 10px 2% 10px 2%;
+}
 .que-project-entry {
     height: 307px;
     float: left;

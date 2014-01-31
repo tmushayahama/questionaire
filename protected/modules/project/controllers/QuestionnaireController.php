@@ -216,6 +216,7 @@ class QuestionnaireController extends Controller {
       $concept = Yii::app()->request->getParam('concept');
       $year = Yii::app()->request->getParam('year');
       $selectedDropdown = Yii::app()->request->getParam('selected_dropdown');
+      $resultOutput = Yii::app()->request->getParam('result_output');
       $model = new QuestionBank();
       $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
       $conceptList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "concept");
@@ -223,7 +224,21 @@ class QuestionnaireController extends Controller {
       //$count = QuestionBank::Model()->count($searchCriteria);
       $pages = new CPagination(50);
       $pages->pageSize = 50;
-
+      $resultRow ="";
+      if ($resultOutput == 1) {
+        $resultRow = $this->renderPartial('_question_search_results', array(
+        'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
+        'questionCount' => 50,
+        'questionnaireId' => $questionnaireId,
+        'pages' => $pages)
+         , true
+         , true);
+      } else {
+        $resultRow = $this->renderPartial('_questionnaire_search_results', array(
+        'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, $tool, $concept, $year, 10),
+        'questionnaireId' => $questionnaireId)
+         , true);
+      }
       echo CJSON::encode(array(
        'selected_dropdown'=> $selectedDropdown,
        'tool_dropdown' => CHtml::activeDropDownList(
@@ -244,13 +259,7 @@ class QuestionnaireController extends Controller {
         'empty' => 'Select a Year',
         'class' => 'input-block-level'
        )),
-       'question_search_results' => $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
-        'questionCount' => 50,
-        'questionnaireId' => $questionnaireId,
-        'pages' => $pages)
-         , true
-         , true)));
+       'question_search_results' => $resultRow,));
     }
     Yii::app()->end();
   }
