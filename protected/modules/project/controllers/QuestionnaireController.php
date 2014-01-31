@@ -212,9 +212,11 @@ class QuestionnaireController extends Controller {
   public function actionQuestionKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
+      $concept = Yii::app()->request->getParam('concept');
+      $year = Yii::app()->request->getParam('year');
       $model = new QuestionBank();
-      $conceptList = QuestionBank::getUniqueConcept($keyword, "concept");
-      $yearList = QuestionBank::getUniqueConcept($keyword, "year");
+      $conceptList = QuestionBank::getUniqueColumn($keyword, $concept, $year, "concept");
+      $yearList = QuestionBank::getUniqueColumn($keyword, $concept, $year, "year");
       //$count = QuestionBank::Model()->count($searchCriteria);
       $pages = new CPagination(50);
       $pages->pageSize = 50;
@@ -222,16 +224,18 @@ class QuestionnaireController extends Controller {
       echo CJSON::encode(array(
        'concept_dropdown' => CHtml::activeDropDownList(
          $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
+        'id' => 'que-question-concept-dropdown',
         'empty' => 'Select a Concept',
         'class' => 'input-block-level'
        )),
        'year_dropdown' => CHtml::activeDropDownList(
          $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
+        'id' => 'que-question-year-dropdown',
         'empty' => 'Select a Year',
         'class' => 'input-block-level'
        )),
        'question_search_results' => $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::keywordSearch($keyword, 50),
+        'questions' => QuestionBank::keywordSearch($keyword, $concept, $year, 50),
         'questionCount' => 50,
         'questionnaireId' => $questionnaireId,
         'pages' => $pages)

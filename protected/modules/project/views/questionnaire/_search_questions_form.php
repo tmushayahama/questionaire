@@ -14,10 +14,7 @@ $form = $this->beginWidget('CActiveForm', array(
   ));
 ?>
 <div class="row">
-  <div class="span3">
-    <h4 class="pull-right">Keyword Search</h4>
-  </div>
-  <div class="span8">
+  <div class="span12">
     <div class="row-fluid input-prepend input-append">
       <div class="btn-group">
         <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -44,7 +41,8 @@ $form = $this->beginWidget('CActiveForm', array(
     <?php
     echo CHtml::activeDropDownList(
       $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
-     'empty' => 'Select a Concept',
+      'id'=> 'que-question-concept-dropdown',
+       'empty' => 'Select a Concept',
      'class' => 'input-block-level'
     ));
     ?>
@@ -55,7 +53,8 @@ $form = $this->beginWidget('CActiveForm', array(
     <?php
     echo CHtml::activeDropDownList(
       $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
-     'empty' => 'Select Year',
+    'id'=> 'que-question-year-dropdown',
+       'empty' => 'Select Year',
      'class' => 'input-block-level'
     ));
     ?>

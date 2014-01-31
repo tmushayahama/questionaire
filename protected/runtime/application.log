@@ -12791,3 +12791,378 @@ Stack trace:
 REQUEST_URI=/questionnaire/js/jquery.min.map
 HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
 ---
+2014/01/31 06:26:58 [warning] [application] Failed to set unsafe attribute "id" of "UserQuestion".
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (366)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2014/01/31 17:25:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:32:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:32:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:38:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:38:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:54:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:54:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:54:22 [error] [php] Missing argument 2 for QuestionBank::keywordSearchCriteria(), called in C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php on line 46 and defined (C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php:33)
+Stack trace:
+#0 unknown(0): QuestionnaireController->actionQuestionKeywordSearch()
+#1 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): QuestionnaireController->runAction()
+#5 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#8 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): QuestionnaireController->runActionWithFilters()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): QuestionnaireController->run()
+#12 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\questionnaire\index.php(13): CWebApplication->run()
+REQUEST_URI=/questionnaire/project/questionnaire/questionkeywordsearch/questionnaireId/216
+in C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php (33)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php (46)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (218)
+2014/01/31 17:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:56:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY concept' at line 1. The SQL statement executed was: SELECT DISTINCT * FROM `que_question_bank` `t` WHERE ((((((tool LIKE :ycp0) OR (concept LIKE :ycp1)) OR (author LIKE :ycp2)) OR (year LIKE :ycp3)) OR (content LIKE :ycp4)) AND (concept='')) AND (year=) GROUP BY concept.
+in C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php (49)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (218)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2014/01/31 17:56:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY concept' at line 1. The SQL statement executed was: SELECT DISTINCT * FROM `que_question_bank` `t` WHERE ((((((tool LIKE :ycp0) OR (concept LIKE :ycp1)) OR (author LIKE :ycp2)) OR (year LIKE :ycp3)) OR (content LIKE :ycp4)) AND (concept='')) AND (year=) GROUP BY concept' in C:\xampp\htdocs\questionnaire\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php(49): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(218): QuestionBank::getUniqueColumn('step', NULL, NULL, 'concept')
+#5 [internal function]: QuestionnaireController->actionQuestionKeywordSearch('216')
+#6 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionnaireController), Array)
+#7 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionnaireController), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('questionkeyword...')
+#17 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('project/questio...')
+#18 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/questionnaire/project/questionnaire/questionkeywordsearch/questionnaireId/216
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:59:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 17:59:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:00:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:00:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:00:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY concept' at line 1. The SQL statement executed was: SELECT DISTINCT * FROM `que_question_bank` `t` WHERE ((((((tool LIKE :ycp0) OR (concept LIKE :ycp1)) OR (author LIKE :ycp2)) OR (year LIKE :ycp3)) OR (content LIKE :ycp4)) AND (concept='')) AND (year=) GROUP BY concept.
+in C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php (49)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (218)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2014/01/31 18:00:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY concept' at line 1. The SQL statement executed was: SELECT DISTINCT * FROM `que_question_bank` `t` WHERE ((((((tool LIKE :ycp0) OR (concept LIKE :ycp1)) OR (author LIKE :ycp2)) OR (year LIKE :ycp3)) OR (content LIKE :ycp4)) AND (concept='')) AND (year=) GROUP BY concept' in C:\xampp\htdocs\questionnaire\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php(49): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(218): QuestionBank::getUniqueColumn('step', NULL, NULL, 'concept')
+#5 [internal function]: QuestionnaireController->actionQuestionKeywordSearch('216')
+#6 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionnaireController), Array)
+#7 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionnaireController), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('questionkeyword...')
+#17 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('project/questio...')
+#18 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/questionnaire/project/questionnaire/questionkeywordsearch/questionnaireId/216
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:01:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT * FROM `que_question_bank` `t` WHERE ((((((tool LIKE :ycp0) OR (concept LIKE :ycp1)) OR (author LIKE :ycp2)) OR (year LIKE :ycp3)) OR (content LIKE :ycp4)) AND (concept='')) AND (year=).
+in C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php (49)
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (218)
+in C:\xampp\htdocs\questionnaire\index.php (13)
+2014/01/31 18:01:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT * FROM `que_question_bank` `t` WHERE ((((((tool LIKE :ycp0) OR (concept LIKE :ycp1)) OR (author LIKE :ycp2)) OR (year LIKE :ycp3)) OR (content LIKE :ycp4)) AND (concept='')) AND (year=)' in C:\xampp\htdocs\questionnaire\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\questionnaire\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\questionnaire\protected\modules\project\models\QuestionBank.php(49): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php(218): QuestionBank::getUniqueColumn('step', NULL, NULL, 'concept')
+#5 [internal function]: QuestionnaireController->actionQuestionKeywordSearch('216')
+#6 C:\xampp\htdocs\questionnaire\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionnaireController), Array)
+#7 C:\xampp\htdocs\questionnaire\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionnaireController), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\questionnaire\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\questionnaire\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\questionnaire\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\questionnaire\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\questionnaire\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\questionnaire\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(282): CController->run('questionkeyword...')
+#17 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('project/questio...')
+#18 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/questionnaire/project/questionnaire/questionkeywordsearch/questionnaireId/216
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:05:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:05:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:15:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---
+2014/01/31 18:15:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/jquery.min.map
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/2/questionnaireId/216
+---

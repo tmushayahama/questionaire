@@ -99,7 +99,23 @@ function searchEventHandlers() {
         e.preventDefault();
         var keyword = $("#que-question-keyword-search-input").val().trim();
         if (keyword != "") {
-            var data = {"keyword": keyword};
+            var data = {"keyword": keyword,
+                "year": null,
+                "concept": null};
+            ajaxCall(questionKeywordSearchUrl, data, questionSearch);
+        }
+    });
+    $("body").on("change", "#que-question-concept-dropdown, #que-question-year-dropdown", function(e) {
+        e.preventDefault();
+        alert("yeas");
+        var concept = $("#que-question-concept-dropdown").val().trim();
+        var year = $("#que-question-year-dropdown").val().trim();
+        var year = $("#que-question-year-dropdown").val().trim();
+        var keyword = $("#que-question-keyword-search-input").val().trim();
+        if (concept != "" || year !="") {
+            var data = {"keyword": keyword,
+                "concept": concept,
+                "year": year};
             ajaxCall(questionKeywordSearchUrl, data, questionSearch);
         }
     });
