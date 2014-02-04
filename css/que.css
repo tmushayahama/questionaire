@@ -633,19 +633,3 @@ textarea {
 .que-sidebar-nav-1 li:hover a{
     color: #F5F5F5;
 }
-.que-stats-row-1 {
-    height: 150px;
-}
-.que-stats-row-1 h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 5.0em;
-    font-weight: normal!important;
-}
-.que-stats-row-1 .que-stats {
-    margin: 10px;
-    border: #AAA solid 1px;
-    background-color: #E5E3D5;
-    text-align: center;
-    height: 100%;
-}

@@ -24,17 +24,16 @@ Yii::app()->clientScript->registerScriptFile(
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
-    <li><?php echo CHtml::link("Project: " . Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
+    <li><?php echo CHtml::link(Project::model()->findByPk($projectId)->name, Yii::app()->createUrl("project/project/view", array("id" => $projectId)), array('class' => 'btn btn-link')) ?><span class="divider">/</span></li>
     <li class="active">Questionnaire</li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
   <div class="que-topbar-nav container">
     <div class="row">
-      <h4 class="pull-left"><?php echo $model->name ?></h4>
-      <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
-        <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Design Questionnaire</a></li>
-        <li class=""><a href="#questionnaire-summary-pane" data-toggle="tab">Summary</a></li>
+      <ul id="que-topbar-nav-list" class="que-nav-1">
+        <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">My Questionnaire</a></li>
+        <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
       </ul>
     </div>
   </div>
@@ -45,94 +44,74 @@ Yii::app()->clientScript->registerScriptFile(
       <div class="tab-pane active " id="questionnaire-design-pane">
         <div class="que-sidebar row-fluid">
           <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
-            <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
-            <br>
-            <h4 class="sub-heading-2">Add Questions</h4>
-            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">Question Search<i class="icon-chevron-right pull-right"></i></a></li>
-            <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
+            <ul class="nav nav-stacked">
+              <li class="">
+                Original Questions <div class="badge pull-right"><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></div>
+              </li>
+              <li class="">
+                Questions Modified<div class="badge pull-right"><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId) ?></div>
+              </li>
+              <li class="">
+                Questions New <div class="badge pull-right"><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId) ?></div>
+              </li>
+            </ul>
           </ul>
         </div><!--/span-->
         <div class="que-middle-container row-fluid">
-          <div class="tab-content row">
-            <div class="tab-pane active"id="que-questionnaire-edit-pane">
-              <div class="tab-heading">
-                <div class="pull-left">Edit Questionnaire</div>
-                <div class="pull-right">
-                  <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
-                </div>
-              </div>
-              <div id="que-questionnaire-questions" class="span11">
-                <?php
-                $count = 1;
-                foreach ($userQuestions as $userQuestion):
-                  echo $this->renderPartial('_question_row', array(
-                   'count' => $count++,
-                   'userQuestion' => $userQuestion));
-                endforeach;
-                ?>
-              </div>
+          <div class="tab-heading">
+            <div class="pull-left">Edit Questionnaire</div>
+            <div class="pull-right">
+              <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
             </div>
-            <div class="tab-pane"id="que-question-bank-pane">
-              <div class="tab-heading">
-                Question Search
-              </div>
-              <div class="que-margined">
-                <div class="row-fluid">
-                  <?php
-                  echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
-                   "toolList" => $toolList,
-                   "yearList" => $yearList,
-                   'conceptList' => $conceptList));
-                  ?>
-                </div>
-                <div>
-                  <ul class="nav nav-tabs">
-                    <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1">Results As Questions</a></li>
-                    <li><a id="que-result-as-questions" class="que-result-as" result-output="2">Results As Questionnaires</a></li>
-                  </ul>
-                </div>
-                <div id="que-question-result" class="row-fluid">
-
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane"id="que-create-new-question-bank-pane">
-              <div class="tab-heading">
-                Create your Own Question
-              </div>
-              <div class="que-margined">
-                <div class="row-fluid">
-                  <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
-                  <div class="row-fluid gb-footer">
-                    <button id="que-save-create-question-btn" class="que-btn que-btn-blue-2" >Save</button>
-                    <button id="que-cancel-create-question-btn" class="que-btn  que-btn-grey-1">Cancel</button>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div id="que-questionnaire-questions" class="span11">
+            <?php
+            $count = 1;
+            foreach ($userQuestions as $userQuestion):
+              echo $this->renderPartial('_question_row', array(
+               'count' => $count++,
+               'userQuestion' => $userQuestion));
+            endforeach;
+            ?>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane"id="que-create-new-question-bank-pane">
+        <div class="tab-heading">
+          Create your Own Question
+        </div>
+        <div class="que-margined">
+          <div class="row-fluid">
+            <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
+            <div class="row-fluid gb-footer">
+              <button id="que-save-create-question-btn" class="que-btn que-btn-blue-2" >Save</button>
+              <button id="que-cancel-create-question-btn" class="que-btn  que-btn-grey-1">Cancel</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-pane" id="questionnaire-summary-pane">
-        <div class="tab-heading">
-          <div class="pull-left">Total Questions</div>
-          <div class="pull-right">
-            <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?>
-          </div>
-        </div>
 
-        <div class="que-stats-row-1 row-fluid">
-          <div class=" que-stats offset1 span3">
-            <h1><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
-            <h3>Original Questions</h3>
+      <div class="tab-pane" id="que-search-question-pane">
+        <div class="tab-heading">
+          Question Search
+        </div>
+        <div class="que-margined">
+          <div class="row-fluid">
+            <?php
+            echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
+             "toolList" => $toolList,
+             "yearList" => $yearList,
+             'conceptList' => $conceptList));
+            ?>
           </div>
-          <div class="que-stats span4">
-            <h1><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId) ?></h1>
-            <h3>Questions Modified</h3>
+          <div>
+            <ul class="nav nav-tabs">
+              <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1">Results As Questions</a></li>
+              <li><a id="que-result-as-questions" class="que-result-as" result-output="2">Results As Questionnaires</a></li>
+            </ul>
           </div>
-          <div class="que-stats span3">
-            <h1><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId) ?></h1>
-            <h3>Questions New</h3>
+          <div id="que-question-result" class="row-fluid">
+
           </div>
         </div>
       </div>
