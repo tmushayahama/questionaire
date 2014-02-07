@@ -1,6 +1,7 @@
 <div class="row-fluid">
-  <h5 class="pull-left">Results
-    <?php echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
+  <h5 class="pull-left">Results:
+      <?php echo ' ' . $questionCount." questions"; ?>
+    <?php //echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
   </h5>
   <div class="span8 pull-right">
     <?php

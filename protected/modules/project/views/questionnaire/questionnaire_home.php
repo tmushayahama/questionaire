@@ -113,8 +113,8 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
           <div>
             <ul class="nav nav-tabs">
-              <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1">Results As Questions</a></li>
-              <li><a id="que-result-as-questions" class="que-result-as" result-output="2">Results As Questionnaires</a></li>
+              <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1"><h4>Results As Questions</h4></a></li>
+              <li><a id="que-result-as-questions" class="que-result-as" result-output="2"><h4>Results As Questionnaires</h4></a></li>
             </ul>
           </div>
           <div id="que-question-result" class="row-fluid">

@@ -15,6 +15,6 @@
     <?php echo $filterSelected; ?>
   </div>
   <div class="span1 que-filter-cancel">
-    <button class="que-remove-filter pull-right que-btn que-btn-grey-1 btn-large">X</button>
+    <button class="que-remove-filter pull-right que-btn que-btn-grey-1">X</button>
   </div>
 </div>

@@ -33,6 +33,10 @@ class QuestionBank extends CActiveRecord {
     $keywordSearchCriteria->limit = $limit;
     return QuestionBank::Model()->findAll($keywordSearchCriteria);
   }
+  public static function keywordSearchCount($keyword, $tool, $concept, $year) {
+    $keywordSearchCriteria = self::keywordSearchCriteria($keyword, $tool, $concept, $year);
+    return QuestionBank::Model()->count($keywordSearchCriteria);
+  }
 
   public static function keywordSearchCriteria($keyword, $tool, $concept, $year) {
     $keywordSearchCriteria = new CDbCriteria;

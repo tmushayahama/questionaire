@@ -224,8 +224,8 @@ class QuestionnaireController extends Controller {
       $conceptList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "concept");
       $yearList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "year");
       //$count = QuestionBank::Model()->count($searchCriteria);
-      $pages = new CPagination(50);
-      $pages->pageSize = 50;
+      $pages = new CPagination(100);
+      $pages->pageSize = 100;
       $resultRow = "";
 
       $selectedFilterView = null;
@@ -235,7 +235,7 @@ class QuestionnaireController extends Controller {
       if ($resultOutput == 1) {
         $resultRow = $this->renderPartial('_question_search_results', array(
          'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
-         'questionCount' => 50,
+         'questionCount' => QuestionBank::keywordSearchCount($keyword, $tool, $concept, $year),
          'questionnaireId' => $questionnaireId,
          'pages' => $pages)
           , true
