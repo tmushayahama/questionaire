@@ -111,7 +111,7 @@ Yii::app()->clientScript->registerScriptFile(
             </ul>
           </div>
           <div id="que-question-result" class="row-fluid">
-
+            
           </div>
         </div>
       </div>

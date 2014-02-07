@@ -216,46 +216,55 @@ class QuestionnaireController extends Controller {
       $concept = Yii::app()->request->getParam('concept');
       $year = Yii::app()->request->getParam('year');
       $selectedDropdown = Yii::app()->request->getParam('selected_dropdown');
+      $selectedFilterType = Yii::app()->request->getParam('selected_filter_type');
+      $selectedFilter = Yii::app()->request->getParam('selected_filter');
       $resultOutput = Yii::app()->request->getParam('result_output');
       $model = new QuestionBank();
       $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
       $conceptList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "concept");
-      $yearList = QuestionBank::getUniqueColumn($keyword,$tool, $concept, $year, "year");
+      $yearList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "year");
       //$count = QuestionBank::Model()->count($searchCriteria);
       $pages = new CPagination(50);
       $pages->pageSize = 50;
-      $resultRow ="";
+      $resultRow = "";
       if ($resultOutput == 1) {
         $resultRow = $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
-        'questionCount' => 50,
-        'questionnaireId' => $questionnaireId,
-        'pages' => $pages)
-         , true
-         , true);
+         'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
+         'questionCount' => 50,
+         'questionnaireId' => $questionnaireId,
+         'pages' => $pages)
+          , true
+          , true);
       } else {
         $resultRow = $this->renderPartial('_questionnaire_search_results', array(
-        'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, $tool, $concept, $year, 10),
-        'questionnaireId' => $questionnaireId)
-         , true);
+         'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, $tool, $concept, $year, 10),
+         'questionnaireId' => $questionnaireId)
+          , true);
       }
       echo CJSON::encode(array(
-       'selected_dropdown'=> $selectedDropdown,
+       'selected_dropdown' => $selectedDropdown,
+       'filter_selected' => $this->renderPartial('_selected_filter_row', array(
+        'filterType' => $this->questionFilterType($selectedFilterType),
+        'filterSelected' => $selectedFilter)
+         , true),
        'tool_dropdown' => CHtml::activeDropDownList(
          $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
         'id' => 'que-question-tool-dropdown',
+        'filter-type' => QuestionBank::$FILTER_TOOL,
         'empty' => 'Select a Questionnaire',
         'class' => 'input-block-level'
        )),
        'concept_dropdown' => CHtml::activeDropDownList(
          $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
         'id' => 'que-question-concept-dropdown',
+        'filter-type' => QuestionBank::$FILTER_CONCEPT,
         'empty' => 'Select a Concept',
         'class' => 'input-block-level'
        )),
        'year_dropdown' => CHtml::activeDropDownList(
          $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
         'id' => 'que-question-year-dropdown',
+        'filter-type' => QuestionBank::$FILTER_YEAR,
         'empty' => 'Select a Year',
         'class' => 'input-block-level'
        )),
@@ -263,6 +272,7 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
+
   public function actionQuestionnaireKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
@@ -612,6 +622,17 @@ class QuestionnaireController extends Controller {
     if ($model === null)
       throw new CHttpException(404, 'The requested page does not exist.');
     return $model;
+  }
+
+  public function questionFilterType($filterType) {
+    switch ($filterType) {
+      case QuestionBank::$FILTER_CONCEPT:
+        return "Concept:";
+      case QuestionBank::$FILTER_TOOL:
+        return "Questionnaire:";
+      case QuestionBank::$FILTER_YEAR:
+        return "Year:";
+    }
   }
 
   /**

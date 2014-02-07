@@ -21,6 +21,10 @@
  */
 class QuestionBank extends CActiveRecord {
 
+  public static $FILTER_TOOL = 1;
+  public static $FILTER_CONCEPT = 2;
+  public static $FILTER_YEAR = 3;
+  
   public $questionConceptList;
   public $questionYearList;
 

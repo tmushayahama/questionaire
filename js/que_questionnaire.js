@@ -50,6 +50,10 @@ function questionSearch(data) {
     $("#que-year-dropdown").html(data["year_dropdown"]);
     if (data["selected_dropdown"].trim() != "") {
         $("#" + data["selected_dropdown"] + " option:nth(1)").attr("selected", "selected");
+        $("#" + data["selected_dropdown"]).parent().hide("slow");
+    }
+    if (data["filter_selected"] != null) {
+        $("#que-filter-selected").append(data["filter_selected"]);
     }
 }
 function addQuestion(data) {
@@ -128,7 +132,9 @@ function searchEventHandlers() {
                 year: year,
                 tool: tool,
                 result_output: resultOutput,
-                selected_dropdown: selectedDropdown};
+                selected_dropdown: selectedDropdown,
+                selected_filter_type: $(this).attr("filter-type"),
+                selected_filter: $(this).val()};
             ajaxCall(questionKeywordSearchUrl, data, questionSearch);
         }
     });
