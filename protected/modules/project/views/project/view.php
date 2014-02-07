@@ -8,7 +8,11 @@
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
   <div class="que-topbar-nav container">
-    <h4><?php echo $projectModel->name ?></h4>
+    <div class="row">
+      <ul id="que-topbar-nav-list" class="que-nav-1">
+        <li class="active"><a><?php echo $projectModel->name ?></a></li>
+      </ul>
+    </div>
   </div>
 </div>
 

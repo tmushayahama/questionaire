@@ -11,7 +11,7 @@ Yii::app()->clientScript->registerScriptFile(
   </ul>
   <div class="que-topbar-nav container">
     <div class="row">
-      <ul id="que-topbar-nav-list" class="que-nav-1 pull-right">
+      <ul id="que-topbar-nav-list" class="que-nav-1">
         <li class="active"><a href="#que-projects-pane" data-toggle="tab">Projects</a></li>
         <li class=""><a href="#que-activity-log-pane" data-toggle="tab">Activity Log</a></li>
       </ul>

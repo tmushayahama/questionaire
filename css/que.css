@@ -45,33 +45,46 @@ textarea {
 /*****NAVS*******/
 .que-nav-1 {
     margin: 0;
-    height: 25px;
+    width:100%;
+    height: 40px;
     list-style: none;
+    border-top: #F5F5F5 solid 1px;
+    border-bottom: #F5F5F5 solid 1px;
+    overflow:hidden;
 }
 .que-nav-1 li {
     min-width:70px;
+    max-width: 200px;
+    height: 100%;
     float:left;
-    padding: 2px 10px 3px 10px;
-    margin-left:5px;
-    background-color: #ECF2F7;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    padding: 2px 20px 3px 20px;
+    border-right:#EEE solid 2px;
+    overflow:hidden;
 }
 .que-nav-1 li a{
     display: block;
     height: 100%;
     width: 100%;
-    color: #444;
-    font-size: 1.0em;
+    color: #f5f5f5;
+    font-size: 1.1em;
     font-weight: bold;
     text-align: center;
+    line-height: 35px;
     text-decoration: none;
 }
 .que-nav-1 li:hover,
-.que-nav-1 li.active {
-    background-color: #27728B;
+.que-nav-1 li.active:hover {
+    background-color: #EEE;
 }
-.que-nav-1 li:hover a,
+.que-nav-1 li.active {
+    background-color: #1B313A;
+}
+.que-nav-1 li.active:hover {
+    background-color: #1B313A;
+}
+.que-nav-1 li:hover a {
+     color: #444;
+}
 .que-nav-1 li.active a {
     color: #F5F5F5;
 }
@@ -123,10 +136,11 @@ textarea {
 }
 /*----Headingins------*/
 .sub-heading-1 {
-    height:53px;
+    height:52px;
     padding: 8px 15px 0px 10px;
-    background-color: #27728B;
-    color: #F5F5F5;
+    border-bottom: #999 solid 1px;
+    background-color: #DDD;
+    color: #222;
 }
 .sub-heading-2 {
     height:30px;
@@ -135,8 +149,11 @@ textarea {
     color: #F5F5F5;
 }
 .que-topbar-nav{
-    padding-top: 20px;
-    border-bottom: #27728B solid 5px;
+    margin-top:15px;
+    padding: 1px 0 1px 0;
+    background-color: #27728B;
+    border-top: #27728B groove 4px;
+    border-bottom: #27728B groove 4px;
 }
 
 .que-topbar-nav ul li a small{
@@ -465,6 +482,22 @@ textarea {
     font-size: 1.5em;
 }
 /*------Questionnaire -------*/
+.que-questionnaire-stats {
+    padding: 10px 5px 0px 5px;
+    background-color: #DDD;
+}
+.que-stats {
+    overflow:hidden;
+    background-color: #F5F5F5;
+}
+.que-stats:hover {
+    background-color:#FFF;
+    color:#456789;
+    text-decoration:none;
+}
+.que-stats h1{
+    text-align:center;
+}
 .question-row {
     border: #777 solid 1px;
     margin-bottom: 20px;

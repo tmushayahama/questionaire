@@ -42,27 +42,34 @@ Yii::app()->clientScript->registerScriptFile(
   <div class="row-fluid que-white-background">
     <div class="tab-content">
       <div class="tab-pane active " id="questionnaire-design-pane">
-        <div class="que-sidebar row-fluid">
-          <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
-            <ul class="nav nav-stacked">
-              <li class="">
-                Original Questions <div class="badge pull-right"><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></div>
-              </li>
-              <li class="">
-                Questions Modified<div class="badge pull-right"><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId) ?></div>
-              </li>
-              <li class="">
-                Questions New <div class="badge pull-right"><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId) ?></div>
-              </li>
-            </ul>
-          </ul>
-        </div><!--/span-->
-        <div class="que-middle-container row-fluid">
+        <div class="que-white-background row-fluid span12">
           <div class="tab-heading">
             <div class="pull-left">Edit Questionnaire</div>
             <div class="pull-right">
               <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
             </div>
+          </div>
+          <div class="que-questionnaire-stats">
+            <ul class="thumbnails">
+              <li class="span4">
+                <a class="thumbnail que-stats">
+                  <h1><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
+                  <h5 class="text-center">Original Questions</h5>
+                </a>
+              </li>
+              <li class="span4">
+                <a class="thumbnail que-stats">
+                  <h1><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId); ?></h1>
+                  <h5 class="text-center">Questions Modified</h5>
+                </a>
+              </li>
+              <li class="span4">
+                <a class="thumbnail que-stats">
+                  <h1><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId); ?></h1>
+                  <h5 class="text-center">New Created Questions</h5>
+                </a>
+              </li>
+            </ul>
           </div>
           <div id="que-questionnaire-questions" class="span11">
             <?php
@@ -111,7 +118,7 @@ Yii::app()->clientScript->registerScriptFile(
             </ul>
           </div>
           <div id="que-question-result" class="row-fluid">
-            
+
           </div>
         </div>
       </div>

@@ -64,8 +64,8 @@ $form = $this->beginWidget('CActiveForm', array(
 <div id="que-filter-selected" class="row-fluid">
 
 </div>
-<div class="form-footer span11">
+<div class="well row-fluid">
   <?php //echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
-  <button type="button" id="que-clear-search-btn" class="que-btn que-btn-grey-1 ">Clear</button>
+  <button type="button" id="que-clear-search-btn" class="que-btn btn-large que-btn-grey-1 ">Clear</button>
 </div>
 <?php $this->endWidget(); ?>
