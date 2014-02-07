@@ -215,7 +215,7 @@ class QuestionnaireController extends Controller {
       $tool = Yii::app()->request->getParam('tool');
       $concept = Yii::app()->request->getParam('concept');
       $year = Yii::app()->request->getParam('year');
-      $selectedDropdown = Yii::app()->request->getParam('selected_dropdown');
+      $selectedDropdowns = Yii::app()->request->getParam('selected_dropdown');
       $selectedFilterType = Yii::app()->request->getParam('selected_filter_type');
       $selectedFilter = Yii::app()->request->getParam('selected_filter');
       $resultOutput = Yii::app()->request->getParam('result_output');
@@ -227,6 +227,11 @@ class QuestionnaireController extends Controller {
       $pages = new CPagination(50);
       $pages->pageSize = 50;
       $resultRow = "";
+
+      $selectedFilterView = null;
+      $toolDropdown = null;
+      $conceptDropdown = null;
+      $yearDropdown = null;
       if ($resultOutput == 1) {
         $resultRow = $this->renderPartial('_question_search_results', array(
          'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
@@ -241,33 +246,72 @@ class QuestionnaireController extends Controller {
          'questionnaireId' => $questionnaireId)
           , true);
       }
-      echo CJSON::encode(array(
-       'selected_dropdown' => $selectedDropdown,
-       'filter_selected' => $this->renderPartial('_selected_filter_row', array(
+      if (in_array("que-question-tool-dropdown", $selectedDropdowns)) {
+        $toolDropdown = CHtml::activeDropDownList(
+            $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
+           'id' => 'que-question-tool-dropdown',
+           'filter-type' => QuestionBank::$FILTER_TOOL,
+           //'empty' => 'Select a Questionnaire',
+          // 'options' => array('2' => array('selected' => true)),
+           'class' => 'input-block-level'));
+      } else {
+        $toolDropdown = CHtml::activeDropDownList(
+            $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
+           'id' => 'que-question-tool-dropdown',
+           'filter-type' => QuestionBank::$FILTER_TOOL,
+           'empty' => 'Select a Questionnaire',
+           'class' => 'input-block-level'));
+      }
+      if (in_array("que-question-concept-dropdown", $selectedDropdowns)) {
+        $conceptDropdown = CHtml::activeDropDownList(
+            $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
+           'id' => 'que-question-concept-dropdown',
+           'filter-type' => QuestionBank::$FILTER_CONCEPT,
+           //'empty' => 'Select a Concept',
+           'class' => 'input-block-level'
+        ));
+      } else {
+        $conceptDropdown = CHtml::activeDropDownList(
+            $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
+           'id' => 'que-question-concept-dropdown',
+           'filter-type' => QuestionBank::$FILTER_CONCEPT,
+           'empty' => 'Select a Concept',
+           //'options' => array('1' => array('selected' => true)),
+           'class' => 'input-block-level'
+        ));
+      }
+      if (in_array("que-question-year-dropdown", $selectedDropdowns)) {
+        $yearDropdown = CHtml::activeDropDownList(
+            $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
+           'id' => 'que-question-year-dropdown',
+           'filter-type' => QuestionBank::$FILTER_YEAR,
+           //'empty' => 'Select a Year',
+           'class' => 'input-block-level'
+        ));
+      } else {
+        $yearDropdown = CHtml::activeDropDownList(
+            $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
+           'id' => 'que-question-year-dropdown',
+           'filter-type' => QuestionBank::$FILTER_YEAR,
+           'empty' => 'Select a Year',
+          // 'options' => array('1' => array('selected' => true)),
+           'class' => 'input-block-level'
+        ));
+      }
+      if ($selectedFilter!=null) {
+        $selectedFilterView = $this->renderPartial('_selected_filter_row', array(
+        'filterTypeId' => $selectedFilterType,
         'filterType' => $this->questionFilterType($selectedFilterType),
         'filterSelected' => $selectedFilter)
-         , true),
-       'tool_dropdown' => CHtml::activeDropDownList(
-         $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
-        'id' => 'que-question-tool-dropdown',
-        'filter-type' => QuestionBank::$FILTER_TOOL,
-        'empty' => 'Select a Questionnaire',
-        'class' => 'input-block-level'
-       )),
-       'concept_dropdown' => CHtml::activeDropDownList(
-         $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
-        'id' => 'que-question-concept-dropdown',
-        'filter-type' => QuestionBank::$FILTER_CONCEPT,
-        'empty' => 'Select a Concept',
-        'class' => 'input-block-level'
-       )),
-       'year_dropdown' => CHtml::activeDropDownList(
-         $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
-        'id' => 'que-question-year-dropdown',
-        'filter-type' => QuestionBank::$FILTER_YEAR,
-        'empty' => 'Select a Year',
-        'class' => 'input-block-level'
-       )),
+         , true);
+      }
+
+      echo CJSON::encode(array(
+       'selected_dropdown' => $selectedDropdowns,
+       'filter_selected' => $selectedFilterView,
+       'tool_dropdown' => $toolDropdown,
+       'concept_dropdown' => $conceptDropdown,
+       'year_dropdown' => $yearDropdown,
        'question_search_results' => $resultRow,));
     }
     Yii::app()->end();

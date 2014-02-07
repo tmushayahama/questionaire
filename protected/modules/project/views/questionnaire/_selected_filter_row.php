@@ -6,7 +6,8 @@
  * and open the template in the editor.
  */
 ?>
-<div class="que-selected-filter-row row-fluid">
+<div class="que-selected-filter-row row-fluid"
+    selected-filter-id="<?php echo $filterTypeId; ?>">
   <div class="span2 que-filter-type">
     <?php echo $filterType; ?>
   </div>
@@ -14,6 +15,6 @@
     <?php echo $filterSelected; ?>
   </div>
   <div class="span1 que-filter-cancel">
-    <button class="pull-right que-btn que-btn-grey-1 btn-large">X</button>
+    <button class="que-remove-filter pull-right que-btn que-btn-grey-1 btn-large">X</button>
   </div>
 </div>
