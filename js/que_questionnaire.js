@@ -14,6 +14,7 @@ $(document).ready(function(e) {
         $(this).tab('show');
     });
     searchEventHandlers();
+    browseQuestionEventHandlers();
     addQuestionEventHandlers();
     editQuestionnaireHandlers();
     $('#ajax-loader').ajaxStart(function() {
@@ -42,6 +43,11 @@ function ajaxCall(url, data, callback) {
  }*/
 function questionnaireSearch(data) {
     $("#que-questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
+}
+function questionBrowse(data) {
+    //alert(data["question_search_results"])
+     $("#que-browse-question-pane").html(data["sortcode_child"]);
+     $("#que-browse-result").html(data["question_search_results"]);
 }
 function questionSearch(data) {
     $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
@@ -109,6 +115,14 @@ function rearrangeNumbers(id) {
     for (var i = 0; i < children.length; i++) {
         $(children[i]).find(".count").text(i + 1);
     }
+}
+function  browseQuestionEventHandlers() {
+    $("body").on("click", ".que-sortcode-child", function(e) {
+        e.preventDefault();
+        data = {parent_code: $(this).text().trim()};
+        ajaxCall(questionBrowseUrl, data, questionBrowse)
+    });
+    
 }
 function searchEventHandlers() {
     $("#que-question-keyword-search-btn").click(function(e) {

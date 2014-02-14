@@ -5,6 +5,8 @@ Yii::app()->clientScript->registerScriptFile(
 );
 ?>
 <script id="record-task-url" type="text/javascript">
+  var questionBrowseUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionbrowse"); ?>";
+
   var questionnaireSearchFromCYUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearchfromcy/questionnaireId/" . $questionnaireId); ?>";
   var questionnaireSearchFromQUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionnairesearchfromq/questionnaireId/" . $questionnaireId); ?>";
   var questionSearchUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/questionsearch/questionnaireId/" . $questionnaireId); ?>";
@@ -34,6 +36,7 @@ Yii::app()->clientScript->registerScriptFile(
       <ul id="que-topbar-nav-list" class="que-nav-1">
         <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">My Questionnaire</a></li>
         <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
+        <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li>
       </ul>
     </div>
   </div>
@@ -122,6 +125,13 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
         </div>
       </div>
+      <div class="tab-pane"id="que-browse-question-pane">
+        <?php
+        echo $this->renderPartial('sortcode/_sortcode_child', array(
+         'sortcodes'=> $sortcodes,
+         'childCode'=>"Root"));
+        ?>
+      </div>
     </div>
   </div>
 </div>
@@ -161,9 +171,7 @@ Yii::app()->clientScript->registerScriptFile(
   <span><h3>View Modified</h3>
   </span>
   <div class="modal-body">
-    <div class="span12">
 
-    </div>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

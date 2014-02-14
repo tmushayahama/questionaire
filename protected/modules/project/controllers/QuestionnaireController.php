@@ -30,7 +30,7 @@ class QuestionnaireController extends Controller {
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
       'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions',
-       'questionnairesearchfromq', 'questionnairesearchfromcy', 'GetUserQuestionToDelete', 'questionKeywordSearch',
+       'questionbrowse', 'questionnairesearchfromcy', 'GetUserQuestionToDelete', 'questionKeywordSearch',
        'questionnaireKeywordSearch'),
       'users' => array('@'),
      ),
@@ -67,6 +67,7 @@ class QuestionnaireController extends Controller {
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
      'model' => $this->loadModel($questionnaireId),
+     'sortcodes' => QuestionSort::getChildCode("Root"),
      'toolList' => QuestionBank::getUniqueTools(),
      'yearList' => QuestionBank::getUniqueYear(),
      'conceptList' => QuestionBank::getUniqueConcepts(),
@@ -76,6 +77,27 @@ class QuestionnaireController extends Controller {
      'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
      'userQuestions' => UserQuestion::getUserQuestions($questionnaireId)
     ));
+  }
+
+  public function actionQuestionBrowse() {
+    if (Yii::app()->request->isAjaxRequest) {
+      $parentCode = Yii::app()->request->getParam('parent_code');
+      $sortcodeChild = $this->renderPartial('sortcode/_sortcode_child', array(
+       'sortcodes' => QuestionSort::getChildCode($parentCode),
+       'childCode' => $parentCode,)
+        , true
+        , true);
+      echo CJSON::encode(array(
+       'sortcode_child' => $sortcodeChild,
+       'question_search_results' => $this->renderPartial('_question_search_results', array(
+        'questions' => QuestionBank::Model()->findAll("sort_code='".$parentCode."'"),
+        'questionCount' => QuestionBank::Model()->count("sort_code='".$parentCode."'"),
+        'questionnaireId' => null,
+        'pages' => null)
+         , true
+         , true)));
+    }
+    Yii::app()->end();
   }
 
   public function actionViewQuestions($projectId, $questionnaireId) {
@@ -252,7 +274,7 @@ class QuestionnaireController extends Controller {
            'id' => 'que-question-tool-dropdown',
            'filter-type' => QuestionBank::$FILTER_TOOL,
            //'empty' => 'Select a Questionnaire',
-          // 'options' => array('2' => array('selected' => true)),
+           // 'options' => array('2' => array('selected' => true)),
            'class' => 'input-block-level'));
       } else {
         $toolDropdown = CHtml::activeDropDownList(
@@ -294,16 +316,16 @@ class QuestionnaireController extends Controller {
            'id' => 'que-question-year-dropdown',
            'filter-type' => QuestionBank::$FILTER_YEAR,
            'empty' => 'Select a Year',
-          // 'options' => array('1' => array('selected' => true)),
+           // 'options' => array('1' => array('selected' => true)),
            'class' => 'input-block-level'
         ));
       }
-      if ($selectedFilter!=null) {
+      if ($selectedFilter != null) {
         $selectedFilterView = $this->renderPartial('_selected_filter_row', array(
-        'filterTypeId' => $selectedFilterType,
-        'filterType' => $this->questionFilterType($selectedFilterType),
-        'filterSelected' => $selectedFilter)
-         , true);
+         'filterTypeId' => $selectedFilterType,
+         'filterType' => $this->questionFilterType($selectedFilterType),
+         'filterSelected' => $selectedFilter)
+          , true);
       }
 
       echo CJSON::encode(array(

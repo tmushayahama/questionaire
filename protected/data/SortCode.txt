@@ -1,0 +1,37 @@
+	Parent	Child			
+1	Root	Physical Features of the Program			
+2	Physical Features of the Program	Visuals			
+3	Physical Features of the Program	Logical Aspects			
+4	Physical Features of the Program	User Assistance			
+5	Physical Features of the Program	Program Content or Output			
+6	Physical Features of the Program	System Reliability			
+7	Physical Features of the Program	Speed			
+8	Physical Features of the Program	Noise			
+9	Physical Features of the Program	Medium			
+10	Physical Features of the Program	Features			
+11	Visuals	Size			
+12	Visuals	Colors			
+13	Logical Aspects	Layout			
+14	Logical Aspects	 Consistency			
+15	Logical Aspects	Intuitive Use			
+16	Logical Aspects	Number of Steps			
+17	Consistency	Phrase Consistency			
+18	Consistency	Layout Consistency			
+19	Consistency	Input Consistency			
+20	Intuitive Use	Intuitive Wording			
+21	Intuitive Use	Intuitive Formatting			
+22	Intuitive Use	Intuitive Input			
+23	User Assistance	Help Menu			
+24	User Assistance	Manuals			
+25	User Assistance	External Help Processes			
+26	User Assistance	Error Messages			
+27	User Assistance	Error Recovery			
+28	Error Recovery	Prompts and Interaction			
+29	Program Content or Output	Up to Date Content			
+30	Program Content or Output	Accurate Content			
+31	Program Content or Output	Expected Content			
+32	Program Content or Output	Level of Detail			
+33	Program Content or Output	Trusted			
+34	Program Content or Output	Relevant Content			
+35	Program Content or Output	Format Output			
+36	Program Content or Output	Clarity			

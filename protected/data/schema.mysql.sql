@@ -56,17 +56,14 @@ CREATE TABLE `que_profile_field` (
 
 CREATE TABLE `que_question_sort` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code_name` varchar(10) not null default "",
-    `parent_id` int not null,
+  `parent_code` varchar(255) not null,
+  `child_code` varchar(255) not null,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-ALTER TABLE `que_question_sort`
-  ADD CONSTRAINT `question_sort_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_question_sort` (`id`) ON DELETE CASCADE;
-
 
 CREATE TABLE `que_question_bank` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  -- `sort_code` varchar(150) not null default "", 
+  `sort_code` varchar(150) not null default "", 
   -- `sort_name` varchar(150) not null default "", 
  `tool` varchar(1000) not null default "",
   `author` varchar(150) not null default "",
@@ -153,3 +150,26 @@ ALTER TABLE `que_user_project`
 ALTER TABLE `que_user_project`
   ADD CONSTRAINT `user_project_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
 
+
+
+INSERT INTO `que_user` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`) VALUES
+(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'admin@example.com', '9a24eff8c15a6a141ece27eb6947da0f', 1, 1);
+
+INSERT INTO `que_profile` (`user_id`) VALUES
+(1);
+
+load data local infile 'C:/xampp/htdocs/questionnaire/protected/data/QueLoad.csv' 
+into table questionnaire.que_question_bank 
+    fields terminated by ','
+    enclosed by '"' 
+    escaped by '\\' 
+    lines terminated by '\r\n';
+
+load data local infile 'C:/xampp/htdocs/questionnaire/protected/data/SortCode.txt' 
+    into table questionnaire.que_question_sort 
+    fields terminated by '\t' 
+    enclosed by '"'
+    escaped by '\\' 
+    lines terminated by '\r\n'
+    ignore 1 LINES
+   (`id`, `parent_code`, `child_code`);
