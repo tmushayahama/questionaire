@@ -13,15 +13,15 @@
         <textarea class="que-edit-question-content input-block-level" rows="3">
       
         </textarea>
-       <!-- <a class="que-view-answer-options-toggle">
-          <h5> <strong>Edit Answer Options</strong> 
-            <i class="icon-chevron-down"></i>
-          </h5>
-        </a>
-        <div class="question-answer-options row hide">
-          <textarea class="input-block-level" rows="5">     
-          </textarea>
-        </div> -->
+        <!-- <a class="que-view-answer-options-toggle">
+           <h5> <strong>Edit Answer Options</strong> 
+             <i class="icon-chevron-down"></i>
+           </h5>
+         </a>
+         <div class="question-answer-options row hide">
+           <textarea class="input-block-level" rows="5">     
+           </textarea>
+         </div> -->
       </div>
       <div class="row-fluid que-question-text">
         <p class="que-question-content"><?php echo $userQuestion->content; ?></p>
@@ -55,23 +55,19 @@
       </div>
     </div> 
     <div class="span2">
-      <small class="badge">
-        <?php
-        switch ($userQuestion->status) {
-          case UserQuestion::$FROM_QUESTION:
-          case UserQuestion::$FROM_QUESTIONNAIRE:
-            echo "certified";
-            break;
-          case UserQuestion::$FROM_QUESTION_MODIFIED:
-          case UserQuestion::$FROM_QUESTIONNAIRE_MODIFIED:
-            echo "modified";
-            break;
-          case UserQuestion::$NEW_QUESTION:
-            echo "new";
-            break;
-        }
-        ?>
-      </small>
+      <small class=""><i>
+          <?php
+          switch ($userQuestion->status) {
+            case UserQuestion::$FROM_QUESTION_MODIFIED:
+            case UserQuestion::$FROM_QUESTIONNAIRE_MODIFIED:
+              echo "modified";
+              break;
+            case UserQuestion::$NEW_QUESTION:
+              echo "new";
+              break;
+          }
+          ?>
+        </i></small>
     </div>
   </div>
   <div class="row que-footer que-question-action-links">

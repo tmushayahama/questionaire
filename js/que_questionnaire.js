@@ -46,48 +46,68 @@ function questionnaireSearch(data) {
 }
 function questionBrowse(data) {
     //alert(data["question_search_results"])
-     $("#que-browse-question-pane").html(data["sortcode_child"]);
-     $("#que-browse-result").html(data["question_search_results"]);
+    $("#que-browse-question-pane").html(data["sortcode_child"]);
+    $("#que-browse-result").html(data["question_search_results"]);
 }
 function questionSearch(data) {
-    $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
-    if (data["concept_dropdown"] !== null) {
-        $("#que-concept-dropdown").html(data["concept_dropdown"]); //"question_row" is the thing that addQuestion controller submitted
-    }
-    if (data["tool_dropdown"] !== null) {
-        $("#que-tool-dropdown").html(data["tool_dropdown"]);
-    }
-    if (data["year_dropdown"] !== null) {
-        $("#que-year-dropdown").html(data["year_dropdown"]);
-    }
-    for (var i = 0; i < data["selected_dropdown"].length; i++) {
-        // $("#" + data["selected_dropdown"][i] + " option:nth(1)").attr("selected", "selected");
-        $("#" + data["selected_dropdown"][i]).parent().hide("slow");
-    }
-    if (data["filter_selected"] !== null) {
-        $("#que-filter-selected").append(data["filter_selected"]);
+    if (data["no_results"]) {
+        $("#que-question-result").html("<h1 class='text-center'>No Match Found</h1>");//"question_row" is the thing that addQuestion controller submitted
+        $("#que-filters-container").hide();
+        $("#que-result-as-container").hide();
+    } else {
+        $("#que-filters-container").show("slow");
+        $("#que-result-as-container").show();
+        $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
+        if (data["concept_dropdown"] !== null) {
+            $("#que-concept-dropdown").html(data["concept_dropdown"]); //"question_row" is the thing that addQuestion controller submitted
+        }
+        /*if (data["tool_dropdown"] !== null) {
+         $("#que-tool-dropdown").html(data["tool_dropdown"]);
+         }*/
+        if (data["year_dropdown"] !== null) {
+            $("#que-year-dropdown").html(data["year_dropdown"]);
+        }
+        for (var i = 0; i < data["selected_dropdown"].length; i++) {
+            // $("#" + data["selected_dropdown"][i] + " option:nth(1)").attr("selected", "selected");
+            $("#" + data["selected_dropdown"][i]).parent().hide("slow");
+        }
+        if (data["filter_selected"] !== null) {
+            $("#que-filter-selected").append(data["filter_selected"]);
+        }
     }
 }
 function addQuestion(data) {
     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
     rearrangeNumbers("#que-questionnaire-questions");
+    $("#que-question-original-number").text(data["orginal_questions_count"]);
+    $("#que-question-modified-number").text(data["modified_questions_count"]);
+    $("#que-question-created-number").text(data["created_questions_count"]);
 }
 function duplicateQuestion(data) {
     $(data["question_row"]).insertAfter("#que-user-question-row-" + data["original_user_question_id"]);//"question_row" is the thing that addQuestion controller submitted
     //$("#add-question-"+question_id).css("color","#999999");//the only way????
     //$("#que-user-question-row-"data.
     rearrangeNumbers("#que-questionnaire-questions");
+    $("#que-question-original-number").text(data["orginal_questions_count"]);
+    $("#que-question-modified-number").text(data["modified_questions_count"]);
+    $("#que-question-created-number").text(data["created_questions_count"]);
 }
 function createQuestion(data) {
     $("#que-create-question-input").val("");
     $('a[href="#que-questionnaire-edit-pane"]').tab('show');
     $("#que-questionnaire-questions").prepend(data["question_row"]);//"question_row" is the thing that addQuestion controller submitted
     rearrangeNumbers("#que-questionnaire-questions");
+    $("#que-question-original-number").text(data["orginal_questions_count"]);
+    $("#que-question-modified-number").text(data["modified_questions_count"]);
+    $("#que-question-created-number").text(data["created_questions_count"]);
 }
 function editQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).find(".que-question-content")
-            .text(data["content"])
+            .text(data["content"]);
+    $("#que-question-original-number").text(data["orginal_questions_count"]);
+    $("#que-question-modified-number").text(data["modified_questions_count"]);
+    $("#que-question-created-number").text(data["created_questions_count"]);
 }
 function moreInfoQuestion(data) {
     var questionResultRow = $("#question-result-row-" + data["question_id"]);
@@ -101,6 +121,9 @@ function getUserQuestionToDelete(data) {
 function removeQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).remove();
     rearrangeNumbers("#que-questionnaire-questions");
+    $("#que-question-original-number").text(data["orginal_questions_count"]);
+    $("#que-question-modified-number").text(data["modified_questions_count"]);
+    $("#que-question-created-number").text(data["created_questions_count"]);
 }
 function removeFromSearchQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).remove();
@@ -109,6 +132,9 @@ function removeFromSearchQuestion(data) {
         $("#user-question-to-delete-modal").modal("hide");
     }
     rearrangeNumbers("#que-questionnaire-questions");
+    $("#que-question-original-number").text(data["orginal_questions_count"]);
+    $("#que-question-modified-number").text(data["modified_questions_count"]);
+    $("#que-question-created-number").text(data["created_questions_count"]);
 }
 function rearrangeNumbers(id) {
     var children = $(id).children();
@@ -116,13 +142,23 @@ function rearrangeNumbers(id) {
         $(children[i]).find(".count").text(i + 1);
     }
 }
+function incrementNumber(id) {
+    rearrangeNumbers(id);
+    var originalQuestions = parseInt($(id).text()) + 1;
+    $(id).text(originalQuestions);
+}
+function decrementNumber(id) {
+    rearrangeNumbers(id);
+    var originalQuestions = parseInt($(id).text()) - 1;
+    $(id).text(originalQuestions);
+}
 function  browseQuestionEventHandlers() {
     $("body").on("click", ".que-sortcode-child", function(e) {
         e.preventDefault();
         data = {parent_code: $(this).text().trim()};
         ajaxCall(questionBrowseUrl, data, questionBrowse)
     });
-    
+
 }
 function searchEventHandlers() {
     $("#que-question-keyword-search-btn").click(function(e) {
@@ -133,14 +169,14 @@ function searchEventHandlers() {
         var data = {"keyword": keyword,
             "year": null,
             "concept": null,
-            "tool": null,
+            // "tool": null,
             "selected_dropdown": selectedDropdown,
             result_output: resultOutput};
         ajaxCall(questionKeywordSearchUrl, data, questionSearch);
         $("#que-filter-selected").children().each(function(e) {
             $(this).remove();
         });
-        $("#que-question-tool-dropdown").parent().show();
+        //$("#que-question-tool-dropdown").parent().show();
         $("#que-question-concept-dropdown").parent().show();
         $("#que-question-year-dropdown").parent().show();
         //  }
@@ -150,19 +186,19 @@ function searchEventHandlers() {
         $("#que-question-keyword-search-btn").click();
     });
 
-    $("body").on("change", "#que-question-tool-dropdown, #que-question-concept-dropdown, #que-question-year-dropdown", function(e) {
+    $("body").on("change", "#que-question-concept-dropdown, #que-question-year-dropdown", function(e) {
         e.preventDefault();
         var concept = $("#que-question-concept-dropdown").val().trim();
         var year = $("#que-question-year-dropdown").val().trim();
-        var tool = $("#que-question-tool-dropdown").val().trim();
+        //var tool = $("#que-question-tool-dropdown").val().trim();
         //alert(tool)
         var keyword = $("#que-question-keyword-search-input").val().trim();
         selectedDropdown.push($(this).attr("id"));
-        if (concept != "" || year != "" || tool != "") {
+        if (concept != "" || year != "") {
             var data = {keyword: keyword,
                 concept: concept,
                 year: year,
-                tool: tool,
+                // tool: tool,
                 result_output: resultOutput,
                 selected_dropdown: selectedDropdown,
                 selected_filter_type: $(this).attr("filter-type"),
@@ -176,13 +212,13 @@ function searchEventHandlers() {
         var filterType = parseInt($(this).closest(".que-selected-filter-row").attr("selected-filter-id"));
         var concept = $("#que-question-concept-dropdown").val().trim();
         var year = $("#que-question-year-dropdown").val().trim();
-        var tool = $("#que-question-tool-dropdown").val().trim();
+        // var tool = $("#que-question-tool-dropdown").val().trim();
         switch (filterType) {
-            case 1:
-                tool = null;
-                selectedDropdown.splice(selectedDropdown.indexOf("que-question-tool-dropdown"), 1);
-                $("#que-question-tool-dropdown").parent().show("slow");
-                break;
+            /*case 1:
+             tool = null;
+             selectedDropdown.splice(selectedDropdown.indexOf("que-question-tool-dropdown"), 1);
+             $("#que-question-tool-dropdown").parent().show("slow");
+             break;*/
             case 2:
                 concept = null;
                 selectedDropdown.splice(selectedDropdown.indexOf("que-question-concept-dropdown"), 1);
@@ -196,11 +232,11 @@ function searchEventHandlers() {
         }
         //alert(selectedDropdown);
         var keyword = $("#que-question-keyword-search-input").val().trim();
-        if (concept != "" || year != "" || tool != "") {
+        if (concept != "" || year != "") {
             var data = {keyword: keyword,
                 concept: concept,
                 year: year,
-                tool: tool,
+                /// tool: tool,
                 result_output: resultOutput,
                 selected_dropdown: selectedDropdown,
                 selected_filter_type: null,
@@ -214,7 +250,7 @@ function searchEventHandlers() {
         e.preventDefault();
         var concept = $("#que-question-concept-dropdown").val().trim();
         var year = $("#que-question-year-dropdown").val().trim();
-        var tool = $("#que-question-tool-dropdown").val().trim();
+        // var tool = $("#que-question-tool-dropdown").val().trim();
         //alert(tool)
         var keyword = $("#que-question-keyword-search-input").val().trim();
         resultOutput = $(this).attr("result-output");
@@ -222,7 +258,7 @@ function searchEventHandlers() {
         var data = {keyword: keyword,
             concept: concept,
             year: year,
-            tool: tool,
+            //tool: tool,
             result_output: resultOutput,
             selected_dropdown: selectedDropdown};
         ajaxCall(questionKeywordSearchUrl, data, questionSearch);
@@ -376,8 +412,7 @@ function editQuestionnaireHandlers() {
     $("body").on("click", ".que-edit-question-btn", function(e) {
         e.preventDefault();
         $(this).closest(".question-row").find(".que-edit-question-content")
-                .text($(this).closest(".question-row").find(".que-question-content").text())
-                .select();
+                .text($(this).closest(".question-row").find(".que-question-content").text());
     });
     $("body").on("click", ".que-save-edit-question-btn", function(e) {
         e.preventDefault();

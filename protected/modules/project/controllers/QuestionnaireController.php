@@ -67,7 +67,7 @@ class QuestionnaireController extends Controller {
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
      'model' => $this->loadModel($questionnaireId),
-     'sortcodes' => QuestionSort::getChildCode("Root"),
+     //'sortcodes' => QuestionSort::getChildCode("Root"),
      'toolList' => QuestionBank::getUniqueTools(),
      'yearList' => QuestionBank::getUniqueYear(),
      'conceptList' => QuestionBank::getUniqueConcepts(),
@@ -172,7 +172,7 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
-  public function actionQuestionSearch($questionnaireId) {
+ /* public function actionQuestionSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $questionSearchModel = new QuestionBank();
       $questionnaireSearchModel = new QuestionBank;
@@ -196,7 +196,7 @@ class QuestionnaireController extends Controller {
         $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
         }
         }
-        } */
+        } *
       if (isset($_POST['QuestionBank']['questionConceptList'])) {
         if (is_array($_POST['QuestionBank']['questionConceptList'])) {
           foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
@@ -220,21 +220,22 @@ class QuestionnaireController extends Controller {
       $pages->pageSize = 50;
       $pages->applyLimit($searchCriteria);
       echo CJSON::encode(array(
+       'no_results'=> $count,
        'question_search_results' => $this->renderPartial('_question_search_results', array(
         'questions' => QuestionBank::Model()->findAll($searchCriteria),
-        'questionCount' => QuestionBank::Model()->count($searchCriteria),
+        'questionCount' => $count,
         'questionnaireId' => $questionnaireId,
         'pages' => $pages)
          , true
          , true)));
     }
     Yii::app()->end();
-  }
+  } */
 
   public function actionQuestionKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
-      $tool = Yii::app()->request->getParam('tool');
+     // $tool = Yii::app()->request->getParam('tool');
       $concept = Yii::app()->request->getParam('concept');
       $year = Yii::app()->request->getParam('year');
       $selectedDropdowns = Yii::app()->request->getParam('selected_dropdown');
@@ -242,33 +243,34 @@ class QuestionnaireController extends Controller {
       $selectedFilter = Yii::app()->request->getParam('selected_filter');
       $resultOutput = Yii::app()->request->getParam('result_output');
       $model = new QuestionBank();
-      $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
-      $conceptList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "concept");
-      $yearList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "year");
+     // $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
+      $conceptList = QuestionBank::getUniqueColumn($keyword, null, $concept, $year, "concept");
+      $yearList = QuestionBank::getUniqueColumn($keyword, null, $concept, $year, "year");
       //$count = QuestionBank::Model()->count($searchCriteria);
+      $questionCount = QuestionBank::keywordSearchCount($keyword, null, $concept, $year);
       $pages = new CPagination(100);
       $pages->pageSize = 100;
       $resultRow = "";
 
       $selectedFilterView = null;
-      $toolDropdown = null;
+      //$toolDropdown = null;
       $conceptDropdown = null;
       $yearDropdown = null;
       if ($resultOutput == 1) {
         $resultRow = $this->renderPartial('_question_search_results', array(
-         'questions' => QuestionBank::keywordSearch($keyword, $tool, $concept, $year, 50),
-         'questionCount' => QuestionBank::keywordSearchCount($keyword, $tool, $concept, $year),
+         'questions' => QuestionBank::keywordSearch($keyword, null, $concept, $year, 50),
+         'questionCount' => $questionCount,
          'questionnaireId' => $questionnaireId,
          'pages' => $pages)
           , true
           , true);
       } else {
         $resultRow = $this->renderPartial('_questionnaire_search_results', array(
-         'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, $tool, $concept, $year, 10),
+         'questionnaires' => QuestionnaireQuestionBank::keywordSearch($keyword, null, $concept, $year, 10),
          'questionnaireId' => $questionnaireId)
           , true);
       }
-      if (in_array("que-question-tool-dropdown", $selectedDropdowns)) {
+    /*  if (in_array("que-question-tool-dropdown", $selectedDropdowns)) {
         $toolDropdown = CHtml::activeDropDownList(
             $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
            'id' => 'que-question-tool-dropdown',
@@ -283,7 +285,7 @@ class QuestionnaireController extends Controller {
            'filter-type' => QuestionBank::$FILTER_TOOL,
            'empty' => 'Select a Questionnaire',
            'class' => 'input-block-level'));
-      }
+      } */
       if (in_array("que-question-concept-dropdown", $selectedDropdowns)) {
         $conceptDropdown = CHtml::activeDropDownList(
             $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
@@ -329,9 +331,10 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
+       'no_results'=> $questionCount==0,
        'selected_dropdown' => $selectedDropdowns,
        'filter_selected' => $selectedFilterView,
-       'tool_dropdown' => $toolDropdown,
+       //'tool_dropdown' => $toolDropdown,
        'concept_dropdown' => $conceptDropdown,
        'year_dropdown' => $yearDropdown,
        'question_search_results' => $resultRow,));
@@ -447,6 +450,9 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
+       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
         'userQuestion' => $userQuestion)
@@ -467,6 +473,9 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
+       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        'original_user_question_id' => $originalUserQuestion->id,
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
@@ -490,6 +499,9 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
+       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
         'userQuestion' => $userQuestion)
@@ -498,7 +510,7 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
-  public function actionEditQuestion() {
+  public function actionEditQuestion($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $userQuestionId = Yii::app()->request->getParam('user_question_id');
       $content = Yii::app()->request->getParam('content');
@@ -519,6 +531,9 @@ class QuestionnaireController extends Controller {
         }
       }
       echo CJSON::encode(array(
+       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        "content" => $userQuestion->content,
        "user_question_id" => $userQuestion->id));
     }
@@ -531,6 +546,9 @@ class QuestionnaireController extends Controller {
       $model = UserQuestion::model()->findByPk($userQuestionId);
       $model->delete();
       echo CJSON::encode(array(
+       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        "user_question_id" => $userQuestionId));
     }
     Yii::app()->end();

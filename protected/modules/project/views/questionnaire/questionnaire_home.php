@@ -15,7 +15,7 @@ Yii::app()->clientScript->registerScriptFile(
 
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
-  var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion"); ?>";
+  var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion", array("questionnaireId"=>$questionnaireId)); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/viewModifiedQuestions"); ?>";
   var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -36,7 +36,7 @@ Yii::app()->clientScript->registerScriptFile(
       <ul id="que-topbar-nav-list" class="que-nav-1">
         <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">My Questionnaire</a></li>
         <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
-        <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li>
+     <!--   <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li> -->
       </ul>
     </div>
   </div>
@@ -47,7 +47,7 @@ Yii::app()->clientScript->registerScriptFile(
       <div class="tab-pane active " id="questionnaire-design-pane">
         <div class="que-white-background row-fluid span12">
           <div class="tab-heading">
-            <div class="pull-left">Edit Questionnaire</div>
+            <div class="pull-left"><?php echo $model->name; ?></div>
             <div class="pull-right">
               <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
             </div>
@@ -56,19 +56,19 @@ Yii::app()->clientScript->registerScriptFile(
             <ul class="thumbnails">
               <li class="span4">
                 <a class="thumbnail que-stats">
-                  <h1><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
+                  <h1 id="que-question-original-number"><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
                   <h5 class="text-center">Original Questions</h5>
                 </a>
               </li>
               <li class="span4">
                 <a class="thumbnail que-stats">
-                  <h1><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId); ?></h1>
+                  <h1 id="que-question-modified-number"><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId); ?></h1>
                   <h5 class="text-center">Questions Modified</h5>
                 </a>
               </li>
               <li class="span4">
                 <a class="thumbnail que-stats">
-                  <h1><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId); ?></h1>
+                  <h1 id="que-question-created-number"><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId); ?></h1>
                   <h5 class="text-center">New Created Questions</h5>
                 </a>
               </li>
@@ -115,7 +115,7 @@ Yii::app()->clientScript->registerScriptFile(
             ?>
           </div>
           <div>
-            <ul class="nav nav-tabs">
+            <ul id="que-result-as-container" class="nav nav-tabs hide">
               <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1"><h4>Results As Questions</h4></a></li>
               <li><a id="que-result-as-questions" class="que-result-as" result-output="2"><h4>Results As Questionnaires</h4></a></li>
             </ul>
@@ -125,13 +125,13 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
         </div>
       </div>
-      <div class="tab-pane"id="que-browse-question-pane">
+      <!--<div class="tab-pane"id="que-browse-question-pane">
         <?php
-        echo $this->renderPartial('sortcode/_sortcode_child', array(
-         'sortcodes'=> $sortcodes,
-         'childCode'=>"Root"));
+        //echo $this->renderPartial('sortcode/_sortcode_child', array(
+        // 'sortcodes'=> $sortcodes,
+        // 'childCode'=>"Root"));
         ?>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
