@@ -521,6 +521,9 @@ textarea {
 .question-row .que-footer button {
     margin-left: 3px;
 }
+.que-sortable {
+    background-color: #BBB;
+}
 
 .heading{
     font-size: 2.0em;

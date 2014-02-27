@@ -437,6 +437,9 @@ function reorderQuestionsHandlers() {
             $("#que-reorder-questions-cancel-btn").show();
             $("#que-questionnaire-questions").sortable();
             $("#que-questionnaire-questions").disableSelection();
+            $(".que-footer").hide();
+            $(".que-grab-me").show();
+            $(".question-row").addClass("que-sortable");
         } else {
             $(this).attr("que-action", "reorder");
             $(this).text("eorder")
@@ -447,6 +450,9 @@ function reorderQuestionsHandlers() {
             $('#que-questionnaire-questions').unbind('mousedown');
             $('#que-questionnaire-questions').unbind('mouseup');
             $('#que-questionnaire-questions').unbind('selectstart');
+            $(".que-question-action-links").show();
+            $(".que-grab-me").hide();
+            $(".question-row").removeClass("que-sortable");
         }
     });
 }
