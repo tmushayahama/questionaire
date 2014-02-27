@@ -17,6 +17,7 @@ $(document).ready(function(e) {
     browseQuestionEventHandlers();
     addQuestionEventHandlers();
     editQuestionnaireHandlers();
+    reorderQuestionsHandlers();
     $('#ajax-loader').ajaxStart(function() {
         $(this).show();
     });
@@ -388,8 +389,7 @@ function editQuestionnaireHandlers() {
         e.preventDefault();
         $(this).tab('show');
     });
-    $("#que-questionnaire-questions").sortable();
-    $("#que-questionnaire-questions").disableSelection();
+
 
     $("body").on("click", ".que-edit-question-btn", function(e) {
         e.preventDefault();
@@ -427,3 +427,37 @@ function editQuestionnaireHandlers() {
         }
     });
 }
+
+function reorderQuestionsHandlers() {
+    $("#que-reorder-questions-btn").click(function(e) {
+        e.preventDefault();
+        if ($(this).attr("que-action") == "reorder") {
+            $(this).attr("que-action", "done");
+            $(this).text("Done Reordering")
+            $("#que-reorder-questions-cancel-btn").show();
+            $("#que-questionnaire-questions").sortable();
+            $("#que-questionnaire-questions").disableSelection();
+        } else {
+            $(this).attr("que-action", "reorder");
+            $(this).text("eorder")
+            $("#que-reorder-questions-cancel-btn").hide();
+            $("#que-questionnaire-questions").sortable("destroy"); //call widget-function destroy
+            $('#que-questionnaire-questions').disableSelection('disabled');
+            $('#que-questionnaire-questions').unbind('click');
+            $('#que-questionnaire-questions').unbind('mousedown');
+            $('#que-questionnaire-questions').unbind('mouseup');
+            $('#que-questionnaire-questions').unbind('selectstart');
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -95,6 +95,7 @@ CREATE TABLE `que_user_question` (
     `content` varchar(528),
     `scale` int,
     `answer`  varchar(500),
+    `order` int not null default 1,
     `status` int not null default 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
@@ -127,6 +128,8 @@ CREATE TABLE `que_project_questionnaire` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `project_id` int NOT NULL,
   `user_questionnaire_id` int not null,
+  `order` int not null default 1,
+  `status` int not null default 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 
@@ -141,6 +144,8 @@ CREATE TABLE `que_user_project` (
 	`user_id`int not null,
 	`project_id`int not null,
         `privilege_type` int not null default 0,
+        `order` int not null default 1,
+        `status` int not null default 0,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 

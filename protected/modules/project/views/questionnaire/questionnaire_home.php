@@ -15,7 +15,7 @@ Yii::app()->clientScript->registerScriptFile(
 
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
-  var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion", array("questionnaireId"=>$questionnaireId)); ?>";
+  var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion", array("questionnaireId" => $questionnaireId)); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/viewModifiedQuestions"); ?>";
   var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -34,20 +34,21 @@ Yii::app()->clientScript->registerScriptFile(
   <div class="que-topbar-nav container">
     <div class="row">
       <ul id="que-topbar-nav-list" class="que-nav-1">
-        <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">My Questionnaire</a></li>
+        <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Preview Questionnaire</a></li>
         <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
-     <!--   <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li> -->
+        <!--   <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li> -->
       </ul>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="row-fluid que-white-background">
+    <h3 class=""><?php echo $model->name; ?></h3>
     <div class="tab-content">
-      <div class="tab-pane active " id="questionnaire-design-pane">
+      <div class="tab-pane active" id="questionnaire-design-pane">
         <div class="que-white-background row-fluid span12">
           <div class="tab-heading">
-            <div class="pull-left"><?php echo $model->name; ?></div>
+            <div class="pull-left">Preview</div>
             <div class="pull-right">
               <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
             </div>
@@ -74,6 +75,14 @@ Yii::app()->clientScript->registerScriptFile(
               </li>
             </ul>
           </div>
+           <div class="row-fluid">
+              <button id="que-reorder-questions-btn" class="que-btn que-btn-blue-2 pull-right" que-action="reorder">
+                Reorder
+              </button>
+              <button id="que-reorder-questions-cancel-btn" class="hide que-btn que-btn-grey-1 pull-right">
+                Cancel
+              </button>
+            </div>
           <div id="que-questionnaire-questions" class="span11">
             <?php
             $count = 1;
@@ -126,11 +135,11 @@ Yii::app()->clientScript->registerScriptFile(
         </div>
       </div>
       <!--<div class="tab-pane"id="que-browse-question-pane">
-        <?php
-        //echo $this->renderPartial('sortcode/_sortcode_child', array(
-        // 'sortcodes'=> $sortcodes,
-        // 'childCode'=>"Root"));
-        ?>
+      <?php
+      //echo $this->renderPartial('sortcode/_sortcode_child', array(
+      // 'sortcodes'=> $sortcodes,
+      // 'childCode'=>"Root"));
+      ?>
       </div> -->
     </div>
   </div>
