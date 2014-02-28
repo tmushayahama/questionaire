@@ -168,9 +168,13 @@ function searchEventHandlers() {
     $("#que-question-keyword-search-btn").click(function(e) {
         e.preventDefault();
         var keyword = $("#que-question-keyword-search-input").val().trim();
+        var sortId = $("#que-sort-question-result-selector").find(":selected").attr("value");
+        var order = $("#que-sort-order-selector").find(":selected").attr("value");
         selectedDropdown = [""];
         // if (keyword != "") {
         var data = {"keyword": keyword,
+            sort_id: sortId,
+            order: order,
             "year": null,
             "concept": null,
             // "tool": null,
@@ -194,12 +198,17 @@ function searchEventHandlers() {
         e.preventDefault();
         var concept = $("#que-question-concept-dropdown").val().trim();
         var year = $("#que-question-year-dropdown").val().trim();
-        //var tool = $("#que-question-tool-dropdown").val().trim();
+        var sortId = $("#que-sort-question-result-selector").find(":selected").attr("value");
+        var order = $("#que-sort-order-selector").find(":selected").attr("value");
+
+//var tool = $("#que-question-tool-dropdown").val().trim();
         //alert(tool)
         var keyword = $("#que-question-keyword-search-input").val().trim();
         selectedDropdown.push($(this).attr("id"));
         if (concept != "" || year != "") {
             var data = {keyword: keyword,
+                sort_id: sortId,
+                order: order,
                 concept: concept,
                 year: year,
                 // tool: tool,
@@ -211,6 +220,25 @@ function searchEventHandlers() {
         }
     });
 
+    $("#que-sort-question-result-selector, #que-sort-order-selector").change(function(e) {
+        e.preventDefault();
+        var sortId = $("#que-sort-question-result-selector").find(":selected").attr("value");
+        var order = $("#que-sort-order-selector").find(":selected").attr("value");
+        var concept = $("#que-question-concept-dropdown").val().trim();
+        var year = $("#que-question-year-dropdown").val().trim();
+        //var tool = $("#que-question-tool-dropdown").val().trim();
+        //alert(tool)
+        var keyword = $("#que-question-keyword-search-input").val().trim();
+        var data = {keyword: keyword,
+            sort_id: sortId,
+            order: order,
+            concept: concept,
+            year: year,
+            // tool: tool,
+            result_output: resultOutput,
+            selected_dropdown: selectedDropdown};
+        ajaxCall(questionKeywordSearchUrl, data, questionSearch);
+    });
     $("body").on("click", ".que-remove-filter", function(e) {
         e.preventDefault();
         var filterType = parseInt($(this).closest(".que-selected-filter-row").attr("selected-filter-id"));
@@ -254,12 +282,17 @@ function searchEventHandlers() {
         e.preventDefault();
         var concept = $("#que-question-concept-dropdown").val().trim();
         var year = $("#que-question-year-dropdown").val().trim();
-        // var tool = $("#que-question-tool-dropdown").val().trim();
+        var sortId = $("#que-sort-question-result-selector").find(":selected").attr("value");
+        var order = $("#que-sort-order-selector").find(":selected").attr("value");
+
+// var tool = $("#que-question-tool-dropdown").val().trim();
         //alert(tool)
         var keyword = $("#que-question-keyword-search-input").val().trim();
         resultOutput = $(this).attr("result-output");
         //if (concept != "" || year != "" || tool != "") {
         var data = {keyword: keyword,
+            sort_id: sortId,
+            order: order,
             concept: concept,
             year: year,
             //tool: tool,
@@ -380,11 +413,7 @@ function addQuestionEventHandlers() {
             $(".question-result-row").find(".que-more-info-question-row").hide("slow");
         }
         $(this).text(expand ? "Hide Modifications" : "Show Modifications");
-
     });
-
-
-
 }
 
 function editQuestionnaireHandlers() {
@@ -465,6 +494,9 @@ function reorderQuestionsHandlers() {
             $(".que-grab-me").hide();
             $(".question-row").removeClass("que-sortable");
         }
+    });
+    $('#que-reorder-questions-cancel-btn').click(function() {
+        location.reload();
     });
 }
 

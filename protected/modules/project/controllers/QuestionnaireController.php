@@ -237,11 +237,16 @@ class QuestionnaireController extends Controller {
       $keyword = Yii::app()->request->getParam('keyword');
       // $tool = Yii::app()->request->getParam('tool');
       $concept = Yii::app()->request->getParam('concept');
+      $sortId = Yii::app()->request->getParam('sort_id');
       $year = Yii::app()->request->getParam('year');
       $selectedDropdowns = Yii::app()->request->getParam('selected_dropdown');
       $selectedFilterType = Yii::app()->request->getParam('selected_filter_type');
       $selectedFilter = Yii::app()->request->getParam('selected_filter');
       $resultOutput = Yii::app()->request->getParam('result_output');
+      if ($sortId != null) {
+        //combine the 2
+        $sortId.=" ".Yii::app()->request->getParam('order');
+      }
       $model = new QuestionBank();
       // $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
       $conceptList = QuestionBank::getUniqueColumn($keyword, null, $concept, $year, "concept");
@@ -256,9 +261,10 @@ class QuestionnaireController extends Controller {
       //$toolDropdown = null;
       $conceptDropdown = null;
       $yearDropdown = null;
+
       if ($resultOutput == 1) {
         $resultRow = $this->renderPartial('_question_search_results', array(
-         'questions' => QuestionBank::keywordSearch($keyword, null, $concept, $year, 50),
+         'questions' => QuestionBank::keywordSearch($keyword, null, $concept, $year, $sortId, 50),
          'questionCount' => $questionCount,
          'questionnaireId' => $questionnaireId,
          'pages' => $pages)
@@ -544,10 +550,10 @@ class QuestionnaireController extends Controller {
   public function actionReorderQuestion($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $questionIds = Yii::app()->request->getParam("question_ids");
-      $idCount =  count($questionIds);
+      $idCount = count($questionIds);
       for ($i = 0; $i < $idCount; $i++) {
         $userQuestion = UserQuestion::Model()->findByPk($questionIds[$i]);
-        $userQuestion->order = $idCount+1 - $i;
+        $userQuestion->order = $idCount + 1 - $i;
         if ($userQuestion->save(false)) {
           
         }

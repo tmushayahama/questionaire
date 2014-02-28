@@ -1,13 +1,14 @@
 <div class="row-fluid">
   <h5 class="pull-left">Results:
-      <?php echo ' ' . $questionCount." questions"; ?>
+    <?php echo ' ' . $questionCount . " questions"; ?>
     <?php //echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
   </h5>
   <div class="span8 pull-right">
+    
     <?php
-    $this->widget('CLinkPager', array(
-     'pages' => $pages,
-    ))
+    // $this->widget('CLinkPager', array(
+    //'pages' => $pages,
+    //))
     ?>
   </div>
 </div>

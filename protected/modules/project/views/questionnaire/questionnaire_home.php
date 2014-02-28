@@ -32,6 +32,16 @@ Yii::app()->clientScript->registerScriptFile(
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
+  <br>
+  <br>
+  <h2 class="container">
+    <div class="span8">
+      <?php echo $model->name; ?>
+    </div>
+    <div class="pull-right">
+      <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
+    </div>
+  </h2>
   <div class="que-topbar-nav container">
     <div class="row">
       <ul id="que-topbar-nav-list" class="que-nav-1">
@@ -44,15 +54,11 @@ Yii::app()->clientScript->registerScriptFile(
 </div>
 <div class="container">
   <div class="row-fluid que-white-background">
-    <h3 class=""><?php echo $model->name; ?></h3>
     <div class="tab-content">
       <div class="tab-pane active" id="questionnaire-design-pane">
         <div class="que-white-background row-fluid span12">
           <div class="tab-heading">
             <div class="pull-left">Preview</div>
-            <div class="pull-right">
-              <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
-            </div>
           </div>
           <div class="que-questionnaire-stats">
             <ul class="thumbnails">
@@ -130,6 +136,20 @@ Yii::app()->clientScript->registerScriptFile(
               <li><a id="que-result-as-questions" class="que-result-as" result-output="2"><h4>Results As Questionnaires</h4></a></li>
             </ul>
           </div>
+          Sort By
+          <select id="que-sort-question-result-selector">
+            <option value="<?php echo QuestionBank::$SORT_BY_TIMES_ADDED; ?>">Most Added</option>
+            <option value="<?php echo QuestionBank::$SORT_BY_TIMES_MODIFIED; ?>">Most Modified</option>
+            <option value="<?php echo QuestionBank::$SORT_BY_CONTENT; ?>">Content</option>
+            <option value="<?php echo QuestionBank::$SORT_BY_YEAR; ?>">Year</option>
+            <option value="<?php echo QuestionBank::$SORT_BY_CONCEPT; ?>">Concept</option>
+            <option value="<?php echo QuestionBank::$SORT_BY_TOOL; ?>">Questionnaire</option>
+            <option value="<?php echo QuestionBank::$SORT_BY_AUTHOR; ?>">Author</option>
+          </select>
+          <select id="que-sort-order-selector">
+            <option value="<?php echo QuestionBank::$ORDER_ASC; ?>">Ascending</option>
+            <option value="<?php echo QuestionBank::$ORDER_DESC; ?>">Descending</option>
+          </select>
           <div id="que-question-result" class="row-fluid">
 
           </div>
