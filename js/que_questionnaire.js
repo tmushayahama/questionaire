@@ -110,6 +110,9 @@ function editQuestion(data) {
     $("#que-question-modified-number").text(data["modified_questions_count"]);
     $("#que-question-created-number").text(data["created_questions_count"]);
 }
+function reorderQuestion(data) {
+    rearrangeNumbers("#que-questionnaire-questions");
+}
 function moreInfoQuestion(data) {
     var questionResultRow = $("#question-result-row-" + data["question_id"]);
     questionResultRow.find('.que-more-info-question-modification').html(data["questions_modified_container"]);
@@ -427,7 +430,13 @@ function editQuestionnaireHandlers() {
         }
     });
 }
-
+function getUserQuestionIds(parent) {
+    var result = [];
+    $(parent).children().each(function() {
+        result.push($(this).attr("user-question-id"));
+    });
+    return result;
+}
 function reorderQuestionsHandlers() {
     $("#que-reorder-questions-btn").click(function(e) {
         e.preventDefault();
@@ -441,6 +450,8 @@ function reorderQuestionsHandlers() {
             $(".que-grab-me").show();
             $(".question-row").addClass("que-sortable");
         } else {
+            var data = {question_ids: getUserQuestionIds("#que-questionnaire-questions")};
+            ajaxCall(reorderQuestionUrl, data, reorderQuestion);
             $(this).attr("que-action", "reorder");
             $(this).text("eorder")
             $("#que-reorder-questions-cancel-btn").hide();

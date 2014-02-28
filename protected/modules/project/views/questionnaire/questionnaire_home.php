@@ -16,6 +16,7 @@ Yii::app()->clientScript->registerScriptFile(
   var addQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/addquestion/questionnaireId/" . $questionnaireId); ?>";
   var createQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/createquestion/questionnaireId/" . $questionnaireId); ?>";
   var editQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/editquestion", array("questionnaireId" => $questionnaireId)); ?>";
+  var reorderQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/reorderquestion", array("questionnaireId" => $questionnaireId)); ?>";
   var moreInfoQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/viewModifiedQuestions"); ?>";
   var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
@@ -75,14 +76,14 @@ Yii::app()->clientScript->registerScriptFile(
               </li>
             </ul>
           </div>
-           <div class="row-fluid">
-              <button id="que-reorder-questions-btn" class="que-btn que-btn-blue-2 pull-right" que-action="reorder">
-                Reorder
-              </button>
-              <button id="que-reorder-questions-cancel-btn" class="hide que-btn que-btn-grey-1 pull-right">
-                Cancel
-              </button>
-            </div>
+          <div class="row-fluid">
+            <button id="que-reorder-questions-btn" class="que-btn que-btn-blue-2 pull-right" que-action="reorder">
+              Reorder
+            </button>
+            <button id="que-reorder-questions-cancel-btn" class="hide que-btn que-btn-grey-1 pull-right">
+              Cancel
+            </button>
+          </div>
           <div id="que-questionnaire-questions" class="span11">
             <?php
             $count = 1;

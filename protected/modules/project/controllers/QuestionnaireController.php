@@ -90,8 +90,8 @@ class QuestionnaireController extends Controller {
       echo CJSON::encode(array(
        'sortcode_child' => $sortcodeChild,
        'question_search_results' => $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::Model()->findAll("sort_code='".$parentCode."'"),
-        'questionCount' => QuestionBank::Model()->count("sort_code='".$parentCode."'"),
+        'questions' => QuestionBank::Model()->findAll("sort_code='" . $parentCode . "'"),
+        'questionCount' => QuestionBank::Model()->count("sort_code='" . $parentCode . "'"),
         'questionnaireId' => null,
         'pages' => null)
          , true
@@ -172,70 +172,70 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
- /* public function actionQuestionSearch($questionnaireId) {
+  /* public function actionQuestionSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
-      $questionSearchModel = new QuestionBank();
-      $questionnaireSearchModel = new QuestionBank;
-      //$searchQuestionnaireCriteria = new CDbCriteria;
-      $searchCriteria = new CDbCriteria;
-      //$searchToolCriteria = new CDbCriteria;
-      $searchConceptCriteria = new CDbCriteria;
-      $searchYearCriteria = new CDbCriteria;
-      //$questionSearchModel->unsetAttributes();	// clear any default values
+    $questionSearchModel = new QuestionBank();
+    $questionnaireSearchModel = new QuestionBank;
+    //$searchQuestionnaireCriteria = new CDbCriteria;
+    $searchCriteria = new CDbCriteria;
+    //$searchToolCriteria = new CDbCriteria;
+    $searchConceptCriteria = new CDbCriteria;
+    $searchYearCriteria = new CDbCriteria;
+    //$questionSearchModel->unsetAttributes();	// clear any default values
 
-      /* if (isset($_POST['QuestionnaireQeustion']['questionnaireList'])) {
-        if (is_array($_POST['QuestionnaireQeustion']['questionnaireList'])) {
-        foreach ($_POST['QuestionnaireQeustion']['questionnaireList'] as $questionnaire) {
-        $searchQuestionnaireCriteria->addCondition('name="' . $questionnaire . '"', 'OR');
-        }
-        }
-        }
-        if (isset($_POST['QuestionBank']['questionToolList'])) {
-        if (is_array($_POST['QuestionBank']['questionToolList'])) {
-        foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
-        $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
-        }
-        }
-        } *
-      if (isset($_POST['QuestionBank']['questionConceptList'])) {
-        if (is_array($_POST['QuestionBank']['questionConceptList'])) {
-          foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
-            $searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
-          }
-        }
-      }
-      if (isset($_POST['QuestionBank']['questionYearList'])) {
-        if (is_array($_POST['QuestionBank']['questionYearList'])) {
-          foreach ($_POST['QuestionBank']['questionYearList'] as $year) {
-            $searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
-          }
-        }
-      }
-      //  $searchCriteria->mergeWith($searchToolCriteria, 'AND');
-      $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
-      $searchCriteria->mergeWith($searchYearCriteria, 'AND');
+    /* if (isset($_POST['QuestionnaireQeustion']['questionnaireList'])) {
+    if (is_array($_POST['QuestionnaireQeustion']['questionnaireList'])) {
+    foreach ($_POST['QuestionnaireQeustion']['questionnaireList'] as $questionnaire) {
+    $searchQuestionnaireCriteria->addCondition('name="' . $questionnaire . '"', 'OR');
+    }
+    }
+    }
+    if (isset($_POST['QuestionBank']['questionToolList'])) {
+    if (is_array($_POST['QuestionBank']['questionToolList'])) {
+    foreach ($_POST['QuestionBank']['questionToolList'] as $tool) {
+    $searchToolCriteria->addCondition('tool="' . $tool . '"', 'OR');
+    }
+    }
+    } *
+    if (isset($_POST['QuestionBank']['questionConceptList'])) {
+    if (is_array($_POST['QuestionBank']['questionConceptList'])) {
+    foreach ($_POST['QuestionBank']['questionConceptList'] as $concept) {
+    $searchConceptCriteria->addCondition("concept='" . $concept . "'", 'OR');
+    }
+    }
+    }
+    if (isset($_POST['QuestionBank']['questionYearList'])) {
+    if (is_array($_POST['QuestionBank']['questionYearList'])) {
+    foreach ($_POST['QuestionBank']['questionYearList'] as $year) {
+    $searchYearCriteria->addCondition("year='" . $year . "'", 'OR');
+    }
+    }
+    }
+    //  $searchCriteria->mergeWith($searchToolCriteria, 'AND');
+    $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
+    $searchCriteria->mergeWith($searchYearCriteria, 'AND');
 
-      $count = QuestionBank::Model()->count($searchCriteria);
-      $pages = new CPagination($count);
-      $pages->pageSize = 50;
-      $pages->applyLimit($searchCriteria);
-      echo CJSON::encode(array(
-       'no_results'=> $count,
-       'question_search_results' => $this->renderPartial('_question_search_results', array(
-        'questions' => QuestionBank::Model()->findAll($searchCriteria),
-        'questionCount' => $count,
-        'questionnaireId' => $questionnaireId,
-        'pages' => $pages)
-         , true
-         , true)));
+    $count = QuestionBank::Model()->count($searchCriteria);
+    $pages = new CPagination($count);
+    $pages->pageSize = 50;
+    $pages->applyLimit($searchCriteria);
+    echo CJSON::encode(array(
+    'no_results'=> $count,
+    'question_search_results' => $this->renderPartial('_question_search_results', array(
+    'questions' => QuestionBank::Model()->findAll($searchCriteria),
+    'questionCount' => $count,
+    'questionnaireId' => $questionnaireId,
+    'pages' => $pages)
+    , true
+    , true)));
     }
     Yii::app()->end();
-  } */
+    } */
 
   public function actionQuestionKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
-     // $tool = Yii::app()->request->getParam('tool');
+      // $tool = Yii::app()->request->getParam('tool');
       $concept = Yii::app()->request->getParam('concept');
       $year = Yii::app()->request->getParam('year');
       $selectedDropdowns = Yii::app()->request->getParam('selected_dropdown');
@@ -243,7 +243,7 @@ class QuestionnaireController extends Controller {
       $selectedFilter = Yii::app()->request->getParam('selected_filter');
       $resultOutput = Yii::app()->request->getParam('result_output');
       $model = new QuestionBank();
-     // $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
+      // $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
       $conceptList = QuestionBank::getUniqueColumn($keyword, null, $concept, $year, "concept");
       $yearList = QuestionBank::getUniqueColumn($keyword, null, $concept, $year, "year");
       //$count = QuestionBank::Model()->count($searchCriteria);
@@ -270,22 +270,22 @@ class QuestionnaireController extends Controller {
          'questionnaireId' => $questionnaireId)
           , true);
       }
-    /*  if (in_array("que-question-tool-dropdown", $selectedDropdowns)) {
+      /*  if (in_array("que-question-tool-dropdown", $selectedDropdowns)) {
         $toolDropdown = CHtml::activeDropDownList(
-            $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
-           'id' => 'que-question-tool-dropdown',
-           'filter-type' => QuestionBank::$FILTER_TOOL,
-           //'empty' => 'Select a Questionnaire',
-           // 'options' => array('2' => array('selected' => true)),
-           'class' => 'input-block-level'));
-      } else {
+        $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
+        'id' => 'que-question-tool-dropdown',
+        'filter-type' => QuestionBank::$FILTER_TOOL,
+        //'empty' => 'Select a Questionnaire',
+        // 'options' => array('2' => array('selected' => true)),
+        'class' => 'input-block-level'));
+        } else {
         $toolDropdown = CHtml::activeDropDownList(
-            $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
-           'id' => 'que-question-tool-dropdown',
-           'filter-type' => QuestionBank::$FILTER_TOOL,
-           'empty' => 'Select a Questionnaire',
-           'class' => 'input-block-level'));
-      } */
+        $model, 'year', CHtml::listData($toolList, 'tool', 'tool'), array(
+        'id' => 'que-question-tool-dropdown',
+        'filter-type' => QuestionBank::$FILTER_TOOL,
+        'empty' => 'Select a Questionnaire',
+        'class' => 'input-block-level'));
+        } */
       if (in_array("que-question-concept-dropdown", $selectedDropdowns)) {
         $conceptDropdown = CHtml::activeDropDownList(
             $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
@@ -331,7 +331,7 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
-       'no_results'=> $questionCount==0,
+       'no_results' => $questionCount == 0,
        'selected_dropdown' => $selectedDropdowns,
        'filter_selected' => $selectedFilterView,
        //'tool_dropdown' => $toolDropdown,
@@ -445,14 +445,15 @@ class QuestionnaireController extends Controller {
       $userQuestion->questionnaire_id = $questionnaireId;
       $userQuestion->content = $content;
       $userQuestion->status = $questionStatus;
+      $userQuestion->order = UserQuestion::getUserQuestionsCount($questionnaireId);
       if ($userQuestion->save(false)) {
         QuestionBank::modifyTimesAdded($questionBankModel, true);
       }
 
       echo CJSON::encode(array(
-       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
-       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
-       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
+       'orginal_questions_count' => UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count' => UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count' => UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
         'userQuestion' => $userQuestion)
@@ -473,9 +474,9 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
-       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
-       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
-       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
+       'orginal_questions_count' => UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count' => UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count' => UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        'original_user_question_id' => $originalUserQuestion->id,
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
@@ -499,9 +500,9 @@ class QuestionnaireController extends Controller {
       }
 
       echo CJSON::encode(array(
-       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
-       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
-       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
+       'orginal_questions_count' => UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count' => UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count' => UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        'question_row' => $this->renderPartial('_question_row', array(
         'count' => 1,
         'userQuestion' => $userQuestion)
@@ -531,11 +532,29 @@ class QuestionnaireController extends Controller {
         }
       }
       echo CJSON::encode(array(
-       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
-       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
-       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
+       'orginal_questions_count' => UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count' => UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count' => UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        "content" => $userQuestion->content,
        "user_question_id" => $userQuestion->id));
+    }
+    Yii::app()->end();
+  }
+
+  public function actionReorderQuestion($questionnaireId) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $questionIds = Yii::app()->request->getParam("question_ids");
+      $idCount =  count($questionIds);
+      for ($i = 0; $i < $idCount; $i++) {
+        $userQuestion = UserQuestion::Model()->findByPk($questionIds[$i]);
+        $userQuestion->order = $idCount+1 - $i;
+        if ($userQuestion->save(false)) {
+          
+        }
+      }
+
+      echo CJSON::encode(array(
+       'done' => count($questionIds)));
     }
     Yii::app()->end();
   }
@@ -546,9 +565,9 @@ class QuestionnaireController extends Controller {
       $model = UserQuestion::model()->findByPk($userQuestionId);
       $model->delete();
       echo CJSON::encode(array(
-       'orginal_questions_count'=> UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
-       'modified_questions_count'=> UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
-       'created_questions_count'=> UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
+       'orginal_questions_count' => UserQuestion::getUserQuestionsOriginalCount($questionnaireId),
+       'modified_questions_count' => UserQuestion::getUserQuestionsModifiedCount($questionnaireId),
+       'created_questions_count' => UserQuestion::getUserQuestionsCreatedCount($questionnaireId),
        "user_question_id" => $userQuestionId));
     }
     Yii::app()->end();

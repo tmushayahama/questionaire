@@ -10,6 +10,7 @@
  * @property string $content
  * @property integer $scale
  * @property string $answer
+ * @property integer $order
  * @property integer $status
  *
  * The followings are the available model relations:
@@ -27,7 +28,8 @@ class UserQuestion extends CActiveRecord {
   public static function getUserQuestions($questionnaireId) {
     $userQuestionCriteria = new CDbCriteria;
     //$questionnaireQuestionCriteria->condition = "user_id=" . Yii::app()->user->id;
-    $userQuestionCriteria->order = "id desc";
+    $userQuestionCriteria->alias = "uQ";
+    $userQuestionCriteria->order = "uQ.order desc";
     $userQuestionCriteria->addCondition("questionnaire_id=" . $questionnaireId);
     return UserQuestion::Model()->findAll($userQuestionCriteria);
   }
@@ -119,12 +121,12 @@ class UserQuestion extends CActiveRecord {
     // will receive user inputs.
     return array(
      array('questionnaire_id', 'required'),
-     array('parent_id, questionnaire_id, scale, status', 'numerical', 'integerOnly' => true),
+     array('parent_id, questionnaire_id, scale, order, status', 'numerical', 'integerOnly' => true),
      array('content', 'length', 'max' => 528),
      array('answer', 'length', 'max' => 500),
      // The following rule is used by search().
      // Please remove those attributes that should not be searched.
-     array('id, parent_id, questionnaire_id, content, scale, answer, status', 'safe', 'on' => 'search'),
+     array('id, parent_id, questionnaire_id, content, scale, answer, order, status', 'safe', 'on' => 'search'),
     );
   }
 
@@ -151,6 +153,7 @@ class UserQuestion extends CActiveRecord {
      'content' => 'Content',
      'scale' => 'Scale',
      'answer' => 'Answer',
+     'order' => 'Order',
      'status' => 'Status',
     );
   }
@@ -171,6 +174,7 @@ class UserQuestion extends CActiveRecord {
     $criteria->compare('content', $this->content, true);
     $criteria->compare('scale', $this->scale);
     $criteria->compare('answer', $this->answer, true);
+    $criteria->compare('order', $this->order);
     $criteria->compare('status', $this->status);
 
     return new CActiveDataProvider($this, array(
