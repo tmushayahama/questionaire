@@ -54,10 +54,11 @@ function questionSearch(data) {
     if (data["no_results"]) {
         $("#que-question-result").html("<h1 class='text-center'>No Match Found</h1>");//"question_row" is the thing that addQuestion controller submitted
         $("#que-filters-container").hide();
-        $("#que-result-as-container").hide();
+        //$("#que-result-as-container").hide();
+        $("#que-result-analytics-bar").hide();
     } else {
         $("#que-filters-container").show("slow");
-        $("#que-result-as-container").show();
+        $("#que-result-analytics-bar").show();
         $("#que-question-result").html(data["question_search_results"]);//"question_row" is the thing that addQuestion controller submitted
         if (data["concept_dropdown"] !== null) {
             $("#que-concept-dropdown").html(data["concept_dropdown"]); //"question_row" is the thing that addQuestion controller submitted

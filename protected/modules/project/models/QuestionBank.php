@@ -123,6 +123,21 @@ class QuestionBank extends CActiveRecord {
     return $questionBankModel->save(false);
   }
 
+  public static function analyzeQuestion($content) {
+
+    $begin = strpos($content, '[');
+    $end = strpos($content, ']');
+    $length = $end-$begin;
+    if ($begin !==false && $end !==false) {
+      $result = [];
+      array_push($result, substr($content, $end+1));
+      array_push($result, substr($content, $begin+1, $length-1));
+      return $result;
+    } else {
+      return null;
+    }
+  }
+
   /**
    * Returns the static model of the specified AR class.
    * @param string $className active record class name.

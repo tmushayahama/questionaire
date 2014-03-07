@@ -4,7 +4,7 @@
     <?php //echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>
   </h5>
   <div class="span8 pull-right">
-    
+
     <?php
     // $this->widget('CLinkPager', array(
     //'pages' => $pages,
@@ -49,7 +49,17 @@ foreach ($questions as $question):
       </div>
       <div class="span9">
         <blockquote>
-          <p><?php echo $question->content; ?></p>
+          <p><?php
+            $analyzedQuestion = QuestionBank::analyzeQuestion($question->content);
+            if ($analyzedQuestion === null) :
+              echo $question->content;
+            else:
+              ?>
+              <input type="text" class="span3" placeholder="<?php echo $analyzedQuestion[1]; ?>">
+              <?php echo $analyzedQuestion[0]; ?>
+            <?php endif;
+            ?>
+          </p>
           <small><?php echo $question->author . ", " . $question->year; ?> <br>
             <cite title="Source Title"><?php echo $question->concept ?></cite></small>
         </blockquote>
