@@ -18,6 +18,7 @@ $(document).ready(function(e) {
     addQuestionEventHandlers();
     editQuestionnaireHandlers();
     reorderQuestionsHandlers();
+    deletionHandlers();
     $('#ajax-loader').ajaxStart(function() {
         $(this).show();
     });
@@ -140,6 +141,9 @@ function removeFromSearchQuestion(data) {
     $("#que-question-original-number").text(data["orginal_questions_count"]);
     $("#que-question-modified-number").text(data["modified_questions_count"]);
     $("#que-question-created-number").text(data["created_questions_count"]);
+}
+function deleteProject(data) {
+    $(".que-project-entry[project-id='" + data["project_id"] + "']").remove();
 }
 function rearrangeNumbers(id) {
     var children = $(id).children();
@@ -337,8 +341,11 @@ function addQuestionEventHandlers() {
     $("body").on("click", ".add-question-btn", function(e) {
         e.preventDefault();
         var questionId = $(this).closest(".question-result-row").attr("question-id");
+        var questionPlaceholder = $(this).closest(".question-result-row").find(".que-question-fill").val();
         var questionStatus = $(this).closest(".question-result-row").attr("question-status");
-        var data = {question_id: questionId,
+        var data = {
+            question_placeholder: questionPlaceholder,
+            question_id: questionId,
             question_status: questionStatus};//????
         if ($(this).attr("que-action") === "add") {
             ajaxCall(addQuestionUrl, data, addQuestion);
@@ -498,6 +505,18 @@ function reorderQuestionsHandlers() {
     });
     $('#que-reorder-questions-cancel-btn').click(function() {
         location.reload();
+    });
+}
+function deletionHandlers() {
+    $("body").on("click", ".que-delete-project-btn", function(e) {
+        e.preventDefault();
+        // $("#que-confirm-modal").modal("show");
+        if (confirm("Are you sure")) {
+            var project_id = $(this).closest(".que-project-entry").attr("project-id");
+            var data = {project_id: project_id};
+            ajaxCall(deleteProjectUrl, data, deleteProject);
+        }
+        //$("#que-confirm-modal").modal("hide");
     });
 }
 

@@ -130,6 +130,7 @@ class QuestionBank extends CActiveRecord {
     $length = $end-$begin;
     if ($begin !==false && $end !==false) {
       $result = [];
+      array_push($result, substr($content, 0, $begin));
       array_push($result, substr($content, $end+1));
       array_push($result, substr($content, $begin+1, $length-1));
       return $result;

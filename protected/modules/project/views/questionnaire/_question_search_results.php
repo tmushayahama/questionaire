@@ -55,8 +55,9 @@ foreach ($questions as $question):
               echo $question->content;
             else:
               ?>
-              <input type="text" class="span3" placeholder="<?php echo $analyzedQuestion[1]; ?>">
-              <?php echo $analyzedQuestion[0]; ?>
+            <?php echo $analyzedQuestion[0]; ?>
+              <input type="text" class="que-question-fill span3" placeholder="<?php echo $analyzedQuestion[2]; ?>">
+              <?php echo $analyzedQuestion[1]; ?>
             <?php endif;
             ?>
           </p>
@@ -78,6 +79,7 @@ foreach ($questions as $question):
         </div>-->
       </div> 
       <div class="span2">
+        <?php //if ($analyzedQuestion === null) : ?>
         <button class="add-question-btn pull-right que-btn que-btn-grey-1 que-btn-red-border-1" que-action="<?php echo $actionValue; ?>"><?php echo $actionText; ?></button>
       </div>
     </div>

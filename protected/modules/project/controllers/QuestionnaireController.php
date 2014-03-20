@@ -245,7 +245,7 @@ class QuestionnaireController extends Controller {
       $resultOutput = Yii::app()->request->getParam('result_output');
       if ($sortId != null) {
         //combine the 2
-        $sortId.=" ".Yii::app()->request->getParam('order');
+        $sortId.=" " . Yii::app()->request->getParam('order');
       }
       $model = new QuestionBank();
       // $toolList = QuestionBank::getUniqueColumn($keyword, $tool, $concept, $year, "tool");
@@ -442,11 +442,17 @@ class QuestionnaireController extends Controller {
     if (Yii::app()->request->isAjaxRequest) {
       $userQuestion = new UserQuestion;
       $questionId = Yii::app()->request->getParam('question_id');
+      $questionPlaceholder = Yii::app()->request->getParam('question_placeholder');
       $questionStatus = Yii::app()->request->getParam('question_status');
       $questionBankModel = QuestionBank::Model()->findByPk($questionId);
       $content = $questionBankModel->content;
 
-
+      if ($questionPlaceholder != null) {
+        $analyzedQuestion = QuestionBank::analyzeQuestion($content);
+        if ($analyzedQuestion != null) {
+          $content= $analyzedQuestion[0] . $questionPlaceholder . $analyzedQuestion[1];
+        }
+      }
       $userQuestion->parent_id = $questionId;
       $userQuestion->questionnaire_id = $questionnaireId;
       $userQuestion->content = $content;

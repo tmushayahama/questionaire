@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #FFF;
 }
 body .modal-thick {
     width: 950px;
@@ -143,10 +143,18 @@ textarea {
     color: #222;
 }
 .sub-heading-2 {
-    height:30px;
+    min-height:52px;
     padding: 8px 5px 0px 10px;
     background-color: #27728B;
     color: #F5F5F5;
+}
+.sub-heading-3 {
+    height:40px;
+    margin: 30px 0 20px 0;
+    padding: 3px 5px 0px 0px;
+    border-bottom: #27728B 2px solid;
+    font-weight: normal;
+    font-size: 2.5em;
 }
 .que-topbar-nav{
     margin-top:15px;
@@ -166,7 +174,7 @@ textarea {
     overflow:hidden;
 }
 .que-sidebar {
-    background-color: #FFF;
+    background-color: #F2F2F2;
     height: 100vh;
     width: 28%;
     float: left;
@@ -192,7 +200,7 @@ textarea {
     height: 307px;
     float: left;
     width:32%!important;
-    margin: 1% 0 1% 1%;
+    margin: 0% 0 2% 1%;
     border: #ECF2F7 solid 1px;
     background-color: #FAFAFA;
     border-top: #27728B solid 3px;
@@ -211,10 +219,8 @@ textarea {
     padding: 15px 10px 0px 10px;
     width: 95%;
     overflow: hidden;
-    background-color: #EEE;
-    -webkit-box-shadow: #AAA -2px 1px 3px;
-    -moz-box-shadow: #AAA -2px 1px 3px;
-    box-shadow: #AAA -2px 1px 2px;
+    background-color: #E0E0E0;
+    border-bottom: #BBB solid 1px;
 }
 #que-project-add-btn {
     height: 100%;
@@ -251,7 +257,8 @@ textarea {
     padding-top: 10px;
     background-color: #DDD;
     border-bottom: #ccc solid 1px;
-    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 .que-project-entry .date {
     background-color: #F2F2F2;

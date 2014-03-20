@@ -31,7 +31,7 @@ CREATE TABLE `que_profile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
 
 ALTER TABLE `que_profile`
-  ADD CONSTRAINT `user_profile_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `user_profile_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE `que_profile_field` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -86,7 +86,7 @@ CREATE TABLE `que_questionnaire` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 ALTER TABLE `que_questionnaire`
-  ADD CONSTRAINT `questionnaire_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `questionnaire_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE `que_user_question` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -100,9 +100,9 @@ CREATE TABLE `que_user_question` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 ALTER TABLE `que_user_question`
-  ADD CONSTRAINT `user_question_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_question_bank` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `user_question_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `que_question_bank` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `que_user_question`
-  ADD CONSTRAINT `user_question_questionnaire_id` FOREIGN KEY (`questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `user_question_questionnaire_id` FOREIGN KEY (`questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE `que_questionnaire_question_bank` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -111,9 +111,9 @@ CREATE TABLE `que_questionnaire_question_bank` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
 ALTER TABLE `que_questionnaire_question_bank`
-  ADD CONSTRAINT `questionnaire_question_bank_questionnaire_id` FOREIGN KEY (`bank_questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `questionnaire_question_bank_questionnaire_id` FOREIGN KEY (`bank_questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `que_questionnaire_question_bank`
-  ADD CONSTRAINT `questionnaire_question_bank_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_question_bank` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `questionnaire_question_bank_question_id` FOREIGN KEY (`question_id`) REFERENCES `que_question_bank` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE `que_project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -134,9 +134,9 @@ CREATE TABLE `que_project_questionnaire` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 
 ALTER TABLE `que_project_questionnaire`
-  ADD CONSTRAINT `project_questionnaire_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `project_questionnaire_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `que_project_questionnaire`
-  ADD CONSTRAINT `project_questionnaire_user_questionnaire_id` FOREIGN KEY (`user_questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `project_questionnaire_user_questionnaire_id` FOREIGN KEY (`user_questionnaire_id`) REFERENCES `que_questionnaire` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 CREATE TABLE `que_user_project` (
@@ -150,10 +150,10 @@ CREATE TABLE `que_user_project` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 ALTER TABLE `que_user_project`
-  ADD CONSTRAINT `user_project_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `user_project_user_id` FOREIGN KEY (`user_id`) REFERENCES `que_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `que_user_project`
-  ADD CONSTRAINT `user_project_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `user_project_project_id` FOREIGN KEY (`project_id`) REFERENCES `que_project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 
