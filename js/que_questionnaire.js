@@ -145,6 +145,9 @@ function removeFromSearchQuestion(data) {
 function deleteProject(data) {
     $(".que-project-entry[project-id='" + data["project_id"] + "']").remove();
 }
+function deleteUserQuestionnaire(data) {
+    $(".que-questionnaire-entry[user-questionnaire-id='" + data["questionnaire_id"] + "']").remove();
+}
 function rearrangeNumbers(id) {
     var children = $(id).children();
     for (var i = 0; i < children.length; i++) {
@@ -425,6 +428,15 @@ function addQuestionEventHandlers() {
 }
 
 function editQuestionnaireHandlers() {
+    $('.que-cancel-edit-project-name').click(function(e){
+        $(".edit-project").hide("slow");
+        $(".project-name").show();
+    });
+    $('.que-edit-project-name').click(function(e){
+        $(".project-name").hide();
+        $(".edit-project").show("slow");
+        
+    });
     $('#que-questionnaire-activity-nav a').click(function(e) {
         e.preventDefault();
         $(this).tab('show');
@@ -512,9 +524,19 @@ function deletionHandlers() {
         e.preventDefault();
         // $("#que-confirm-modal").modal("show");
         if (confirm("Are you sure")) {
-            var project_id = $(this).closest(".que-project-entry").attr("project-id");
-            var data = {project_id: project_id};
+            var projectId = $(this).closest(".que-project-entry").attr("project-id");
+            var data = {project_id: projectId};
             ajaxCall(deleteProjectUrl, data, deleteProject);
+        }
+        //$("#que-confirm-modal").modal("hide");
+    });
+    $("body").on("click", ".que-delete-questionnaire-btn", function(e) {
+        e.preventDefault();
+        // $("#que-confirm-modal").modal("show");
+        if (confirm("Are you sure")) {
+            var userQuestionnaireId = $(this).closest(".que-questionnaire-entry").attr("user-questionnaire-id");
+           var data = {user_questionnaire_id: userQuestionnaireId};
+            ajaxCall(deleteUserQuestionnaireUrl, data, deleteUserQuestionnaire);
         }
         //$("#que-confirm-modal").modal("hide");
     });

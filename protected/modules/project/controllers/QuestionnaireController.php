@@ -30,7 +30,8 @@ class QuestionnaireController extends Controller {
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
       'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions',
-       'questionbrowse', 'questionnairesearchfromcy', 'GetUserQuestionToDelete', 'questionKeywordSearch',
+       'questionbrowse', 'questionnairesearchfromcy', 'GetUserQuestionToDelete', 
+       'deleteUserQuestionnaire', 'questionKeywordSearch',
        'questionnaireKeywordSearch'),
       'users' => array('@'),
      ),
@@ -641,6 +642,17 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
+   public function actionDeleteUserQuestionnaire() {
+    if (Yii::app()->request->isAjaxRequest) {
+      $questionnaireId = Yii::app()->request->getParam('user_questionnaire_id');
+      $model = ProjectQuestionnaire::model()->findByPk($questionnaireId);
+      $model->delete();
+      echo CJSON::encode(array(
+       'questionnaire_id' => $questionnaireId
+      ));
+    }
+    Yii::app()->end();
+  }
   /**
    * Creates a new model.
    * If creation is successful, the browser will be redirected to the 'view' page.

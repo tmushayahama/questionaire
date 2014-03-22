@@ -1,5 +1,12 @@
-<?php $this->beginContent('//home_layouts/navbar'); ?>
-
+<?php
+$this->beginContent('//home_layouts/navbar');
+Yii::app()->clientScript->registerScriptFile(
+  Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
+);
+?>
+<script>
+  var deleteUserQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/deleteUserQuestionnaire"); ?>";
+</script>
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
@@ -7,24 +14,34 @@
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
-  <div class="que-topbar-nav container">
-    <div class="row">
-      <ul id="que-topbar-nav-list" class="que-nav-1">
-        <li class="active"><a><?php echo $projectModel->name ?></a></li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 <div class="container">
-  <!-- <div id="gb-home-nav" class=" row-fluid span10">
-    <a class=""><i class="icon-check"></i> 1 Contributer</a>
-    <a class=""><i class="icon-time"></i> 2 Questionnaire </a>
-    <a class=""><i class="icon-book"></i> 2 Questions </a>
-  </div> -->
   <div class="row que-questionnaires-content">
+    <div class="sub-heading-3">
+      <div class="hide edit-project row-fluid">
+        <h3>Edit Project</h3>
+        <br>
+        <input type="text" class="input-block-level" value="<?php echo $projectModel->name ?>">
+        <textarea class="span12" rows="2"><?php echo $projectModel->description; ?></textarea>
+        <a class="btn que-save-edit-project-name">Save</a>
+        <a class="btn que-cancel-edit-project-name">Cancel</a>
+        <br>
+        <br>
+      </div>
+      <div class="project-name row-fluid">
+        <h2>
+          <div class="pull-left"><?php echo $projectModel->name ?> </div>
+          <div class="">
+            &nbsp(<?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>)
+            <a class="btn btn-mini que-edit-project-name">Edit Project</a>
+          </div></h2>
+        <p><?php //echo $projectModel->description;    ?></p>
+
+      </div>
+    </div>
     <div class="que-sidebar row-fluid">
-      <h3 class="sub-heading-1">Create Questionnaires</h3>
+      <h3 class="sub-heading-2">Create Questionnaires</h3>
       <div id="new-questionnaire-form" class="">
 
         <?php
@@ -54,32 +71,25 @@
       </div>
     </div><!--/span-->
     <div class="que-middle-container row-fluid">
-
-      <div class="tab-heading">
-        <div class="pull-left">My Questionnaires </div>
-        <div class="">
-          (<?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>)
-        </div>
-      </div>
-      <br>
       <table class="que-white-background table table-hover">
         <thead>
           <tr>
             <th class="span1">
             </th>
             <th class="span8">
-              Name
+              Questionnaires
             </th>
             <th class="span3">
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="que-questionaire-entry">
-            <?php
-            $row = 1;
-            foreach ($projectQuestionnaires as $projectQuestionnaire):
-              ?>
+
+          <?php
+          $row = 1;
+          foreach ($projectQuestionnaires as $projectQuestionnaire):
+            ?>
+            <tr class="que-questionnaire-entry" user-questionnaire-id="<?php echo $projectQuestionnaire->id ?>">
               <td class="">
                 <?php echo $row++; ?>
               </td>
@@ -88,8 +98,16 @@
                 <p><i class="que-space-right">Created: 12/12/12</i> <i>Last Modified: 12/12/12</i></p>
               </td>
               <td class="">
-                <i class ="icon-edit"></i>
-                <i class ="icon-trash"></i>
+                <div class="pull-right btn-group">
+                  <button id="" class="btn  dropdown-toggle" data-toggle="dropdown"><i class =" icon-file"></i></button>
+                  <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                     <li> <a class=""> <i class ="icon-white icon-file"></i>Copy To</a></li>
+                   <li> <a class=""> <i class ="icon-white icon-file"></i>Move To</a></li>
+                    <li> <a class="que-delete-questionnaire-btn"> <i class ="icon-white icon-trash"></i>Delete</a></li>
+                </div>
               </td>
             </tr>
           <?php endforeach; ?>

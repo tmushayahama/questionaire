@@ -36,8 +36,6 @@ Yii::app()->clientScript->registerScriptFile(
         <div class="que-project-entry" project-id="<?php echo $userProject->project_id; ?>">
           <div class="title que-padding">
             <?php echo CHtml::link($userProject->project->name, Yii::app()->getModule('project')->viewProjectUrl . $userProject->project->id, array('class' => 'active')); ?>
-            <a class="que-delete-project-btn pull-right que-btn que-btn-red-1">X</a>
-
           </div>
           <!-- <div class="date que-padding">
              <span class="span6"><i>Created: 12-12-12</i></span>
@@ -73,6 +71,9 @@ Yii::app()->clientScript->registerScriptFile(
               </table>
 
             <?php endif; ?>
+          </div>
+          <div class="que-footer">
+            <a class="que-delete-project-btn pull-right btn btn-danger"> <i class ="icon-white icon-trash"></i></a>
           </div>
         </div>
       <?php endforeach; ?>

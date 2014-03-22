@@ -1,9 +1,9 @@
-DROP USER 'questionnaire'@'localhost';
-CREATE USER 'questionnaire'@'localhost' IDENTIFIED BY 'fun++';
-Drop database if exists questionnaire;
-CREATE DATABASE questionnaire DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
-GRANT ALL PRIVILEGES ON questionnaire.* to 'questionnaire'@'localhost' WITH GRANT OPTION;
-USE questionnaire;
+-- DROP USER 'questionnaire'@'localhost';
+-- CREATE USER 'questionnaire'@'localhost' IDENTIFIED BY 'fun++';
+Drop database if exists uniter_test;
+CREATE DATABASE uniter_test DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+GRANT ALL PRIVILEGES ON uniter_test.* to 'tu_admin' WITH GRANT OPTION;
+USE uniter_test;
 
 CREATE TABLE `que_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -163,14 +163,14 @@ INSERT INTO `que_user` (`id`, `username`, `password`, `email`, `activkey`, `supe
 INSERT INTO `que_profile` (`user_id`) VALUES
 (1);
 
-load data local infile 'C:/xampp/htdocs/questionnaire/protected/data/QueLoad.csv' 
+load data local infile 'sftp://mush02@Uniter-bp01.bmi.osumc.edu/home/mush02/questionnaire/protected/data/QueLoad.csv' 
 into table questionnaire.que_question_bank 
     fields terminated by ','
     enclosed by '"' 
     escaped by '\\' 
     lines terminated by '\r\n';
 
-load data local infile 'C:/xampp/htdocs/questionnaire/protected/data/SortCode.txt' 
+load data local infile 'sftp://mush02@Uniter-bp01.bmi.osumc.edu/home/mush02/questionnaire/protected/data/SortCode.txt' 
     into table questionnaire.que_question_sort 
     fields terminated by '\t' 
     enclosed by '"'
