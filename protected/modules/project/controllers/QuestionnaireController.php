@@ -29,8 +29,8 @@ class QuestionnaireController extends Controller {
       'users' => array('*'),
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
-      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'createquestion', 'viewquestions',
-       'questionbrowse', 'questionnairesearchfromcy', 'GetUserQuestionToDelete', 
+      'actions' => array('create', 'update', 'dashboard', 'addquestion', 'copyquestionnaire', 'movequestionnaire', 'createquestion', 'viewquestions',
+       'questionbrowse', 'questionnairesearchfromcy', 'GetUserQuestionToDelete',
        'deleteUserQuestionnaire', 'questionKeywordSearch',
        'questionnaireKeywordSearch'),
       'users' => array('@'),
@@ -78,6 +78,36 @@ class QuestionnaireController extends Controller {
      'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
      'userQuestions' => UserQuestion::getUserQuestions($questionnaireId)
     ));
+  }
+
+  public function actionCopyQuestionnaire($id) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $questionnaireId = Yii::app()->request->getParam('questionnaire_id');
+      $toProjectId = Yii::app()->request->getParam('to_project_id');
+      Questionnaire::copyQuestionnaires($questionnaireId, $toProjectId);
+      $projectQuestionnaires = ProjectQuestionnaire::model()->findAll("project_id = " . $id);
+      echo CJSON::encode(array(
+       'questionnaires' => $this->renderPartial('project.views.project._questionnaires', array(
+        'projectQuestionnaires' => $projectQuestionnaires,
+         ), true, true)
+      ));
+    }
+    Yii::app()->end();
+  }
+
+  public function actionMoveQuestionnaire($id) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $questionnaireId = Yii::app()->request->getParam('questionnaire_id');
+      $toProjectId = Yii::app()->request->getParam('to_project_id');
+      Questionnaire::moveQuestionnaires($questionnaireId, $toProjectId);
+      $projectQuestionnaires = ProjectQuestionnaire::model()->findAll("project_id = " . $id);
+      echo CJSON::encode(array(
+       'questionnaires' => $this->renderPartial('project.views.project._questionnaires', array(
+        'projectQuestionnaires' => $projectQuestionnaires,
+         ), true, true)
+      ));
+    }
+    Yii::app()->end();
   }
 
   public function actionQuestionBrowse() {
@@ -451,7 +481,7 @@ class QuestionnaireController extends Controller {
       if ($questionPlaceholder != null) {
         $analyzedQuestion = QuestionBank::analyzeQuestion($content);
         if ($analyzedQuestion != null) {
-          $content= $analyzedQuestion[0] . $questionPlaceholder . $analyzedQuestion[1];
+          $content = $analyzedQuestion[0] . $questionPlaceholder . $analyzedQuestion[1];
         }
       }
       $userQuestion->parent_id = $questionId;
@@ -642,10 +672,10 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
-   public function actionDeleteUserQuestionnaire() {
+  public function actionDeleteUserQuestionnaire() {
     if (Yii::app()->request->isAjaxRequest) {
       $questionnaireId = Yii::app()->request->getParam('user_questionnaire_id');
-      $model = ProjectQuestionnaire::model()->findByPk($questionnaireId);
+      $model = Questionnaire::model()->findByPk($questionnaireId);
       $model->delete();
       echo CJSON::encode(array(
        'questionnaire_id' => $questionnaireId
@@ -653,6 +683,7 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
+
   /**
    * Creates a new model.
    * If creation is successful, the browser will be redirected to the 'view' page.

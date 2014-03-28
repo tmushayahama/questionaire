@@ -43,6 +43,14 @@ function ajaxCall(url, data, callback) {
  return false;
  }
  }*/
+function copyQuestionnaire(data) {
+    $("#copy-projects-modal").modal("hide");
+    $("#questionnaire-container").html(data["questionnaires"]);
+}
+function moveQuestionnaire(data) {
+    $("#move-projects-modal").modal("hide");
+    $("#questionnaire-container").html(data["questionnaires"]);
+}
 function questionnaireSearch(data) {
     $("#que-questionnaire-result").html(data["questionnaire_search_results"]);//"question_row" is the thing that addQuestion controller submitted
 }
@@ -428,14 +436,44 @@ function addQuestionEventHandlers() {
 }
 
 function editQuestionnaireHandlers() {
-    $('.que-cancel-edit-project-name').click(function(e){
+    $("body").on("click", ".copy-questionnaire-modal-trigger", function(e) {
+        e.preventDefault();
+        $("#copy-projects-modal").modal("show");
+        var questionnaireId = $(this).closest(".que-questionnaire-entry").attr("user-questionnaire-id");
+        $("#copy-questionnaire-btn").attr("questionnaire-id", questionnaireId)
+    });
+    $("#copy-questionnaire-btn").click(function(e) {
+        e.preventDefault();
+        var toProjectId = $('#copy-project-select').val();
+        var questionnaireId = $(this).attr("questionnaire-id");
+        var data = {to_project_id: toProjectId,
+            questionnaire_id: questionnaireId};
+        ajaxCall(copyQuestionnaireUrl, data, copyQuestionnaire);
+        //$("#que-confirm-modal").modal("hide");
+    });
+    $("body").on("click", ".move-questionnaire-modal-trigger", function(e) {
+        e.preventDefault();
+        $("#move-projects-modal").modal("show");
+        var questionnaireId = $(this).closest(".que-questionnaire-entry").attr("user-questionnaire-id");
+        $("#move-questionnaire-btn").attr("questionnaire-id", questionnaireId)
+    });
+    $("#move-questionnaire-btn").click(function(e) {
+        e.preventDefault();
+        var toProjectId = $('#move-project-select').val();
+        var questionnaireId = $(this).attr("questionnaire-id");
+        var data = {to_project_id: toProjectId,
+            questionnaire_id: questionnaireId};
+       ajaxCall(moveQuestionnaireUrl, data, moveQuestionnaire);
+        //$("#que-confirm-modal").modal("hide");
+    });
+    $('.que-cancel-edit-project-name').click(function(e) {
         $(".edit-project").hide("slow");
         $(".project-name").show();
     });
-    $('.que-edit-project-name').click(function(e){
+    $('.que-edit-project-name').click(function(e) {
         $(".project-name").hide();
         $(".edit-project").show("slow");
-        
+
     });
     $('#que-questionnaire-activity-nav a').click(function(e) {
         e.preventDefault();
@@ -519,6 +557,7 @@ function reorderQuestionsHandlers() {
         location.reload();
     });
 }
+
 function deletionHandlers() {
     $("body").on("click", ".que-delete-project-btn", function(e) {
         e.preventDefault();
@@ -535,13 +574,12 @@ function deletionHandlers() {
         // $("#que-confirm-modal").modal("show");
         if (confirm("Are you sure")) {
             var userQuestionnaireId = $(this).closest(".que-questionnaire-entry").attr("user-questionnaire-id");
-           var data = {user_questionnaire_id: userQuestionnaireId};
+            var data = {user_questionnaire_id: userQuestionnaireId};
             ajaxCall(deleteUserQuestionnaireUrl, data, deleteUserQuestionnaire);
         }
         //$("#que-confirm-modal").modal("hide");
     });
 }
-
 
 
 

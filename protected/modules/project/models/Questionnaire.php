@@ -52,6 +52,51 @@ class Questionnaire extends CActiveRecord {
     return Questionnaire::Model()->findAll($questionnaireCriteria);
   }
 
+  public static function copyQuestionnaires($questionnaireId, $toProjectId) {
+    $originalQestionnaire = Questionnaire::model()->findByPk($questionnaireId);
+    
+    $questionCriteria = new CDbCriteria;
+    $questionCriteria->condition = "questionnaire_id=" . $questionnaireId;
+    $questions = UserQuestion::Model()->findAll($questionCriteria);
+    $questionnaire = new Questionnaire();
+    $questionnaire->name = $originalQestionnaire->name;
+    $questionnaire->parent_id = $originalQestionnaire->parent_id;
+    $questionnaire->save();
+    self::createProjectQuestionnaire($toProjectId, $questionnaire->id);
+    foreach ($questions as $question) {
+      $userQuestion = new UserQuestion();
+      $userQuestion->attributes = $question->attributes;
+      $userQuestion->questionnaire_id = $questionnaire->id;
+      $userQuestion->save();
+    }
+  }
+   public static function moveQuestionnaires($questionnaireId, $toProjectId) {
+    $originalQestionnaire = Questionnaire::model()->findByPk($questionnaireId);
+    
+    $questionCriteria = new CDbCriteria;
+    $questionCriteria->condition = "questionnaire_id=" . $questionnaireId;
+    $questions = UserQuestion::Model()->findAll($questionCriteria);
+    $questionnaire = new Questionnaire();
+    $questionnaire->name = $originalQestionnaire->name;
+    $questionnaire->parent_id = $originalQestionnaire->parent_id;
+    $questionnaire->save();
+    self::createProjectQuestionnaire($toProjectId, $questionnaire->id);
+    foreach ($questions as $question) {
+      $userQuestion = new UserQuestion();
+      $userQuestion->attributes = $question->attributes;
+      $userQuestion->questionnaire_id = $questionnaire->id;
+      $userQuestion->save();
+    }
+     $originalQestionnaire->delete();
+  }
+
+  private static function createProjectQuestionnaire($projectId, $questionnaireId) {
+    $projectQuestonnaire = new ProjectQuestionnaire();
+    $projectQuestonnaire->project_id = $projectId;
+    $projectQuestonnaire->user_questionnaire_id = $questionnaireId;
+    $projectQuestonnaire->save();
+  }
+
   /**
    * Returns the static model of the specified AR class.
    * @param string $className active record class name.

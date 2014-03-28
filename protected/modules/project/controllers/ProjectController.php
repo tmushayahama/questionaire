@@ -62,6 +62,7 @@ class ProjectController extends Controller {
      'projectModel' => $this->loadModel($id),
      'questionnaireModel' => $questionnaireModel,
      'projectQuestionnaires' => $projectQuestionnaires,
+     'projects'=> Project::model()->findAll()
     ));
   }
 

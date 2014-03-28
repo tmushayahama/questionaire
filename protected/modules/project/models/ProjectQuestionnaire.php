@@ -25,6 +25,7 @@ class ProjectQuestionnaire extends CActiveRecord {
     $projectQestionnaireCriteria->condition = "project_id=" . $project_id;
   return ProjectQuestionnaire::Model()->count($projectQestionnaireCriteria);
   }
+   
 
   /**
    * Returns the static model of the specified AR class.

@@ -6,6 +6,8 @@ Yii::app()->clientScript->registerScriptFile(
 ?>
 <script>
   var deleteUserQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/deleteUserQuestionnaire"); ?>";
+  var copyQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/copyQuestionnaire/", array('id' => $projectModel->id)); ?>";
+  var moveQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moveQuestionnaire/", array('id' => $projectModel->id)); ?>";
 </script>
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
@@ -36,7 +38,7 @@ Yii::app()->clientScript->registerScriptFile(
             &nbsp(<?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>)
             <a class="btn btn-mini que-edit-project-name">Edit Project</a>
           </div></h2>
-        <p><?php //echo $projectModel->description;    ?></p>
+        <p><?php //echo $projectModel->description;              ?></p>
 
       </div>
     </div>
@@ -83,39 +85,67 @@ Yii::app()->clientScript->registerScriptFile(
             </th>
           </tr>
         </thead>
-        <tbody>
-
+        <tbody id="questionnaire-container">
           <?php
-          $row = 1;
-          foreach ($projectQuestionnaires as $projectQuestionnaire):
-            ?>
-            <tr class="que-questionnaire-entry" user-questionnaire-id="<?php echo $projectQuestionnaire->id ?>">
-              <td class="">
-                <?php echo $row++; ?>
-              </td>
-              <td class="name">
-                <h4><?php echo CHtml::link($projectQuestionnaire->userQuestionnaire->name, array(Yii::app()->getModule('project')->viewQuestionnaireUrl, 'projectId' => $projectModel->id, 'questionnaireId' => $projectQuestionnaire->userQuestionnaire->id), array('class' => '')); ?></h4>
-                <p><i class="que-space-right">Created: 12/12/12</i> <i>Last Modified: 12/12/12</i></p>
-              </td>
-              <td class="">
-                <div class="pull-right btn-group">
-                  <button id="" class="btn  dropdown-toggle" data-toggle="dropdown"><i class =" icon-file"></i></button>
-                  <button class="btn dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                     <li> <a class=""> <i class ="icon-white icon-file"></i>Copy To</a></li>
-                   <li> <a class=""> <i class ="icon-white icon-file"></i>Move To</a></li>
-                    <li> <a class="que-delete-questionnaire-btn"> <i class ="icon-white icon-trash"></i>Delete</a></li>
-                </div>
-              </td>
-            </tr>
-          <?php endforeach; ?>
+          echo $this->renderPartial('_questionnaires', array(
+           'projectQuestionnaires' => $projectQuestionnaires,
+          ));
+          ?>
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+<!-- ---------------MODALS ------------------------>
+<div id="copy-projects-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <h2>Copy Project
+    <button class="pull-right gb-btn gb-btn-red-1 gb-btn-color-white skilllist-modal-close-btn" data-dismiss="modal" aria-hidden="true">close</button>
+  </h2>
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="row-fluid">
+        <select id="copy-project-select" class="input-block-level">
+          <?php
+          foreach ($projects as $project):
+            if ($project->id == $projectModel->id):
+              ?>
+              <option selected="selected" value="<?php echo $project->id; ?>"><?php echo $project->name; ?></option>
+            <?php else: ?> 
+              <option value="<?php echo $project->id; ?>"><?php echo $project->name; ?></option>
+            <?php
+            endif;
+          endforeach;
+          ?>
+        </select>
+      </div>
+      <a id="copy-questionnaire-btn" class="que-btn que-btn-blue-2">Copy Questionnaire</a>
+    </div>
+  </div>
+</div>
+
+<div id="move-projects-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <h2>Move Project
+    <button class="pull-right gb-btn gb-btn-red-1 gb-btn-color-white skilllist-modal-close-btn" data-dismiss="modal" aria-hidden="true">close</button>
+  </h2>
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="row-fluid">
+        <select id="move-project-select" class="input-block-level">
+          <?php
+          foreach ($projects as $project):
+            if ($project->id != $projectModel->id):
+              ?>
+              <option value="<?php echo $project->id; ?>"><?php echo $project->name; ?></option>
+              <?php
+            endif;
+          endforeach;
+          ?>
+        </select>
+      </div>
+      <a id="move-questionnaire-btn" class="que-btn que-btn-blue-2">Move Questionnaire</a>
+    </div>
+  </div>
+</div>
 <?php $this->endContent(); ?>
 
