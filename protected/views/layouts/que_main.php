@@ -22,7 +22,7 @@
       <?php echo $content ?>
     </div>
     <div id="que-cornfirm-modal" class="modal hide in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <span><h3>Questionnaire Says, </h3>
+      <span><h3>iUSuR Says, </h3>
       </span>
       <div class="modal-body">
         <h3 id="que-confirm-message" class="text-warning"></h3>

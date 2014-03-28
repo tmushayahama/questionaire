@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="nav-collapse collapse">
-        <h1 id="homepage"> Questionnaire </h1>
+        <h1 id="homepage"> iUSuR </h1>
 
         <?php
         echo CHtml::beginForm('', 'post', array(

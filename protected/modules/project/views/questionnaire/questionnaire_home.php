@@ -235,4 +235,4 @@ Yii::app()->clientScript->registerScriptFile(
     <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
-<?php $this->endContent(); ?>
+<?php $this->endContent();?>

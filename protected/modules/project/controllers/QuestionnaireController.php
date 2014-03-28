@@ -49,9 +49,19 @@ class QuestionnaireController extends Controller {
    * Displays a particular model.
    * @param integer $id the ID of the model to be displayed
    */
-  public function actionDashboard($projectId) {
+  public function actionDashboard($projectId, $questionnaireId) {
+    //$questionSearchModel = new QuestionBank();
     $this->render('dashboard', array(
-      //'model'=>$this->loadModel($id),
+     'projectId' => $projectId,
+     'questionnaireId' => $questionnaireId,
+     'model' => $this->loadModel($questionnaireId),
+     //'sortcodes' => QuestionSort::getChildCode("Root"),
+     //'toolList' => QuestionBank::getUniqueTools(),
+     //'yearList' => QuestionBank::getUniqueYear(),
+     //'conceptList' => QuestionBank::getUniqueConcepts(),
+     'questionnaireList' => Questionnaire::getQuestionnaires(),
+     //'questionSearchModel' => $questionSearchModel,
+     'userQuestions' => UserQuestion::getUserQuestions($questionnaireId)
     ));
   }
 
@@ -61,9 +71,6 @@ class QuestionnaireController extends Controller {
    */
   public function actionView($projectId, $questionnaireId) {
     $questionSearchModel = new QuestionBank();
-    $questionnaireSearchFromCYModel = new QuestionBank;
-    $questionnaireSearchFromQModel = new Questionnaire;
-
     $this->render('questionnaire_home', array(
      'projectId' => $projectId,
      'questionnaireId' => $questionnaireId,
@@ -74,8 +81,6 @@ class QuestionnaireController extends Controller {
      'conceptList' => QuestionBank::getUniqueConcepts(),
      'questionnaireList' => Questionnaire::getQuestionnaires(),
      'questionSearchModel' => $questionSearchModel,
-     'questionnaireSearchFromCYModel' => $questionnaireSearchFromCYModel,
-     'questionnaireSearchFromQModel' => $questionnaireSearchFromQModel,
      'userQuestions' => UserQuestion::getUserQuestions($questionnaireId)
     ));
   }

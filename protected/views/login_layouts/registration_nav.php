@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<?php echo CHtml::link('Questionnaire', Yii::app()->getModule('user')->returnUrl, array('class' => 'brand ')); ?>
+			<?php echo CHtml::link('iUSuR', Yii::app()->getModule('user')->returnUrl, array('class' => 'brand ')); ?>
 			<div class="nav-collapse collapse">
 				<p class="navbar-text pull-right">
 					<?php echo CHtml::link('Log In', Yii::app()->getModule('user')->loginUrl, array('class' => 'btn ')); ?>

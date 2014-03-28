@@ -230,5 +230,4 @@ class QuestionBank extends CActiveRecord {
      'criteria' => $criteria,
     ));
   }
-
 }
