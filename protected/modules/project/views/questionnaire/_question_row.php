@@ -18,7 +18,7 @@
         </textarea>
         <!-- <a class="que-view-answer-options-toggle">
            <h5> <strong>Edit Answer Options</strong> 
-             <i class="icon-chevron-down"></i>
+             <i class="glyphicon glyphicon-chevron-down"></i>
            </h5>
          </a>
          <div class="question-answer-options row hide">
@@ -30,7 +30,7 @@
         <p class="que-question-content"><?php echo $userQuestion->content; ?></p>
         <!-- <a class="que-view-answer-options-toggle">
           <h5> <strong>View Answer Options</strong> 
-            <i class="icon-chevron-down"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
           </h5>
         </a>
         <div class="question-answer-options row hide">

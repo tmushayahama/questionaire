@@ -3,9 +3,9 @@
 	<div class="navbar-inner">
 		<div class="container-fluid">
 			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+				<span class="glyphicon glyphicon-bar"></span>
+				<span class="glyphicon glyphicon-bar"></span>
+				<span class="glyphicon glyphicon-bar"></span>
 			</button>
 			<?php echo CHtml::link('iUSuR', Yii::app()->getModule('user')->returnUrl, array('class' => 'brand ')); ?>
 			<div class="nav-collapse collapse">

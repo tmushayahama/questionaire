@@ -46,12 +46,12 @@ Yii::app()->clientScript->registerScriptFile(
         <div class="que-sidebar row-fluid">
           <h3 class="sub-heading-1">Edit Questionnaire</h3>
           <ul id="que-questionnaire-activity-nav" class="que-sidebar-nav-1">
-            <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="icon-chevron-right pull-right"></i></a></li>
+            <li class="active"><a href="#que-questionnaire-edit-pane" data-toggle="tab">Edit Questionnaire<i class="glyphicon glyphicon-chevron-right pull-right"></i></a></li>
             <br>
             <h4 class="sub-heading-2">Add Question</h4>
-            <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="icon-chevron-right pull-right"></i></a></li>
-            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="icon-chevron-right pull-right"></i></a></li>
-            <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="icon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-questionnaire-bank-pane" data-toggle="tab">From Questionnaire Bank <i class="glyphicon glyphicon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-question-bank-pane" data-toggle="tab">From Question Bank<i class="glyphicon glyphicon-chevron-right pull-right"></i></a></li>
+            <li class=""><a href="#que-create-new-question-bank-pane" data-toggle="tab">Create Your Own<i class="glyphicon glyphicon-chevron-right pull-right"></i></a></li>
           </ul>
         </div><!--/span-->
         <div class="que-middle-container row-fluid">

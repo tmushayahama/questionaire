@@ -1,5 +1,8 @@
 <?php $this->beginContent('//home_layouts/navbar'); ?>
+
 <?php
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 'On');  //On or Off
 Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
 );

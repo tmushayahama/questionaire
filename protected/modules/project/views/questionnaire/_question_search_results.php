@@ -66,7 +66,7 @@ foreach ($questions as $question):
         </blockquote>
         <!-- <a class="que-view-answer-options-toggle">
           <strong>View Answer Options</strong> 
-          <i class="icon-chevron-down"></i>
+          <i class="glyphicon glyphicon-chevron-down"></i>
         </a>
         <div class="question-answer-options row hide">
           <ol class="nav nav-list">

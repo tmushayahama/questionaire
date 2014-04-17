@@ -14,7 +14,7 @@
         <div class="row">
           <a class="accordion-toggle" data-toggle="collapse" data-parent="#questionnaire-search-result-1" href="<?php echo '#collapse-question-search-1-' . $questionnaire->id; ?>">
             View Questions <?php echo count($questionnaireQuestions); ?> 
-            <i class="icon-chevron-down"></i>
+            <i class="glyphicon glyphicon-chevron-down"></i>
           </a>
         </div>
         <div class="que-question-footer row">
@@ -75,7 +75,7 @@
                   </blockquote>
                   <!-- <a class="que-view-answer-options-toggle">
                     <strong>View Answer Options</strong> 
-                    <i class="icon-chevron-down"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
                   </a> 
                   <div class="question-answer-options row hide">
                     <ol class="nav nav-list">
