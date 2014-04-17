@@ -17,7 +17,7 @@ foreach ($projectQuestionnaires as $projectQuestionnaire):
     </td>
     <td class="">
       <div class="pull-right btn-group">
-        <button id="" class="btn  dropdown-toggle" data-toggle="dropdown"><i class =" icon-file"></i></button>
+        <button id="" class="btn btn-primary  dropdown-toggle" data-toggle="dropdown"><i class ="glyphicon glyphicon-file"></i></button>
         <button class="btn dropdown-toggle" data-toggle="dropdown">
           <span class="caret"></span>
         </button>

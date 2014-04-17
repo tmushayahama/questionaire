@@ -2614,3 +2614,111 @@ Stack trace:
 REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
 HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
 ---
+2014/04/17 02:12:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:22:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:24:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:30:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/site
+---
+2014/04/17 02:30:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:33:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:34:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-tour.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-to...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-tour.js
+HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/3
+---
+2014/04/17 02:36:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap-responsive.js".' in C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\questionnaire\framework\web\CWebApplication.php(141): CWebApplication->runController('js/bootstrap-re...')
+#1 C:\xampp\htdocs\questionnaire\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\questionnaire\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/questionnaire/js/bootstrap-responsive.js
+HTTP_REFERER=http://localhost/questionnaire/project/questionnaire/view/projectId/3/questionnaireId/253
+---
