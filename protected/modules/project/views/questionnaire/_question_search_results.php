@@ -1,4 +1,4 @@
-<div class="row-fluid">
+<div class="row">
   <h5 class="pull-left">Results:
     <?php echo ' ' . $questionCount . " questions"; ?>
     <?php //echo $pages->currentPage . ' to ' . $pages->pageCount . ' of ' . $questionCount; ?>

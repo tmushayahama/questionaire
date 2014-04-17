@@ -13,15 +13,11 @@ $form = $this->beginWidget('CActiveForm', array(
   'onsubmit' => "return false;")
   ));
 ?>
-<div class="row">
-  <div class="span12">
-    <div class="row-fluid input-prepend input-append">
-      <input id="que-question-keyword-search-input" class="span11 que-input-large" placeholder="Search Question by context, year, etc."type="text">
-      <button id="que-question-keyword-search-btn" class="que-btn que-btn-blue-2 btn-large" >Search</button>
-    </div>
-  </div> 
+<div class="input-group input-group-md row">
+  <input id="que-question-keyword-search-input" class="col-lg-10" placeholder="Search Question by context, year, etc."type="text">
+  <button id="que-question-keyword-search-btn" class="btn btn-primary" >Search</button>
 </div>
-<div id="que-filters-container" class="hide">
+<div id="que-filters-container" class="que-hide">
   <h4 class="que-additional-filter-question-btn">Additional Filters</h4>
   <div class="row">
     <!-- <div id="que-tool-dropdown" class="span12">
@@ -37,7 +33,7 @@ $form = $this->beginWidget('CActiveForm', array(
      </div> -->
   </div>
   <div class="row">
-    <div id="que-concept-dropdown" filter-type="<?php echo QuestionBank::$FILTER_CONCEPT ?>" class="span12">
+    <div id="que-concept-dropdown" filter-type="<?php echo QuestionBank::$FILTER_CONCEPT ?>" class="col-lg-12 col-sm-12 col-xs-12">
       <?php
       echo CHtml::activeDropDownList(
         $model, 'concept', CHtml::listData($conceptList, 'concept', 'concept'), array(
@@ -50,7 +46,7 @@ $form = $this->beginWidget('CActiveForm', array(
     </div>
   </div>
   <div class="row">
-    <div id="que-year-dropdown" filter-type="<?php echo QuestionBank::$FILTER_YEAR ?>" class="span12">
+    <div id="que-year-dropdown" filter-type="<?php echo QuestionBank::$FILTER_YEAR ?>" class="col-lg-12 col-sm-12 col-xs-12">
       <?php
       echo CHtml::activeDropDownList(
         $model, 'year', CHtml::listData($yearList, 'year', 'year'), array(
@@ -62,12 +58,12 @@ $form = $this->beginWidget('CActiveForm', array(
       ?>
     </div>
   </div>
-  <div id="que-filter-selected" class="row-fluid">
+  <div id="que-filter-selected" class="row">
 
   </div>
 </div>
-<div class="well row-fluid">
+<div class="well row">
   <?php //echo CHtml::submitButton('Search', array('id' => 'que-search-question-btn', 'class' => 'btn que-btn-red-border-1')); ?>
-  <button type="button" id="que-clear-search-btn" class="que-btn btn-large que-btn-grey-1 ">Clear</button>
+  <button type="button" id="que-clear-search-btn" class="btn btn-default">Clear</button>
 </div>
 <?php $this->endWidget(); ?>

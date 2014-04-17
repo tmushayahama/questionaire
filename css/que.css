@@ -85,69 +85,61 @@ textarea{
 .que-no-padding {
     padding: 0 0 0 0!important;
 }
-.que-side-nav-1 {
-    padding: 0;
-    border-right: #999 solid 1px;
-    height:100vh;
-    list-style: none;
-    background-color: #FFF; /* #DFE0D8; */
+.que-topbar-nav{
+    margin-top:15px;
+    padding: 1px 0 1px 0;
+    background-color: #27728B;
+    border-top: #27728B groove 4px;
+    border-bottom: #27728B groove 4px;
+}
 
-}
-.que-side-nav-1 i{
-    margin-top: 12px;
-}
-.que-side-nav-1 li {
+.que-topbar-nav ul li a small{
+    color:#555;
+} 
+.que-nav-1 {
+    margin: 0;
+    width:100%;
     height: 40px;
-    width: 100%;
-    border-bottom: #BBB solid 1px;
-    background-color: #DFE0D8;
+    list-style: none;
+    border-top: #F5F5F5 solid 1px;
+    border-bottom: #F5F5F5 solid 1px;
+    overflow:hidden;
 }
-.que-side-nav-1 li a{
+.que-nav-1 li {
+    min-width:70px;
+    max-width: 200px;
+    height: 100%;
+    float:left;
+    padding: 2px 20px 3px 20px;
+    border-right:#EEE solid 2px;
+    overflow:hidden;
+}
+.que-nav-1 li a{
     display: block;
     height: 100%;
     width: 100%;
-    color: #004455;
-    line-height: 40px;
-    font-size: 1.2em;
-    font-weight:bold;
-    text-align: left;
-    text-indent:7px;
+    color: #f5f5f5;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
     text-decoration: none;
 }
-.que-side-nav-1 li:hover,
-.que-side-nav-1 li.active {
-    background-color: #706F65;
-}
-.que-side-nav-1 li:hover a,
-.que-side-nav-1 li.active a{
-    background-color: #706F65;
-    color: #EEE;
-}
-.que-heading-3 {
-    padding: 2px 10px 5px 10px;
-    margin-bottom: 10px;
-    border-bottom: #999 solid 1px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-.que-heading-3:hover{
+.que-nav-1 li:hover,
+.que-nav-1 li.active:hover {
     background-color: #EEE;
 }
-.que-body-3 {
-    font-size: 1.5em;
+.que-nav-1 li.active {
+    background-color: #1B313A;
 }
-.que-grey-text {
-    color: #111;
+.que-nav-1 li.active:hover {
+    background-color: #1B313A;
 }
-.que-img-logo {
-    float: left;
-    height: 40px;
-    width: 160px;
-    padding: 8px 0 0px 15px;
+.que-nav-1 li:hover a {
+     color: #444;
 }
-.que-post-img {
-    height: 98%;
-    width:98%;
+.que-nav-1 li.active a {
+    color: #F5F5F5;
 }
 /************AUTH PAGE********************/
 .que-intro-header-1 {
@@ -194,17 +186,48 @@ textarea{
     opacity: 0.5;
     background: #eee;
 }
-/*************POST ACTION*********/
-.que-post-action {
-    padding:0;
+/*------Questionnaire -------*/
+.que-questionnaire-stats {
+    padding: 10px 5px 0px 5px;
+    background-color: #DDD;
 }
-.que-post-action li{
-    border-bottom: #999 solid 1px;
-    padding: 2px 5px 2px 5px;
+.que-stats {
+    overflow:hidden;
+    background-color: #F5F5F5;
 }
-.que-post-action li a{
-    font-size:1.1em;
-    /*color: #00858B;*/
+.que-stats:hover {
+    background-color:#FFF;
+    color:#456789;
+    text-decoration:none;
+}
+.que-stats h1{
+    text-align:center;
+}
+.question-row {
+    border: #777 solid 1px;
+    margin-bottom: 20px;
+    padding: 10px 0px 0px 0px;
+    font-size:1.3em;
+    font-weight: bold;
+    line-height: 25px;
+}
+.question-row:hover {
+    background-color: #F5F5F5;
+}
+.question-row a {
+    margin-left: 20px;
+}
+.question-row .que-footer {
+    padding: 5px 5px 0px 5px;
+    background-color: #ECF2F7;
+    font-size:1.0em;
+    font-weight: normal;
+}
+.question-row .que-footer button {
+    margin-left: 3px;
+}
+.que-sortable {
+    background-color: #BBB;
 }
 /*------------HOME-------------*/
 .que-home-left-nav {
@@ -388,7 +411,6 @@ hr {
 
 .que-navbar {
     background-color:#1B313A;
-    border-bottom: #27728B solid 2px;
     font-family:arial,sans-serif;
     top:0;
     left:0;
@@ -403,19 +425,6 @@ hr {
 }
 .que-navbar li > a,.navbar-toggle  {
     color:#efefef;
-}
-
-.que-navbar .dropdown-menu li a {color:#2A4888;}
-.que-navbar .dropdown-menu li > a {padding-left:30px;}
-
-.que-navbar li>a:hover,
-.que-navbar li>a:focus, 
-.que-navbar .open, 
-.que-navbar .open>a,
-.que-navbar .open>a:hover, 
-.que-navbar .open>a:focus {
-    background-color:#777777;
-    color:#fff;
 }
 .que-breadcrumb {
     background-color: #ECF2F7;
@@ -698,9 +707,6 @@ small.text-muted {
     }
 
     .que-navbar {
-        background-color:#111111;
-        top:0;
-        width:100%;
         position:relative!important;
     }
 

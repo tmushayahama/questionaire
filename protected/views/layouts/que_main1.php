@@ -20,28 +20,25 @@
 
   </head>
   <body>
-    <!-- top nav -->
-    <div class="navbar que-navbar navbar-static-top">  
+    <div class="navbar que-navbar navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only"></span>
-            <span class="glyphicon glyphicon-bar"></span>
-            <span class="glyphicon glyphicon-bar"></span>
-            <span class="glyphicon glyphicon-bar"></span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
+           <?php echo CHtml::link('<h3>iUsUR</h3>', Yii::app()->user->returnUrl, array('class' => 'navbar-brand')); ?>
         </div>
-        <?php echo CHtml::link('<h3>iUsUR</h3>', Yii::app()->user->returnUrl, array('class' => 'navbar-brand')); ?>
-        <nav class="collapse navbar-collapse" role="navigation">
-
+        <div class="navbar-collapse collapse">
           <ul class="nav nav-pills pull-right">
             <li><a class="btn btn-link"><?php echo User::getFirstname(); ?></a></li>
             <li><?php echo CHtml::link('Logout', Yii::app()->getModule('user')->logoutUrl, array('class' => 'btn btn-link')); ?>	</li>
           </ul>
-        </nav>
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
-    <!-- /top nav -->
     <div class="" id="main-container">
       <div class="que-no-padding ">
         <?php echo $content; ?>

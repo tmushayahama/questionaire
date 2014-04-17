@@ -1,4 +1,4 @@
-<?php $this->beginContent('//home_layouts/navbar'); ?>
+<?php $this->beginContent('//layouts/que_main1'); ?>
 
 <?php
 ini_set('error_reporting', E_ALL);
@@ -35,83 +35,81 @@ Yii::app()->clientScript->registerScriptFile(
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
-  <br>
-  <br>
-  <h2 class="container">
-    <div class="span8">
-      <?php echo $model->name; ?>
-    </div>
-    <div class="pull-right">
-      <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
-    </div>
-  </h2>
-  <div class="que-topbar-nav container">
-    <div class="row">
-      <ul id="que-topbar-nav-list" class="que-nav-1">
-        <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Preview Questionnaire</a></li>
-        <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
-        <!--   <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li> -->
-      </ul>
-    </div>
+</div>
+<br>
+<br>
+<h2 class="container">
+  <div class="col-lg-8 col-sm-8 col-xs-8">
+    <?php echo $model->name; ?>
   </div>
+  <div class="pull-right">
+    <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
+  </div>
+</h2>
+<div class="que-topbar-na container">
+  <ul id="que-topbar-nav-list" class="nav nav-tabs row">
+    <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Preview Questionnaire</a></li>
+    <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
+    <!--   <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li> -->
+  </ul>
 </div>
 <div class="container">
-  <div class="row-fluid que-white-background">
+  <div class="row">
     <div class="tab-content">
       <div class="tab-pane active" id="questionnaire-design-pane">
-        <div class="que-white-background row-fluid span12">
-          <div class="tab-heading">
-            <div class="pull-left">Preview</div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><div class="">Preview</div></h4>
           </div>
-          <div class="que-questionnaire-stats">
-            <ul class="thumbnails">
-              <li class="span4">
-                <a class="thumbnail que-stats">
-                  <h1 id="que-question-original-number"><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
-                  <h5 class="text-center">Original Questions</h5>
-                </a>
-              </li>
-              <li class="span4">
-                <a class="thumbnail que-stats">
-                  <h1 id="que-question-modified-number"><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId); ?></h1>
-                  <h5 class="text-center">Questions Modified</h5>
-                </a>
-              </li>
-              <li class="span4">
-                <a class="thumbnail que-stats">
-                  <h1 id="que-question-created-number"><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId); ?></h1>
-                  <h5 class="text-center">New Created Questions</h5>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="row-fluid">
-            <button id="que-reorder-questions-btn" class="que-btn que-btn-blue-2 pull-right" que-action="reorder">
-              Reorder
-            </button>
-            <button id="que-reorder-questions-cancel-btn" class="hide que-btn que-btn-grey-1 pull-right">
-              Cancel
-            </button>
-          </div>
-          <div id="que-questionnaire-questions" class="span11">
-            <?php
-            $count = 1;
-            foreach ($userQuestions as $userQuestion):
-              echo $this->renderPartial('_question_row', array(
-               'count' => $count++,
-               'userQuestion' => $userQuestion));
-            endforeach;
-            ?>
+          <div class="panel-body">
+            <div class="que-questionnaire-stats">
+              <ul class="thumbnails">
+                <li class="col-lg-4 col-sm-4 col-xs-4">
+                  <a class="thumbnail que-stats">
+                    <h1 id="que-question-original-number"><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
+                    <h5 class="text-center">Original Questions</h5>
+                  </a>
+                </li>
+                <li class="col-lg-4 col-sm-4 col-xs-4">
+                  <a class="thumbnail que-stats">
+                    <h1 id="que-question-modified-number"><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId); ?></h1>
+                    <h5 class="text-center">Questions Modified</h5>
+                  </a>
+                </li>
+                <li class="col-lg-4 col-sm-4 col-xs-4">
+                  <a class="thumbnail que-stats">
+                    <h1 id="que-question-created-number"><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId); ?></h1>
+                    <h5 class="text-center">New Created Questions</h5>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="pull-right">
+                <a id="que-reorder-questions-btn" class="btn btn-primary" que-action="reorder">Reorder</a>
+                <a id="que-reorder-questions-cancel-btn" class="que-hide btn btn-default">Cancel</a>
+              </div>
+            </div>
+            <div id="que-questionnaire-questions" class="row">
+              <?php
+              $count = 1;
+              foreach ($userQuestions as $userQuestion):
+                echo $this->renderPartial('_question_row', array(
+                 'count' => $count++,
+                 'userQuestion' => $userQuestion));
+              endforeach;
+              ?>
+            </div>
           </div>
         </div>
       </div>
       <div class="tab-pane"id="que-create-new-question-bank-pane">
-        <div class="tab-heading">
-          Create your Own Question
-        </div>
-        <div class="que-margined">
-          <div class="row-fluid">
-            <textarea id="que-create-question-input" class="input-block-level" rows="4"></textarea>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Create your Own Question
+          </div>
+          <div class="panel-body">
+            <textarea id="que-create-question-input" class="col-lg-12 col-sm-12 col-xs-12" rows="4"></textarea>
             <div class="row-fluid gb-footer">
               <button id="que-save-create-question-btn" class="que-btn que-btn-blue-2" >Save</button>
               <button id="que-cancel-create-question-btn" class="que-btn  que-btn-grey-1">Cancel</button>
@@ -119,7 +117,6 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="que-search-question-pane">
         <div class="tab-heading">
           Question Search
@@ -133,7 +130,7 @@ Yii::app()->clientScript->registerScriptFile(
              'conceptList' => $conceptList));
             ?>
           </div>
-          <div id="que-result-analytics-bar" class="hide">
+          <div id="que-result-analytics-bar" class="que-hide">
             <ul id="que-result-as-container" class="nav nav-tabs">
               <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1"><h4>Results As Questions</h4></a></li>
               <li><a id="que-result-as-questions" class="que-result-as" result-output="2"><h4>Results As Questionnaires</h4></a></li>
@@ -148,13 +145,13 @@ Yii::app()->clientScript->registerScriptFile(
               <option value="<?php echo QuestionBank::$SORT_BY_TOOL; ?>">Questionnaire</option>
               <option value="<?php echo QuestionBank::$SORT_BY_AUTHOR; ?>">Author</option>
             </select>
-            <select id="que-sort-order-selector">
-              <option value="<?php echo QuestionBank::$ORDER_ASC; ?>">Ascending</option>
+            <select id="que-sort-order-selector"> 
               <option value="<?php echo QuestionBank::$ORDER_DESC; ?>">Descending</option>
+              <option value="<?php echo QuestionBank::$ORDER_ASC; ?>">Ascending</option>
             </select>
           </div>
 
-          <div id="que-question-result" class="row-fluid">
+          <div id="que-question-result" class="row">
 
           </div>
         </div>
@@ -238,4 +235,4 @@ Yii::app()->clientScript->registerScriptFile(
     <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
 </div>
-<?php $this->endContent();?>
+<?php $this->endContent(); ?>
