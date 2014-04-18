@@ -1,8 +1,7 @@
 <?php $this->beginContent('//layouts/que_main1'); ?>
 
 <?php
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 'On');  //On or Off
+$questionCount = UserQuestion::getUserQuestionsCount($questionnaireId);
 Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
 );
@@ -24,9 +23,7 @@ Yii::app()->clientScript->registerScriptFile(
   var getUserQuestionToDeleteUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/getUserQuestionToDelete/questionnaireId/" . $questionnaireId); ?>";
   var removeQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/removequestion/questionnaireId/" . $questionnaireId); ?>"
   var duplicateQuestionUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/duplicatequestion/questionnaireId/" . $questionnaireId); ?>"
-
 </script>
-
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
     <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?><span class="divider">/</span></li>
@@ -39,17 +36,17 @@ Yii::app()->clientScript->registerScriptFile(
 <br>
 <br>
 <h2 class="container">
-  <div class="col-lg-8 col-sm-8 col-xs-8">
+  <div class="col-lg-8 col-sm-8 col-xs-12">
     <?php echo $model->name; ?>
   </div>
-  <div class="pull-right">
-    <?php echo UserQuestion::getUserQuestionsCount($questionnaireId) ?><small> questions</small>
+  <div class="col-lg-4 col-sm-4 col-xs-12">
+    <?php echo $questionCount; ?><small> questions</small>
   </div>
 </h2>
-<div class="que-topbar-na container">
-  <ul id="que-topbar-nav-list" class="nav nav-tabs row">
-    <li class="active"><a href="#questionnaire-design-pane" data-toggle="tab">Preview Questionnaire</a></li>
-    <li class=""><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
+<div class="que-topbar-nav container">
+  <ul id="que-topbar-nav-list" class="que-nav-1 row que-no-padding">
+    <li class="active col-lg-6 col-sm-6 col-xs-12"><a class="" href="#questionnaire-design-pane" data-toggle="tab">Preview Questionnaire</a></li>
+    <li class="col-lg-6 col-sm-6 col-xs-12"><a href="#que-search-question-pane" data-toggle="tab">Question Search</a></li>
     <!--   <li class=""><a href="#que-browse-question-pane" data-toggle="tab">Browse Question</a></li> -->
   </ul>
 </div>
@@ -63,43 +60,47 @@ Yii::app()->clientScript->registerScriptFile(
           </div>
           <div class="panel-body">
             <div class="que-questionnaire-stats">
-              <ul class="thumbnails">
-                <li class="col-lg-4 col-sm-4 col-xs-4">
-                  <a class="thumbnail que-stats">
+              <div class="panel">
+                <div class="row">
+                  <a class="col-lg-4 col-sm-4 col-xs-4 que-stats">
                     <h1 id="que-question-original-number"><?php echo UserQuestion::getUserQuestionsOriginalCount($questionnaireId) ?></h1>
                     <h5 class="text-center">Original Questions</h5>
                   </a>
-                </li>
-                <li class="col-lg-4 col-sm-4 col-xs-4">
-                  <a class="thumbnail que-stats">
+                  <a class="col-lg-4 col-sm-4 col-xs-4 que-stats">
                     <h1 id="que-question-modified-number"><?php echo UserQuestion::getUserQuestionsModifiedCount($questionnaireId); ?></h1>
                     <h5 class="text-center">Questions Modified</h5>
                   </a>
-                </li>
-                <li class="col-lg-4 col-sm-4 col-xs-4">
-                  <a class="thumbnail que-stats">
+                  <a class="col-lg-4 col-sm-4 col-xs-4 que-stats">
                     <h1 id="que-question-created-number"><?php echo UserQuestion::getUserQuestionsCreatedCount($questionnaireId); ?></h1>
                     <h5 class="text-center">New Created Questions</h5>
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div class="row">
-              <div class="pull-right">
-                <a id="que-reorder-questions-btn" class="btn btn-primary" que-action="reorder">Reorder</a>
-                <a id="que-reorder-questions-cancel-btn" class="que-hide btn btn-default">Cancel</a>
+                </div>
               </div>
             </div>
-            <div id="que-questionnaire-questions" class="row">
-              <?php
-              $count = 1;
-              foreach ($userQuestions as $userQuestion):
-                echo $this->renderPartial('_question_row', array(
-                 'count' => $count++,
-                 'userQuestion' => $userQuestion));
-              endforeach;
-              ?>
-            </div>
+            <?php if ($questionCount > 0): ?>
+              <div class="row">
+                <div class="pull-right">
+                  <a id="que-reorder-questions-btn" class="btn btn-primary" que-action="reorder">Reorder</a>
+                  <a id="que-reorder-questions-cancel-btn" class="que-hide btn btn-default">Cancel</a>
+                </div>
+              </div>
+              <div id="que-questionnaire-questions" class="row">
+                <?php
+                $count = 1;
+                foreach ($userQuestions as $userQuestion):
+                  echo $this->renderPartial('_question_row', array(
+                   'count' => $count++,
+                   'userQuestion' => $userQuestion));
+                endforeach;
+                ?>
+              </div>
+            <?php else: ?>
+              <div class="alert alert-info">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>You haven't added any question(s)</strong><br>
+                You can add questions from our Question and Questionnaire Bank.
+              </div>
+            <?php endif ?>
           </div>
         </div>
       </div>
@@ -118,41 +119,43 @@ Yii::app()->clientScript->registerScriptFile(
         </div>
       </div>
       <div class="tab-pane" id="que-search-question-pane">
-        <div class="tab-heading">
-          Question Search
-        </div>
-        <div class="que-margined">
-          <div class="row-fluid">
-            <?php
-            echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
-             "toolList" => $toolList,
-             "yearList" => $yearList,
-             'conceptList' => $conceptList));
-            ?>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><div class="">Question Search</div></h4>
           </div>
-          <div id="que-result-analytics-bar" class="que-hide">
-            <ul id="que-result-as-container" class="nav nav-tabs">
-              <li><a id="que-result-as-questionnaires" class="que-result-as que-btn-grey-1" result-output="1"><h4>Results As Questions</h4></a></li>
-              <li><a id="que-result-as-questions" class="que-result-as" result-output="2"><h4>Results As Questionnaires</h4></a></li>
-            </ul>
-            Sort By
-            <select id="que-sort-question-result-selector">
-              <option value="<?php echo QuestionBank::$SORT_BY_TIMES_ADDED; ?>">Most Added</option>
-              <option value="<?php echo QuestionBank::$SORT_BY_TIMES_MODIFIED; ?>">Most Modified</option>
-              <option value="<?php echo QuestionBank::$SORT_BY_CONTENT; ?>">Content</option>
-              <option value="<?php echo QuestionBank::$SORT_BY_YEAR; ?>">Year</option>
-              <option value="<?php echo QuestionBank::$SORT_BY_CONCEPT; ?>">Concept</option>
-              <option value="<?php echo QuestionBank::$SORT_BY_TOOL; ?>">Questionnaire</option>
-              <option value="<?php echo QuestionBank::$SORT_BY_AUTHOR; ?>">Author</option>
-            </select>
-            <select id="que-sort-order-selector"> 
-              <option value="<?php echo QuestionBank::$ORDER_DESC; ?>">Descending</option>
-              <option value="<?php echo QuestionBank::$ORDER_ASC; ?>">Ascending</option>
-            </select>
-          </div>
-
-          <div id="que-question-result" class="row">
-
+          <div class="panel-body">
+            <div class="row">
+              <?php
+              echo $this->renderPartial('_search_questions_form', array('model' => $questionSearchModel,
+               "toolList" => $toolList,
+               "yearList" => $yearList,
+               'conceptList' => $conceptList));
+              ?>
+            </div>
+            <div id="que-result-analytics-bar" class="que-hide">
+              <ul id="que-result-as-container" class="nav nav-tabs">
+                <li><a id="que-result-as-questionnaires" class="que-result-as btn btn-default" result-output="1"><h4>Results As Questions</h4></a></li>
+                <li><a id="que-result-as-questions" class="que-result-as" result-output="2"><h4>Results As Questionnaires</h4></a></li>
+              </ul>
+              Sort By
+              <div class="form-group row">
+                <select id="que-sort-question-result-selector" class="input-lg">
+                  <option value="<?php echo QuestionBank::$SORT_BY_TIMES_ADDED; ?>">Most Added</option>
+                  <option value="<?php echo QuestionBank::$SORT_BY_TIMES_MODIFIED; ?>">Most Modified</option>
+                  <option value="<?php echo QuestionBank::$SORT_BY_CONTENT; ?>">Content</option>
+                  <option value="<?php echo QuestionBank::$SORT_BY_YEAR; ?>">Year</option>
+                  <option value="<?php echo QuestionBank::$SORT_BY_CONCEPT; ?>">Concept</option>
+                  <option value="<?php echo QuestionBank::$SORT_BY_TOOL; ?>">Questionnaire</option>
+                  <option value="<?php echo QuestionBank::$SORT_BY_AUTHOR; ?>">Author</option>
+                </select>
+                <select id="que-sort-order-selector" class="input-lg"> 
+                  <option value="<?php echo QuestionBank::$ORDER_DESC; ?>">Descending</option>
+                  <option value="<?php echo QuestionBank::$ORDER_ASC; ?>">Ascending</option>
+                </select>
+              </div>
+            </div>
+            <div id="que-question-result" class="row">
+            </div>
           </div>
         </div>
       </div>

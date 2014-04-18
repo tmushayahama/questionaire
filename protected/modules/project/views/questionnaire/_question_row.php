@@ -12,7 +12,7 @@
       <div class="col-lg-1 col-sm-1 col-xs-1">
         <h2 class="text-center text-info count"><?php echo $count; ?></h2>
       </div>
-      <div class="col-lg-9 col-sm-9 col-xs-9">
+      <div class="col-lg-9 col-sm-9 col-xs-11">
         <div class="row edit-question-input que-hide">
           <textarea class="que-edit-question-content col-lg-12 col-sm-12 col-xs-12" rows="3"></textarea>
           <!-- <a class="que-view-answer-options-toggle">
@@ -69,7 +69,8 @@
                 break;
             }
             ?>
-          </i></small>
+          </i>
+        </small>
       </div>
     </div>
   </div>
