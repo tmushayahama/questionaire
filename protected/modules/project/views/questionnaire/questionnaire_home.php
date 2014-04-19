@@ -77,30 +77,38 @@ Yii::app()->clientScript->registerScriptFile(
                 </div>
               </div>
             </div>
-            <?php if ($questionCount > 0): ?>
+            <?php
+            $hideResult = "";
+            $hideAlert = "";
+            if ($questionCount == 0) {
+              $hideResult = "que-hide";
+            } else {
+              $hideAlert = "que-hide";
+            }
+            ?>
+            <div id="que-no-questionnaire-alert" class="alert alert-info <?php echo $hideAlert; ?>">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>You haven't added any question(s)</strong><br>
+              You can add questions from our Question and Questionnaire Bank.
+            </div>
+
+            <div id="que-questionnaire-questions" class="row <?php echo $hideResult; ?>">
               <div class="row">
                 <div class="pull-right">
                   <a id="que-reorder-questions-btn" class="btn btn-primary" que-action="reorder">Reorder</a>
                   <a id="que-reorder-questions-cancel-btn" class="que-hide btn btn-default">Cancel</a>
                 </div>
-              </div>
-              <div id="que-questionnaire-questions" class="row">
-                <?php
-                $count = 1;
-                foreach ($userQuestions as $userQuestion):
-                  echo $this->renderPartial('_question_row', array(
-                   'count' => $count++,
-                   'userQuestion' => $userQuestion));
-                endforeach;
-                ?>
-              </div>
-            <?php else: ?>
-              <div class="alert alert-info">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>You haven't added any question(s)</strong><br>
-                You can add questions from our Question and Questionnaire Bank.
-              </div>
-            <?php endif ?>
+              </div>             
+              <?php
+              $count = 1;
+              foreach ($userQuestions as $userQuestion):
+                echo $this->renderPartial('_question_row', array(
+                 'count' => $count++,
+                 'userQuestion' => $userQuestion));
+              endforeach;
+              ?>
+            </div>
+
           </div>
         </div>
       </div>

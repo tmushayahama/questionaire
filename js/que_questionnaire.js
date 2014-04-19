@@ -94,6 +94,8 @@ function addQuestion(data) {
     $("#que-question-original-number").text(data["orginal_questions_count"]);
     $("#que-question-modified-number").text(data["modified_questions_count"]);
     $("#que-question-created-number").text(data["created_questions_count"]);
+    $("#que-questionnaire-questions").show();
+    $("#que-no-questionnaire-alert").hide();
 }
 function duplicateQuestion(data) {
     $(data["question_row"]).insertAfter("#que-user-question-row-" + data["original_user_question_id"]);//"question_row" is the thing that addQuestion controller submitted
@@ -103,6 +105,7 @@ function duplicateQuestion(data) {
     $("#que-question-original-number").text(data["orginal_questions_count"]);
     $("#que-question-modified-number").text(data["modified_questions_count"]);
     $("#que-question-created-number").text(data["created_questions_count"]);
+
 }
 function createQuestion(data) {
     $("#que-create-question-input").val("");
@@ -138,6 +141,12 @@ function removeQuestion(data) {
     $("#que-question-original-number").text(data["orginal_questions_count"]);
     $("#que-question-modified-number").text(data["modified_questions_count"]);
     $("#que-question-created-number").text(data["created_questions_count"]);
+    if (parseInt(data["orginal_questions_count"]) +
+            parseInt(data["modified_questions_count"]) +
+            parseInt(data["created_questions_count"]) == 0) {
+        $("#que-questionnaire-questions").hide();
+        $("#que-no-questionnaire-alert").show();
+    }
 }
 function removeFromSearchQuestion(data) {
     $("#que-user-question-row-" + data["user_question_id"]).remove();
@@ -463,7 +472,7 @@ function editQuestionnaireHandlers() {
         var questionnaireId = $(this).attr("questionnaire-id");
         var data = {to_project_id: toProjectId,
             questionnaire_id: questionnaireId};
-       ajaxCall(moveQuestionnaireUrl, data, moveQuestionnaire);
+        ajaxCall(moveQuestionnaireUrl, data, moveQuestionnaire);
         //$("#que-confirm-modal").modal("hide");
     });
     $('.que-cancel-edit-project-name').click(function(e) {

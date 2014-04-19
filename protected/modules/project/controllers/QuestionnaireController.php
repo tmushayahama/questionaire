@@ -334,7 +334,7 @@ class QuestionnaireController extends Controller {
            'id' => 'que-question-concept-dropdown',
            'filter-type' => QuestionBank::$FILTER_CONCEPT,
            //'empty' => 'Select a Concept',
-           'class' => 'input-block-level'
+           'class' => 'form-control input-lg col-lg-12 col-sm-12 col-xs-12'
         ));
       } else {
         $conceptDropdown = CHtml::activeDropDownList(
@@ -343,7 +343,7 @@ class QuestionnaireController extends Controller {
            'filter-type' => QuestionBank::$FILTER_CONCEPT,
            'empty' => 'Select a Concept',
            //'options' => array('1' => array('selected' => true)),
-           'class' => 'input-block-level'
+           'class' => 'form-control input-lg col-lg-12 col-sm-12 col-xs-12'
         ));
       }
       if (in_array("que-question-year-dropdown", $selectedDropdowns)) {
@@ -352,7 +352,7 @@ class QuestionnaireController extends Controller {
            'id' => 'que-question-year-dropdown',
            'filter-type' => QuestionBank::$FILTER_YEAR,
            //'empty' => 'Select a Year',
-           'class' => 'input-block-level'
+           'class' => 'form-control input-lg col-lg-12 col-sm-12 col-xs-12'
         ));
       } else {
         $yearDropdown = CHtml::activeDropDownList(
@@ -361,7 +361,7 @@ class QuestionnaireController extends Controller {
            'filter-type' => QuestionBank::$FILTER_YEAR,
            'empty' => 'Select a Year',
            // 'options' => array('1' => array('selected' => true)),
-           'class' => 'input-block-level'
+           'class' => 'form-control input-lg col-lg-12 col-sm-12 col-xs-12'
         ));
       }
       if ($selectedFilter != null) {

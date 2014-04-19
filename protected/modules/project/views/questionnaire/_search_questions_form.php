@@ -9,7 +9,7 @@ $form = $this->beginWidget('CActiveForm', array(
  'id' => 'search-question-form',
  'enableAjaxValidation' => false,
  'htmlOptions' => array(
-  'class' => 'form',
+  'class' => 'form well',
   'onsubmit' => "return false;")
   ));
 ?>
@@ -23,8 +23,9 @@ $form = $this->beginWidget('CActiveForm', array(
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
+<br>
 <div id="que-filters-container" class="que-hide">
-  <h4 class="que-additional-filter-question-btn">Additional Filters</h4>
+  <h5 class="que-additional-filter-question-btn">Additional Filters</h5>
   <div class="row">
     <!-- <div id="que-tool-dropdown" class="span12">
     <?php
@@ -62,6 +63,7 @@ $form = $this->beginWidget('CActiveForm', array(
       ?>
     </div>
   </div>
+  <br>
   <div id="que-filter-selected" class="row">
   </div>
   <div class="form-actions row">

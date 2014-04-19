@@ -4,20 +4,27 @@ $this->beginContent('//layouts/que_main1');
 Yii::app()->clientScript->registerScriptFile(
   Yii::app()->baseUrl . '/js/que_questionnaire.js', CClientScript::POS_END
 );
+Yii::app()->clientScript->registerScriptFile(
+  Yii::app()->baseUrl . '/js/que_home_tour.js', CClientScript::POS_END
+);
 ?>
 <script>
   var deleteProjectUrl = "<?php echo Yii::app()->createUrl("project/project/deleteProject"); ?>";
 </script>
 <div class="container">
+  <div id="que-start-tour-btn" class="btn btn-default col-lg-12 col-sm-12 col-xs-12 alert alert-block alert-info">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="text-info">Take a Tour - Home</h4>
+  </div>
   <div class="row">
-    <div class="sub-heading-3">
+    <div id="que-project-heading" class="sub-heading-3">
       <div class="pull-left">My Projects </div>
       <div class="">
         &nbsp(<?php echo UserProject::getUserProjectCount(); ?>)
       </div>
     </div>
     <div class="que-sidebar col-lg-3 col-sm-12 col-xs-12 que-no-padding">
-      <div class="panel panel-primary"> 
+      <div id="que-create-project-panel" class="panel panel-primary"> 
         <div class="panel-heading">
           <h3 class="sub-heading-2">Create Project</h3>
         </div>
@@ -30,7 +37,7 @@ Yii::app()->clientScript->registerScriptFile(
     </div>
     <div class="col-lg-9 col-sm-12 col-xs-12 que-no-padding">
       <br>
-      <div class="row">
+      <div id="que-projects-container" class="row">
         <?php foreach ($projects as $userProject): ?>
           <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="que-project-entry panel panel-default" project-id="<?php echo $userProject->project_id; ?>">
