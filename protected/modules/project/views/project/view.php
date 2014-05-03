@@ -5,14 +5,15 @@ Yii::app()->clientScript->registerScriptFile(
 );
 ?>
 <script>
-  var deleteUserQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/deleteUserQuestionnaire"); ?>";
+   var editProjectUrl = "<?php echo Yii::app()->createUrl("project/project/editProject", array('id' => $projectModel->id)); ?>";
+ var deleteUserQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/deleteUserQuestionnaire"); ?>";
   var copyQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/copyQuestionnaire/", array('id' => $projectModel->id)); ?>";
   var moveQuestionnaireUrl = "<?php echo Yii::app()->createUrl("project/questionnaire/moveQuestionnaire/", array('id' => $projectModel->id)); ?>";
 </script>
 <div class="row-fluid">
   <ul class="breadcrumb que-breadcrumb">
-    <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?> <span class="divider">/</span></li>
-    <li class="active"><?php echo $projectModel->name ?></li>
+    <li><?php echo CHtml::link('Home', Yii::app()->user->returnUrl, array('class' => 'btn btn-link')); ?></li>
+    <li class="active"><?php //echo $projectModel->name ?></li>
 
     <!--<li class="offset7"><a href="#new-project-modal" role="button" class="gb-btn" data-toggle="modal">Manage Questionnaire</a></li>-->
   </ul>
@@ -25,10 +26,10 @@ Yii::app()->clientScript->registerScriptFile(
         <h3>Edit Project</h3>
         <br>
         <div class="form-group row">
-          <input type="text" class="col-lg-12 col-sm-12 col-xs-12" value="<?php echo $projectModel->name ?>">
+          <input id="project-name-input" type="text" class="col-lg-12 col-sm-12 col-xs-12" value="<?php echo $projectModel->name ?>">
         </div>
         <div class="form-group row">
-          <textarea class="col-lg-12 col-sm-12 col-xs-12" rows="2"><?php echo $projectModel->description; ?></textarea>
+          <textarea id="project-description-input" class="col-lg-12 col-sm-12 col-xs-12" rows="2"><?php echo $projectModel->description; ?></textarea>
         </div>
         <div class="form-actions">
           <a class="btn btn-primary que-save-edit-project-name">Save</a>
@@ -38,7 +39,7 @@ Yii::app()->clientScript->registerScriptFile(
       </div>
       <div class="project-name row">
         <h2>
-          <div class="pull-left"><?php echo $projectModel->name ?> </div>
+          <div class="que-project-name-heading pull-left"><?php echo $projectModel->name ?> </div>
           <div class="">
             &nbsp(<?php echo ProjectQuestionnaire::getProjectQuestionnairesCount($projectModel->id); ?>)
             <a class="btn btn-mini que-edit-project-name">Edit Project</a>

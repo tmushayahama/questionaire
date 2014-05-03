@@ -16,8 +16,8 @@ function tourEventHandlers() {
             storage: false,
             steps: [
                 {
-                    element: "#que-project-heading",
-                    title: "Project Heading and Count",
+                    element: "#que-project-heading-count",
+                    title: "Number of projects I have created",
                     content: "See how many projects you have created.",
                     placement: "bottom",
                     position: "fixed"
@@ -25,7 +25,7 @@ function tourEventHandlers() {
                 {
                     element: "#que-create-project-panel",
                     title: "Creating a Project",
-                    content: "Manage your questionnaire in projects",
+                    content: "Manage your questionnaires in projects.",
                     placement: "top"
                 },
                 {

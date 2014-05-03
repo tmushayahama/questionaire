@@ -43,6 +43,9 @@ function ajaxCall(url, data, callback) {
  return false;
  }
  }*/
+function editProject(data) {
+    $(".que-project-name-heading").text(data["name"]);
+}
 function copyQuestionnaire(data) {
     $("#copy-projects-modal").modal("hide");
     $("#questionnaire-container").html(data["questionnaires"]);
@@ -482,7 +485,15 @@ function editQuestionnaireHandlers() {
     $('.que-edit-project-name').click(function(e) {
         $(".project-name").hide();
         $(".edit-project").show("slow");
-
+    });
+    $('.que-save-edit-project-name').click(function(e) {
+        var name = $('#project-name-input').val();
+        var description = $('#project-description-input').val();
+        var data = {name: name,
+            description: description};
+        ajaxCall(editProjectUrl, data, editProject);
+        $(".edit-project").hide("slow");
+        $(".project-name").show();
     });
     $('#que-questionnaire-activity-nav a').click(function(e) {
         e.preventDefault();

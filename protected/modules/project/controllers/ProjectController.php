@@ -24,7 +24,7 @@ class ProjectController extends Controller {
       'users' => array('*'),
      ),
      array('allow', // allow authenticated user to perform 'create' and 'update' actions
-      'actions' => array('create', 'update', 'delete', 'deleteProject'),
+      'actions' => array('create', 'update', 'delete', 'deleteProject', 'editProject'),
       'users' => array('@'),
      ),
      array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -62,8 +62,25 @@ class ProjectController extends Controller {
      'projectModel' => $this->loadModel($id),
      'questionnaireModel' => $questionnaireModel,
      'projectQuestionnaires' => $projectQuestionnaires,
-     'projects'=> Project::model()->findAll()
+     'projects' => Project::model()->findAll()
     ));
+  }
+
+  public function actionEditProject($id) {
+    if (Yii::app()->request->isAjaxRequest) {
+      $name = Yii::app()->request->getParam('name');
+      $description = Yii::app()->request->getParam('description');
+      $project = Project::model()->findByPk($id);
+      $project->name = $name;
+      $project->description = $description;
+      $project->save(false);
+      
+      echo CJSON::encode(array(
+      'name' => $project->name,
+       'description' => $project->description
+     ));
+    }
+    Yii::app()->end();
   }
 
   /**

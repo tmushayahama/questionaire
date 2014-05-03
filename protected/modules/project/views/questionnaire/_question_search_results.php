@@ -53,7 +53,7 @@ foreach ($questions as $question):
             <p><?php
               $analyzedQuestion = QuestionBank::analyzeQuestion($question->content);
               if ($analyzedQuestion === null) :
-                echo 'Tremayne says, "'.$question->content.'"';
+                echo $question->content;
               else:
                 ?>
                 <?php echo $analyzedQuestion[0]; ?>

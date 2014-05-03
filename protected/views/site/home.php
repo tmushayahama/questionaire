@@ -14,14 +14,14 @@ Yii::app()->clientScript->registerScriptFile(
 <div class="container">
   <div id="que-start-tour-btn" class="btn btn-default col-lg-12 col-sm-12 col-xs-12 alert alert-block alert-info">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h4 class="text-info">Take a Tour - Home</h4>
+    <h4 class="text-info">Take a Tour - Home Page</h4>
   </div>
   <div class="row">
-    <div id="que-project-heading" class="sub-heading-3">
-      <div class="pull-left">My Projects </div>
-      <div class="">
+    <div class="sub-heading-3">
+      <span class="pull-left">My Projects </span>
+      <span id="que-project-heading-count" class="">
         &nbsp(<?php echo UserProject::getUserProjectCount(); ?>)
-      </div>
+      </span>
     </div>
     <div class="que-sidebar col-lg-3 col-sm-12 col-xs-12 que-no-padding">
       <div id="que-create-project-panel" class="panel panel-primary"> 
@@ -82,8 +82,7 @@ Yii::app()->clientScript->registerScriptFile(
                 </div>
               </div>
               <div class="panel-footer">
-                <a class="que-delete-project-btn btn btn-link"> <i class ="glyphicon glyphicon-edit"></i></a>
-                <a class="que-delete-project-btn btn btn-link"> <i class ="glyphicon glyphicon-trash"></i></a>
+                <a class="que-delete-project-btn btn"> <i class ="glyphicon glyphicon-trash"></i></a>
               </div>
             </div>
           </div>
