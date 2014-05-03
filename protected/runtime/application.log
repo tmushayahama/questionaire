@@ -4722,3 +4722,6 @@ Stack trace:
 REQUEST_URI=/questionnaire/js/jquery.min.map
 HTTP_REFERER=http://localhost/questionnaire/project/project/view/id/4
 ---
+2014/05/03 04:31:49 [warning] [application] Failed to set unsafe attribute "id" of "UserQuestion".
+in C:\xampp\htdocs\questionnaire\protected\modules\project\controllers\QuestionnaireController.php (443)
+in C:\xampp\htdocs\questionnaire\index.php (13)

@@ -117,31 +117,6 @@ textarea{
     background-color:  #6F8B8E;
     color: #FAFAFA;  
 } 
-.que-intro-header-2 {
-    background-color: #FAFAFA;
-    min-height:400px;
-}
-
-.que-intro-header-2 img{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 150px;
-    width: 150px;
-}
-.que-intro-header-3 {
-    padding: 50px 0px 50px 0px;
-    background-color: #DFE0D8;
-}
-.que-intro-header-4 {
-    padding: 25px 0 2px 0;
-    background-color :#FFF
-}
-/*----------BUTTONS----------------*/
-.que-btn-disabled-1 {
-    pointer-events: none;
-    opacity: 0.5;
-    background: #eee;
-}
 /*------Questionnaire -------*/
 .que-questionnaire-stats {
     padding: 10px 5px 5px 5px;
@@ -209,70 +184,6 @@ textarea{
     background-color: transparent;
 }
 
-.home-menu-box {
-    margin-bottom: 5px;
-    padding:1px 2px 2px 1px;
-    height: 30px;
-    color:#111;
-    border-bottom: #999 solid 1px;
-}
-.home-menu-box-2{
-    padding:5px 5px 5px 5px;
-    height: 30px;
-    color:#333;
-}
-.home-menu-box-3 {
-    padding:1px 2px 0px 1px;
-    height: 15px;
-    color:#333;
-}
-.menu-box-width-1 {
-    width:32.3%;
-}
-.menu-box-width-2 {
-    width:65%;
-}
-.home-menu-box,
-.home-menu-box-2,
-.home-menu-box-3{
-
-    float: left;
-    font-weight: normal;
-    /*border-radius: 5px;
-     -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-     -o-border-radius: 4px;
-    -webkit-box-shadow: 0px 2px 2px #CCC;
-    -moz-box-shadow: 0px 2px 2px #CCC;
-    box-shadow: 0px 2px 2px #CCC;*/
-    overflow:hidden;
-}
-.home-menu-box:hover,
-.home-menu-box-2:hover,
-.home-menu-box-3:hover{
-    background-color: #EDEFF4;
-    text-decoration: none!important;
-    color:#111;
-}
-.home-menu-box-margin-right {
-    margin-right: 0.5%;
-}
-.home-menu-box img,
-.home-menu-box-2 img{
-    float: left;
-    height: 20px;
-    width: 25px;
-    margin-right: 3px;
-}
-.home-menu-box .menu-heading,
-.home-menu-box-3 .menu-heading{
-    text-align: left;
-    font-size: 1.1em;
-    overflow: hidden;
-}
-.home-menu-box .menu-heading p{
-    font-size: 0.8em;
-}
 /**************NAV**************/
 .que-nav-1 {
     margin: 0;
@@ -569,96 +480,6 @@ hr {
 small.text-muted {
     font-family:courier,courier-new,monospace;
 }
-/*------------SKILL -----------------*/
-#que-post-input {
-    min-height: 135px;
-    padding: 10px 10px 0px 10px;
-    background-color: #DFE0D8;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    /*-webkit-box-shadow: rgb(0, 0, 0) -1px 1px 2px;
-    -moz-box-shadow: rgb(0,0,0) -1px 1px 2px;
-    box-shadow: rgb(0, 0, 0) -1px 1px 2px;*/
-}
-#que-post-tab {
-    margin-bottom:0px;
-    display:inline;
-}
-#que-post-tab li a:hover  {
-    background-color: transparent; 
-}
-#que-post-tab li a img {
-    height: 40px;
-    width:50px;
-}
-
-#que-post-tab li a img.active {
-    height: 40px;
-    width:70px;
-}
-.que-subskill {
-    padding: 5px 2px 5px 5px;
-    background-color: #EAEAE8;
-}
-#que-post-tab li a {
-    font-size:1em;
-    text-align:center;
-}
-.que-subskill {
-    padding: 5px 2px 5px 5px;
-    background-color: #EAEAE8;
-    border-bottom: #555 solid 1px;
-}
-/*------------TOP BORDERS -----------*/
-.que-top-border-1 {
-    border: #8B8556 solid 1px;
-    border-top: #8B8556 solid 7px;
-}
-.que-top-border-2 {
-    border: #345678 solid 1px; 
-    border-top: #345678 solid 7px; 
-}
-.que-top-border-3 {
-    border: #8B8556 solid 1px;
-    border-top: #8B8556 solid 7px;
-}
-.que-top-border-4 {
-    border: #BEAB16 solid 1px;
-    border-top: #BEAB16 solid 7px;
-}
-.que-skill-gained-top-border {
-    border: #8B8556 solid 1px;
-    border-left: #8B8556 solid 5px;
-}
-.que-skill-to-improve-top-border {
-    border: #8B8556 solid 1px;
-    border-top: #8B8556 solid 5px;
-}
-.que-skill-to-learn-top-border {
-    border: #16A8BE solid 1px;
-    border-left: #16A8BE solid 5px;
-}
-.que-mentorship-top-border {
-    border: #008900 solid 1px;
-    border-left: #008900 solid 5px;
-}
-.que-mentorship-request-top-border {
-    border: #16A86B solid 1px;
-    border-left: #16A86B solid 5px;
-}
-.que-advice-top-border {
-    border: #BEAB16 solid 1px;
-    border-left: #BEAB16 solid 5px;
-}
-.que-skillbank-side-border {
-    border: #345678 solid 1px;
-    border-left: #345678 solid 5px; 
-}
-.que-bottom-border-grey-3 {
-    border-bottom: #706F65 solid 3px;
-}
-
-
 @media (max-width: 1170px) {
     .que-navbar .input-group {
         width: 360px;

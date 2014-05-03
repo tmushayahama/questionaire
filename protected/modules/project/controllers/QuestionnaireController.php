@@ -268,6 +268,11 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
     } */
 
+  /* The following are ajax calls to the search page. 
+   * They correspond to methods defined in javascript code on top of 
+   * the html file inside the <script> tags
+   * 
+   */
   public function actionQuestionKeywordSearch($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $keyword = Yii::app()->request->getParam('keyword');
@@ -397,83 +402,6 @@ class QuestionnaireController extends Controller {
     }
     Yii::app()->end();
   }
-
-  public function actionQuestionnaireSearchFromCY($questionnaireId) {
-    if (Yii::app()->request->isAjaxRequest) {
-      $searchQuestionnaireCriteria = new CDbCriteria;
-      $searchCriteria = new CDbCriteria;
-      $searchConceptCriteria = new CDbCriteria;
-      $searchYearCriteria = new CDbCriteria;
-      //$questionSearchModel->unsetAttributes();	// clear any default values
-      $searchConceptCriteria->with = array
-       ("question" => array("alias" => "t2"));
-      $searchYearCriteria->with = array
-       ("question" => array("alias" => "t2"));
-      $searchCriteria->with = array
-       ("question" => array("alias" => "t2"),
-       "bankQuestionnaire" => array("alias" => "t3"));
-      if (isset($_POST['QuestionBank'][3]['questionConceptList'])) {
-        if (is_array($_POST['QuestionBank'][3]['questionConceptList'])) {
-          foreach ($_POST['QuestionBank'][3]['questionConceptList'] as $concept) {
-            $searchConceptCriteria->addCondition("t2.concept='" . $concept . "'", 'OR');
-          }
-        }
-      }
-      if (isset($_POST['QuestionBank'][3]['questionYearList'])) {
-        if (is_array($_POST['QuestionBank'][3]['questionYearList'])) {
-          foreach ($_POST['QuestionBank'][3]['questionYearList'] as $year) {
-            $searchYearCriteria->addCondition("t2.year='" . $year . "'", 'OR');
-          }
-        }
-      }
-      $searchCriteria->mergeWith($searchConceptCriteria, 'AND');
-      $searchCriteria->mergeWith($searchYearCriteria, 'AND');
-      $searchCriteria->group = "bank_questionnaire_id";
-      $searchCriteria->distinct = true;
-
-      echo CJSON::encode(array(
-       'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
-        'questionnaires' => QuestionnaireQuestionBank::Model()->findAll($searchCriteria),
-        'questionnaireId' => $questionnaireId)
-         , true)));
-    }
-    Yii::app()->end();
-  }
-
-  public function actionQuestionnaireSearchFromQ($questionnaireId) {
-    if (Yii::app()->request->isAjaxRequest) {
-      //$searchQuestionnaireCriteria = new CDbCriteria;
-      //$searchCriteria = new CDbCriteria;
-      //$searchConceptCriteria = new CDbCriteria;
-      $searchToolCriteria = new CDbCriteria;
-      $searchToolCriteria->with = array(
-       "bankQuestionnaire" => array("alias" => "t3"));
-      $searchToolCriteria->group = "bank_questionnaire_id";
-      $searchToolCriteria->distinct = true;
-      //$questionSearchModel->unsetAttributes();	// clear any default values
-      ///$searchToolCriteria->with = array
-      // ("question" => array("alias" => "t2"));
-      if (isset($_POST['Questionnaire'][2]['questionnaireSelected'])) {
-        if (is_array($_POST['Questionnaire'][2]['questionnaireSelected'])) {
-          foreach ($_POST['Questionnaire'][2]['questionnaireSelected'] as $name) {
-            $searchToolCriteria->addCondition("t3.name='" . $name . "'", 'OR');
-          }
-        }
-      }
-      //$searchCriteria->mergeWith($searchConceptCriteria, 'AND');
-      // $searchCriteria->mergeWith($searchYearCriteria, 'AND');
-      // $searchCriteria->group = "bank_questionnaire_id";
-      // $searchCriteria->distinct = true;
-
-      echo CJSON::encode(array(
-       'questionnaire_search_results' => $this->renderPartial('_questionnaire_search_results', array(
-        'questionnaires' => QuestionnaireQuestionBank::Model()->findAll($searchToolCriteria),
-        'questionnaireId' => $questionnaireId)
-         , true)));
-    }
-    Yii::app()->end();
-  }
-
   public function actionAddQuestion($questionnaireId) {
     if (Yii::app()->request->isAjaxRequest) {
       $userQuestion = new UserQuestion;
@@ -652,16 +580,6 @@ class QuestionnaireController extends Controller {
     Yii::app()->end();
   }
 
-  //problem!!!: will delete questions with same question->id in other questionnaire
-  public function actionQRemoveQuestion($questionnaireId) {
-    if (Yii::app()->request->isAjaxRequest) {
-      $questionId = Yii::app()->request->getParam('question_id');
-      $model = UserQuestion::model()->findByAttributes(array('question_id' => $questionId));
-      $model->delete();
-    }
-    Yii::app()->end();
-  }
-
   public function actionMoreInfoQuestion() {
     if (Yii::app()->request->isAjaxRequest) {
       $questionId = Yii::app()->request->getParam('question_id');
@@ -690,49 +608,6 @@ class QuestionnaireController extends Controller {
   }
 
   /**
-   * Creates a new model.
-   * If creation is successful, the browser will be redirected to the 'view' page.
-   */
-  public function actionCreate() {
-    $model = new Questionnaire;
-
-    // Uncomment the following line if AJAX validation is needed
-    // $this->performAjaxValidation($model);
-
-    if (isset($_POST['Questionnaire'])) {
-      $model->attributes = $_POST['Questionnaire'];
-      if ($model->save())
-        $this->redirect(array('view', 'id' => $model->id));
-    }
-
-    $this->render('create', array(
-     'model' => $model,
-    ));
-  }
-
-  /**
-   * Updates a particular model.
-   * If update is successful, the browser will be redirected to the 'view' page.
-   * @param integer $id the ID of the model to be updated
-   */
-  public function actionUpdate($id) {
-    $model = $this->loadModel($id);
-
-    // Uncomment the following line if AJAX validation is needed
-    // $this->performAjaxValidation($model);
-
-    if (isset($_POST['Questionnaire'])) {
-      $model->attributes = $_POST['Questionnaire'];
-      if ($model->save())
-        $this->redirect(array('view', 'id' => $model->id));
-    }
-
-    $this->render('update', array(
-     'model' => $model,
-    ));
-  }
-
-  /**
    * Deletes a particular model.
    * If deletion is successful, the browser will be redirected to the 'admin' page.
    * @param integer $id the ID of the model to be deleted
@@ -743,16 +618,6 @@ class QuestionnaireController extends Controller {
     // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
     if (!isset($_GET['ajax']))
       $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-  }
-
-  /**
-   * Lists all models.
-   */
-  public function actionIndex() {
-    $dataProvider = new CActiveDataProvider('Questionnaire');
-    $this->render('index', array(
-     'dataProvider' => $dataProvider,
-    ));
   }
 
   public function actionInitQuestionnaire() {
